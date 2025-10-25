@@ -10,7 +10,7 @@
 
 <div align=center>
   
-Mario Forever: Party Worlds Reimagined is a remake of Mario Forever: Party Worlds created by LooPeR231 Featuring 10 worlds of varying design and interesting new mechanics. This is a public repository that not only contains the entire `.godot` project of the game, but also features all `.rdw` files for maps for analyzing and understanding how the game was made.
+Mario Forever: Party Worlds Reimagined is a remake of Mario Forever: Party Worlds created by LooPeR231 Featuring 10 worlds of varying design and interesting new mechanics. This is a public repository that not only contains the entire `.godot` project of the game, but also features all `.rdw` (RealDraw Pro) files for maps for analyzing and understanding how the game was made.
 
 </div>
 
