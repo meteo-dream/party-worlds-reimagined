@@ -518,36 +518,36 @@ initial_velocity_max = 27.94
 gravity = Vector3(0, -10, 0)
 scale_curve = SubResource("CurveTexture_y48cr")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tski"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl3nl"]
 atlas = ExtResource("42_mg5h8")
-region = Rect2(0, 0, 2048, 1728)
+region = Rect2(0, 0, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n5y5y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1n82"]
 atlas = ExtResource("42_mg5h8")
-region = Rect2(0, 1728, 2048, 1728)
+region = Rect2(0, 864, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pr7ql"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae7s2"]
 atlas = ExtResource("42_mg5h8")
-region = Rect2(0, 3456, 2048, 1728)
+region = Rect2(0, 1728, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k86sd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8ivk"]
 atlas = ExtResource("42_mg5h8")
-region = Rect2(0, 5184, 2048, 1728)
+region = Rect2(0, 2592, 1024, 864)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u1n82"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5tski")
+"texture": SubResource("AtlasTexture_pl3nl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n5y5y")
+"texture": SubResource("AtlasTexture_u1n82")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pr7ql")
+"texture": SubResource("AtlasTexture_ae7s2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k86sd")
+"texture": SubResource("AtlasTexture_e8ivk")
 }],
 "loop": true,
 "name": &"default",
@@ -652,11 +652,9 @@ motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(512, 432)
-scale = Vector2(0.5, 0.5)
+position = Vector2(288, 432)
 sprite_frames = SubResource("SpriteFrames_u1n82")
 autoplay = "default"
-metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 z_index = -100
