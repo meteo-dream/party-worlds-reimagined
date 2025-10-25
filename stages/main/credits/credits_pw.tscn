@@ -34,6 +34,7 @@ play_globally = 2
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("4_s27vk")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -42,7 +43,7 @@ physics_interpolation_mode = 0
 anchors_preset = 0
 offset_top = 480.0
 offset_right = 640.0
-offset_bottom = 2944.0
+offset_bottom = 3096.0
 script = ExtResource("5_e2cam")
 speed = 35.0
 
@@ -57,15 +58,15 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_owpsj")
 
 [node name="MrsW" type="Sprite2D" parent="Text"]
-position = Vector2(320, 1704)
+position = Vector2(320, 1784)
 texture = ExtResource("8_td670")
 
 [node name="RmW" type="Sprite2D" parent="Text"]
-position = Vector2(320, 1894)
+position = Vector2(320, 1974)
 texture = ExtResource("9_f0t52")
 
 [node name="TailsW" type="Sprite2D" parent="Text"]
-position = Vector2(320, 2084)
+position = Vector2(320, 2164)
 texture = ExtResource("10_bg184")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Text"]
@@ -133,6 +134,8 @@ nintendo
 Music Sources:
 remix.kwed.org
 modarchive.org
+SMWCentral.net
+demoscene
 newgrounds
 nintendo
 team shanghai alice
@@ -144,6 +147,8 @@ Team Shanghai Alice
 public domain
 Trick nostalgie
 
+
+--Engine credits--
 
 Powered by Thunder engine
 developed by:
@@ -188,9 +193,13 @@ k, jose - a light waltz
 
 
 
+
+
+
 This is merely basic credits.
-For more details on characters who appear
-as well as developer commentary, please beat the game!"
+For more details on characters who appear in the game,
+developer commentary, and special thanks,
+please beat the game and explore the save game room!"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0

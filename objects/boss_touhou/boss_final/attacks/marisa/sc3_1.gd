@@ -25,7 +25,7 @@ const SPARK_WARNING = preload("res://objects/boss_touhou/boss_final/kevin_marisa
 @export var noise_speed: float = 360.0
 @export var noise_interval_sec: float = 1.0
 @export var noise_shoot_delay_sec: float = 0.7
-@export var noise_targeted_cone: float = 70.0
+@export var noise_targeted_cone: float = 64.0
 var noise_angle_diff_outside: float = (360.0 - noise_targeted_cone) / noise_count_outside
 var the_player: Player
 var master_spark_target: Vector2
@@ -82,7 +82,7 @@ func _physics_process(delta: float) -> void:
 			master_spark_interval.start(spark_shoot_interval)
 			var shoot_angle: float = boss.global_position.angle_to_point(master_spark_target)
 			var angle_variation: float = deg_to_rad(spark_shoot_cone / 2)
-			shoot_spark(spark_speed, shoot_angle, angle_variation, spark_scale)
+			for i in 3: shoot_spark(spark_speed, shoot_angle, angle_variation, spark_scale)
 	if start_shooting_noise and noise_bullet_interval.time_left <= 0.0:
 		noise_bullet_interval.start(noise_interval_sec)
 		play_sound(boss.bullet_shoot_1, boss, true)

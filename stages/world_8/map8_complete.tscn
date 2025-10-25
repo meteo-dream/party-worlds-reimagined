@@ -135,7 +135,7 @@ animations = [{
 [node name="MAP8COMPLETE" type="Node2D"]
 script = ExtResource("1_3m3vs")
 goto_scene = "res://stages/world_9/map9.tscn"
-world_name = "7"
+world_name = "8"
 metadata/_edit_horizontal_guides_ = [-92.0]
 
 [node name="MusicLoader" parent="." instance=ExtResource("2_7y5ss")]

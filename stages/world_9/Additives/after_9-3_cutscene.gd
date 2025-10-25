@@ -35,6 +35,7 @@ var reporter_node: Node2D
 func _ready() -> void:
 	player.completed = true
 	skippable = true
+	CustomGlobals.load_boss_status_w9()
 	use_hatate_for_cutscene = !CustomGlobals.check_for_hatate_boss()
 	disappear_label()
 	super()
@@ -48,7 +49,7 @@ func _ready() -> void:
 		var tw = get_tree().create_tween()
 		tw.tween_property(reporter_node, "global_position", AYA_END_POSITION, 5.0)
 		tw.tween_callback(func() -> void:
-			reporter_node.queue_free())
+			if is_instance_valid(reporter_node): reporter_node.queue_free())
 		start_shooting_news = true
 	else:
 		reporter_node = HATATE_SPRITE.instantiate()

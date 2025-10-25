@@ -18,7 +18,7 @@ texture = ExtResource("2_4x41h")
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
 offset_left = 24.0
 offset_right = 408.0
-offset_bottom = 384.0
+offset_bottom = 400.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/normal_font = ExtResource("2_s5kri")
@@ -28,6 +28,8 @@ text = "MUSIC SOURCES:
 [left]
  remix.kwed.org
  modarchive.org
+ SMWCentral.net
+ demoscene
  newgrounds
  nintendo
  team shanghai alice"
@@ -35,10 +37,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="." index="2"]
-offset_left = 248.0
-offset_top = 400.0
-offset_right = 777.0
-offset_bottom = 431.0
+offset_left = 256.0
+offset_top = 408.0
+offset_right = 785.0
+offset_bottom = 439.0
 rotation = -0.258309
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
 theme_override_constants/outline_size = 10

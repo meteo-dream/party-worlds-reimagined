@@ -19,6 +19,7 @@ animations = [{
 }]
 
 [node name="AyaSprite" type="AnimatedSprite2D"]
+scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_76i84")
 autoplay = "default"
 flip_h = true
@@ -26,3 +27,5 @@ script = ExtResource("2_76i84")
 use_trail = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.90735e-06, 9.53674e-07)
+scale = Vector2(4.92308, 3.07692)
