@@ -1,50 +1,93 @@
-# Mario Forever: Party Worlds Reimagined Progress Sheet
+<img width="520" height="367" alt="title" src="https://github.com/user-attachments/assets/aad31e00-92a4-42b5-a9bb-cb7d6f303ee3" />
 
-## Current Status: 97.3%
-Each new level finished = 2.7%
+# Created by <br/> <img width="540" height="100" alt="Meteo_Dream" src="https://github.com/user-attachments/assets/a669d7bf-a038-4cba-ba6e-761aba896a11" />
 
-- World 1
-  - 1-1: ***FINISHED***
-  - 1-2: ***FINISHED***
-  - 1-3: ***FINISHED***
-  - 1-4: ***FINISHED***
-- World 2
-  - 2-1: ***FINISHED***
-  - 2-2: ***FINISHED***
-  - 2-3: ***FINISHED***
-- World 3
-  - 3-1: ***FINISHED***
-  - 3-2: ***FINISHED***
-  - 3-3: ***FINISHED***
-  - 3-4: ***KEVINED***
-- World 4
-  - 4-1: ***FINISHED***
-  - 4-2: ***FINISHED***
-  - 4-3: ***FINISHED***
-  - 4-4: ***FINISHED***
-  - 4-5: ***FINISHED***
-- World 5: ***FINISHED***
-- World 6
-  - 6-1: ***FINISHED***
-  - 6-2: ***FINISHED***
-  - 6-3: ***FINISHED***
-  - 6-4: ***FINISHED***
-  - 6-5: ***FINISHED***
-- World 7
-  - 7-1: ***FINISHED***
-  - 7-2: ***FINISHED***
-  - 7-3: *UNFINISHED*
-  - 7-4: ***FINISHED***
-- World 8
-  - 8-1: ***FINISHED***
-  - 8-2: ***FINISHED***
-  - 8-3: ***FINISHED***
-- World 9
-  - 9-1: ***FINISHED***
-  - 9-2: ***FINISHED***
-  - 9-3: ***FINISHED***
-- World 10
-  - 10-1: ***FINISHED***
-  - 10-2: ***FINISHED***
-  - 10-3: ***FINISHED***
-  - 10-4: Not Started
+
+Mario Forever: Party Worlds Reimagined is a remake of Mario Forever: Party Worlds created by LooPeR231 Featuring 10 worlds of varying design and interesting new mechanics. This is a public repository that not only contains the entire `.godot` project of the game, but also features all `.rdw` files for maps for analyzing and understanding how the game was made.
+
+## Important note
+When you first launch the `.godot` project, some parsing errors might appear. **This is normal,** You have to reload your project again and it will be ready to go.
+
+## Credits
+
+Project lead: LooPeR231
+
+Level Design: LooPeR231, Yaolinggui
+
+Map Design SerafimGWS, Yaolinggui, Nerton17, Bullex
+
+Coding, Bosses, Several cutscenes: Yaolinggui
+
+## Powered by:<br/> <img width="130" height="130" alt="engine_icon" src="https://github.com/user-attachments/assets/6cb19226-8237-4860-9ce4-429505530b07" />
+
+Developed by:
+ReflexGURU
+
+JUE13
+
+Yukana
+
+
+## Graphics credits
+
+Sonikku
+
+Askywalker
+
+Yingchin soul
+
+Supersledgebro
+
+Walmaker2022
+
+Gamma v
+
+Sednaiur
+
+Crafink
+
+Shikaternia
+
+Evan.f
+
+Hellfire
+
+Electro_kun
+
+Supermany
+
+Serafimgws
+
+Random.nick
+
+Pixelator
+
+Eevee
+
+Smuglutena
+
+Nitrox
+
+Nicelife
+
+
+Mario assets: Nintendo<br/>
+Touhou assets: Team Shanghai Alice - ZUN
+
+## Audio Credits
+
+Music Sources:
+
+Remix.Kwed.org<br/>
+Modarchive.org<br/>
+Newgrounds<br/>
+Nintendo<br/>
+Team Shanghai Alice
+
+SFX Sources:
+
+The Sounds Resource<br/>
+Nintendo<br/>
+Team Shanghai Alice<br/>
+Public Domain<br/>
+Trick Nostalgie
