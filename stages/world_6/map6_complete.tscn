@@ -1,0 +1,265 @@
+[gd_scene load_steps=41 format=3 uid="uid://ct4ik4dplw4p7"]
+
+[ext_resource type="Script" uid="uid://cgmeyo2w81dhx" path="res://engine/scenes/map/scripts/map-complete.gd" id="1_didx8"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_6e720"]
+[ext_resource type="AudioStream" uid="uid://cx6jafqubqpsj" path="res://stages/main/intronumber102.mod" id="3_xv67f"]
+[ext_resource type="Texture2D" uid="uid://usm6n80msr7n" path="res://engine/scenes/map/textures/bg.png" id="4_tcm52"]
+[ext_resource type="Texture2D" uid="uid://b6hnnpa1sdewh" path="res://engine/scenes/map/textures/mario_icon.png" id="5_4l4s5"]
+[ext_resource type="Script" uid="uid://84tklnoxykkh" path="res://engine/scenes/map/scripts/player_icon.gd" id="6_otkry"]
+[ext_resource type="Texture2D" uid="uid://dipgia6816dos" path="res://gfx/map-labels/W6.png" id="7_xv67f"]
+[ext_resource type="Script" uid="uid://dr3vhptgbru6r" path="res://engine/scenes/map/scripts/world_text.gd" id="8_8sp7h"]
+[ext_resource type="Texture2D" uid="uid://blumff1vegg4c" path="res://engine/scenes/map/textures/completed.png" id="9_dogfh"]
+[ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="10_xv67f"]
+[ext_resource type="Texture2D" uid="uid://cto6jscisp1xf" path="res://gfx/maps/PW65.png" id="11_hl2ai"]
+[ext_resource type="Texture2D" uid="uid://clr8oicjc816y" path="res://FX/particle1.png" id="12_41pg7"]
+[ext_resource type="Material" uid="uid://c1nmysma0hu3o" path="res://gfx/bg-elements/all-round-particles.tres" id="13_omu4d"]
+[ext_resource type="PackedScene" uid="uid://cf0roi324girr" path="res://FX/lava-particles/lava-particles.tscn" id="14_vy4qt"]
+[ext_resource type="Shader" uid="uid://dlb60ticce5vh" path="res://FX/fg_fog/fg_fog.gdshader" id="15_wf14p"]
+[ext_resource type="Texture2D" uid="uid://dp3eh1lqvl8wj" path="res://FX/fg_fog/mask-shape.png" id="16_cqi5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uckvt"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 0, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mhhh"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 34, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udw5u"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 68, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnfoe"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 102, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7abs"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 136, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr8bi"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 170, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay1n8"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 204, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3kv5"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 238, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32jqr"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 272, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvatm"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 238, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa7hc"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 204, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dukt6"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 170, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejxv8"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 136, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uei27"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 102, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jmt0"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 68, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhowb"]
+atlas = ExtResource("9_dogfh")
+region = Rect2(0, 34, 206, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypd1c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uckvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mhhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udw5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnfoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7abs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr8bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay1n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3kv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32jqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvatm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa7hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dukt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejxv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uei27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jmt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhowb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="Curve" id="Curve_eel8j"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.52, 0.868132), 0.0, 0.0, 0, 0, Vector2(1, 0.307692), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_y48cr"]
+curve = SubResource("Curve_eel8j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l2o1k"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(200, 300, 0)
+emission_shape = 3
+emission_box_extents = Vector3(400, 1, 1)
+angle_max = 180.0
+direction = Vector3(0, 0, 0)
+spread = 40.0
+flatness = 0.055
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -10, 0)
+scale_curve = SubResource("CurveTexture_y48cr")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0j31p"]
+noise_type = 3
+seed = 4
+frequency = 0.004
+offset = Vector3(0, 300, 0)
+fractal_octaves = 3
+fractal_gain = 0.35
+fractal_weighted_strength = 0.47
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_abww3"]
+width = 640
+height = 480
+seamless = true
+seamless_blend_skirt = 0.25
+noise = SubResource("FastNoiseLite_0j31p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfqam"]
+shader = ExtResource("15_wf14p")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_abww3")
+shader_parameter/density = 1.0
+shader_parameter/speed = Vector2(0.044, 0)
+shader_parameter/freq = 1.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_f6ndl"]
+blend_mode = 3
+
+[node name="Map 6 Complete" type="Node2D"]
+script = ExtResource("1_didx8")
+goto_scene = "res://stages/world_7/map7.tscn"
+world_name = "6"
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_6e720")]
+music = Array[Resource]([ExtResource("3_xv67f")])
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("4_tcm52")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3333, 480)
+region_filter_clip_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="MarioIcon" type="Sprite2D" parent="GUI"]
+position = Vector2(581, 436)
+texture = ExtResource("5_4l4s5")
+script = ExtResource("6_otkry")
+metadata/_edit_lock_ = true
+
+[node name="WorldText" type="Sprite2D" parent="GUI"]
+position = Vector2(320, -64)
+texture = ExtResource("7_xv67f")
+script = ExtResource("8_8sp7h")
+
+[node name="BounceMarker" type="Marker2D" parent="GUI/WorldText"]
+position = Vector2(0, 146)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GUI/WorldText"]
+position = Vector2(0, 44)
+sprite_frames = SubResource("SpriteFrames_ypd1c")
+autoplay = "default"
+
+[node name="MusicOverlay" parent="." instance=ExtResource("10_xv67f")]
+text = Array[String](["wotw - intro number 102"])
+
+[node name="Pw65" type="Sprite2D" parent="."]
+position = Vector2(256, 240)
+texture = ExtResource("11_hl2ai")
+metadata/_edit_group_ = true
+
+[node name="CanvasGroup2" type="CanvasGroup" parent="Pw65"]
+position = Vector2(-1296, -240)
+fit_margin = 0.0
+clear_margin = 0.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Pw65/CanvasGroup2"]
+position = Vector2(1328, 256)
+amount = 50
+texture = ExtResource("12_41pg7")
+lifetime = 10.0
+visibility_rect = Rect2(-488, -100, 976, 200)
+process_material = ExtResource("13_omu4d")
+
+[node name="Lava Particles" parent="Pw65/CanvasGroup2" instance=ExtResource("14_vy4qt")]
+position = Vector2(960, 142)
+amount = 50
+visibility_rect = Rect2(0, 0, 672, 200)
+process_material = SubResource("ParticleProcessMaterial_l2o1k")
+
+[node name="ColorRect" type="ColorRect" parent="Pw65/CanvasGroup2"]
+material = SubResource("ShaderMaterial_jfqam")
+offset_left = 896.0
+offset_top = 94.0
+offset_right = 1696.0
+offset_bottom = 398.0
+color = Color(0, 0, 0, 1)
+
+[node name="Mask-shape2" type="Sprite2D" parent="Pw65/CanvasGroup2"]
+material = SubResource("CanvasItemMaterial_f6ndl")
+position = Vector2(1287.53, 246)
+scale = Vector2(0.937781, 0.76)
+texture = ExtResource("16_cqi5b")
+metadata/_edit_lock_ = true

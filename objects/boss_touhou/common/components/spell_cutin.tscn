@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://deqaf1juj2xh7"]
+
+[ext_resource type="Script" uid="uid://yo1we700gbtb" path="res://objects/boss_touhou/common/components/spell_cutin.gd" id="2_iefpc"]
+
+[node name="SpellCutin" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.678431)
+scale = Vector2(0.48, 0.48)
+script = ExtResource("2_iefpc")

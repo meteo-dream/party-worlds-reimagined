@@ -1,0 +1,205 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Mario Forever: Party Worlds Reimagined"
+run/main_scene="uid://bvsf4hcgm2vav"
+config/project_settings_override="user://boot.thss"
+config/features=PackedStringArray("4.4", "Mobile")
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="uid://cfs011efm6bq7"
+config/icon="res://taskbar.png"
+config/windows_native_icon="res://taskbar.ico"
+boot_splash/minimum_display_time=75
+thunder_settings/save_game_room_path="res://stages/main/save_game_room_pw.tscn"
+thunder_settings/main_menu_path="res://stages/main_menu/main_menu.tscn"
+thunder_settings/player/jumpable_when_crouching=false
+thunder_settings/player/gameover_music="res://engine/objects/players/prefabs/sounds/music-gameover.ogg"
+thunder_settings/player/default_lives=4
+thunder_settings/credits_path="res://stages/main/credits/credits_pw.tscn"
+thunder_settings/custom_mouse_cursor_path="res://engine/components/ui/generic/textures/mouse_cursor.png"
+thunder_settings/tweaks/progress_continue=true
+thunder_settings/tweaks/bowser_stomping=false
+thunder_settings/tweaks/checkpoints=true
+thunder_settings/tweaks/stomping_combo=true
+thunder_settings/tweaks/better_springboards=true
+thunder_settings/tweaks/replace_circle_transitions_with_fades=false
+thunder_settings/tweaks/enable_smooth_cam_transitions=true
+thunder_settings/tweaks/enable_blur_transitions=true
+thunder_settings/tweaks/pause_on_suit_change=false
+thunder_settings/tweaks/player_skid_animation=false
+thunder_settings/tweaks/custom_mouse_cursor=true
+thunder_settings/tweaks/load_save_from_world_start=false
+thunder_settings/tweaks/f3_keybind=true
+thunder_settings/tweaks/f4_keybind=true
+thunder_settings/tweaks/revamp_item_shop=false
+thunder_settings/tweaks/faster_save_deletion=false
+thunder_settings/tweaks/crouch_jumping=true
+
+[autoload]
+
+Audio="*res://engine/singletones/scripts/Audio.gd"
+Classes="*res://engine/singletones/scripts/Classes.gd"
+Console="*res://engine/singletones/nodes/debug/console/console.tscn"
+Data="*res://engine/singletones/scripts/Data.gd"
+GlobalViewport="*res://engine/singletones/nodes/viewport/viewport.tscn"
+Scenes="*res://engine/singletones/scripts/Scenes.gd"
+Thunder="*res://engine/singletones/scripts/Thunder.gd"
+TransitionManager="*res://engine/singletones/scripts/TransitionManager.gd"
+ProfileManager="*res://engine/singletones/scripts/ProfileManager.gd"
+SettingsManager="*res://engine/singletones/scripts/SettingsManager.gd"
+Pause="*res://engine/components/pause/pause.tscn"
+GameOverContinue="*res://engine/components/game_over/game_over_continue.tscn"
+SkinsManager="*res://engine/singletones/scripts/SkinsManager.gd"
+CharacterManager="*res://engine/singletones/scripts/CharacterManager.gd"
+CustomGlobals="*res://stages/singletones/CustomGlobals.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[debug]
+
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
+
+[dialogue_manager]
+
+runtime/balloon_path="res://objects/boss_touhou/dialogue/balloon.tscn"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
+window/vsync/buffer_count=1
+window/vsync/swapchain_count=2
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/godot-openmpt/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/localization/special_fonts/": "blue",
+"res://engine/": "red",
+"res://gfx/": "purple",
+"res://modules/": "green",
+"res://objects/": "teal",
+"res://stages/": "yellow"
+}
+
+[global_group]
+
+danmaku="A bullet."
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":4194309,"unicode":4194309,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194310,"physical_keycode":0,"key_label":4194310,"unicode":4194310,"location":0,"echo":false,"script":null)
+]
+}
+m_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+m_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+m_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+m_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+m_jump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+m_run={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+m_attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+]
+}
+m_extra={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+a_console={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194332,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+a_player_label={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":4,"position":Vector2(175, 7),"global_position":Vector2(179, 52),"factor":1.0,"button_index":3,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+a_player_label_expanded={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+a_delete={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194312,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+pause_toggle={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+a_tab={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://objects/boss_touhou/dialogue/vs_marisa.dialogue", "res://objects/boss_touhou/dialogue/vs_reimu.dialogue")
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="enemy"
+2d_physics/layer_3="item"
+2d_physics/layer_4="general"
+2d_physics/layer_5="block_for_players"
+2d_physics/layer_6="block_for_enemies"
+2d_physics/layer_7="block_for_items"
+2d_physics/layer_8="fluid"
+
+[physics]
+
+common/max_physics_steps_per_frame=4
+common/physics_interpolation=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://c23bje80wt1an"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_nnhi2"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_tbt42"]
+[ext_resource type="Texture2D" uid="uid://ch27r4qbdmfuy" path="res://stages/main/credits/textures/levelpng5.png" id="3_l42np"]
+[ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="4_tbt42"]
+
+[node name="SectionFinalBoss" instance=ExtResource("1_nnhi2")]
+life_time_sec = 3.6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+offset_top = 224.0
+offset_right = 560.0
+offset_bottom = 400.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_tbt42")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "9-3 & final boss coding,
+several cutscenes and credits:
+
+[color=95FBFF]yaolinggui[/color]"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RealdrawScreenshot" type="Sprite2D" parent="." index="1"]
+z_index = -1
+position = Vector2(408, 192)
+rotation = 0.123918
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_l42np")
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = -16.0
+offset_top = 80.0
+offset_right = 624.0
+offset_bottom = 111.0
+rotation = -0.123918
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_tbt42")
+theme_override_font_sizes/font_size = 27
+text = "1-4: the calling"
+horizontal_alignment = 1

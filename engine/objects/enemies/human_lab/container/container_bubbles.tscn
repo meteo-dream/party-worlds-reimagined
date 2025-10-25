@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckblbi2g1ps1y"]
+
+[ext_resource type="PackedScene" uid="uid://bwy11odywkm4d" path="res://engine/objects/enemies/human_lab/container/container.tscn" id="1_vxiw2"]
+[ext_resource type="Script" uid="uid://cj64y6gtsdjw8" path="res://engine/objects/enemies/human_lab/container/container_bubbles.gd" id="2_v6nvq"]
+[ext_resource type="Texture2D" uid="uid://bbmu3pd1umaal" path="res://engine/objects/enemies/human_lab/container/textures/container_hollow.png" id="3_ancyg"]
+[ext_resource type="PackedScene" uid="uid://eyqjecs0sfv0" path="res://engine/objects/effects/bubble/bubble_bg_generator.tscn" id="3_yn4c8"]
+[ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="4_pqph3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwbb2"]
+size = Vector2(68, 24)
+
+[node name="ContainerBubbles" instance=ExtResource("1_vxiw2")]
+script = ExtResource("2_v6nvq")
+
+[node name="BubbleBGGenerator" parent="." index="1" instance=ExtResource("3_yn4c8")]
+position = Vector2(0, 48)
+radius_x = 28.0
+gen_z_index = 0
+min_speed = 20.0
+max_speed = 200.0
+delay_range_sec = Vector2(0.4, 1)
+
+[node name="ContainerHollow" type="Sprite2D" parent="." index="2"]
+z_index = 1
+texture = ExtResource("3_ancyg")
+
+[node name="Node2D" type="Node2D" parent="." index="3"]
+script = ExtResource("4_pqph3")
+amplitude = Vector2(0, 12)
+random_phase = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" index="0"]
+
+[node name="Area2D" type="Area2D" parent="." index="4" groups=["#no_bubbles"]]
+visible = false
+collision_layer = 4096
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, -56)
+shape = SubResource("RectangleShape2D_gwbb2")

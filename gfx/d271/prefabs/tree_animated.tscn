@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckqcehme2xf7g"]
+
+[ext_resource type="Texture2D" uid="uid://bmasn65vobox6" path="res://engine/tilesets/overworld/tree_animated.png" id="1_asv84"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8elo"]
+atlas = ExtResource("1_asv84")
+region = Rect2(0, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh0c7"]
+atlas = ExtResource("1_asv84")
+region = Rect2(36, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8itno"]
+atlas = ExtResource("1_asv84")
+region = Rect2(72, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvoem"]
+atlas = ExtResource("1_asv84")
+region = Rect2(108, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqk62"]
+atlas = ExtResource("1_asv84")
+region = Rect2(144, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua5e5"]
+atlas = ExtResource("1_asv84")
+region = Rect2(180, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsy8q"]
+atlas = ExtResource("1_asv84")
+region = Rect2(216, 0, 36, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6tl4"]
+atlas = ExtResource("1_asv84")
+region = Rect2(252, 0, 36, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5k406"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8elo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh0c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8itno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvoem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqk62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua5e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsy8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6tl4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = -3
+sprite_frames = SubResource("SpriteFrames_5k406")
+autoplay = "default"

@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2y7nd2ip214k"]
+
+[ext_resource type="Script" uid="uid://b63jax08qa1lr" path="res://objects/w8_friendly_cloud/components/w8_friendly_cloud.gd" id="1_pte6p"]
+[ext_resource type="Texture2D" uid="uid://drlpxpqs5y6iw" path="res://objects/w8_friendly_cloud/texture/8-1friendly_cloud.png" id="1_todsi"]
+[ext_resource type="PackedScene" uid="uid://5hrgihonj66u" path="res://objects/w8_friendly_cloud/components/falling_fire_flower.tscn" id="2_jt4wg"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="3_bcn3v"]
+
+[sub_resource type="Resource" id="Resource_5tt8e"]
+script = ExtResource("3_bcn3v")
+creation_nodepack = ExtResource("2_jt4wg")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pte6p"]
+atlas = ExtResource("1_todsi")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uj37"]
+atlas = ExtResource("1_todsi")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt4wg"]
+atlas = ExtResource("1_todsi")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcn3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pte6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uj37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt4wg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="W8FriendlyCloud" type="Node2D"]
+z_index = 1
+script = ExtResource("1_pte6p")
+bonus_to_drop = SubResource("Resource_5tt8e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bcn3v")
+autoplay = "default"

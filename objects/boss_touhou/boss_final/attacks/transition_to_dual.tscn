@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2tl00lommylo"]
+
+[ext_resource type="Script" uid="uid://bnwgnlsltfjpp" path="res://objects/boss_touhou/boss_final/attacks/transition_to_dual.gd" id="1_051ua"]
+
+[node name="TransitionToDual" type="Node"]
+script = ExtResource("1_051ua")

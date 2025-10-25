@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://xy2xj3ffcwyr"]
+
+[ext_resource type="Texture2D" uid="uid://7s8mu1plluqg" path="res://gfx/worldfinal/cutscene/vulkan_sign1.png" id="1_6yjf8"]
+[ext_resource type="Texture2D" uid="uid://c5plvl8vmk0h0" path="res://gfx/worldfinal/cutscene/vulkan_sign2.png" id="2_fvi15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jwv8"]
+atlas = ExtResource("1_6yjf8")
+region = Rect2(0, 0, 404, 151)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jypj4"]
+atlas = ExtResource("2_fvi15")
+region = Rect2(0, 0, 404, 151)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqxfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jwv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jypj4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
+}]
+
+[node name="VulkanSign" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_kqxfl")
+autoplay = "default"
+frame_progress = 0.696554

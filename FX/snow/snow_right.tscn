@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgua1sc86esc"]
+
+[ext_resource type="PackedScene" uid="uid://b2uwsvx31kct1" path="res://FX/snow/snow_left.tscn" id="1_33oq5"]
+[ext_resource type="Texture2D" uid="uid://dt24qjka222vn" path="res://gfx/world5/texture.png" id="2_tn568"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m13rv"]
+atlas = ExtResource("2_tn568")
+region = Rect2(128, 320, 32, 16)
+
+[node name="SnowRight" instance=ExtResource("1_33oq5")]
+
+[node name="Sprite2D" parent="." index="1"]
+texture = SubResource("AtlasTexture_m13rv")

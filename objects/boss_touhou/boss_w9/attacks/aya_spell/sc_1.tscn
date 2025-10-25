@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0mx3j775xew1"]
+
+[ext_resource type="Script" uid="uid://c1vfd4as8esny" path="res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_1.gd" id="1_yn8l3"]
+
+[node name="sc_1" type="Node"]
+script = ExtResource("1_yn8l3")
+is_spell_card = true
+spellcard_name = "Reporting \"Aya Shameimaru's Coercive Coverage\""
+spellcard_time = 26.0
+spellcard_score_bonus = 10000
+
+[node name="ViewfinderWaitTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="ViewfinderNoShowTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="IntervalTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://bjmpdsqqawx6c"]
+
+[ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="1_plntc"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_0gr63"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_5dc2r"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_q1i6p"]
+[ext_resource type="Texture2D" uid="uid://q85ypqfeniyv" path="res://gfx/worldfinal/10-2/science_bro.png" id="5_0gr63"]
+
+[sub_resource type="Resource" id="Resource_urdc8"]
+resource_local_to_scene = true
+script = ExtResource("4_q1i6p")
+creation_nodepack = ExtResource("2_0gr63")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, 0)
+}
+custom_script = ExtResource("3_5dc2r")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dc2r"]
+atlas = ExtResource("5_0gr63")
+region = Rect2(0, 0, 33, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1i6p"]
+atlas = ExtResource("5_0gr63")
+region = Rect2(0, 48, 33, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urdc8"]
+atlas = ExtResource("5_0gr63")
+region = Rect2(0, 0, 33, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ssnh"]
+atlas = ExtResource("5_0gr63")
+region = Rect2(0, 48, 33, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rgp23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dc2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1i6p")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urdc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ssnh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="FireScienceBro" instance=ExtResource("1_plntc")]
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+stomping_creation = SubResource("Resource_urdc8")
+killing_creation = SubResource("Resource_urdc8")
+
+[node name="Sprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_rgp23")
+animation = &"default"

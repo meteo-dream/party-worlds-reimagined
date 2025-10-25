@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=3 uid="uid://b0goi5vj5njki"]
+
+[ext_resource type="Script" uid="uid://cgicycx2fq6c3" path="res://stages/world_final/Additives/8-2/scripted/acid_drown_cutscene_handler.gd" id="1_w510u"]
+[ext_resource type="AudioStream" uid="uid://dswpnm2gg1l2x" path="res://stages/world_final/Additives/8-2/scripted/sounds/acid_rise.wav" id="2_mbish"]
+[ext_resource type="AudioStream" uid="uid://7oluidps33l4" path="res://stages/world_final/Additives/8-2/scripted/sounds/cutscene_trigger.wav" id="3_0xexw"]
+[ext_resource type="PackedScene" uid="uid://v1d7jaq72wuu" path="res://stages/world_final/Additives/8-2/scripted/gate_pair.tscn" id="4_1aj86"]
+[ext_resource type="PackedScene" uid="uid://qshc1gd1jl67" path="res://stages/world_final/Additives/8-2/acid_area.tscn" id="5_vgub7"]
+[ext_resource type="PackedScene" uid="uid://ybg3g07loy68" path="res://stages/world_final/Additives/8-2/enemies/paratroopas/acid_koopa_paratroopa_green.tscn" id="6_dojkf"]
+[ext_resource type="Script" uid="uid://dwvajgftg3du5" path="res://stages/world_final/Additives/8-2/scripted/enemies/cutscene_paratroopa.gd" id="7_35bng"]
+[ext_resource type="Script" uid="uid://cp3ol1ey6deg" path="res://stages/world_final/Additives/8-2/scripted/enemies/cutscene_paratroopa2.gd" id="8_w5xr1"]
+[ext_resource type="PackedScene" uid="uid://5pxcqsxhh68s" path="res://stages/world_final/Additives/8-2/enemies/koopas/acid_koopa_red.tscn" id="10_7k8x0"]
+[ext_resource type="Script" uid="uid://cdbbjed427r5c" path="res://stages/world_final/Additives/8-2/scripted/enemies/cutscene_grounded.gd" id="11_ienks"]
+[ext_resource type="Script" uid="uid://b1ct5cx8cmf3d" path="res://stages/world_final/Additives/8-2/scripted/enemies/cutscene_grounded2.gd" id="11_w510u"]
+[ext_resource type="PackedScene" uid="uid://dp2mvur34jdbv" path="res://engine/objects/enemies/paratroopas/paratroopa_green.tscn" id="12_jt2y6"]
+[ext_resource type="Script" uid="uid://cmkmwt3ow33ku" path="res://stages/world_final/Additives/8-2/scripted/enemies/cutscene_first_paratroopa.gd" id="13_o7q82"]
+[ext_resource type="PackedScene" uid="uid://b24hnsctae1a0" path="res://engine/objects/enemies/koopas/koopa_red.tscn" id="14_dpw03"]
+[ext_resource type="Script" uid="uid://uprbodox2jxe" path="res://stages/world_final/Additives/8-2/scripted/enemies/cutscene_first_grounded.gd" id="15_yob0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpq7"]
+size = Vector2(170, 72)
+
+[node name="AcidDrownCutsceneHandler" type="Node2D"]
+script = ExtResource("1_w510u")
+acid_rise_distance = 352.0
+acid_rise_time = 1.0
+sound_effect = ExtResource("2_mbish")
+camera_scroll_to_x_coordinate = 9888.0
+trigger_sound_effect = ExtResource("3_0xexw")
+
+[node name="GatePair" parent="." instance=ExtResource("4_1aj86")]
+position = Vector2(64, 160)
+is_part_of_a_cutscene = true
+
+[node name="AcidCutscene" parent="." instance=ExtResource("5_vgub7")]
+offset_left = 192.0
+offset_top = 416.0
+offset_right = 832.0
+offset_bottom = 896.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="IdiotPoint1" type="Node2D" parent="."]
+position = Vector2(272, 224)
+
+[node name="IdiotPoint2" type="Node2D" parent="."]
+position = Vector2(464, 272)
+
+[node name="IdiotPoint3" type="Node2D" parent="."]
+position = Vector2(592, 272)
+
+[node name="IdiotPoint4" type="Node2D" parent="."]
+position = Vector2(784, 288)
+
+[node name="AcidKoopaParatroopaGreen" parent="." instance=ExtResource("6_dojkf")]
+position = Vector2(-128, 1280)
+script = ExtResource("7_35bng")
+
+[node name="AcidKoopaParatroopaGreen2" parent="." instance=ExtResource("6_dojkf")]
+position = Vector2(-96, 1280)
+script = ExtResource("8_w5xr1")
+
+[node name="AcidKoopaRed" parent="." instance=ExtResource("10_7k8x0")]
+position = Vector2(-32, 1280)
+script = ExtResource("11_ienks")
+
+[node name="AcidKoopaRed2" parent="." instance=ExtResource("10_7k8x0")]
+position = Vector2(-64, 1280)
+script = ExtResource("11_w510u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 1200)
+collision_layer = 112
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-88, 144)
+shape = SubResource("RectangleShape2D_kxpq7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-232, 72)
+shape = SubResource("RectangleShape2D_kxpq7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(72, 72)
+shape = SubResource("RectangleShape2D_kxpq7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-80, 0)
+shape = SubResource("RectangleShape2D_kxpq7")
+
+[node name="KoopaParatroopaGreen" parent="." instance=ExtResource("12_jt2y6")]
+position = Vector2(272, 224)
+script = ExtResource("13_o7q82")
+
+[node name="KoopaParatroopaGreen2" parent="." instance=ExtResource("12_jt2y6")]
+position = Vector2(784, 288)
+script = ExtResource("13_o7q82")
+
+[node name="KoopaRed" parent="." instance=ExtResource("14_dpw03")]
+position = Vector2(464, 272)
+script = ExtResource("15_yob0f")
+
+[node name="KoopaRed2" parent="." instance=ExtResource("14_dpw03")]
+position = Vector2(592, 272)
+script = ExtResource("15_yob0f")
+
+[connection signal="acid_receded" from="." to="AcidKoopaParatroopaGreen" method="_on_acid_drown_cutscene_handler_acid_receded"]
+[connection signal="acid_receded" from="." to="AcidKoopaParatroopaGreen2" method="_on_acid_drown_cutscene_handler_acid_receded"]
+[connection signal="acid_receded" from="." to="AcidKoopaRed" method="_on_acid_drown_cutscene_handler_acid_receded"]
+[connection signal="acid_receded" from="." to="AcidKoopaRed2" method="_on_acid_drown_cutscene_handler_acid_receded"]
+[connection signal="enemy_corrosion" from="." to="AcidKoopaParatroopaGreen" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="AcidKoopaParatroopaGreen2" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="AcidKoopaRed" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="AcidKoopaRed2" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="KoopaParatroopaGreen" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="KoopaParatroopaGreen2" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="KoopaRed" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="enemy_corrosion" from="." to="KoopaRed2" method="_on_acid_drown_cutscene_handler_enemy_corrosion"]
+[connection signal="gate_adjustments" from="." to="GatePair" method="_on_acid_drown_cutscene_handler_gate_adjustments"]
+[connection signal="open_second_gate" from="." to="GatePair" method="_on_acid_drown_cutscene_handler_open_second_gate"]
+[connection signal="finish_first_movement" from="GatePair" to="." method="_on_gate_pair_finish_first_movement"]
+[connection signal="player_entered" from="GatePair" to="." method="_on_gate_pair_player_entered"]

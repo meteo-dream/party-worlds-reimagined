@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxn6xu7nrb8sm"]
+
+[ext_resource type="Texture2D" uid="uid://cuas51giljmrm" path="res://gfx/world6/6-2/neons/boomboom_bar.png" id="1_tug3s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fql8"]
+atlas = ExtResource("1_tug3s")
+region = Rect2(0, 0, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4a3f"]
+atlas = ExtResource("1_tug3s")
+region = Rect2(0, 96, 160, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52jww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fql8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4a3f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_52jww")
+autoplay = "default"

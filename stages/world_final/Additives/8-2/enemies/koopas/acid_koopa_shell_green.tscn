@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://cspc2bmwhmgqe"]
+
+[ext_resource type="PackedScene" uid="uid://ctpsv143q5pjv" path="res://engine/objects/enemies/koopas/koopa_shell_green.tscn" id="1_oyxom"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_m4sqm"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_yrtbn"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_tiqfy"]
+[ext_resource type="Texture2D" uid="uid://c7j06mg3yweto" path="res://gfx/worldfinal/10-2/acid_greenkoopashell.png" id="5_m4sqm"]
+
+[sub_resource type="Resource" id="Resource_qvi73"]
+resource_local_to_scene = true
+script = ExtResource("4_tiqfy")
+creation_nodepack = ExtResource("2_m4sqm")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("3_yrtbn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrtbn"]
+atlas = ExtResource("5_m4sqm")
+region = Rect2(0, 0, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiqfy"]
+atlas = ExtResource("5_m4sqm")
+region = Rect2(34, 0, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvi73"]
+atlas = ExtResource("5_m4sqm")
+region = Rect2(68, 0, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oprq"]
+atlas = ExtResource("5_m4sqm")
+region = Rect2(102, 0, 34, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsr2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrtbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiqfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvi73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oprq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="AcidKoopaShellGreen" instance=ExtResource("1_oyxom")]
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+killing_creation = SubResource("Resource_qvi73")
+
+[node name="Sprite" parent="." index="3"]
+sprite_frames = SubResource("SpriteFrames_qsr2x")

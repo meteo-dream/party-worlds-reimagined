@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://crba53m0glejl"]
+
+[ext_resource type="Texture2D" uid="uid://lo4ctvmf5s6v" path="res://gfx/world4/4-4.png" id="1_qwp7d"]
+
+[sub_resource type="Gradient" id="Gradient_23cwt"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.142857, 0.493506, 0.694805)
+colors = PackedColorArray(1, 1, 1, 1, 0.31, 0.31, 0.31, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8q315"]
+gradient = SubResource("Gradient_23cwt")
+width = 300
+height = 300
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+metadata/_snap_enabled = true
+
+[node name="Lamp" type="Sprite2D"]
+z_index = -1
+position = Vector2(0, -64)
+texture = ExtResource("1_qwp7d")
+region_enabled = true
+region_rect = Rect2(352, 96, 32, 128)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -36)
+color = Color(1, 0.710333, 0.21, 1)
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_8q315")
+metadata/_edit_lock_ = true

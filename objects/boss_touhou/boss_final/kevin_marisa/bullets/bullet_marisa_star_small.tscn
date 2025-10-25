@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqrnqx6oalc6y"]
+
+[ext_resource type="PackedScene" uid="uid://ck7ej4hvlg5fo" path="res://objects/boss_touhou/common/bullet_base_marisa.tscn" id="1_00cec"]
+
+[node name="BulletMarisaStarSmall" instance=ExtResource("1_00cec")]
+accelerate_at_start = false
+accelerate_after_sec = 1.0
+accelerate_time_sec = 1.0
+self_rotate_speed = 0.08
+self_rotate_direction = 0
+
+[node name="Sprite" parent="." index="1"]
+frame = 160
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(5.96046e-08, -0.5)
+scale = Vector2(1.1, 1.05)

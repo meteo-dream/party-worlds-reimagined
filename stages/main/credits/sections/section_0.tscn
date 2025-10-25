@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd05p652gur6c"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_dlqef"]
+[ext_resource type="Texture2D" uid="uid://80bqar8bvl72" path="res://stages/main/credits/textures/title.png" id="2_yhtm6"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="3_3qno5"]
+
+[node name="Section0" instance=ExtResource("1_dlqef")]
+life_time_sec = 4.5
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(312, 200)
+texture = ExtResource("2_yhtm6")
+
+[node name="Label" type="Label" parent="." index="1"]
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 408.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_3qno5")
+theme_override_font_sizes/font_size = 23
+text = "Credits music: k, jose - a light waltz"
+horizontal_alignment = 1
+vertical_alignment = 1

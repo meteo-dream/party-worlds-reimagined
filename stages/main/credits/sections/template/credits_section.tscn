@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://p23jgidr27o5"]
+
+[ext_resource type="Script" uid="uid://drgmuff1gd8fr" path="res://stages/main/credits/sections/template/credits_section.gd" id="1_awjce"]
+
+[node name="CreditsSection" type="Node2D"]
+script = ExtResource("1_awjce")
+appear_time_sec = 0.8
+disappear_time_sec = 0.8

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://pjgrb3lt8adf"]
+
+[ext_resource type="Script" uid="uid://blwfm4kgh4gsu" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc0_1.gd" id="1_dfmtv"]
+
+[node name="Sc0_Start" type="Node"]
+script = ExtResource("1_dfmtv")
+is_new_spell_card = true
+
+[node name="WanderInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3txvq2pb8wvp"]
+
+[ext_resource type="Script" uid="uid://bjnpsujy3pspe" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc1_1.gd" id="1_nblxg"]
+
+[node name="Sc1_Start" type="Node"]
+script = ExtResource("1_nblxg")
+is_new_spell_card = true
+is_spell_card = true
+spellcard_name = "Nether Sign \"Scarlet Netherworld\""
+
+[node name="RainTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="RemiInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

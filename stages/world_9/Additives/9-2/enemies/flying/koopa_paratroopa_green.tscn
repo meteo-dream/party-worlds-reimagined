@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwxg52eue22xr"]
+
+[ext_resource type="PackedScene" uid="uid://dp2mvur34jdbv" path="res://engine/objects/enemies/paratroopas/paratroopa_green.tscn" id="1_bbliy"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_3q2ud"]
+[ext_resource type="PackedScene" uid="uid://cno8qn60lpnvv" path="res://engine/objects/enemies/koopas/koopa_green.tscn" id="2_diflj"]
+[ext_resource type="Script" uid="uid://rn8sjw8x5b2w" path="res://stages/world_9/Additives/9-2/enemies/flying/paratroopa_spawn_koopa.gd" id="3_ckwrq"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_diflj"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_ckwrq"]
+
+[sub_resource type="Resource" id="Resource_0wxij"]
+script = ExtResource("4_ckwrq")
+creation_nodepack = ExtResource("2_diflj")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"life_time": 4.0
+}
+custom_script = ExtResource("3_ckwrq")
+
+[sub_resource type="Resource" id="Resource_dvep3"]
+resource_local_to_scene = true
+script = ExtResource("4_ckwrq")
+creation_nodepack = ExtResource("2_3q2ud")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite/Dead"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("3_diflj")
+
+[node name="KoopaParatroopaGreen" instance=ExtResource("1_bbliy")]
+phase = 150.228
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+stomping_creation = SubResource("Resource_0wxij")
+killing_creation = SubResource("Resource_dvep3")

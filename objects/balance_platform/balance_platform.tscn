@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3ra08356pxkg"]
+
+[ext_resource type="Script" uid="uid://b0kk3au4hliec" path="res://objects/balance_platform/balance_platform.gd" id="1_1yqr4"]
+[ext_resource type="Texture2D" uid="uid://b0lmhrk7erkld" path="res://engine/objects/platform/platform.png" id="2_3kals"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qitl2"]
+size = Vector2(288, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uii33"]
+size = Vector2(288, 1)
+
+[node name="BalancePlatform" type="AnimatableBody2D"]
+collision_layer = 112
+collision_mask = 0
+sync_to_physics = false
+script = ExtResource("1_1yqr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_qitl2")
+one_way_collision = true
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
+visible = false
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_uii33")
+target_position = Vector2(0, -1)
+max_results = 16
+collision_mask = 7
+
+[node name="Sprites" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Sprite1" type="Sprite2D" parent="Sprites"]
+texture = ExtResource("2_3kals")
+
+[node name="Sprite2" type="Sprite2D" parent="Sprites"]
+position = Vector2(96, 0)
+texture = ExtResource("2_3kals")
+
+[node name="Sprite3" type="Sprite2D" parent="Sprites"]
+position = Vector2(-96, 0)
+texture = ExtResource("2_3kals")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+modulate = Color(1, 1, 1, 0.0196078)
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(14.4, 0.8)
+metadata/_edit_lock_ = true

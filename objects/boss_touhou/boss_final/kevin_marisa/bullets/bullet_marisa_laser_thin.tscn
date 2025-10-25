@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://clibjtd1loe24"]
+
+[ext_resource type="PackedScene" uid="uid://ck7ej4hvlg5fo" path="res://objects/boss_touhou/common/bullet_base_marisa.tscn" id="1_7gyem"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="2_qdg2b"]
+[ext_resource type="Script" uid="uid://c314pjwwowdx5" path="res://objects/boss_touhou/boss_final/kevin_marisa/bullets/bullet_marisa_laser_thin.gd" id="2_ure1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gyem"]
+size = Vector2(10, 1027)
+
+[node name="BulletMarisaLaserThin" instance=ExtResource("1_7gyem")]
+script = ExtResource("2_ure1g")
+use_as_warning = false
+desired_scale = 1.0
+wait_time = 1.0
+resize_time = 0.25
+life_time = 1.0
+disappear_time = 0.25
+accelerate_at_start = false
+accelerate_after_sec = 1.0
+accelerate_time_sec = 1.0
+selected_color = 5
+self_rotate_direction = 0
+deletable_bullet = false
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -513.5)
+shape = SubResource("RectangleShape2D_7gyem")
+metadata/_edit_lock_ = true
+
+[node name="Sprite" parent="." index="1"]
+material = ExtResource("2_qdg2b")
+position = Vector2(0, -513.5)
+scale = Vector2(1.35, 85.5833)
+hframes = 1
+vframes = 1
+frame = 0
+region_enabled = true
+region_rect = Rect2(0, 2, 16, 12)
+metadata/_edit_lock_ = true
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(0, -512)
+scale = Vector2(1.1, 51.8)
+metadata/_edit_lock_ = true

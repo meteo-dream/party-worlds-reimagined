@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8sn3xyjbfwl5"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_py3gq"]
+[ext_resource type="Script" uid="uid://dagygr7w7f5o4" path="res://objects/boss_touhou/boss_w9/attacks/bullets/bullet_arrow_red.gd" id="2_biljm"]
+
+[node name="BulletArrowPurple" instance=ExtResource("1_py3gq")]
+script = ExtResource("2_biljm")
+bullet_erase_color = Color(0.698039, 0, 1, 1)
+bullet_erase_sound = null
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(1, 3.55271e-15)
+rotation = 1.5708
+frame = 20
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+position = Vector2(3.57628e-07, 0.740737)
+rotation = -1.5708
+frame = 2
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(0, 5.96046e-08)
+scale = Vector2(1, 1.1)

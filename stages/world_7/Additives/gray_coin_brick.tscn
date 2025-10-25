@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://r6cjy42kbtru"]
+
+[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="1_kduk5"]
+[ext_resource type="Texture2D" uid="uid://dpvggkvs8pffa" path="res://engine/objects/bumping_blocks/brick/textures/brick_grey.png" id="2_3f17j"]
+[ext_resource type="Texture2D" uid="uid://cv4ajosu5y5xl" path="res://engine/objects/items/coin/texture.png" id="2_mo70f"]
+[ext_resource type="Texture2D" uid="uid://bullhcct0hurt" path="res://engine/objects/bumping_blocks/question_block/textures/empty.png" id="3_7bfcr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bfcr"]
+atlas = ExtResource("2_3f17j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sdwb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bfcr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7bfcr")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3wug"]
+atlas = ExtResource("2_mo70f")
+region = Rect2(0, 0, 32, 32)
+
+[node name="Brick" instance=ExtResource("1_kduk5")]
+
+[node name="AnimatedSprite2D" parent="Sprites" index="1"]
+sprite_frames = SubResource("SpriteFrames_1sdwb")
+
+[node name="ItemDisplayer" parent="Sprites" index="2"]
+texture = SubResource("AtlasTexture_t3wug")

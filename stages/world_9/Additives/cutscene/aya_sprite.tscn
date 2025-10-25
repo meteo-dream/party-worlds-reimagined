@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7kapdwkrccd5"]
+
+[ext_resource type="Texture2D" uid="uid://d3avt1sikhgsa" path="res://objects/boss_touhou/boss_w9/textures/aya_boss.png" id="1_x6613"]
+[ext_resource type="Script" uid="uid://2df2uhom7uml" path="res://stages/world_9/Additives/cutscene/aya_sprite.gd" id="2_76i84"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6613"]
+atlas = ExtResource("1_x6613")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76i84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6613")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AyaSprite" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_76i84")
+autoplay = "default"
+flip_h = true
+script = ExtResource("2_76i84")
+use_trail = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://crok5baqatjtr"]
+
+[ext_resource type="Script" uid="uid://ggjv2hp0vfhn" path="res://objects/boss_touhou/cutscene/flashbang.gd" id="1_ltlc1"]
+
+[sub_resource type="Gradient" id="Gradient_lbd2c"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ltlc1"]
+gradient = SubResource("Gradient_lbd2c")
+
+[node name="Flashbang" type="Sprite2D"]
+scale = Vector2(12, 9.5)
+texture = SubResource("GradientTexture2D_ltlc1")
+script = ExtResource("1_ltlc1")

@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://dc3sb64g14o8s"]
+
+[ext_resource type="Shader" uid="uid://c1yibfdu766i8" path="res://engine/shaders/hsv_global.gdshader" id="1_d5biv"]
+[ext_resource type="Texture2D" uid="uid://bggmpt116re46" path="res://gfx/maps/w8-2_p2.png" id="2_aqgk0"]
+[ext_resource type="Texture2D" uid="uid://doixtnbb5jcfr" path="res://gfx/maps/w8-2_up1.png" id="3_aqgk0"]
+[ext_resource type="Texture2D" uid="uid://b2mvgvdxclkbp" path="res://gfx/maps/w8-2_up2.png" id="3_e4tqw"]
+[ext_resource type="Texture2D" uid="uid://bmqnrema6n7vh" path="res://gfx/maps/w8-2_up3.png" id="4_87e2n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e4tqw"]
+shader = ExtResource("1_d5biv")
+shader_parameter/hue = -0.18
+shader_parameter/saturation = -0.157
+shader_parameter/value = -0.067
+
+[sub_resource type="Gradient" id="Gradient_23cwt"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.142857, 0.493506, 0.694805)
+colors = PackedColorArray(1, 1, 1, 1, 0.31, 0.31, 0.31, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aqgk0"]
+gradient = SubResource("Gradient_23cwt")
+width = 300
+height = 300
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_8y18l"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0.666667, 1, 0.541176)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gudmx"]
+gradient = SubResource("Gradient_8y18l")
+width = 640
+height = 480
+
+[node name="Map8-2" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+offset = Vector2(1480, 192)
+transform = Transform2D(1, 0, 0, 1, 1480, 192)
+follow_viewport_enabled = true
+
+[node name="W8-2Up1" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_e4tqw")
+position = Vector2(-1, -2)
+texture = ExtResource("3_aqgk0")
+
+[node name="W8-2Up2" type="Sprite2D" parent="CanvasLayer"]
+z_index = -1
+position = Vector2(-1, -2)
+texture = ExtResource("3_e4tqw")
+
+[node name="W8-2Up3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-1, -2)
+texture = ExtResource("4_87e2n")
+
+[node name="PointLight2D" type="PointLight2D" parent="CanvasLayer"]
+position = Vector2(-447, 39)
+scale = Vector2(0.3, 0.3)
+color = Color(1, 0.710333, 0.21, 1)
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_aqgk0")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="CanvasLayer"]
+position = Vector2(-283, 1)
+scale = Vector2(0.3, 0.3)
+color = Color(1, 0.710333, 0.21, 1)
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_aqgk0")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D3" type="PointLight2D" parent="CanvasLayer"]
+position = Vector2(-117, 1)
+scale = Vector2(0.3, 0.3)
+color = Color(1, 0.710333, 0.21, 1)
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_aqgk0")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D4" type="PointLight2D" parent="CanvasLayer"]
+position = Vector2(423, 40)
+scale = Vector2(0.3, 0.3)
+color = Color(1, 0.710333, 0.21, 1)
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_aqgk0")
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+color = Color(0.278431, 0.278431, 0.278431, 1)
+metadata/_edit_lock_ = true
+
+[node name="ForeDarkness" type="ParallaxBackground" parent="CanvasLayer"]
+layer = 2
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ForeDarkness"]
+position = Vector2(1480, 192)
+motion_scale = Vector2(0, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="CanvasLayer/ForeDarkness/ParallaxLayer2"]
+position = Vector2(-1.49963, 2.98023e-06)
+scale = Vector2(1.53906, 0.445833)
+energy = 0.18
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_gudmx")
+
+[node name="W8-2P2" type="Sprite2D" parent="."]
+position = Vector2(200, 174)
+texture = ExtResource("2_aqgk0")
+metadata/_edit_lock_ = true

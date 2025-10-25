@@ -1,0 +1,235 @@
+[gd_scene load_steps=22 format=3 uid="uid://b270euhmgq4m3"]
+
+[ext_resource type="Script" uid="uid://b2miajjwaop0p" path="res://engine/scenes/map/scripts/map.gd" id="1_id3kk"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_m73pa"]
+[ext_resource type="AudioStream" uid="uid://rcwg35r3s5wl" path="res://stages/world_final/music/repeating_patterns.xm" id="3_3cpwd"]
+[ext_resource type="Texture2D" uid="uid://usm6n80msr7n" path="res://engine/scenes/map/textures/bg.png" id="4_qt3n5"]
+[ext_resource type="PackedScene" uid="uid://w4jc7nb1lcsy" path="res://engine/scenes/map/prefabs/player.tscn" id="5_4m6fc"]
+[ext_resource type="Texture2D" uid="uid://dm3grrg4aj6rm" path="res://gfx/maps/w10_full.png" id="5_m73pa"]
+[ext_resource type="PackedScene" uid="uid://beu6ovtvrvpfc" path="res://engine/scenes/map/prefabs/dot.tscn" id="6_rmrg8"]
+[ext_resource type="Script" uid="uid://w38wmhi8lagh" path="res://engine/scenes/map/scripts/map_camera.gd" id="7_dcpwj"]
+[ext_resource type="Texture2D" uid="uid://cgvk2oduj20ta" path="res://gfx/map-labels/W10.png" id="8_id3kk"]
+[ext_resource type="Script" uid="uid://dr3vhptgbru6r" path="res://engine/scenes/map/scripts/world_text.gd" id="9_x7512"]
+[ext_resource type="Texture2D" uid="uid://b6hnnpa1sdewh" path="res://engine/scenes/map/textures/mario_icon.png" id="10_r6ww2"]
+[ext_resource type="Script" uid="uid://84tklnoxykkh" path="res://engine/scenes/map/scripts/player_icon.gd" id="11_cxmon"]
+[ext_resource type="Texture2D" uid="uid://h5k1m7htt20h" path="res://engine/scenes/map/textures/press_start.png" id="12_avsrr"]
+[ext_resource type="Script" uid="uid://dxfohdq1ugjpj" path="res://engine/scenes/map/scripts/start_text.gd" id="13_3764v"]
+[ext_resource type="Script" uid="uid://v61jbnq007mi" path="res://engine/scenes/map/scripts/marker_space.gd" id="14_1ju2c"]
+[ext_resource type="Texture2D" uid="uid://cyx06gn10n78x" path="res://engine/scenes/map/textures/debug.png" id="15_jyoas"]
+[ext_resource type="Texture2D" uid="uid://co2aqkfsljcf1" path="res://engine/scenes/map/textures/x.png" id="16_5c41c"]
+[ext_resource type="Script" uid="uid://bgm1hm3784ld7" path="res://engine/scenes/map/scripts/map_player_marker.gd" id="17_t78sc"]
+[ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="18_3gcdc"]
+[ext_resource type="Texture2D" uid="uid://duvp3tyjcwwto" path="res://gfx/maps/Remit.png" id="20_3cpwd"]
+
+[sub_resource type="GDScript" id="GDScript_qt3n5"]
+script/source = "extends Sprite2D
+
+enum FacingMethod {
+	LOOK_AT_PLAYER,
+	X_SINE,
+	Y_COSINE
+}
+
+@export_group(\"Physics\")
+@export var amplitude: Vector2 = Vector2(50, 50)
+@export_range(0, 360, 0.01, \"suffix: °\") var phase: float
+@export var random_phase: bool:
+	set(rph):
+		random_phase = rph
+		if random_phase:
+			phase = randf_range(0, 360)
+@export var frequency: float = 1
+@export_group(\"Sprite\")
+@export var sprite_path: NodePath
+@export var facing_method: FacingMethod = FacingMethod.LOOK_AT_PLAYER
+
+var dir: int
+var facing: float
+
+@onready var center: Vector2 = position
+
+func _physics_process(delta: float) -> void:
+	position = Thunder.Math.oval(center, amplitude, deg_to_rad(phase))
+	phase = wrapf(phase + frequency * Thunder.get_delta(delta), 0, 360)
+	
+	if !sprite_path || !has_node(sprite_path):
+		return
+	var sprite = get_node(sprite_path)
+	
+	match facing_method:
+		FacingMethod.LOOK_AT_PLAYER:
+			var player: Player = Thunder._current_player
+			if player:
+				facing = Thunder.Math.look_at(global_position, player.global_position, global_transform)
+		FacingMethod.X_SINE:
+			facing = -sin(deg_to_rad(phase))
+		FacingMethod.Y_COSINE:
+			facing = cos(deg_to_rad(phase))
+	dir = sign(facing)
+	
+	if &\"flip_h\" in sprite:
+		sprite.flip_h = (facing < 0 && facing != 0)
+"
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_id3kk")
+player = NodePath("Player")
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_m73pa")]
+music = Array[Resource]([ExtResource("3_3cpwd")])
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("4_qt3n5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3333, 480)
+region_filter_clip_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Bg2" type="Sprite2D" parent="."]
+position = Vector2(3333, 0)
+texture = ExtResource("4_qt3n5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 480, 3333, 480)
+region_filter_clip_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Bg3" type="Sprite2D" parent="."]
+position = Vector2(6666, 0)
+texture = ExtResource("4_qt3n5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 960, 3333, 480)
+region_filter_clip_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="W10Full" type="Sprite2D" parent="."]
+position = Vector2(896, 254)
+texture = ExtResource("5_m73pa")
+
+[node name="Player" parent="." instance=ExtResource("5_4m6fc")]
+z_index = 5
+z_as_relative = false
+position = Vector2(-16, 304)
+dots = ExtResource("6_rmrg8")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+limit_right = 1790
+limit_bottom = 480
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+editor_draw_limits = true
+script = ExtResource("7_dcpwj")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="WorldText" type="Sprite2D" parent="GUI"]
+position = Vector2(320, -64)
+texture = ExtResource("8_id3kk")
+script = ExtResource("9_x7512")
+
+[node name="BounceMarker" type="Marker2D" parent="GUI/WorldText"]
+position = Vector2(0, 146)
+
+[node name="MarioIcon" type="Sprite2D" parent="GUI"]
+position = Vector2(581, 436)
+texture = ExtResource("10_r6ww2")
+script = ExtResource("11_cxmon")
+metadata/_edit_lock_ = true
+
+[node name="PressStart" type="Sprite2D" parent="GUI"]
+position = Vector2(320, 443)
+texture = ExtResource("12_avsrr")
+script = ExtResource("13_3764v")
+
+[node name="MarkerSpace" type="Node2D" parent="."]
+editor_description = "Use this as World"
+script = ExtResource("14_1ju2c")
+space_name = 10
+dot_texture = ExtResource("15_jyoas")
+x_texture = ExtResource("16_5c41c")
+draw_dots = true
+
+[node name="MapPlayerMarker9" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(0, 304)
+script = ExtResource("17_t78sc")
+
+[node name="MapPlayerMarker4" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(80, 304)
+script = ExtResource("17_t78sc")
+level = "uid://dt8fsykp4f2eq"
+level_override_save = "uid://3lj443kh0yv"
+
+[node name="MapPlayerMarker5" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(544, 304)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+level = "uid://ss4esaqal7tr"
+level_override_save = "uid://c1e0mr83pnipb"
+
+[node name="MapPlayerMarker8" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(752, 304)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+level = "uid://jgx21dmpsxe5"
+
+[node name="MapPlayerMarker10" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(1288, 304)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+
+[node name="MapPlayerMarker11" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(1288, 224)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+
+[node name="MapPlayerMarker12" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(1336, 224)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+
+[node name="MapPlayerMarker13" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(1368, 304)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+
+[node name="MapPlayerMarker16" type="Marker2D" parent="MarkerSpace"]
+show_behind_parent = true
+z_as_relative = false
+position = Vector2(1592, 304)
+rotation = -1.57068
+script = ExtResource("17_t78sc")
+level = "uid://bny7rfh2vcik1"
+
+[node name="MusicOverlay" parent="." instance=ExtResource("18_3gcdc")]
+displaying_mode = 1
+text = Array[String](["DRAX - REPEATING PATTERNS"])
+
+[node name="Bosst" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1688, 280)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("20_3cpwd")
+script = SubResource("GDScript_qt3n5")
+amplitude = Vector2(0, 5)
+frequency = 2.0

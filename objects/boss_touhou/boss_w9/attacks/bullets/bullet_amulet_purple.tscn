@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://qdrfrqhu6bqk"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_rwkuw"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="2_vjsud"]
+[ext_resource type="Script" uid="uid://dagygr7w7f5o4" path="res://objects/boss_touhou/boss_w9/attacks/bullets/bullet_arrow_red.gd" id="2_wtfb5"]
+
+[node name="BulletAmuletPurple" instance=ExtResource("1_rwkuw")]
+script = ExtResource("2_wtfb5")
+bullet_erase_color = Color(0.918347, 0.000778563, 0.934117, 1)
+bullet_erase_sound = null
+
+[node name="Sprite" parent="." index="1"]
+material = ExtResource("2_vjsud")
+rotation = 1.5708
+frame = 116
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+rotation = -1.5708
+scale = Vector2(1, 1)
+frame = 2
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-1.49012e-07, 0)
+scale = Vector2(1.1, 1)

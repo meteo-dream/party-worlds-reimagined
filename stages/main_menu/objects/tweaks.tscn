@@ -1,0 +1,224 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2mch7wqmlcgp"]
+
+[ext_resource type="Shader" uid="uid://c1yibfdu766i8" path="res://engine/shaders/hsv_global.gdshader" id="1_fcdr4"]
+[ext_resource type="Texture2D" uid="uid://pkaaw7skdh05" path="res://stages/main_menu/textures/tweak_bg.png" id="2_4c2j4"]
+[ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="3_j4li8"]
+[ext_resource type="Texture2D" uid="uid://dqmtyhn8gs07t" path="res://stages/main_menu/textures/tweaks.png" id="4_orn0c"]
+[ext_resource type="PackedScene" uid="uid://kiw6yxeov3fj" path="res://stages/main_menu/objects/tweaks_selections.tscn" id="5_v0prp"]
+[ext_resource type="Script" uid="uid://4njnxglrb7mw" path="res://stages/main_menu/scripts/label_space_key.gd" id="7_lpv5f"]
+[ext_resource type="FontFile" uid="uid://bgsavu6joui2r" path="res://engine/fonts/junebug.ttf" id="8_i5nl3"]
+[ext_resource type="Script" uid="uid://btpomigrb53gl" path="res://stages/main_menu/scripts/tweak_description.gd" id="12_cheln"]
+[ext_resource type="FontFile" uid="uid://dod5x6pna7fub" path="res://engine/fonts/comix_heavy.ttf" id="13_1g7cx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smql5"]
+shader = ExtResource("1_fcdr4")
+shader_parameter/hue = -0.5
+shader_parameter/saturation = -0.451
+shader_parameter/value = -0.1
+
+[sub_resource type="Gradient" id="Gradient_knrxj"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.188235, 0.513726, 0.635294)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vfjrk"]
+gradient = SubResource("Gradient_knrxj")
+width = 8
+
+[node name="Tweaks" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Bg" type="TextureRect" parent="."]
+z_index = -5
+z_as_relative = false
+material = SubResource("ShaderMaterial_smql5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4c2j4")
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+physics_interpolation_mode = 1
+script = ExtResource("3_j4li8")
+amplitude = Vector2(0, 10)
+frequency = 10.0
+
+[node name="Icon" type="TextureRect" parent="Node2D"]
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 129.0
+offset_bottom = 142.0
+texture = ExtResource("4_orn0c")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+size = Vector2i(640, 480)
+render_target_update_mode = 4
+
+[node name="Tweaks" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_v0prp")]
+physics_interpolation_mode = 1
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 11.0
+offset_top = 319.0
+offset_right = 152.0
+offset_bottom = 464.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("8_i5nl3")
+theme_override_font_sizes/font_size = 11
+text = "if you have
+any ideas
+on how to
+expand
+this list,
+feel free to
+contact us on
+our discord
+server!"
+vertical_alignment = 2
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 319.0
+offset_right = 130.0
+offset_bottom = 464.0
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("8_i5nl3")
+theme_override_font_sizes/font_size = 11
+text = "please press
+%s
+for a tweak
+description!"
+vertical_alignment = 2
+autowrap_mode = 3
+uppercase = true
+script = ExtResource("7_lpv5f")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+script = ExtResource("12_cheln")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+process_mode = 3
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 0)
+
+[node name="Box" type="Node2D" parent="CanvasLayer"]
+process_mode = 3
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Texture" type="TextureRect" parent="CanvasLayer/Box"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -100.0
+offset_right = 240.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_vfjrk")
+
+[node name="Text" type="Label" parent="CanvasLayer/Box/Texture"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 27)
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0.341176, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("8_i5nl3")
+theme_override_font_sizes/font_size = 12
+text = "MESSAGE BOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="Text2" type="Label" parent="CanvasLayer/Box/Texture"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(0, 27)
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0.188235, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("13_1g7cx")
+theme_override_font_sizes/font_size = 18
+text = "PRESS %s"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("7_lpv5f")
+
+[node name="Text3" type="Label" parent="CanvasLayer/Box/Texture"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -48.0
+offset_bottom = -5.0
+grow_horizontal = 2
+pivot_offset = Vector2(0, 27)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.513726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("8_i5nl3")
+theme_override_font_sizes/font_size = 12
+text = "PRESS SPACE KEY"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+uppercase = true

@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkgkpbuei0vrj"]
+
+[ext_resource type="Texture2D" uid="uid://dt24qjka222vn" path="res://gfx/world5/texture.png" id="1_cgxyp"]
+[ext_resource type="Script" uid="uid://rlimx4gf8i8a" path="res://FX/snow/snow_on_ground.gd" id="2_5ihx0"]
+
+[sub_resource type="Curve" id="Curve_5uw8h"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.31868, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_qd1xh"]
+curve = SubResource("Curve_5uw8h")
+
+[sub_resource type="Curve" id="Curve_mudv7"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.82357, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yomsu"]
+curve = SubResource("Curve_mudv7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eyn2w"]
+particle_flag_disable_z = true
+angle_min = -360.0
+angle_max = 360.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 25.0
+initial_velocity_max = 75.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.5
+scale_max = 0.75
+scale_curve = SubResource("CurveTexture_yomsu")
+alpha_curve = SubResource("CurveTexture_qd1xh")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a27iy"]
+atlas = ExtResource("1_cgxyp")
+region = Rect2(232, 136, 16, 16)
+
+[node name="SnowOnGround" type="GPUParticles2D"]
+z_index = 5
+position = Vector2(0, 16)
+emitting = false
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_eyn2w")
+texture = SubResource("AtlasTexture_a27iy")
+script = ExtResource("2_5ihx0")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+collision_mask = 16
+hit_from_inside = true
+collide_with_areas = true

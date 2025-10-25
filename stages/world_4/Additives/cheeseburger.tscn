@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8fdlsdrutsvd"]
+
+[ext_resource type="Script" uid="uid://dl11c0qxdgfp7" path="res://stages/world_4/Additives/vstroeni.gd" id="1_gir6t"]
+[ext_resource type="Texture2D" uid="uid://wjugbkskopwc" path="res://gfx/world4/CheeZburger.png" id="1_yshf5"]
+[ext_resource type="AudioStream" uid="uid://di4twcoucsguc" path="res://FX/zhrat.ogg" id="2_8dl44"]
+[ext_resource type="Script" uid="uid://bgun4wpyyvj4n" path="res://modules/player_detection.gd" id="3_nclyj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij5pk"]
+size = Vector2(32, 32)
+
+[node name="cheeseburger" type="Node2D"]
+script = ExtResource("1_gir6t")
+sound = ExtResource("2_8dl44")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yshf5")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_nclyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_ij5pk")
+
+[connection signal="player_enter" from="Area2D" to="." method="_on_area_2d_player_enter"]

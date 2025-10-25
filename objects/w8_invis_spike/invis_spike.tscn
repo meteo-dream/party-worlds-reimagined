@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://csj6le8ffyb3x"]
+
+[ext_resource type="Script" uid="uid://ch3dlv85xt64q" path="res://objects/w8_invis_spike/invis_spike.gd" id="1_jxil7"]
+[ext_resource type="Texture2D" uid="uid://d2a6p585jun78" path="res://objects/w8_invis_spike/invis_spike.png" id="2_jxil7"]
+
+[node name="Invisi-Spike" type="Area2D"]
+modulate = Color(1, 1, 1, 0.603922)
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_jxil7")
+type = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(0, 16)
+polygon = PackedVector2Array(0, -32, 16, 0, -16, 0)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_jxil7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqx4bpiglpwuq"]
+
+[ext_resource type="Script" uid="uid://b2cr77oau4h14" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc7_1.gd" id="1_s3c6u"]
+
+[node name="Sc7_Start" type="Node"]
+script = ExtResource("1_s3c6u")
+show_warning_line = true
+is_new_spell_card = true
+next_attack_will_be_new = true
+end_spell_card_afterwards = true
+player_should_get_pity_afterwards = true
+is_spell_card = true
+spellcard_name = "Comet \"Blazing Star\""
+
+[node name="BossRestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="MasterSparkTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="NoiseBulletTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="MasterSparkInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

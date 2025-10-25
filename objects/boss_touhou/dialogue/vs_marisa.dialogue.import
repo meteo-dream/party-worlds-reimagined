@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://docqcam5804po"
+path="res://.godot/imported/vs_marisa.dialogue-564822053f7d06cf61df08c65edf547f.tres"
+
+[deps]
+
+source_file="res://objects/boss_touhou/dialogue/vs_marisa.dialogue"
+dest_files=["res://.godot/imported/vs_marisa.dialogue-564822053f7d06cf61df08c65edf547f.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdx3w1fqaokwx"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_ydqsg"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_kie0u"]
+[ext_resource type="Texture2D" uid="uid://b1oopgjbmg11a" path="res://stages/main/credits/textures/tails_w.png" id="3_bcuq6"]
+
+[node name="SectionSkinTails" instance=ExtResource("1_ydqsg")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+offset_top = 128.0
+offset_right = 640.0
+offset_bottom = 376.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_kie0u")
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "Miles \"tails\" prower
+
+character: sega
+original sprites: hartflip0218
+voice: Sonic heroes & sonic generations (jp)
+custom sfx & bgm: Sonic 1, cd & 3
+
+Skin by: [color=95FBFF]yaolinggui[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TailsW" type="Sprite2D" parent="." index="1"]
+position = Vector2(320, 96)
+texture = ExtResource("3_bcuq6")

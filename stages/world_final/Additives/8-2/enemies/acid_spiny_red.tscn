@@ -1,0 +1,104 @@
+[gd_scene load_steps=17 format=3 uid="uid://dwwoslihqtfgj"]
+
+[ext_resource type="PackedScene" uid="uid://c58i0gaq0il4o" path="res://engine/objects/enemies/spinies/spiny_red.tscn" id="1_utgkx"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_6th0b"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_f7tae"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_tv6h7"]
+[ext_resource type="Texture2D" uid="uid://dr0tm03ifrn1s" path="res://engine/objects/enemies/spinies/textures/spiny_red_appear.png" id="5_f7tae"]
+[ext_resource type="Texture2D" uid="uid://bo4icy6p2mjsd" path="res://gfx/worldfinal/10-2/acid_spiny.png" id="6_tv6h7"]
+
+[sub_resource type="Resource" id="Resource_xevp5"]
+resource_local_to_scene = true
+script = ExtResource("4_tv6h7")
+creation_nodepack = ExtResource("2_6th0b")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("3_f7tae")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v57uq"]
+atlas = ExtResource("5_f7tae")
+region = Rect2(0, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpycm"]
+atlas = ExtResource("5_f7tae")
+region = Rect2(0, 31, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w6q8"]
+atlas = ExtResource("5_f7tae")
+region = Rect2(0, 62, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mp26"]
+atlas = ExtResource("5_f7tae")
+region = Rect2(0, 93, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mx4ph"]
+atlas = ExtResource("5_f7tae")
+region = Rect2(0, 124, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvse4"]
+atlas = ExtResource("5_f7tae")
+region = Rect2(0, 155, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xevp5"]
+atlas = ExtResource("6_tv6h7")
+region = Rect2(0, 0, 33, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rr7i"]
+atlas = ExtResource("6_tv6h7")
+region = Rect2(33, 0, 33, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tf6e6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v57uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpycm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w6q8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mp26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mx4ph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvse4")
+}],
+"loop": false,
+"name": &"appear",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xevp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rr7i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="AcidSpinyRed" instance=ExtResource("1_utgkx")]
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+killing_creation = SubResource("Resource_xevp5")
+
+[node name="Sprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_tf6e6")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2nag1osiubrm"]
+
+[ext_resource type="Texture2D" uid="uid://ckfb3opqbapyi" path="res://engine/tilesets/overworld/tree_tall.png" id="1_grt25"]
+
+[node name="TreeLong" type="Sprite2D"]
+z_index = -3
+position = Vector2(0, -32)
+texture = ExtResource("1_grt25")

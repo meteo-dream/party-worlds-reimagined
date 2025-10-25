@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxhw4u8vc0wru"]
+
+[ext_resource type="Texture2D" uid="uid://274gg83ka183" path="res://gfx/worldfinal/wheel_right.png" id="1_mu565"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mu565"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mu565"]
+atlas = ExtResource("1_mu565")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjprh"]
+atlas = ExtResource("1_mu565")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ot64"]
+atlas = ExtResource("1_mu565")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ink7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mu565")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjprh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ot64")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="WheelRight" type="StaticBody2D"]
+collision_layer = 112
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_mu565")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ink7r")
+autoplay = "default"

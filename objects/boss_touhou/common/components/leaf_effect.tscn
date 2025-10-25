@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cawait3l3ftoy"]
+
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_2omla"]
+[ext_resource type="Texture2D" uid="uid://cqb0mknk6d37s" path="res://objects/boss_touhou/common/textures/particle_effects.png" id="1_oa6nr"]
+[ext_resource type="Script" uid="uid://b5mji30odgdtv" path="res://objects/boss_touhou/common/components/leaf_effect.gd" id="3_3fry1"]
+
+[node name="LeafEffect" type="Sprite2D"]
+material = ExtResource("1_2omla")
+texture = ExtResource("1_oa6nr")
+hframes = 2
+vframes = 2
+frame = 3
+script = ExtResource("3_3fry1")

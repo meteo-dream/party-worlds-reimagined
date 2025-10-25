@@ -1,0 +1,58 @@
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://djl4x7thc1p36"]
+
+[ext_resource type="Texture2D" uid="uid://bowlwdsae3nkb" path="res://gfx/world4/goombast1.png" id="1_3wgew"]
+[ext_resource type="Texture2D" uid="uid://ded0krs7aonhh" path="res://gfx/world4/goombast2.png" id="2_hcqls"]
+[ext_resource type="Texture2D" uid="uid://32ui3g8a83cm" path="res://gfx/world4/goombast3.png" id="3_nnjpp"]
+[ext_resource type="Texture2D" uid="uid://dnq0pj2286fyx" path="res://gfx/world4/goombast4.png" id="4_ii2kc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e42nj"]
+texture = ExtResource("1_3wgew")
+texture_region_size = Vector2i(44, 32)
+0:0/0 = 0
+0:0/0/z_index = -3
+0:1/0 = 0
+0:1/0/z_index = -3
+0:2/0 = 0
+0:2/0/z_index = -3
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v2473"]
+texture = ExtResource("2_hcqls")
+texture_region_size = Vector2i(44, 32)
+0:0/0 = 0
+0:0/0/z_index = -3
+0:1/0 = 0
+0:1/0/z_index = -3
+0:2/0 = 0
+0:2/0/z_index = -3
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16dac"]
+texture = ExtResource("3_nnjpp")
+texture_region_size = Vector2i(44, 32)
+0:0/0 = 0
+0:0/0/z_index = -3
+0:1/0 = 0
+0:1/0/z_index = -3
+0:2/0 = 0
+0:2/0/z_index = -3
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nvhfy"]
+texture = ExtResource("4_ii2kc")
+texture_region_size = Vector2i(44, 32)
+0:0/0 = 0
+0:0/0/z_index = -3
+0:1/0 = 0
+0:1/0/z_index = -3
+0:2/0 = 0
+0:2/0/z_index = -3
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 112
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_e42nj")
+sources/1 = SubResource("TileSetAtlasSource_v2473")
+sources/2 = SubResource("TileSetAtlasSource_16dac")
+sources/3 = SubResource("TileSetAtlasSource_nvhfy")

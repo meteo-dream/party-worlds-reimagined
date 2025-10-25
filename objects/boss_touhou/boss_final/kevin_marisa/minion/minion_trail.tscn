@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bon4lt5kqwyyx"]
+
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_8xnur"]
+[ext_resource type="Texture2D" uid="uid://bba8dk36js2c8" path="res://objects/boss_touhou/common/textures/bullet_shoot_eff.png" id="1_8y2lt"]
+[ext_resource type="Script" uid="uid://cwdccve8c2gvr" path="res://objects/boss_touhou/boss_final/kevin_marisa/minion/minion_trail.gd" id="2_0jw2i"]
+
+[node name="MinionTrail" type="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0.72549)
+material = ExtResource("1_8xnur")
+position = Vector2(-1, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_8y2lt")
+hframes = 8
+script = ExtResource("2_0jw2i")

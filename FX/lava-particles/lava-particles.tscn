@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf0roi324girr"]
+
+[ext_resource type="Texture2D" uid="uid://cdhnhrs5kmdc2" path="res://FX/lava-particles/elawaefekt.png" id="1_au0en"]
+
+[sub_resource type="Curve" id="Curve_6wvsv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.52, 0.868132), 0.0, 0.0, 0, 0, Vector2(1, 0.307692), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_y48cr"]
+curve = SubResource("Curve_6wvsv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5rjdk"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(7200, 490, 0)
+emission_shape = 3
+emission_box_extents = Vector3(7200, 1, 1)
+angle_max = 180.0
+direction = Vector3(0, 0, 0)
+spread = 40.0
+flatness = 0.055
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -10, 0)
+scale_curve = SubResource("CurveTexture_y48cr")
+
+[node name="Lava Particles" type="GPUParticles2D"]
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_5rjdk")
+texture = ExtResource("1_au0en")
+lifetime = 10.0
+preprocess = 5.0
+visibility_rect = Rect2(0, 0, 14208, 480)

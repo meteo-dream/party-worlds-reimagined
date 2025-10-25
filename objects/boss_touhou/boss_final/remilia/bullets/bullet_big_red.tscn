@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg1ngnca12hgk"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_d6r1a"]
+[ext_resource type="Script" uid="uid://du1k208uwkxq8" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_bounce.gd" id="2_34fnw"]
+[ext_resource type="Texture2D" uid="uid://basuab21se1l2" path="res://objects/boss_touhou/common/textures/bullet_tex2.png" id="2_dgtbc"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="2_mypq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgtbc"]
+radius = 11.0454
+
+[node name="BulletBigRed" instance=ExtResource("1_d6r1a")]
+script = ExtResource("2_34fnw")
+bouncy = false
+bounce_once = false
+bullet_erase_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_dgtbc")
+
+[node name="Sprite" parent="." index="1"]
+material = ExtResource("2_mypq1")
+texture = ExtResource("2_dgtbc")
+hframes = 8
+vframes = 8
+frame = 9
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+position = Vector2(-0.740741, 0)
+scale = Vector2(1.5, 1.5)
+frame = 1
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-0.500001, 4.76837e-07)
+scale = Vector2(1.85, 1.8)

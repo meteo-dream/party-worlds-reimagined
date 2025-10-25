@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvsf4hcgm2vav"]
+
+[ext_resource type="Texture2D" uid="uid://cixteknhv1ino" path="res://stages/main/intro/textures/disclaimer.png" id="1_72tey"]
+[ext_resource type="Script" uid="uid://cut0su45io4y6" path="res://stages/main/intro/scripts/intro.gd" id="1_sljtl"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sljtl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="Disclaimer" type="TextureRect" parent="CenterContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("1_72tey")

@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://dymhou1wjxasl"]
+
+[ext_resource type="PackedScene" uid="uid://c8mms5q7m2lk7" path="res://engine/objects/enemies/cheeps/cheep_red.tscn" id="1_ustk1"]
+[ext_resource type="Script" uid="uid://do5goegendynv" path="res://objects/Jumping Cheep/jumping_cheep.gd" id="2_p8l0t"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_wxxxq"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_4ms0v"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_j6ut4"]
+[ext_resource type="AudioStream" uid="uid://c162tqddc8eej" path="res://engine/objects/bumping_blocks/_sounds/bump.wav" id="5_caidn"]
+[ext_resource type="Texture2D" uid="uid://0e2teiyyxcty" path="res://engine/objects/enemies/cheeps/textures/cheep_blue.png" id="6_qpke8"]
+
+[sub_resource type="Resource" id="Resource_0lvi6"]
+resource_local_to_scene = true
+script = ExtResource("4_j6ut4")
+creation_nodepack = ExtResource("2_wxxxq")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, 0)
+}
+custom_script = ExtResource("3_4ms0v")
+
+[sub_resource type="Resource" id="Resource_03s2a"]
+resource_local_to_scene = true
+script = ExtResource("4_j6ut4")
+creation_nodepack = ExtResource("2_wxxxq")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, 0),
+"gravity_scale": 0.25,
+"max_falling_speed": 300.0
+}
+custom_script = ExtResource("3_4ms0v")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tscna"]
+atlas = ExtResource("6_qpke8")
+region = Rect2(0, 0, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmjed"]
+atlas = ExtResource("6_qpke8")
+region = Rect2(0, 32, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hs2g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tscna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmjed")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.5
+}]
+
+[node name="JumpingCheep" instance=ExtResource("1_ustk1")]
+script = ExtResource("2_p8l0t")
+jump_strength = 150
+speed = Vector2(0, 0)
+gravity_scale = 0.45
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+stomping_creation = SubResource("Resource_0lvi6")
+stomping_scores = 100
+killing_immune = {
+"beetroot": true,
+"boomerang": false,
+"fireball": true,
+"hammer": false,
+"iceball": true,
+"shell": false,
+"shell_defence": 1,
+"shell_forced": false,
+"starman": false
+}
+killing_creation = SubResource("Resource_03s2a")
+killing_scores = 100
+killing_sound_failed = ExtResource("5_caidn")
+metadata/_edit_pinned_properties_ = [&"killing_immune", &"killing_scores", &"stomping_scores"]
+
+[node name="Sprite" parent="." index="4"]
+sprite_frames = SubResource("SpriteFrames_3hs2g")
+metadata/_edit_pinned_properties_ = [&"sprite_frames"]

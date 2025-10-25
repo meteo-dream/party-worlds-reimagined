@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxnyx0qovx4no"]
+
+[ext_resource type="Script" uid="uid://v4xhkc5y2ph3" path="res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_2_alt.gd" id="1_v1vod"]
+
+[node name="sc_2_alt" type="Node"]
+script = ExtResource("1_v1vod")
+is_spell_card = true
+spellcard_name = "Continuous Shooting \"Rapid Shot\""
+spellcard_time = 22.5
+spellcard_score_bonus = 10000
+
+[node name="ShootTotalTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="ShootPhaseTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="CooldownRestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="ViewfinderExistTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

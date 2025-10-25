@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=3 uid="uid://h754avq0010r"]
+
+[ext_resource type="Script" uid="uid://pd3paryp3gqi" path="res://objects/w7_spawn_portal/portal_question_block.gd" id="1_1otpb"]
+[ext_resource type="Texture2D" uid="uid://bb88vxhnqp6bt" path="res://objects/w7_spawn_portal/texture/w7_special_question.png" id="2_1otpb"]
+[ext_resource type="AudioStream" uid="uid://dre03uu5nnhg1" path="res://objects/w7_spawn_portal/sounds/correct.wav" id="2_gevrs"]
+[ext_resource type="Texture2D" uid="uid://bullhcct0hurt" path="res://engine/objects/bumping_blocks/question_block/textures/empty.png" id="3_gevrs"]
+[ext_resource type="Script" uid="uid://bx1y6xh3b137a" path="res://engine/objects/bumping_blocks/question_block/invisible_body_checker.gd" id="5_7rpbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x2nd"]
+size = Vector2(32, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fygbc"]
+cull_mode = 1
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t4qw"]
+atlas = ExtResource("2_1otpb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqkg8"]
+atlas = ExtResource("2_1otpb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asein"]
+atlas = ExtResource("2_1otpb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rpbh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t4qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asein")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gevrs")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}]
+
+[node name="PortalQuestionBlock" type="AnimatableBody2D"]
+disable_mode = 1
+collision_layer = 112
+sync_to_physics = false
+script = ExtResource("1_1otpb")
+correct_sound = ExtResource("2_gevrs")
+result = null
+metadata/_edit_pinned_properties_ = [&"result"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_2x2nd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_2x2nd")
+one_way_collision = true
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprites"]
+occluder = SubResource("OccluderPolygon2D_fygbc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites"]
+process_mode = 3
+sprite_frames = SubResource("SpriteFrames_7rpbh")
+autoplay = "default"
+frame = 1
+frame_progress = 0.124644
+
+[node name="ItemDisplayer" type="Sprite2D" parent="Sprites"]
+position = Vector2(8, 8)
+scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Sprites"]
+visible = false
+position = Vector2(1.43051e-06, 1.43051e-06)
+scale = Vector2(1.6, 1.6)
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 96
+collision_mask = 96
+script = ExtResource("5_7rpbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_2x2nd")

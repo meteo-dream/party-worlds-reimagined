@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://4xvjyjrcgfac"]
+
+[ext_resource type="Script" uid="uid://cjm3ekcydgyux" path="res://stages/world_final/Additives/8-1/left_jumping_cheeps_generator.gd" id="1_0q16p"]
+
+[node name="JumpingCheepsGeneratorLeft" type="Node"]
+script = ExtResource("1_0q16p")
+speed_min = Vector2i(50, -400)
+speed_max = Vector2i(350, -250)

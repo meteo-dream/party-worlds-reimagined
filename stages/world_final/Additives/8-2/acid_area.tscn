@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://qshc1gd1jl67"]
+
+[ext_resource type="PackedScene" uid="uid://d0121yqkw7b6i" path="res://engine/objects/fluid/lava_area.tscn" id="1_5q0ym"]
+[ext_resource type="Material" uid="uid://h47qkomxpuw2" path="res://stages/world_final/Additives/8-2/acid_material.tres" id="2_dhaxh"]
+[ext_resource type="Script" uid="uid://ihrmfhyox61n" path="res://stages/world_final/Additives/8-2/acid_area.gd" id="3_64h4d"]
+[ext_resource type="PackedScene" uid="uid://cwttglyxetss5" path="res://stages/world_final/Additives/8-2/misc/acid_spray.tscn" id="4_64h4d"]
+
+[node name="Acid" instance=ExtResource("1_5q0ym")]
+
+[node name="TextureRect" parent="." index="0"]
+material = ExtResource("2_dhaxh")
+
+[node name="Area2D" parent="." index="1"]
+script = ExtResource("3_64h4d")
+LAVA_SPRAY = ExtResource("4_64h4d")
+
+[node name="ColorRect" parent="." index="2"]
+color = Color(0.2, 0.376471, 0.101961, 1)

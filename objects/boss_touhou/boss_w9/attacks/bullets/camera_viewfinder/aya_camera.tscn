@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsrrip7igjgpw"]
+
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_clw7h"]
+[ext_resource type="Script" uid="uid://8d5jduat55gw" path="res://objects/boss_touhou/boss_w9/attacks/bullets/camera_viewfinder/camera_viewfinder.gd" id="1_e6g8q"]
+[ext_resource type="Texture2D" uid="uid://dxqic5yoiqsxl" path="res://objects/boss_touhou/boss_w9/textures/aya_photo.png" id="1_tw6ft"]
+[ext_resource type="AudioStream" uid="uid://byb1lt25iv5ei" path="res://objects/boss_touhou/common/sounds/se_focusin.wav" id="2_4hbti"]
+[ext_resource type="AudioStream" uid="uid://dcpmh8765gsp5" path="res://objects/boss_touhou/common/sounds/se_shutter.wav" id="3_hu230"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clw7h"]
+size = Vector2(248, 184)
+
+[node name="AyaCamera" type="Area2D"]
+z_index = 15
+collision_layer = 8388609
+script = ExtResource("1_e6g8q")
+player_in_camera = ExtResource("2_4hbti")
+camera_shutter = ExtResource("3_hu230")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("1_clw7h")
+texture = ExtResource("1_tw6ft")
+hframes = 2
+
+[node name="FlashEffect" type="Sprite2D" parent="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+material = ExtResource("1_clw7h")
+texture = ExtResource("1_tw6ft")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_clw7h")
+
+[node name="LifeTime" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

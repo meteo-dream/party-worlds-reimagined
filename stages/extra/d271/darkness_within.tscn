@@ -1,0 +1,249 @@
+[gd_scene load_steps=34 format=3 uid="uid://yfheedrhciyt"]
+
+[ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_kwmem"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_d3m13"]
+[ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_vgdtv"]
+[ext_resource type="AudioStream" uid="uid://ym2ey6umxl1v" path="res://stages/extra/d271/music/pator-deep_breaths.xm" id="4_bv882"]
+[ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="4_cqdqc"]
+[ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_70b4l"]
+[ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_6qpd8"]
+[ext_resource type="Texture2D" uid="uid://ucldpb8tou4p" path="res://stages/extra/d271/gfx/darkness_within_tileset.png" id="10_eijdt"]
+[ext_resource type="TileSet" uid="uid://c8vmqwxodub03" path="res://stages/extra/d271/prefabs/darkness_within.tres" id="10_kitch"]
+[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_oc1um"]
+[ext_resource type="Texture2D" uid="uid://db78gg7oxquh2" path="res://stages/extra/d271/gfx/OutputImage.png" id="13_mah1h"]
+[ext_resource type="Script" uid="uid://bmpo2qyh1a5yk" path="res://stages/extra/d271/prefabs/gradient_glow.gd" id="15_u1hhb"]
+[ext_resource type="PackedScene" uid="uid://d0121yqkw7b6i" path="res://engine/objects/fluid/lava_area.tscn" id="16_qk6jp"]
+[ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="17_4xoem"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="17_s8430"]
+[ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="19_4fhsa"]
+[ext_resource type="PackedScene" uid="uid://oja3uy1y4hpl" path="res://engine/objects/enemies/piranha_plants/piranha_pink.tscn" id="19_psg76"]
+[ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="20_ed44v"]
+[ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="21_pxat7"]
+[ext_resource type="PackedScene" uid="uid://db85vh72kcsmg" path="res://engine/objects/effects/lavafall/lavafall.tscn" id="23_twuf6"]
+[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="24_ld6a3"]
+[ext_resource type="PackedScene" uid="uid://uhf6frao7p1m" path="res://engine/objects/enemies/podoboo/podoboo.tscn" id="25_02d8b"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_u7mev"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_i706s"]
+offsets = PackedFloat32Array(0, 0.57)
+colors = PackedColorArray(0.533333, 0.219608, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rquvl"]
+gradient = SubResource("Gradient_i706s")
+width = 640
+height = 480
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_bqixo"]
+colors = PackedColorArray(0.929412, 0.784314, 0.113725, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oyern"]
+gradient = SubResource("Gradient_bqixo")
+width = 160
+height = 160
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.875, 0.25)
+metadata/_snap_enabled = true
+metadata/_snap_count = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5paum"]
+atlas = ExtResource("10_eijdt")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="Resource" id="Resource_j5ejy"]
+resource_local_to_scene = true
+script = ExtResource("19_4fhsa")
+creation_nodepack = ExtResource("17_4xoem")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[sub_resource type="Resource" id="Resource_mhana"]
+resource_local_to_scene = true
+script = ExtResource("19_4fhsa")
+creation_fallback_node = ExtResource("20_ed44v")
+creation_nodepack = ExtResource("21_pxat7")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[sub_resource type="Resource" id="Resource_ylql3"]
+resource_local_to_scene = true
+script = ExtResource("19_4fhsa")
+creation_nodepack = ExtResource("17_4xoem")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[sub_resource type="Resource" id="Resource_nciky"]
+resource_local_to_scene = true
+script = ExtResource("19_4fhsa")
+creation_nodepack = ExtResource("17_4xoem")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[sub_resource type="Resource" id="Resource_smimp"]
+resource_local_to_scene = true
+script = ExtResource("19_4fhsa")
+creation_fallback_node = ExtResource("20_ed44v")
+creation_nodepack = ExtResource("21_pxat7")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[node name="DarknessWithin" type="Node2D"]
+script = ExtResource("1_kwmem")
+completion_music = ExtResource("2_vgdtv")
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_d3m13")]
+music = Array[Resource]([ExtResource("4_bv882")])
+
+[node name="Mario" parent="." instance=ExtResource("4_cqdqc")]
+position = Vector2(96, 240)
+floor_snap_length = 8.0
+
+[node name="PlayerCamera2D" type="Camera2D" parent="."]
+editor_draw_screen = false
+script = ExtResource("6_70b4l")
+metadata/_edit_lock_ = true
+
+[node name="CameraArea" parent="." instance=ExtResource("7_6qpd8")]
+offset_right = 11008.0
+offset_bottom = 480.0
+metadata/_edit_lock_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("10_kitch")
+format = 2
+layer_0/tile_data = PackedInt32Array(851970, 327680, 0, 851968, 327680, 0, 917504, 327680, 0, 851969, 327680, 0, 917505, 327680, 0, 917506, 327680, 0, 851971, 327680, 0, 917507, 327680, 0, 851972, 327680, 0, 917508, 327680, 0, 851973, 327680, 0, 917509, 327680, 0, 851974, 327680, 0, 917510, 327680, 0, 851975, 327680, 0, 917511, 327680, 0, 851976, 327680, 0, 917512, 327680, 0, 851977, 327680, 0, 917513, 327680, 0, 851978, 327680, 0, 917514, 327680, 0, 851979, 327680, 0, 917515, 327680, 0, 851980, 327680, 0, 917516, 327680, 0, 851981, 327680, 0, 917517, 327680, 0, 851982, 327680, 0, 917518, 327680, 0, 851983, 327680, 0, 917519, 327680, 0, 262162, 917504, 0, 65546, 917504, 0, 393222, 917504, 0, 786442, 720896, 1, 262157, 851968, 2, 196610, 851968, 2, 786439, 524288, 0, 720910, 589824, 0, 786446, 589824, 1, 786437, 327680, 0, 983039, 0, 0, 917503, 0, 0, 851967, 0, 0, 786431, 0, 0, 720895, 0, 0, 655359, 0, 0, 589823, 0, 0, 524287, 0, 0, 458751, 0, 0, 393215, 0, 0, 327679, 0, 0, 262143, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, -1, 0, 0, -65537, 0, 0, -131073, 0, 0, -196609, 0, 0, -262145, 0, 0, -327681, 0, 0, 655360, 327680, 0, 655361, 327680, 0, 720896, 327680, 0, 720897, 327680, 0, 786432, 327680, 0, 786433, 327680, 0, 524298, 1, 65536, 524300, 1, 65536, 524302, 1, 65536, 327691, 1, 65536, 327693, 1, 65536, 196616, 1, 131072, 786448, 1, 196608, 524290, 2, 0, 589826, 2, 1, 524291, 65538, 0, 589827, 65538, 1, 720899, 327680, 0, 786435, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 655363, 327680, 0, 655362, 327680, 0, 720898, 327680, 0, 786434, 327680, 0, 851984, 327680, 0, 917520, 327680, 0, 851988, 327680, 0, 917524, 327680, 0, 851989, 327680, 0, 917525, 327680, 0, 851990, 327680, 0, 917526, 327680, 0, 851991, 327680, 0, 917527, 327680, 0, 851992, 327680, 0, 917528, 327680, 0, 458775, 917504, 0, 131108, 917504, 0, 131100, 1, 131072, 851998, 327680, 0, 917534, 327680, 0, 851999, 327680, 0, 917535, 327680, 0, 852000, 327680, 0, 917536, 327680, 0, 786465, 1, 65536, 852001, 327680, 0, 917537, 327680, 0, 852002, 327680, 0, 917538, 327680, 0, 852003, 327680, 0, 917539, 327680, 0, 852004, 327680, 0, 917540, 327680, 0, 852005, 327680, 0, 917541, 327680, 0, 589854, 1, 65536, 589855, 1, 65536, 786463, 1, 196608, 393249, 1, 65536, 327714, 1, 262144, 393250, 1, 65536, 786466, 720896, 1, 786470, 524288, 0, 852006, 327680, 0, 917542, 327680, 0, 852007, 327680, 0, 917543, 327680, 0, 786472, 1, 196608, 852008, 327680, 0, 917544, 327680, 0, 655401, 2, 0, 720937, 2, 1, 786473, 2, 1, 852009, 2, 1, 917545, 2, 1, 983081, 2, 1, 655402, 65538, 0, 720938, 65538, 1, 786474, 65538, 1, 852010, 65538, 1, 917546, 65538, 1, 983082, 65538, 1, 851993, 327680, 0, 851994, 327680, 0, 851995, 327680, 0, 851996, 327680, 0, 851997, 327680, 0, 917533, 327680, 0, 917532, 327680, 0, 917531, 327680, 0, 917530, 327680, 0, 917529, 327680, 0, 458789, 851968, 2, 786461, 655360, 0, 786453, 720896, 0, 852011, 327680, 0, 917547, 327680, 0, 983083, 327680, 0, 852012, 327680, 0, 917548, 327680, 0, 983084, 327680, 0, 852013, 327680, 0, 917549, 327680, 0, 983085, 327680, 0, 852014, 327680, 0, 917550, 327680, 0, 983086, 327680, 0, 852015, 327680, 0, 917551, 327680, 0, 983087, 327680, 0, 852016, 327680, 0, 917552, 327680, 0, 983088, 327680, 0, 720945, 2, 0, 786481, 2, 1, 720946, 65538, 0, 786482, 65538, 1, 852017, 2, 1, 852018, 65538, 1, 917553, 2, 1, 917554, 65538, 1, 983089, 2, 1, 983090, 65538, 1, 458802, 1, 524288, 524344, 2, 0, 589880, 2, 1, 524345, 65538, 0, 589881, 65538, 1, 655416, 2, 1, 655417, 65538, 1, 720952, 2, 1, 720953, 65538, 1, 786488, 2, 1, 786489, 65538, 1, 852024, 2, 1, 852025, 65538, 1, 917560, 2, 1, 917561, 65538, 1, 983096, 2, 1, 983097, 65538, 1, 1048632, 2, 1, 1048633, 65538, 1, 655410, 1, 262144, 786486, 1, 262144, 852019, 327680, 0, 852020, 327680, 0, 852021, 327680, 0, 852022, 327680, 0, 852023, 327680, 0, 917559, 327680, 0, 983095, 327680, 0, 983094, 327680, 0, 983093, 327680, 0, 983092, 327680, 0, 983091, 327680, 0, 917555, 327680, 0, 917556, 327680, 0, 917557, 327680, 0, 917558, 327680, 0, 852026, 393216, 0, 917562, 393216, 0, 983098, 393216, 0, 327727, 1, 131072, 262196, 917504, 0, 49, 917504, 0, 196653, 851968, 2, 786459, 524288, 1, 786479, 524288, 1, 786484, 720896, 0, 786478, 720896, 1, 589882, 1, 65536, 524346, 1, 65536, 524347, 1, 65536, 524348, 1, 65536, 61, 393216, 0, 65597, 393216, 0, 65598, 393216, 0, 65599, 393216, 0, 65600, 393216, 0, 65601, 393216, 0, 66, 393216, 0, 65602, 393216, 0, 655404, 65536, 0, 655418, 393216, 0, 720954, 393216, 0, 786490, 393216, 0, 524351, 1, 65536, 524352, 1, 65536, 524355, 1, 65536, 524356, 1, 65536, 524357, 1, 65536, 524358, 1, 65536, 589894, 1, 65536, 655430, 393216, 0, 720966, 393216, 0, 655431, 393216, 0, 720967, 393216, 0, 786502, 393216, 0, 786503, 393216, 0, 720968, 393216, 0, 786504, 393216, 0, 786505, 393216, 0, 852041, 393216, 0, 852040, 393216, 0, 852039, 393216, 0, 852038, 393216, 0, 917574, 393216, 0, 917575, 393216, 0, 917576, 393216, 0, 917577, 393216, 0, 917578, 393216, 0, 852042, 393216, 0, 917579, 393216, 0, 917580, 393216, 0, 852044, 393216, 0, 852043, 393216, 0, 852045, 2, 0, 917581, 2, 1, 852046, 65538, 0, 917582, 65538, 1, 983117, 2, 1, 983118, 65538, 1, 589825, 262144, 0, 589895, 720896, 0, 786508, 720896, 1, 131141, 1, 131072, 262211, 851968, 2, 131132, 917504, 0, 393288, 917504, 0, 524333, 917504, 0)
+layer_1/name = "Layer1"
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." instance=ExtResource("10_oc1um")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="OutputImage" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.596078)
+position = Vector2(784, 336)
+texture = ExtResource("13_mah1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+material = SubResource("CanvasItemMaterial_u7mev")
+position = Vector2(320, 240)
+texture = SubResource("GradientTexture2D_rquvl")
+script = ExtResource("15_u1hhb")
+metadata/_edit_lock_ = true
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Lava" parent="." instance=ExtResource("16_qk6jp")]
+offset_top = 448.0
+offset_right = 1856.0
+offset_bottom = 480.0
+
+[node name="Lava2" parent="." instance=ExtResource("16_qk6jp")]
+offset_left = 1888.0
+offset_top = 320.0
+offset_right = 2240.0
+offset_bottom = 496.0
+
+[node name="Lava3" parent="." instance=ExtResource("16_qk6jp")]
+offset_left = 1984.0
+offset_top = -10.0
+offset_right = 2112.0
+
+[node name="Coin" parent="." instance=ExtResource("17_4xoem")]
+position = Vector2(640, 560)
+
+[node name="PointLight2D" type="Sprite2D" parent="."]
+position = Vector2(496, 80)
+texture = SubResource("GradientTexture2D_oyern")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 0
+position = Vector2(496, 80)
+texture = SubResource("AtlasTexture_5paum")
+
+[node name="QuestionBlock" parent="." instance=ExtResource("17_s8430")]
+position = Vector2(368, 272)
+result = SubResource("Resource_j5ejy")
+
+[node name="QuestionBlock4" parent="." instance=ExtResource("17_s8430")]
+position = Vector2(1392, 336)
+result = SubResource("Resource_mhana")
+initially_visible_and_solid = false
+
+[node name="QuestionBlock2" parent="." instance=ExtResource("17_s8430")]
+position = Vector2(432, 272)
+result = SubResource("Resource_ylql3")
+
+[node name="QuestionBlock3" parent="." instance=ExtResource("17_s8430")]
+position = Vector2(400, 176)
+result = SubResource("Resource_nciky")
+
+[node name="PiranhaPink" parent="." instance=ExtResource("19_psg76")]
+position = Vector2(1344, 320)
+
+[node name="Lavafall" parent="." instance=ExtResource("23_twuf6")]
+position = Vector2(2048, 32)
+
+[node name="QuestionBlockFireFlower" parent="." instance=ExtResource("24_ld6a3")]
+position = Vector2(1056, 592)
+result = SubResource("Resource_smimp")
+
+[node name="Podoboo" parent="." instance=ExtResource("25_02d8b")]
+position = Vector2(1984, 336)
+interval = 1.0
+jumping_height = 240.0
+
+[node name="Podoboo2" parent="." instance=ExtResource("25_02d8b")]
+position = Vector2(2112, 336)
+interval = 1.0
+jumping_height = 192.0

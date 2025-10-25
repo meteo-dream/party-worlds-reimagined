@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjlwg40br8xp6"]
+
+[ext_resource type="Texture2D" uid="uid://c8gxdojq3ou6a" path="res://gfx/world6/6-2/neons/fry_guys.png" id="1_rnc08"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq4d7"]
+atlas = ExtResource("1_rnc08")
+region = Rect2(0, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieqn4"]
+atlas = ExtResource("1_rnc08")
+region = Rect2(0, 96, 128, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xrp0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq4d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieqn4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_0xrp0")
+autoplay = "default"

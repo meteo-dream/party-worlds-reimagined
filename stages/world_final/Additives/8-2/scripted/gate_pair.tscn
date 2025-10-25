@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://v1d7jaq72wuu"]
+
+[ext_resource type="Script" uid="uid://bd7oka65xq5iv" path="res://stages/world_final/Additives/8-2/scripted/gate_pair.gd" id="1_1h8lq"]
+[ext_resource type="PackedScene" uid="uid://dhy8uinww4ap5" path="res://stages/world_final/Additives/8-2/scripted/base_gate.tscn" id="2_qf7by"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13hbl"]
+size = Vector2(96, 193)
+
+[node name="GatePair" type="Node2D"]
+script = ExtResource("1_1h8lq")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(48, 95.5)
+shape = SubResource("RectangleShape2D_13hbl")
+
+[node name="BaseGate" parent="." instance=ExtResource("2_qf7by")]
+position = Vector2(-64, -128)
+
+[node name="BaseGate2" parent="." instance=ExtResource("2_qf7by")]
+position = Vector2(96, 32)
+gate_type = 1
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
+[connection signal="finished_movement" from="BaseGate" to="." method="_on_base_gate_finished_movement"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqm2ba8rkpnbq"]
+
+[ext_resource type="PackedScene" uid="uid://dfua3yh021nx6" path="res://objects/boss_touhou/common/magic_circle_minion.tscn" id="1_6f2ws"]
+[ext_resource type="Script" uid="uid://bm77ejiuq0g1k" path="res://objects/boss_touhou/boss_final/kevin_marisa/minion/magic_circle_orbit_option.gd" id="2_1y3xh"]
+
+[node name="MagicCircleOrbitOption" instance=ExtResource("1_6f2ws")]
+script = ExtResource("2_1y3xh")
+use_normal_movement = false
+final_orbit_amplitude = 100.0
+orbit_amplitude_time_sec = 1.5
+final_orbit_speed = 300.0
+orbit_acceleration_time_sec = 1.5
+orbit_angle_offset = 0.0
+use_static_anchor = false
+anchor_vector = Vector2(0, 0)
+time_before_orbit_escape_sec = 5.0
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+position = Vector2(1.90735e-06, 0)
+
+[node name="OrbitTimer" type="Timer" parent="." index="2"]
+process_mode = 1
+one_shot = true

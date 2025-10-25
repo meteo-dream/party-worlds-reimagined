@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw2m7gpgvhqyj"]
+
+[ext_resource type="Texture2D" uid="uid://bhdvcmxlf3ejv" path="res://engine/tilesets/overworld/default_grass.png" id="1_fli8p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubsil"]
+atlas = ExtResource("1_fli8p")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox8j8"]
+atlas = ExtResource("1_fli8p")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiotg"]
+atlas = ExtResource("1_fli8p")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bpflf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubsil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox8j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiotg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = -2
+position = Vector2(16, 0)
+sprite_frames = SubResource("SpriteFrames_bpflf")
+autoplay = "default"

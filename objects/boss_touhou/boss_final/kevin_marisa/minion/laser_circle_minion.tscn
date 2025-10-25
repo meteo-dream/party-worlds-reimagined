@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6lrq3ap1cn7q"]
+
+[ext_resource type="PackedScene" uid="uid://dfua3yh021nx6" path="res://objects/boss_touhou/common/magic_circle_minion.tscn" id="1_rjm0m"]
+[ext_resource type="Script" uid="uid://bylhslx82ykwl" path="res://objects/boss_touhou/boss_final/kevin_marisa/minion/laser_circle_minion.gd" id="2_swmgx"]
+[ext_resource type="AudioStream" uid="uid://dwsab5vxrlwvc" path="res://objects/boss_touhou/common/sounds/se_lazer00.wav" id="3_43pnv"]
+[ext_resource type="PackedScene" uid="uid://clibjtd1loe24" path="res://objects/boss_touhou/boss_final/kevin_marisa/bullets/bullet_marisa_laser_thin.tscn" id="4_6gljy"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="5_hb7nt"]
+[ext_resource type="Texture2D" uid="uid://bba8dk36js2c8" path="res://objects/boss_touhou/common/textures/bullet_shoot_eff.png" id="5_hhbw5"]
+
+[node name="LaserCircleMinion" instance=ExtResource("1_rjm0m")]
+self_modulate = Color(0.945098, 0.917647, 0.498039, 1)
+script = ExtResource("2_swmgx")
+move_destination = Vector2(200, 200)
+move_time_sec = 1.5
+shoot_laser_life_time_sec = 1.0
+shoot_use_laser_blast_instead = false
+shoot_use_as_warning = false
+shoot_desired_scale = 1.5
+shoot_wait_time = 1.0
+shoot_resize_time = 0.5
+shoot_life_time = 1.0
+shoot_disappear_time = 0.5
+shoot_sound_effect = ExtResource("3_43pnv")
+shoot_bullet_type = ExtResource("4_6gljy")
+shoot_bullet_speed = 0.0
+shoot_delay_time_sec = 2.0
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+position = Vector2(1.43051e-06, -2.38419e-06)
+
+[node name="LaserShootEffect" type="Sprite2D" parent="." index="2"]
+material = ExtResource("5_hb7nt")
+scale = Vector2(3, 3)
+texture = ExtResource("5_hhbw5")
+hframes = 8
+
+[node name="DisappearTimer" type="Timer" parent="." index="3"]
+process_mode = 1
+one_shot = true

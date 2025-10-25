@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo38g5ywpvrc7"]
+
+[ext_resource type="Texture2D" uid="uid://cnw7t13m2bojq" path="res://engine/tilesets/underground/gfx/underground_lamp.png" id="1_vjg56"]
+
+[sub_resource type="Gradient" id="Gradient_23cwt"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.142857, 0.493506, 0.694805)
+colors = PackedColorArray(1, 1, 1, 1, 0.31, 0.31, 0.31, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_frw04"]
+gradient = SubResource("Gradient_23cwt")
+width = 300
+height = 300
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+metadata/_snap_enabled = true
+
+[node name="UndergroundLamp" type="Sprite2D"]
+texture = ExtResource("1_vjg56")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 48)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.710333, 0.21, 1)
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_frw04")
+metadata/_edit_lock_ = true

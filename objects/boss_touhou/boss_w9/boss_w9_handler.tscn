@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://0ef5ytfu5wv0"]
+
+[ext_resource type="Script" uid="uid://115f4t81e1g8" path="res://objects/boss_touhou/boss_w9/boss_w9_handler.gd" id="1_rqml3"]
+[ext_resource type="PackedScene" uid="uid://d2f4dva8eso6e" path="res://objects/boss_touhou/boss_w9/components/spellcard_background.tscn" id="3_oaj4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghknn"]
+size = Vector2(304, 480)
+
+[node name="BossW9Handler" type="Node2D" node_paths=PackedStringArray("trigger_spellcard_background")]
+script = ExtResource("1_rqml3")
+trigger_spellcard_background = NodePath("SpellcardBackground")
+settings_spellcard_background_layer_1_opacity = 0.87
+settings_spellcard_background_layer_2_opacity = 0.65
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(168, 0)
+shape = SubResource("RectangleShape2D_ghknn")
+
+[node name="SpellcardBackground" parent="." instance=ExtResource("3_oaj4x")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 1
+bus = &"Sound"
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

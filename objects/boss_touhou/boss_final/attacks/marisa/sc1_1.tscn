@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckuce0fgk6m1j"]
+
+[ext_resource type="Script" uid="uid://dhv16w88xbusl" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc1_1.gd" id="1_hfmwp"]
+
+[node name="Sc1_Start" type="Node"]
+script = ExtResource("1_hfmwp")
+is_new_spell_card = true
+is_spell_card = true
+spellcard_name = "Light Sign \"Earthlight Ray\""
+
+[node name="BossInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="SpawnInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

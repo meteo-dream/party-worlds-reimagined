@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://vkk13sb8mecf"]
+
+[ext_resource type="Texture2D" uid="uid://cv48hala1160e" path="res://gfx/world3/3-1grass.png" id="1_buffd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fyjx"]
+atlas = ExtResource("1_buffd")
+region = Rect2(0, 0, 63, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me7hu"]
+atlas = ExtResource("1_buffd")
+region = Rect2(0, 32, 63, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1d11"]
+atlas = ExtResource("1_buffd")
+region = Rect2(0, 64, 63, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s1ok"]
+atlas = ExtResource("1_buffd")
+region = Rect2(0, 96, 63, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2b3ra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fyjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me7hu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1d11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s1ok")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="3-1Grass" type="AnimatedSprite2D"]
+z_index = -3
+sprite_frames = SubResource("SpriteFrames_2b3ra")
+autoplay = "default"
+frame_progress = 0.84522

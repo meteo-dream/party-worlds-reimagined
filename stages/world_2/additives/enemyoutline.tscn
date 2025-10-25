@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://165d3xyy6ct7"]
+
+[ext_resource type="Texture2D" uid="uid://drgad2ej3afcu" path="res://gfx/world2/outline.png" id="1_bhpsd"]
+
+[node name="Sprite2D" type="Sprite2D"]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_bhpsd")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)

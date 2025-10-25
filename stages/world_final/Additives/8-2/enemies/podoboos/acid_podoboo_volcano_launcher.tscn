@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckftrn0pupx33"]
+
+[ext_resource type="PackedScene" uid="uid://kc2ukyx68s2q" path="res://engine/objects/enemies/podoboo/podoboo_volcano_launcher.tscn" id="1_088ly"]
+[ext_resource type="Script" uid="uid://cjqdu4tdsgkph" path="res://stages/world_final/Additives/8-2/enemies/podoboos/acid_podoboo_volcano_launcher.gd" id="2_gwxku"]
+[ext_resource type="Texture2D" uid="uid://kmajkukqkjey" path="res://gfx/worldfinal/10-2/acid_podoboo.png" id="2_w0omw"]
+[ext_resource type="PackedScene" uid="uid://dyfg0fpqpyih0" path="res://stages/world_final/Additives/8-2/enemies/podoboos/acid_podoboo.tscn" id="3_ccyij"]
+
+[node name="AcidPodobooVolcanoLauncher" instance=ExtResource("1_088ly")]
+script = ExtResource("2_gwxku")
+PODOBOO = ExtResource("3_ccyij")
+
+[node name="Podoboo" parent="." index="2"]
+texture = ExtResource("2_w0omw")

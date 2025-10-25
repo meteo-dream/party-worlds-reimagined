@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo4wq4jlq0a4g"]
+
+[ext_resource type="Script" uid="uid://fwnelq7iuuf3" path="res://objects/area_titles/area_title.gd" id="1_ryqik"]
+[ext_resource type="FontFile" uid="uid://b1pi0t5byork2" path="res://engine/components/hud/hud_font.fnt" id="2_43o2k"]
+
+[node name="AreaTitle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+script = ExtResource("1_ryqik")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="AreaName" type="Label" parent="HUD"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 32.0
+offset_right = 65.0
+offset_bottom = 50.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_43o2k")
+text = "AREA NAME"
+horizontal_alignment = 1

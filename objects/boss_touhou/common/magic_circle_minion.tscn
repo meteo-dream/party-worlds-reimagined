@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfua3yh021nx6"]
+
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_h53ot"]
+[ext_resource type="Texture2D" uid="uid://cwv4rbxiyh0ql" path="res://objects/boss_touhou/common/textures/magic_circle_option.png" id="1_ndraa"]
+[ext_resource type="Script" uid="uid://ui10hx3nrbhm" path="res://objects/boss_touhou/common/magic_circle_minion.gd" id="2_4chq1"]
+[ext_resource type="AudioStream" uid="uid://bglg4oksf6efl" path="res://objects/boss_touhou/common/sounds/se_tan00.wav" id="4_78pxw"]
+[ext_resource type="PackedScene" uid="uid://dqrnqx6oalc6y" path="res://objects/boss_touhou/boss_final/kevin_marisa/bullets/bullet_marisa_star_small.tscn" id="4_m3eun"]
+
+[node name="MagicCircleMinion" type="Sprite2D"]
+self_modulate = Color(0.945098, 0.917647, 0.227451, 1)
+material = ExtResource("1_h53ot")
+texture = ExtResource("1_ndraa")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 63)
+script = ExtResource("2_4chq1")
+shoot_sound_effect = ExtResource("4_78pxw")
+shoot_bullet_type = ExtResource("4_m3eun")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(2.86102e-06, 4.76837e-07)
+scale = Vector2(3.2, 3.2)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

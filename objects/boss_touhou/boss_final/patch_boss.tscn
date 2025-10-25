@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://itmtlnrtmnqp"]
+
+[ext_resource type="Texture2D" uid="uid://cy6lrnpvlbrio" path="res://objects/boss_touhou/boss_final/textures/patch_boss.png" id="1_lddod"]
+[ext_resource type="Script" uid="uid://cid48fb4b8n54" path="res://objects/boss_touhou/boss_final/patch_boss.gd" id="2_7ciqv"]
+[ext_resource type="AudioStream" uid="uid://bx2s8ajo33k4h" path="res://objects/boss_touhou/common/sounds/se_ch00.wav" id="3_yj81h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaigc"]
+atlas = ExtResource("1_lddod")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ciqv"]
+atlas = ExtResource("1_lddod")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj81h"]
+atlas = ExtResource("1_lddod")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n45ua"]
+atlas = ExtResource("1_lddod")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa03y"]
+atlas = ExtResource("1_lddod")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lddod"]
+atlas = ExtResource("1_lddod")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr1r8"]
+atlas = ExtResource("1_lddod")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pysp4"]
+atlas = ExtResource("1_lddod")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brlr5"]
+atlas = ExtResource("1_lddod")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pr1r8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qaigc")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ciqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj81h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n45ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa03y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lddod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr1r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pysp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brlr5")
+}],
+"loop": false,
+"name": &"move",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brlr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pysp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr1r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lddod")
+}],
+"loop": false,
+"name": &"stop",
+"speed": 8.0
+}]
+
+[node name="PatchBoss" type="AnimatedSprite2D"]
+scale = Vector2(1.4, 1.4)
+sprite_frames = SubResource("SpriteFrames_pr1r8")
+autoplay = "default"
+script = ExtResource("2_7ciqv")
+short_charge_up = ExtResource("3_yj81h")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

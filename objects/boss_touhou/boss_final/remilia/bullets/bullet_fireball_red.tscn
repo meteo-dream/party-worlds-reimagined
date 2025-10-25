@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://bsai67y1av30o"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_ujrix"]
+[ext_resource type="Script" uid="uid://cvn4n1obi72uu" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_fireball_red.gd" id="2_aixyd"]
+[ext_resource type="Texture2D" uid="uid://clr8b4r4wgc47" path="res://objects/boss_touhou/common/textures/bullet_fireball.png" id="2_ltfu8"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="3_cjhgo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aixyd"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aixyd"]
+atlas = ExtResource("2_ltfu8")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjhgo"]
+atlas = ExtResource("2_ltfu8")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xikl8"]
+atlas = ExtResource("2_ltfu8")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bycdm"]
+atlas = ExtResource("2_ltfu8")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0pnsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aixyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjhgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xikl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bycdm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="BulletFireballRed" instance=ExtResource("1_ujrix")]
+script = ExtResource("2_aixyd")
+do_accelerate = false
+final_accelerate_speed = 300.0
+decelerate_delay_sec = 0.3
+decelerate_time_sec = 0.7
+bullet_erase_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_aixyd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+material = ExtResource("3_cjhgo")
+position = Vector2(-3, -1)
+rotation = 1.5708
+scale = Vector2(1.35, 1.35)
+sprite_frames = SubResource("SpriteFrames_0pnsb")
+autoplay = "default"
+
+[node name="Sprite" parent="." index="2"]
+position = Vector2(0, 2)
+rotation = 1.5708
+texture = null
+hframes = 8
+vframes = 2
+frame = 0
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+position = Vector2(-0.740741, -2.22222)
+rotation = -1.5708
+scale = Vector2(2, 2)
+frame = 1
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="3"]
+position = Vector2(-3.5, 0.500001)
+scale = Vector2(2.45, 1.95)

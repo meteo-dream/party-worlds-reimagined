@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck7ej4hvlg5fo"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_qoyuc"]
+[ext_resource type="Script" uid="uid://dp4mgninkatrd" path="res://objects/boss_touhou/common/bullet_base_marisa.gd" id="2_gqvkj"]
+
+[node name="BulletBaseMarisa" instance=ExtResource("1_qoyuc")]
+script = ExtResource("2_gqvkj")
+selected_color = 2
+color_list = Array[Color]([Color(0.933333, 0.509804, 0.933333, 1), Color(1, 0, 0, 1), Color(1, 0.843137, 0, 1), Color(1, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1), Color(0, 1, 1, 1)])
+sprite_anim_list = Array[int]([4, 2, 14, 13, 11, 6, 8])
+appear_anim_list = Array[int]([2, 1, 6, 6, 5, 3, 4])
+self_rotate_speed = 0.0

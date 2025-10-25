@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd66ygdmkdr0p"]
+
+[ext_resource type="Texture2D" uid="uid://bnq3hb7bptor0" path="res://gfx/world7/w7_grass.png" id="1_6ty30"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x54g7"]
+atlas = ExtResource("1_6ty30")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ntj2"]
+atlas = ExtResource("1_6ty30")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86jwh"]
+atlas = ExtResource("1_6ty30")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqtjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x54g7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ntj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86jwh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="World7Grass" type="AnimatedSprite2D"]
+position = Vector2(16, 0)
+sprite_frames = SubResource("SpriteFrames_uqtjw")
+autoplay = "default"

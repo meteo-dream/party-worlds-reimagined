@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://c51gjl7pj4fwa"]
+
+[ext_resource type="Texture2D" uid="uid://vmyjfmnxw6hg" path="res://gfx/world6/6-3-f-b.png" id="1_avvsd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wjn6"]
+atlas = ExtResource("1_avvsd")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45bet"]
+atlas = ExtResource("1_avvsd")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glo1i"]
+atlas = ExtResource("1_avvsd")
+region = Rect2(0, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfh30"]
+atlas = ExtResource("1_avvsd")
+region = Rect2(0, 288, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ntxk2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wjn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45bet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glo1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfh30")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="6-3-f-b" type="AnimatedSprite2D"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_ntxk2")
+autoplay = "default"

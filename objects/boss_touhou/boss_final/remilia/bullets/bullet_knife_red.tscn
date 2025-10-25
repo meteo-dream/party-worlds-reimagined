@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b02h6tufnrenr"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_3jx6r"]
+[ext_resource type="Texture2D" uid="uid://basuab21se1l2" path="res://objects/boss_touhou/common/textures/bullet_tex2.png" id="2_d1g8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1g8c"]
+size = Vector2(19, 6)
+
+[node name="BulletKnifeRed" instance=ExtResource("1_3jx6r")]
+bullet_erase_color = Color(1, 0, 0, 1)
+ignore_modulate_alpha_for_collision = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_d1g8c")
+
+[node name="Sprite" parent="." index="1"]
+rotation = 1.5708
+texture = ExtResource("2_d1g8c")
+hframes = 8
+vframes = 8
+frame = 25
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+rotation = -1.5708
+scale = Vector2(1.4, 1.4)
+frame = 1
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(2.38419e-07, -1)
+scale = Vector2(2.2, 1.4)

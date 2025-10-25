@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://hleooyw14nng"]
+
+[ext_resource type="SpriteFrames" uid="uid://0iotktariwss" path="res://objects/boss_touhou/boss_final/prefabs/patchouli_knowledge.tres" id="1_w6rnw"]
+
+[node name="PatchCutscene" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_w6rnw")
+animation = &"move"
+autoplay = "default"

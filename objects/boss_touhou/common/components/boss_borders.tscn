@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://rkt3mgg0nu41"]
+
+[ext_resource type="Script" uid="uid://chwxeobp3uphm" path="res://objects/boss_touhou/common/components/boss_borders.gd" id="1_qkujc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4pxg"]
+size = Vector2(32, 992)
+
+[node name="BossBorders" type="StaticBody2D"]
+collision_layer = 80
+script = ExtResource("1_qkujc")
+
+[node name="LeftBorder" type="CollisionShape2D" parent="."]
+position = Vector2(-16, -16)
+shape = SubResource("RectangleShape2D_r4pxg")
+
+[node name="RightBorder" type="CollisionShape2D" parent="."]
+position = Vector2(656, -16)
+shape = SubResource("RectangleShape2D_r4pxg")

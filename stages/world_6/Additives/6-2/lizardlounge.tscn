@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://b0305bmyyifk4"]
+
+[ext_resource type="Texture2D" uid="uid://chx6a10ku4dxo" path="res://gfx/world6/6-2/neons/lizard_lounge.png" id="1_v7r0f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydg60"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m03rs"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 96, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpscw"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 192, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfllu"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 288, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asjmp"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 384, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh87q"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 480, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61p6y"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 576, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asw3i"]
+atlas = ExtResource("1_v7r0f")
+region = Rect2(0, 672, 128, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pkhoi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydg60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m03rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpscw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfllu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asjmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh87q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61p6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asw3i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_pkhoi")
+autoplay = "default"

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6d37x2wo4tod"]
+
+[ext_resource type="Script" uid="uid://bgc6ulrdg0p2f" path="res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_3.gd" id="1_kdna5"]
+
+[node name="sc_3" type="Node"]
+script = ExtResource("1_kdna5")
+is_spell_card = true
+spellcard_name = "Snapshot \"Fast Shot\""
+spellcard_time = 30.0
+spellcard_score_bonus = 10000
+
+[node name="ViewfinderExistTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="RestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

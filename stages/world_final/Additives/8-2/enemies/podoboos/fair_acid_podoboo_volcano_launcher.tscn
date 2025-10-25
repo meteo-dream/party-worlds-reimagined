@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjhkixujg7uhb"]
+
+[ext_resource type="PackedScene" uid="uid://ckftrn0pupx33" path="res://stages/world_final/Additives/8-2/enemies/podoboos/acid_podoboo_volcano_launcher.tscn" id="1_lidde"]
+
+[node name="FairAcidPodobooVolcanoLauncher" instance=ExtResource("1_lidde")]
+podoboo_min_speed = -4
+podoboo_max_speed = 4
+no_rng_enabled = true

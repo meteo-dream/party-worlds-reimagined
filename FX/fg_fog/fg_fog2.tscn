@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://85affu5ohmcm"]
+
+[ext_resource type="Shader" uid="uid://dlb60ticce5vh" path="res://FX/fg_fog/fg_fog.gdshader" id="1_o8s8v"]
+[ext_resource type="Script" uid="uid://dbwramx2o0yeb" path="res://FX/fg_fog/fogfreq.gd" id="2_r2rbr"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ua01n"]
+noise_type = 3
+seed = 8
+frequency = 0.0044
+offset = Vector3(0, -160.64, 0)
+fractal_octaves = 1
+domain_warp_enabled = true
+domain_warp_amplitude = 5.0
+domain_warp_frequency = 0.1
+domain_warp_fractal_octaves = 10
+domain_warp_fractal_gain = 0.77
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jby4e"]
+width = 640
+height = 480
+seamless = true
+seamless_blend_skirt = 0.693
+noise = SubResource("FastNoiseLite_ua01n")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hxmqp"]
+shader = ExtResource("1_o8s8v")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_jby4e")
+shader_parameter/density = 0.675
+shader_parameter/speed = Vector2(0.02, 0.01)
+shader_parameter/freq = 1.0
+
+[node name="FG Fog" type="ParallaxBackground"]
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(640, 480)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxLayer"]
+material = SubResource("ShaderMaterial_hxmqp")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_r2rbr")

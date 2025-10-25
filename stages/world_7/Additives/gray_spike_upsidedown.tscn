@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0ect2ni24pjc"]
+
+[ext_resource type="PackedScene" uid="uid://5pmwnbbklcjj" path="res://engine/objects/enemies/spikes/spike.tscn" id="1_nwolk"]
+[ext_resource type="Shader" uid="uid://c1yibfdu766i8" path="res://engine/shaders/hsv_global.gdshader" id="2_arx8d"]
+[ext_resource type="Texture2D" uid="uid://pujov6sbhglg" path="res://engine/objects/enemies/spikes/textures/spike_hard_block.png" id="3_xv5da"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yjhit"]
+shader = ExtResource("2_arx8d")
+shader_parameter/hue = -0.345
+shader_parameter/saturation = -0.585
+shader_parameter/value = -0.195
+
+[node name="Spike" instance=ExtResource("1_nwolk")]
+
+[node name="CollisionPolygon2D" parent="." index="0"]
+position = Vector2(0, -16)
+rotation = -3.14159
+polygon = PackedVector2Array(0, -32, 0, -32, 16, 0, -16, 0)
+
+[node name="Sprite" parent="." index="1"]
+material = SubResource("ShaderMaterial_yjhit")
+position = Vector2(0, 0)
+texture = ExtResource("3_xv5da")
+flip_h = true
+flip_v = true

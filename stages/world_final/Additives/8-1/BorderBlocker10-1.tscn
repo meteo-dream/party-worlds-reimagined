@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfo0u8i8mqtdq"]
+
+[ext_resource type="Script" uid="uid://bgcfxcag03uba" path="res://stages/world_final/Additives/8-1/border_blocker_10_1.gd" id="1_ixhu7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrqas"]
+size = Vector2(16, 480)
+
+[node name="BorderBlocker10-1" type="StaticBody2D"]
+collision_layer = 112
+script = ExtResource("1_ixhu7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nrqas")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4yytsw8odlpr"]
+
+[ext_resource type="Script" uid="uid://de7xw1vvp76my" path="res://objects/boss_touhou/boss_final/attacks/remilia/scfinal.gd" id="1_5wmht"]
+
+[node name="ScFinal_Start" type="Node"]
+script = ExtResource("1_5wmht")
+is_new_spell_card = true
+next_attack_will_be_new = true
+
+[node name="Interval" type="Timer" parent="."]

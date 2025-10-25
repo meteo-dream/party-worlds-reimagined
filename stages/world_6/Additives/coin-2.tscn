@@ -1,0 +1,111 @@
+[gd_scene load_steps=15 format=3 uid="uid://b8lmdpwm3m5ii"]
+
+[ext_resource type="Script" uid="uid://csl0g5f43gcwb" path="res://stages/world_6/Additives/coin-2.gd" id="1_wy76i"]
+[ext_resource type="Texture2D" uid="uid://c56cpfcs1gnnb" path="res://gfx/world6/blucoin.png" id="2_imrm1"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="3_ohr2b"]
+[ext_resource type="PackedScene" uid="uid://ch646rieriyyu" path="res://engine/objects/effects/coin_effect/coin_effect.tscn" id="4_l447u"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="5_vs5hh"]
+[ext_resource type="AudioStream" uid="uid://poiur2eg7mre" path="res://engine/objects/items/coin/coin.wav" id="6_xk7jm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcllp"]
+size = Vector2(20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ssl"]
+atlas = ExtResource("2_imrm1")
+region = Rect2(78, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdwor"]
+atlas = ExtResource("2_imrm1")
+region = Rect2(46, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vae7"]
+atlas = ExtResource("2_imrm1")
+region = Rect2(14, 0, 32, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5osl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ssl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdwor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vae7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdwor")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6em3"]
+size = Vector2(20, 30)
+
+[sub_resource type="GDScript" id="GDScript_twjsq"]
+script/source = "extends ByNodeScript
+
+func _ready():
+	Data.add_coin()
+"
+
+[sub_resource type="Resource" id="Resource_223t5"]
+script = ExtResource("5_vs5hh")
+creation_nodepack = ExtResource("4_l447u")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+custom_script = SubResource("GDScript_twjsq")
+
+[node name="Coin" type="Area2D" groups=["coin"]]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_wy76i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_xcllp")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+process_mode = 1
+sprite_frames = SubResource("SpriteFrames_j5osl")
+autoplay = "default"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+rect = Rect2(-20, -20, 40, 40)
+metadata/_edit_lock_ = true
+
+[node name="Body" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+visible = false
+shape = SubResource("RectangleShape2D_l6em3")
+
+[node name="EnemyAttacked" type="Node" parent="Body"]
+script = ExtResource("3_ohr2b")
+stomping_enabled = false
+killing_immune = {
+"boomerang": false,
+"head": false,
+"shell": false,
+"shell_defence": 0,
+"shell_forced": false
+}
+killing_creation = SubResource("Resource_223t5")
+killing_sound_succeeded = ExtResource("6_xk7jm")
+turn_into_coin_on_level_end = false
+
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="." method="queue_free"]

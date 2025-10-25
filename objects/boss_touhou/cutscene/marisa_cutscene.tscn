@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2o1pgkvc5ilg"]
+
+[ext_resource type="Shader" uid="uid://dg38ndn8bx84j" path="res://stages/world_2/shaders/grayscale.gdshader" id="1_asfm4"]
+[ext_resource type="SpriteFrames" uid="uid://v5of08r6bo5f" path="res://objects/boss_touhou/boss_final/prefabs/marisa_kirisame.tres" id="1_t8fmq"]
+[ext_resource type="Script" uid="uid://csjpbfcwqqgnn" path="res://objects/boss_touhou/cutscene/marisa_cutscene.gd" id="3_nmnql"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bd0hx"]
+shader = ExtResource("1_asfm4")
+shader_parameter/offset = -0.3
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_asfm4"]
+load_path = "res://.godot/imported/cp_star.png-8aad299551c69fcc1fb6b6d3d28cbf85.ctex"
+
+[sub_resource type="Curve" id="Curve_bd0hx"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.8608, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5t2j1"]
+curve = SubResource("Curve_bd0hx")
+
+[sub_resource type="Curve" id="Curve_oqqpu"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.746479, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -11.146, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1iurn"]
+curve = SubResource("Curve_oqqpu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vwgqr"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 24.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 167.18
+initial_velocity_max = 217.18
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_1iurn")
+alpha_curve = SubResource("CurveTexture_5t2j1")
+
+[node name="MarisaCutscene" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_bd0hx")
+sprite_frames = ExtResource("1_t8fmq")
+autoplay = "default"
+script = ExtResource("3_nmnql")
+
+[node name="Stars" type="GPUParticles2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+amount = 24
+texture = SubResource("CompressedTexture2D_asfm4")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_vwgqr")

@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8b3j072sfcqe"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_vd4ob"]
+[ext_resource type="Texture2D" uid="uid://drq06a4v2rys7" path="res://stages/main/credits/textures/levelpng1.png" id="3_k3471"]
+[ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="4_dcagf"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="4_txwt1"]
+
+[node name="Section2" instance=ExtResource("1_vd4ob")]
+life_time_sec = 4.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 128.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("4_txwt1")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "Level design:[fill]
+ looper231 [color=95FBFF]yaolinggui[/color] "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Levelpng7" type="Sprite2D" parent="." index="1"]
+z_index = -1
+position = Vector2(328, 240)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_k3471")
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_top = 376.0
+offset_right = 640.0
+offset_bottom = 407.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_dcagf")
+theme_override_font_sizes/font_size = 27
+text = "10 -3: lucky question"
+horizontal_alignment = 1

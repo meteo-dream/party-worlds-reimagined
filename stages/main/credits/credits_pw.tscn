@@ -1,0 +1,198 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8h8up5dokdv4"]
+
+[ext_resource type="Script" uid="uid://cdjnovyxotms7" path="res://engine/scenes/credits/scripts/credits.gd" id="1_1fqlt"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_dmdoe"]
+[ext_resource type="AudioStream" uid="uid://bdi7r63yg63jb" path="res://stages/main/credits/music/k_jose_-_a_light_waltz.it" id="3_td670"]
+[ext_resource type="Texture2D" uid="uid://gck1i1ncrdk4" path="res://engine/scenes/credits/textures/credits_bg.png" id="4_s27vk"]
+[ext_resource type="Script" uid="uid://dbcfigd04ap1h" path="res://engine/scenes/credits/credits_text.gd" id="5_e2cam"]
+[ext_resource type="FontFile" uid="uid://dod5x6pna7fub" path="res://engine/fonts/comix_heavy.ttf" id="6_mvgfi"]
+[ext_resource type="Texture2D" uid="uid://dq2seep4cevs7" path="res://stages/main/credits/textures/Meteo_Dream.png" id="7_ns0hf"]
+[ext_resource type="Texture2D" uid="uid://80bqar8bvl72" path="res://stages/main/credits/textures/title.png" id="8_owpsj"]
+[ext_resource type="Texture2D" uid="uid://c4q3ah31qbju3" path="res://stages/main/credits/textures/mrs_w.png" id="8_td670"]
+[ext_resource type="Texture2D" uid="uid://byvkxvvmxmcmn" path="res://stages/main/credits/textures/rm_w.png" id="9_f0t52"]
+[ext_resource type="Texture2D" uid="uid://b1oopgjbmg11a" path="res://stages/main/credits/textures/tails_w.png" id="10_bg184"]
+
+[node name="CreditsTemplate" type="Control"]
+physics_interpolation_mode = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_1fqlt")
+metadata/_edit_lock_ = true
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_dmdoe")]
+music = Array[Resource]([ExtResource("3_td670")])
+channel_id = -7
+play_immediately = false
+stop_all_music_on_start = false
+play_globally = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_s27vk")
+centered = false
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Text" type="Control" parent="."]
+physics_interpolation_mode = 0
+anchors_preset = 0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 2944.0
+script = ExtResource("5_e2cam")
+speed = 35.0
+
+[node name="MeteoDream" type="Sprite2D" parent="Text"]
+position = Vector2(320, 336)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ns0hf")
+
+[node name="Title" type="Sprite2D" parent="Text"]
+position = Vector2(320, 148)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_owpsj")
+
+[node name="MrsW" type="Sprite2D" parent="Text"]
+position = Vector2(320, 1704)
+texture = ExtResource("8_td670")
+
+[node name="RmW" type="Sprite2D" parent="Text"]
+position = Vector2(320, 1894)
+texture = ExtResource("9_f0t52")
+
+[node name="TailsW" type="Sprite2D" parent="Text"]
+position = Vector2(320, 2084)
+texture = ExtResource("10_bg184")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Text"]
+physics_interpolation_mode = 0
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 230.0
+offset_bottom = 902.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("6_mvgfi")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "[center]
+
+
+Created by:
+
+
+
+
+--credits--
+Project lead: LooPer231
+level design: looper231, [color=95FBFF]yaolinggui[/color]
+map design: [color=gray]serafim[/color]gws, [color=95FBFF]yaolinggui[/color], nerton17, bullex
+boss coding, several cutscenes and credits: [color=95FBFF]yaolinggui[/color]
+
+--graphics credits--
+sonikku
+askywalker
+yingchin soul
+supersledgebro
+walmaker2022
+gamma v
+sednaiur
+crafink
+shikaternia
+evan.f
+hellfire
+electro_kun
+supermany
+[color=gray]serafim[/color]gws
+random.nick
+pixelator
+eevee
+[color=light_green]smuglutena[/color]
+nitrox
+Nicelife
+
+various touhou graphics: 
+team shanghai alice - zun 
+
+various mario graphics: 
+nintendo 
+
+--Audio credits--
+
+Music Sources:
+remix.kwed.org
+modarchive.org
+newgrounds
+nintendo
+team shanghai alice
+
+Sound effect sources:
+The Sounds Resource
+Nintendo
+Team Shanghai Alice
+public domain
+Trick nostalgie
+
+
+Powered by Thunder engine
+developed by:
+reflexguru
+jue13
+yukana
+
+
+--Skin credits--
+
+
+
+
+
+Marisa kirisame
+original by: hartflip0218
+voice: koumajou densetsu II & touhou canonball
+custom bgm: hooded edge
+Skin by: yaolinggui
+
+
+
+
+Reimu hakurei
+original by: hartflip0218
+voice: koumajou densetsu II & touhou canonball
+custom bgm: hooded edge
+Skin by: yaolinggui
+
+
+
+
+Miles \"tails\" prower
+original by: hartflip0218
+voice: Sonic heroes & sonic generations (jp)
+custom Sfx & bgm: Sonic 1, cd & 3
+Skin by: yaolinggui
+
+Credits music:
+k, jose - a light waltz
+
+
+
+
+This is merely basic credits.
+For more details on characters who appear
+as well as developer commentary, please beat the game!"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcjwe54awkjxq"]
+
+[ext_resource type="Texture2D" uid="uid://dh5ox7gb4u8fq" path="res://gfx/world3/3-1cloud.png" id="1_26bbx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aah6d"]
+atlas = ExtResource("1_26bbx")
+region = Rect2(0, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4msi"]
+atlas = ExtResource("1_26bbx")
+region = Rect2(65, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7ena"]
+atlas = ExtResource("1_26bbx")
+region = Rect2(130, 0, 65, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3s4fq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aah6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4msi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7ena")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="3-1Cloud" type="AnimatedSprite2D"]
+z_index = -100
+sprite_frames = SubResource("SpriteFrames_3s4fq")
+autoplay = "default"

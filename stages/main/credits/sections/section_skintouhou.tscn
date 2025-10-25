@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://csgqeq5qdnl8m"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_i6qoi"]
+[ext_resource type="Texture2D" uid="uid://byvkxvvmxmcmn" path="res://stages/main/credits/textures/rm_w.png" id="3_i6qoi"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="3_k7wir"]
+[ext_resource type="Texture2D" uid="uid://c4q3ah31qbju3" path="res://stages/main/credits/textures/mrs_w.png" id="4_bwvkx"]
+
+[node name="SectionSkinTouhou" instance=ExtResource("1_i6qoi")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+offset_top = 120.0
+offset_right = 640.0
+offset_bottom = 368.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("3_k7wir")
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "marisa kirisame & reimu hakurei
+
+characters: team shanghai alice - zun
+original sprites: hartflip0218
+voice: koumajou densetsu II
+& touhou canonball
+custom bgm: hooded edge
+
+Skin by: [color=95FBFF]yaolinggui[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RmW" type="Sprite2D" parent="." index="1"]
+position = Vector2(432, 72)
+texture = ExtResource("3_i6qoi")
+
+[node name="MrsW" type="Sprite2D" parent="." index="2"]
+position = Vector2(208, 72)
+texture = ExtResource("4_bwvkx")

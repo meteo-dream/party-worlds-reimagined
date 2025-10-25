@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq7686b7q6r18"]
+
+[ext_resource type="Script" uid="uid://bllmvx6okenyi" path="res://stages/world_2/additives/RemoteTransform2D.gd" id="1_75jxo"]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D"]
+update_rotation = false
+update_scale = false
+script = ExtResource("1_75jxo")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4at2ed2gmh3w"]
+
+[ext_resource type="Texture2D" uid="uid://bullhcct0hurt" path="res://engine/objects/bumping_blocks/question_block/textures/empty.png" id="1_aspue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcot3"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 112
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_jcot3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aspue")

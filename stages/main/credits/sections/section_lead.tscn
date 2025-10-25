@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://vacf5dwbayku"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_w704k"]
+[ext_resource type="Texture2D" uid="uid://dey5eaopp8b8o" path="res://stages/main/credits/textures/looper_pfp.png" id="2_w704k"]
+[ext_resource type="Texture2D" uid="uid://dq2seep4cevs7" path="res://stages/main/credits/textures/Meteo_Dream.png" id="3_jfcd1"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="4_y17lv"]
+
+[node name="SectionLead" instance=ExtResource("1_w704k")]
+life_time_sec = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(488, 248)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_w704k")
+
+[node name="MeteoDream" type="Sprite2D" parent="." index="1"]
+position = Vector2(464, 88)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jfcd1")
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 352.0
+offset_bottom = 291.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_y17lv")
+theme_override_font_sizes/font_size = 37
+text = "Created by:
+
+
+project lead:
+     looper231"

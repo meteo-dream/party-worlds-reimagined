@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhwe7l7iomh3"]
+
+[ext_resource type="Script" uid="uid://c0tob2111cpja" path="res://stages/world_4/Additives/PointLight2D.gd" id="1_8u0x0"]
+
+[sub_resource type="Gradient" id="Gradient_bdlco"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_le52i"]
+gradient = SubResource("Gradient_bdlco")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+metadata/_snap_enabled = true
+
+[node name="PointLight2D3" type="PointLight2D" groups=["sync6"]]
+scale = Vector2(4, 3.66667)
+energy = 1.08
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_le52i")
+offset = Vector2(0, 12)
+script = ExtResource("1_8u0x0")
+metadata/_edit_lock_ = true

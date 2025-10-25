@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbqctjo5hy6hg"]
+
+[ext_resource type="PackedScene" uid="uid://5pmwnbbklcjj" path="res://engine/objects/enemies/spikes/spike.tscn" id="1_58lyd"]
+[ext_resource type="Texture2D" uid="uid://bf52a3oqq4p8h" path="res://objects/spikes/space_station_spike.png" id="2_1ajdx"]
+
+[node name="SpikeSpaceStation" instance=ExtResource("1_58lyd")]
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("2_1ajdx")

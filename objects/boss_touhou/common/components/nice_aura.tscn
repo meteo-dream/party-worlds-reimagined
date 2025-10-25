@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://3gyx3lo57un3"]
+
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_3my77"]
+[ext_resource type="Texture2D" uid="uid://decrvxy8an3qo" path="res://objects/boss_touhou/common/textures/nice_circle.png" id="1_s63pa"]
+[ext_resource type="Script" uid="uid://bjquwni48b38t" path="res://objects/boss_touhou/common/components/nice_aura.gd" id="2_ipy35"]
+
+[node name="NiceAura" type="Sprite2D"]
+material = ExtResource("1_3my77")
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_s63pa")
+script = ExtResource("2_ipy35")

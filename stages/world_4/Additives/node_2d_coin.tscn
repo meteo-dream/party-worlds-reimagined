@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://djhxy4gtt23ku"]
+
+[ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="1_5wcsi"]
+[ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="1_vj2ss"]
+
+[node name="Node2D" type="Node2D" groups=["#circle"]]
+script = ExtResource("1_vj2ss")
+
+[node name="Coin" parent="." instance=ExtResource("1_5wcsi")]

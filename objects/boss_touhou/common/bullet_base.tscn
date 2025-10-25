@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bck46pm8sso1g"]
+
+[ext_resource type="Script" uid="uid://dhc25r4lpee7b" path="res://objects/boss_touhou/common/bullet_base.gd" id="1_vshpa"]
+[ext_resource type="AudioStream" uid="uid://c2fesk4mnf4w3" path="res://objects/boss_touhou/common/sounds/se_etbreak.wav" id="2_lkwbp"]
+[ext_resource type="Texture2D" uid="uid://b4ecvchbwshdl" path="res://objects/boss_touhou/common/textures/bullet_tex.png" id="3_2jf6q"]
+[ext_resource type="Texture2D" uid="uid://bba8dk36js2c8" path="res://objects/boss_touhou/common/textures/bullet_shoot_eff.png" id="4_lkwbp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbxnd"]
+radius = 5.0
+
+[node name="BulletBase" type="Area2D" groups=["#danmaku"]]
+collision_layer = 8388609
+monitorable = false
+script = ExtResource("1_vshpa")
+bullet_erase_color = Color(1, 1, 1, 1)
+bullet_erase_sound = ExtResource("2_lkwbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+z_index = 1
+shape = SubResource("CircleShape2D_sbxnd")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(1.35, 1.35)
+texture = ExtResource("3_2jf6q")
+hframes = 16
+vframes = 16
+frame = 32
+
+[node name="AppearAnim" type="Sprite2D" parent="Sprite"]
+visible = false
+z_index = 1
+position = Vector2(1.78814e-07, -3.8147e-06)
+scale = Vector2(0.740741, 0.740741)
+texture = ExtResource("4_lkwbp")
+hframes = 8
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

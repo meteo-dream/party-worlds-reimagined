@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://qfs0i2nlnp01"]
+
+[ext_resource type="Material" uid="uid://dm2vhdy5auc6i" path="res://FX/rain/raindrop.tres" id="1_n0yu6"]
+[ext_resource type="Texture2D" uid="uid://u3e4c7dp5kik" path="res://FX/rain/raindrop.png" id="2_gxepa"]
+
+[node name="Clip" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 512.0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Rain" type="GPUParticles2D" parent="."]
+amount = 400
+process_material = ExtResource("1_n0yu6")
+texture = ExtResource("2_gxepa")
+lifetime = 0.5
+preprocess = 15.0
+randomness = 0.5
+visibility_rect = Rect2(0, 0, 640, 480)

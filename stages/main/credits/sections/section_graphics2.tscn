@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://didrhk7ub1q0u"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_fb14u"]
+[ext_resource type="Texture2D" uid="uid://cxnlvrvmsjqqb" path="res://stages/main/credits/textures/levelpng3.png" id="2_fb14u"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="3_vxorh"]
+[ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="4_nbf1c"]
+
+[node name="Section4" instance=ExtResource("1_fb14u")]
+life_time_sec = 6.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+z_index = -1
+position = Vector2(256, 200)
+rotation = -0.123918
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_fb14u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
+offset_left = 280.0
+offset_top = -32.0
+offset_right = 688.0
+offset_bottom = 424.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("3_vxorh")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "GRAPHICS:
+
+crafink
+shikaternia
+evan.f
+hellfire
+electro_kun
+supermany
+[color=gray]serafim[/color]gws"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 304.0
+offset_bottom = 351.0
+rotation = 0.0593412
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_nbf1c")
+theme_override_font_sizes/font_size = 27
+text = "6-3: futurism"
+horizontal_alignment = 1

@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhk0c6p7d36xw"]
+
+[ext_resource type="PackedScene" uid="uid://db85vh72kcsmg" path="res://engine/objects/effects/lavafall/lavafall.tscn" id="1_4e6ef"]
+[ext_resource type="SpriteFrames" uid="uid://crsp8vpjgti2m" path="res://stages/world_final/Additives/8-2/misc/acidfall.tres" id="2_dyqt4"]
+
+[node name="Lavafall" instance=ExtResource("1_4e6ef")]
+
+[node name="AnimatedSprite2D" parent="Node2D" index="0"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D2" parent="Node2D" index="1"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D3" parent="Node2D" index="2"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D4" parent="Node2D" index="3"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D5" parent="Node2D" index="4"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D6" parent="Node2D" index="5"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D7" parent="Node2D" index="6"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D8" parent="Node2D" index="7"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D9" parent="Node2D" index="8"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D10" parent="Node2D" index="9"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D11" parent="Node2D" index="10"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D12" parent="Node2D" index="11"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D13" parent="Node2D" index="12"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D14" parent="Node2D" index="13"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D15" parent="Node2D" index="14"]
+sprite_frames = ExtResource("2_dyqt4")
+
+[node name="AnimatedSprite2D16" parent="Node2D" index="15"]
+sprite_frames = ExtResource("2_dyqt4")

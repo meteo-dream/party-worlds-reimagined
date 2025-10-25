@@ -1,0 +1,536 @@
+[gd_scene load_steps=38 format=4 uid="uid://bttcwqhe3g75w"]
+
+[ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_jkjdm"]
+[ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_7c8x4"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_t10h0"]
+[ext_resource type="AudioStream" uid="uid://ch62gfaaokxpc" path="res://stages/main/blache.mod" id="3_c8i6b"]
+[ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="4_gvhqi"]
+[ext_resource type="Script" uid="uid://db8widi15epm" path="res://engine/scenes/save_game_room/scripts/save_room_logic.gd" id="5_a2pht"]
+[ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="5_axrby"]
+[ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="6_rd34b"]
+[ext_resource type="PackedScene" uid="uid://e1hxnaxfnvbl" path="res://engine/scenes/save_game_room/scripts/reset.tscn" id="6_tgxd0"]
+[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="9_nq56u"]
+[ext_resource type="TileSet" uid="uid://cjoxdod5qfcit" path="res://stages/main/save_game_room_pw.tres" id="10_nilg5"]
+[ext_resource type="PackedScene" uid="uid://u383towqhd0i" path="res://engine/objects/warps/pipe_out.tscn" id="12_kj0k2"]
+[ext_resource type="PackedScene" uid="uid://dyg18uvaedfxp" path="res://engine/objects/warps/pipe_save.tscn" id="13_d852e"]
+[ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="14_b0luw"]
+[ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="15_bhtk6"]
+[ext_resource type="PackedScene" uid="uid://8a7nemgi0b6q" path="res://engine/objects/powerups/beetroot/beetroot.tscn" id="16_73851"]
+[ext_resource type="PackedScene" uid="uid://o3k018cbex8g" path="res://engine/objects/powerups/green_lui/green_lui.tscn" id="17_elo2e"]
+[ext_resource type="PackedScene" uid="uid://b2d7bys2llvfr" path="res://engine/objects/bumping_blocks/reset_power_block/reset_power_block.tscn" id="18_eof12"]
+[ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="21_f1o1t"]
+[ext_resource type="FontVariation" uid="uid://4h0cbbutybo2" path="res://engine/fonts/font_variations/mister_earl_variation.tres" id="22_dbn72"]
+[ext_resource type="Texture2D" uid="uid://dh5ox7gb4u8fq" path="res://gfx/world3/3-1cloud.png" id="23_8x5mf"]
+[ext_resource type="Script" uid="uid://blthfq00iwm17" path="res://engine/scenes/save_game_room/scripts/saved_level_label.gd" id="23_j0sbb"]
+[ext_resource type="Texture2D" uid="uid://y4ikbppnbo64" path="res://gfx/world3/bg3-1.png" id="25_mwdyk"]
+[ext_resource type="PackedScene" uid="uid://dh4kf1w7jyseo" path="res://engine/objects/warps/pipe_in.tscn" id="28_cenxx"]
+[ext_resource type="AudioStream" uid="uid://b1bxtmesp2bfq" path="res://engine/objects/players/prefabs/sounds/powerup.wav" id="28_cvwyd"]
+[ext_resource type="AudioStream" uid="uid://b76ae2v10akqg" path="res://engine/objects/players/prefabs/sounds/pipe_cutscene.wav" id="29_fo23o"]
+[ext_resource type="Script" uid="uid://b5elfpo3prfm8" path="res://stages/main/fancy_credits_unlockable.gd" id="29_xdqm1"]
+[ext_resource type="Texture2D" uid="uid://bppw8gp6m4wl0" path="res://engine/objects/core/checkpoint/textures/sign.png" id="30_hgs5s"]
+[ext_resource type="Script" uid="uid://drr3wdl8celkj" path="res://engine/scripts/nodes/effects/blinking_canvas_item.gd" id="32_wucv8"]
+[ext_resource type="Texture2D" uid="uid://bc2xibbc25g6v" path="res://gfx/world3/3-1leaves.png" id="34_4qgcm"]
+
+[sub_resource type="Gradient" id="Gradient_y31rc"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.012987, 0.480519, 1)
+colors = PackedColorArray(0.94, 0.125333, 0, 1, 0.97, 0.642625, 0.2425, 1, 1, 0.36, 0.36, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y4kjk"]
+gradient = SubResource("Gradient_y31rc")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we7ml"]
+atlas = ExtResource("23_8x5mf")
+region = Rect2(0, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2x8b"]
+atlas = ExtResource("23_8x5mf")
+region = Rect2(65, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es5ri"]
+atlas = ExtResource("23_8x5mf")
+region = Rect2(130, 0, 65, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdu4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we7ml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2x8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es5ri")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_sbufh"]
+script/source = "extends Node2D
+
+enum FacingMethod {
+	LOOK_AT_PLAYER,
+	X_SINE,
+	Y_COSINE
+}
+
+@export_group(\"Physics\")
+@export var amplitude: Vector2 = Vector2(50, 50)
+@export_range(0, 360, 0.01, \"suffix: °\") var phase: float
+@export var random_phase: bool:
+	set(rph):
+		random_phase = rph
+		if random_phase:
+			phase = randf_range(0, 360)
+@export var frequency: float = 1
+@export_group(\"Sprite\")
+@export var sprite_path: NodePath
+@export var facing_method: FacingMethod = FacingMethod.LOOK_AT_PLAYER
+
+var dir: int
+var facing: float
+
+@onready var center: Vector2 = position
+
+
+func _physics_process(delta: float) -> void:
+	position = Thunder.Math.oval(center, amplitude, deg_to_rad(phase))
+	phase = wrapf(phase + frequency * Thunder.get_delta(delta), 0, 360)
+	
+	if !sprite_path || !has_node(sprite_path):
+		return
+	var sprite = get_node(sprite_path)
+	
+	match facing_method:
+		FacingMethod.LOOK_AT_PLAYER:
+			var player: Player = Thunder._current_player
+			if player:
+				facing = Thunder.Math.look_at(global_position, player.global_position, global_transform)
+		FacingMethod.X_SINE:
+			facing = -sin(deg_to_rad(phase))
+		FacingMethod.Y_COSINE:
+			facing = cos(deg_to_rad(phase))
+	dir = sign(facing)
+	
+	if &\"flip_h\" in sprite:
+		sprite.flip_h = (facing < 0 && facing != 0)
+"
+
+[node name="SaveGameRoom" type="Node2D"]
+script = ExtResource("1_jkjdm")
+time = -1
+enable_restart_in_pause = false
+completion_music = ExtResource("2_7c8x4")
+falling_below_screen_action = 3
+falling_below_warp_to = NodePath("PipeOut")
+metadata/_edit_lock_ = true
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_t10h0")]
+music = Array[Resource]([ExtResource("3_c8i6b")])
+
+[node name="SaveRoomLogic" type="Node" parent="."]
+script = ExtResource("5_a2pht")
+
+[node name="Mario" parent="." instance=ExtResource("4_gvhqi")]
+position = Vector2(16, -144)
+
+[node name="PlayerCamera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_bottom = 480
+script = ExtResource("5_axrby")
+metadata/_edit_lock_ = true
+
+[node name="Reset" parent="." instance=ExtResource("6_tgxd0")]
+
+[node name="CamArea" parent="." instance=ExtResource("6_rd34b")]
+offset_right = 640.0
+offset_bottom = 480.0
+smooth_transition = true
+metadata/_edit_lock_ = true
+
+[node name="CamArea2" parent="." instance=ExtResource("6_rd34b")]
+offset_left = 640.0
+offset_right = 1280.0
+offset_bottom = 480.0
+smooth_transition = true
+metadata/_edit_lock_ = true
+
+[node name="CamArea3" parent="." instance=ExtResource("6_rd34b")]
+offset_left = 1280.0
+offset_right = 1920.0
+offset_bottom = 480.0
+smooth_transition = true
+metadata/_edit_lock_ = true
+
+[node name="front" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAACAOz/AgAAAAAAAAADAOz/AgAAAAAAAADu/+z/AgAAAAAAAADv/+z/AgAAAAAAAAAEAAkABQACAAAAAAADAAkABQABAAAAAAACAAkABQABAAAAAAABAAkABQABAAAAAAAAAAkABQABAAAAAAD//wkABQAAAAAAAAD//woABQAAAAEAAAAAAAoABQABAAEAAAABAAoABQABAAEAAAACAAoABQABAAEAAAADAAoABQABAAEAAAAEAAoABQAFAAEAAAAEAAsABQABAAEAAAADAAsABQABAAEAAAACAAsABQABAAEAAAABAAsABQABAAEAAAAAAAsABQABAAEAAAD//wsABQAAAAEAAAD//wwABQAAAAEAAAAAAAwABQABAAEAAAABAAwABQABAAEAAAACAAwABQABAAEAAAADAAwABQABAAEAAAAEAAwABQABAAEAAAAEAA0ABQABAAEAAAADAA0ABQABAAEAAAACAA0ABQABAAEAAAABAA0ABQABAAEAAAAAAA0ABQABAAEAAAD//w0ABQADAAEAAAD//w4ABQABAAEAAAAAAA4ABQABAAEAAAABAA4ABQABAAEAAAACAA4ABQABAAEAAAADAA4ABQABAAEAAAAEAA4ABQABAAEAAAATAA4ABQAGAAEAAAATAA0ABQABAAAAAAASAA4ABQABAAEAAAASAA0ABQABAAAAAAARAA4ABQABAAEAAAARAA0ABQABAAAAAAAQAA4ABQABAAEAAAAQAA0ABQABAAAAAAAPAA4ABQABAAEAAAAPAA0ABQABAAAAAAAOAA4ABQABAAEAAAAOAA0ABQABAAAAAAANAA4ABQABAAEAAAANAA0ABQABAAAAAAAMAA4ABQABAAEAAAAMAA0ABQABAAAAAAALAA4ABQABAAEAAAALAA0ABQABAAAAAAAKAA4ABQABAAEAAAAKAA0ABQABAAAAAAAJAA4ABQABAAEAAAAJAA0ABQABAAAAAAAIAA4ABQABAAEAAAAIAA0ABQABAAAAAAAHAA4ABQABAAEAAAAHAA0ABQAFAAEAAAAGAA4ABQAGAAEAAAAGAA0ABQABAAEAAAAFAA4ABQAGAAEAAAAFAA0ABQABAAEAAAATAA8ABQABAAIAAAASAA8ABQABAAIAAAARAA8ABQABAAIAAAAQAA8ABQABAAIAAAAPAA8ABQABAAIAAAAOAA8ABQABAAIAAAANAA8ABQABAAIAAAAMAA8ABQABAAIAAAALAA8ABQABAAIAAAAKAA8ABQABAAIAAAAJAA8ABQABAAIAAAAIAA8ABQABAAIAAAAHAA8ABQABAAIAAAAGAA8ABQABAAIAAAAFAA8ABQABAAIAAAAEAA8ABQABAAIAAAADAA8ABQABAAIAAAACAA8ABQABAAIAAAABAA8ABQABAAIAAAAAAA8ABQABAAIAAAD//w8ABQAEAAAAAAAoAA8ABQABAAIAAAAoAA4ABQAGAAEAAAAoAA0ABQABAAAAAAAnAA8ABQABAAIAAAAnAA4ABQABAAEAAAAnAA0ABQABAAAAAAAmAA8ABQABAAIAAAAmAA4ABQABAAEAAAAmAA0ABQABAAAAAAAlAA8ABQABAAIAAAAlAA4ABQABAAEAAAAlAA0ABQABAAAAAAAkAA8ABQABAAIAAAAkAA4ABQAGAAEAAAAkAA0ABQABAAAAAAAjAA8ABQABAAIAAAAjAA4ABQABAAEAAAAjAA0ABQABAAAAAAAiAA8ABQABAAIAAAAiAA4ABQABAAEAAAAiAA0ABQABAAAAAAAhAA8ABQABAAIAAAAhAA4ABQABAAEAAAAhAA0ABQABAAAAAAAgAA8ABQABAAIAAAAgAA4ABQABAAEAAAAgAA0ABQABAAAAAAAfAA8ABQABAAIAAAAfAA4ABQABAAEAAAAfAA0ABQABAAAAAAAeAA8ABQABAAIAAAAeAA4ABQAGAAEAAAAeAA0ABQABAAAAAAAdAA8ABQABAAIAAAAdAA4ABQABAAEAAAAdAA0ABQABAAAAAAAcAA8ABQABAAIAAAAcAA4ABQABAAEAAAAcAA0ABQABAAAAAAAbAA8ABQABAAIAAAAbAA4ABQABAAEAAAAbAA0ABQABAAAAAAAaAA8ABQABAAIAAAAaAA4ABQABAAEAAAAaAA0ABQABAAAAAAAZAA8ABQABAAIAAAAZAA4ABQABAAEAAAAZAA0ABQABAAAAAAAYAA8ABQABAAIAAAAYAA4ABQABAAEAAAAYAA0ABQABAAAAAAAXAA8ABQABAAIAAAAXAA4ABQABAAEAAAAXAA0ABQABAAAAAAAWAA8ABQABAAIAAAAWAA4ABQABAAEAAAAWAA0ABQABAAAAAAAVAA8ABQABAAIAAAAVAA4ABQABAAEAAAAVAA0ABQABAAAAAAAUAA8ABQABAAIAAAAUAA4ABQABAAEAAAAUAA0ABQABAAAAAAAIAAsABgAAAAEAAAAIAAwABgAAAAEAAAAJAAsABgABAAEAAAAJAAwABgABAAEAAAAIAAoABgAAAAAAAAAJAAoABgABAAAAAAAMAAsABgAAAAEAAAAMAAwABgAAAAEAAAANAAsABgABAAEAAAANAAwABgABAAEAAAAMAAoABgAAAAAAAAANAAoABgABAAAAAAAQAAsABgAAAAEAAAAQAAwABgAAAAEAAAARAAsABgABAAEAAAARAAwABgABAAEAAAAQAAoABgAAAAAAAAARAAoABgABAAAAAAACAAAABgAAAAEAAAACAAEABgAAAAEAAAADAAAABgABAAEAAAADAAEABgABAAEAAAACAAIABgAAAAEAAAADAAIABgABAAEAAAACAAMABgAAAAIAAAADAAMABgABAAIAAAAFAAoABQACAAAAAAAFAAsABQAFAAEAAAAFAAwABQABAAEAAAAGAAwABQAFAAEAAAAGAAsABQACAAAAAAAHAAwABQACAAAAAAAXAAsABQAFAAMAAAAXAAwABQAFAAMAAAAbAAsABQAFAAMAAAAbAAwABQAFAAMAAAAfAAsABQAFAAMAAAAfAAwABQAFAAMAAAAjAAsABQAFAAMAAAAjAAwABQAFAAMAAAAWAAsABQAFAAMAAAAWAAwABQAFAAMAAAAVAAsABQAFAAMAAAAUAAsABQAFAAMAAAATAAsABQAFAAMAAAASAAsABQAFAAMAAAASAAwABQAFAAMAAAATAAwABQAFAAMAAAAoAAwABQAFAAMAAAAoAAsABQAFAAMAAAAoAAoABQAFAAMAAAAoAAkABQAFAAMAAAACAP//BQAFAAMAAAACAP7/BQAFAAMAAAACAP3/BQAFAAMAAAACAPz/BQAFAAMAAAACAPv/BQAFAAMAAAACAPr/BQAFAAMAAAACAPn/BQAFAAMAAAACAPj/BQAFAAMAAAACAPf/BQAFAAMAAAACAPb/BQAFAAMAAAADAPb/BQAFAAMAAAADAPf/BQAFAAMAAAADAPj/BQAFAAMAAAADAPn/BQAFAAMAAAADAPr/BQAFAAMAAAADAPv/BQAFAAMAAAADAPz/BQAFAAMAAAADAP3/BQAFAAMAAAADAP7/BQAFAAMAAAADAP//BQAFAAMAAAD//wgAAgAAAAAAAAD//wcAAgAAAAAAAAD//wYAAgAAAAAAAAD//wUAAgAAAAAAAAD//wQAAgAAAAAAAAD//wMAAgAAAAAAAAD//wIAAgAAAAAAAAD//wEAAgAAAAAAAAD//wAAAgAAAAAAAAD/////AgAAAAAAAAD///7/AgAAAAAAAAD///3/AgAAAAAAAAA8APD/BQAFAAMAAAA8APH/BQAFAAMAAAA8APL/BQAFAAMAAAA8APP/BQAFAAMAAAA8APT/BQAFAAMAAAA8APX/BQAFAAMAAAA8APb/BQAFAAMAAAA8APf/BQAFAAMAAAA8APj/BQAFAAMAAAA8APn/BQAFAAMAAAA8APr/BQAFAAMAAAA8APv/BQAFAAMAAAA8APz/BQAFAAMAAAA8AP3/BQAFAAMAAAA8AP7/BQAFAAMAAAA8AP//BQAFAAMAAAA8AAAABQAFAAMAAAA8AAEABQAFAAMAAAA8AAIABQAFAAMAAAA8AAMABQAFAAMAAAA8AAQABQAFAAMAAAA8AAUABQAFAAMAAAA8AAYABQAFAAMAAAA8AAcABQAFAAMAAAA8AAgABQAFAAMAAAA8AAkABQAFAAMAAAA8AAoABQAFAAMAAAA8AAsABQAFAAMAAAA8AAwABQAFAAMAAAA8AA8ABQACAAIAAAA8AA4ABQACAAEAAAA8AA0ABQACAAAAAAA7AA8ABQABAAIAAAA7AA4ABQAGAAEAAAA7AA0ABQABAAAAAAA6AA8ABQABAAIAAAA6AA4ABQAGAAEAAAA6AA0ABQABAAAAAAA5AA8ABQABAAIAAAA5AA4ABQABAAEAAAA5AA0ABQABAAAAAAA4AA8ABQABAAIAAAA4AA4ABQABAAEAAAA4AA0ABQABAAAAAAA3AA8ABQABAAIAAAA3AA4ABQABAAEAAAA3AA0ABQABAAAAAAA2AA8ABQABAAIAAAA2AA4ABQAGAAEAAAA2AA0ABQABAAAAAAA1AA8ABQABAAIAAAA1AA4ABQABAAEAAAA1AA0ABQABAAAAAAA0AA8ABQABAAIAAAA0AA4ABQABAAEAAAA0AA0ABQABAAAAAAAzAA8ABQABAAIAAAAzAA4ABQABAAEAAAAzAA0ABQABAAAAAAAyAA8ABQABAAIAAAAyAA4ABQABAAEAAAAyAA0ABQABAAAAAAAxAA8ABQABAAIAAAAxAA4ABQABAAEAAAAxAA0ABQABAAAAAAAwAA8ABQABAAIAAAAwAA4ABQAGAAEAAAAwAA0ABQABAAAAAAAvAA8ABQABAAIAAAAvAA4ABQABAAEAAAAvAA0ABQABAAAAAAAuAA8ABQABAAIAAAAuAA4ABQABAAEAAAAuAA0ABQABAAAAAAAtAA8ABQABAAIAAAAtAA4ABQABAAEAAAAtAA0ABQABAAAAAAAsAA8ABQABAAIAAAAsAA4ABQABAAEAAAAsAA0ABQABAAAAAAArAA8ABQABAAIAAAArAA4ABQABAAEAAAArAA0ABQABAAAAAAAqAA8ABQABAAIAAAAqAA4ABQABAAEAAAAqAA0ABQABAAAAAAApAA8ABQABAAIAAAApAA4ABQAGAAEAAAApAA0ABQABAAAAAAApAAkABQAFAAMAAAAqAAkABQAFAAMAAAArAAkABQAFAAMAAAArAAoABQAFAAMAAAArAAsABQAFAAMAAAArAAwABQAFAAMAAAApAAoABQAFAAMAAAApAAsABQAFAAMAAAApAAwABQAFAAMAAAAqAAoABQAFAAMAAAAqAAsABQAFAAMAAAAqAAwABQAFAAMAAAA=")
+tile_set = ExtResource("10_nilg5")
+
+[node name="back" type="TileMapLayer" parent="."]
+z_index = -1
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAAAYABQAGAAYAAAAAAAcABQAGAAcAAAAAAAgABQAGAAgAAAAXAAkABQAHAAcAAAAXAAoABQAHAAgAAAAXAAgABQAHAAYAAAAWAAkABQAGAAUAAAAWAAoABQAGAAgAAAASAAoABQADAAYAAAATAAoABQAEAAYAAAAUAAoABQAFAAYAAAACAAgABQADAAYAAAADAAgABQAEAAYAAAAEAAgABQAFAAYAAAD//wwABQAFAAYAAAABAAgABwAAAAAAAQAPAAwABwAAAAAAAQAgAAwABwAAAAAAAQAnAAwABwAAAAAAAQAYAAwABQADAAYAAAAZAAwABQAEAAYAAAAaAAwABQAFAAYAAAATAAwABQAEAAYAAAAUAAwABQAEAAYAAAAVAAwABQAEAAYAAAAWAAwABQAFAAYAAAASAAwABQADAAYAAAALAAwABQAEAAYAAAAKAAwABQAEAAYAAAAJAAwABQAEAAYAAAAMAAwABQAEAAYAAAA6AAoABQAGAAYAAAA6AAsABQAGAAcAAAA6AAwABQAGAAgAAAAsAAwABQADAAYAAAAtAAwABQAEAAYAAAAuAAwABQAFAAYAAAA3AAwABQADAAYAAAA4AAwABQAEAAYAAAA5AAwABQAFAAYAAAAwAAwABwAAAAAAAQA=")
+tile_set = ExtResource("10_nilg5")
+
+[node name="back2" type="TileMapLayer" parent="."]
+z_index = -2
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAGAAAACAAAAAAAAAAGAAEACAAAAAAAAAAGAAIACAAAAAAAAAAGAAMACAAAAAAAAAAGAAQACAAAAAAAAAAGAAUACAAAAAAAAAAGAAYACAAAAAAAAAAGAAcACAAAAAAAAAAGAAgACAAAAAAAAAAGAAkACAAAAAAAAAAGAAoACAAAAAAAAAAGAAsACAAAAAAAAAAGAAwACAAAAAAAAAAQAAAACAAAAAAAAAAQAAEACAAAAAAAAAAQAAIACAAAAAAAAAAQAAMACAAAAAAAAAAQAAQACAAAAAAAAAAQAAUACAAAAAAAAAAQAAYACAAAAAAAAAAQAAcACAAAAAAAAAAQAAgACAAAAAAAAAAQAAkACAAAAAAAAAAQAAoACAAAAAAAAAAQAAsACAAAAAAAAAAQAAwACAAAAAAAAAAiAAAACAAAAAAAAAAiAAEACAAAAAAAAAAiAAIACAAAAAAAAAAiAAMACAAAAAAAAAAiAAQACAAAAAAAAAAiAAUACAAAAAAAAAAiAAYACAAAAAAAAAAiAAcACAAAAAAAAAAiAAgACAAAAAAAAAAiAAkACAAAAAAAAAAiAAoACAAAAAAAAAAiAAsACAAAAAAAAAAiAAwACAAAAAAAAAAbAAAACAAAAAAAAAAbAAEACAAAAAAAAAAbAAIACAAAAAAAAAAbAAMACAAAAAAAAAAbAAQACAAAAAAAAAAbAAUACAAAAAAAAAAbAAYACAAAAAAAAAAbAAcACAAAAAAAAAAbAAgACAAAAAAAAAAbAAkACAAAAAAAAAAbAAoACAAAAAAAAAAbAAsACAAAAAAAAAAbAAwACAAAAAAAAAAqAAAACAAAAAAAAAAqAAEACAAAAAAAAAAqAAIACAAAAAAAAAAqAAMACAAAAAAAAAAqAAQACAAAAAAAAAAqAAUACAAAAAAAAAAqAAYACAAAAAAAAAAqAAcACAAAAAAAAAAqAAgACAAAAAAAAAAqAAkACAAAAAAAAAAqAAoACAAAAAAAAAAqAAsACAAAAAAAAAAqAAwACAAAAAAAAAAxAAAACAAAAAAAAAAxAAEACAAAAAAAAAAxAAIACAAAAAAAAAAxAAMACAAAAAAAAAAxAAQACAAAAAAAAAAxAAUACAAAAAAAAAAxAAYACAAAAAAAAAAxAAcACAAAAAAAAAAxAAgACAAAAAAAAAAxAAkACAAAAAAAAAAxAAoACAAAAAAAAAAxAAsACAAAAAAAAAAxAAwACAAAAAAAAAA2AAAACAAAAAAAAAA2AAEACAAAAAAAAAA2AAIACAAAAAAAAAA2AAMACAAAAAAAAAA2AAQACAAAAAAAAAA2AAUACAAAAAAAAAA2AAYACAAAAAAAAAA2AAcACAAAAAAAAAA2AAgACAAAAAAAAAA2AAkACAAAAAAAAAA2AAoACAAAAAAAAAA2AAsACAAAAAAAAAA2AAwACAAAAAAAAAA=")
+tile_set = ExtResource("10_nilg5")
+
+[node name="HUD" parent="." instance=ExtResource("9_nq56u")]
+visible = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(320, 240)
+scale = Vector2(10, 7.5)
+texture = SubResource("GradientTexture2D_y4kjk")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(480, 96)
+sprite_frames = SubResource("SpriteFrames_xdu4w")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(200, 56)
+sprite_frames = SubResource("SpriteFrames_xdu4w")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1152, 96)
+sprite_frames = SubResource("SpriteFrames_xdu4w")
+autoplay = "default"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1688, 120)
+sprite_frames = SubResource("SpriteFrames_xdu4w")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1504, 48)
+sprite_frames = SubResource("SpriteFrames_xdu4w")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(880, 64)
+sprite_frames = SubResource("SpriteFrames_xdu4w")
+autoplay = "default"
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2473, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1236, 256)
+texture = ExtResource("25_mwdyk")
+region_rect = Rect2(0, 0, 2473, 400)
+metadata/_edit_lock_ = true
+
+[node name="PipeOut" parent="." instance=ExtResource("12_kj0k2")]
+position = Vector2(96, 112)
+rotation = -3.14159
+warp_direction = 3
+trigger_immediately = true
+
+[node name="PipeSave" parent="." instance=ExtResource("13_d852e")]
+position = Vector2(288, 304)
+profile_name = "save_1"
+warping_editor_display_path = false
+warp_to = NodePath("../PipeOut")
+warp_to_scene = "res://stages/world_1/map_1.tscn"
+warping_sound = ExtResource("29_fo23o")
+use_circle_transition = true
+circle_closing_speed = 0.03
+circle_opening_speed = 0.03
+circle_center_after_middle = true
+circle_wait_till_scene_changed = false
+
+[node name="Label" type="Label" parent="PipeSave"]
+offset_left = -64.0
+offset_top = -80.0
+offset_right = 64.0
+offset_bottom = -57.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "WORLD
+%s"
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("23_j0sbb")
+
+[node name="PipeSave2" parent="." instance=ExtResource("13_d852e")]
+position = Vector2(416, 304)
+profile_name = "save_2"
+warping_editor_display_path = false
+warp_to = NodePath("../PipeOut")
+warp_to_scene = "res://stages/world_1/map_1.tscn"
+warping_sound = ExtResource("29_fo23o")
+use_circle_transition = true
+circle_closing_speed = 0.03
+circle_opening_speed = 0.06
+circle_center_after_middle = true
+circle_wait_till_scene_changed = false
+
+[node name="Label" type="Label" parent="PipeSave2"]
+offset_left = -64.0
+offset_top = -80.0
+offset_right = 64.0
+offset_bottom = -57.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "WORLD
+%s"
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("23_j0sbb")
+
+[node name="PipeSave3" parent="." instance=ExtResource("13_d852e")]
+position = Vector2(544, 304)
+profile_name = "save_3"
+warping_editor_display_path = false
+warp_to = NodePath("../PipeOut")
+warp_to_scene = "res://stages/world_1/map_1.tscn"
+warping_sound = ExtResource("29_fo23o")
+use_circle_transition = true
+circle_closing_speed = 0.03
+circle_opening_speed = 0.06
+circle_center_after_middle = true
+circle_wait_till_scene_changed = false
+
+[node name="Label" type="Label" parent="PipeSave3"]
+offset_left = -64.0
+offset_top = -80.0
+offset_right = 64.0
+offset_bottom = -57.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "WORLD
+%s"
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("23_j0sbb")
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="RedMushroom" parent="Objects" instance=ExtResource("14_b0luw")]
+position = Vector2(816, 400)
+force_powerup_state = true
+score = 0
+supply_behavior = true
+supply_modify_lives = -1
+pickup_neutral_sound = ExtResource("28_cvwyd")
+speed = Vector2(0, 0)
+metadata/_edit_pinned_properties_ = [&"pickup_neutral_sound"]
+
+[node name="FireFlower" parent="Objects" instance=ExtResource("15_bhtk6")]
+position = Vector2(944, 400)
+force_powerup_state = true
+score = 0
+supply_behavior = true
+supply_modify_lives = -2
+pickup_neutral_sound = ExtResource("28_cvwyd")
+metadata/_edit_pinned_properties_ = [&"pickup_neutral_sound"]
+
+[node name="Beetroot" parent="Objects" instance=ExtResource("16_73851")]
+position = Vector2(1072, 400)
+force_powerup_state = true
+score = 0
+supply_behavior = true
+supply_modify_lives = -2
+pickup_neutral_sound = ExtResource("28_cvwyd")
+metadata/_edit_pinned_properties_ = [&"pickup_neutral_sound"]
+
+[node name="GreenLui" parent="Objects" instance=ExtResource("17_elo2e")]
+position = Vector2(1216, 401)
+force_powerup_state = true
+score = 0
+supply_behavior = true
+supply_modify_lives = -2
+pickup_neutral_sound = ExtResource("28_cvwyd")
+metadata/_edit_pinned_properties_ = [&"pickup_neutral_sound"]
+
+[node name="ResetPowerBlock" parent="Objects" instance=ExtResource("18_eof12")]
+position = Vector2(720, 208)
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("21_f1o1t")
+amplitude = Vector2(0, 15)
+frequency = 2.0
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = 656.0
+offset_top = 160.0
+offset_right = 784.0
+offset_bottom = 183.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "RESET POWERUP"
+horizontal_alignment = 1
+
+[node name="Node2D2" type="Node2D" parent="."]
+script = ExtResource("21_f1o1t")
+amplitude = Vector2(0, 15)
+phase = 180.0
+frequency = 2.0
+
+[node name="Label" type="Label" parent="Node2D2"]
+offset_left = 802.0
+offset_top = 160.0
+offset_right = 1245.0
+offset_bottom = 189.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "YOU CAN EXCHANGE SOME LIVES FOR ONE OF THESE ITEMS!!!
+BUT BE CAREFUL, SOMETIMES LIVES ARE MORE IMPORTANT THAN THIS STUFF."
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 752.0
+offset_top = 320.0
+offset_right = 880.0
+offset_bottom = 343.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "COSTS 1 LIFE"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 880.0
+offset_top = 320.0
+offset_right = 1008.0
+offset_bottom = 343.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "COSTS 2 LIVES"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1008.0
+offset_top = 320.0
+offset_right = 1136.0
+offset_bottom = 343.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "COSTS 2 LIVES"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1152.0
+offset_top = 320.0
+offset_right = 1280.0
+offset_bottom = 343.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "COSTS 2 LIVES"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 144.0
+offset_right = 480.0
+offset_bottom = 167.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "SELECT SAVE"
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("32_wucv8")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(104, 234)
+texture = ExtResource("30_hgs5s")
+
+[node name="Label6" type="Label" parent="Sign"]
+offset_left = -53.0
+offset_top = -43.0
+offset_right = 40.0
+offset_bottom = -14.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 18
+text = "mario forever
+party worlds"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Node2D3" type="Node2D" parent="."]
+script = SubResource("GDScript_sbufh")
+amplitude = Vector2(0, 10)
+frequency = 3.0
+
+[node name="Node2D4" type="Node2D" parent="."]
+script = SubResource("GDScript_sbufh")
+amplitude = Vector2(0, 10)
+frequency = 3.0
+
+[node name="3-1Leaves" type="Sprite2D" parent="."]
+z_index = -1
+texture_repeat = 2
+position = Vector2(960, 16)
+texture = ExtResource("34_4qgcm")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 34)
+
+[node name="FancyCreditsUnlockable" type="Node2D" parent="."]
+script = ExtResource("29_xdqm1")
+
+[node name="Label" type="Label" parent="FancyCreditsUnlockable"]
+offset_left = 1600.0
+offset_top = 264.0
+offset_right = 1728.0
+offset_bottom = 293.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_font_sizes/font_size = 21
+text = "POST-GAME
+CREDITS"
+horizontal_alignment = 1
+
+[node name="Pipe" type="TileMapLayer" parent="FancyCreditsUnlockable"]
+tile_map_data = PackedByteArray("AAAzAAoABgAAAAAAAAA0AAoABgABAAAAAAAzAAsABgAAAAEAAAA0AAsABgABAAEAAAAzAAwABgAAAAEAAAA0AAwABgABAAEAAAA=")
+tile_set = ExtResource("10_nilg5")
+
+[node name="PipeIn" parent="FancyCreditsUnlockable" instance=ExtResource("28_cenxx")]
+position = Vector2(1664, 304)
+warp_to_scene = "uid://dpmk8p0lknr8p"
+warping_sound = ExtResource("29_fo23o")
+use_circle_transition = true
+
+[connection signal="body_entered" from="PipeSave" to="Reset" method="_on_pipe_save_player_enter" unbinds=1]
+[connection signal="body_exited" from="PipeSave" to="Reset" method="_on_pipe_save_player_exit" unbinds=1]
+[connection signal="body_entered" from="PipeSave2" to="Reset" method="_on_pipe_save_player_enter" unbinds=1]
+[connection signal="body_exited" from="PipeSave2" to="Reset" method="_on_pipe_save_player_exit" unbinds=1]
+[connection signal="body_entered" from="PipeSave3" to="Reset" method="_on_pipe_save_player_enter" unbinds=1]
+[connection signal="body_exited" from="PipeSave3" to="Reset" method="_on_pipe_save_player_exit" unbinds=1]

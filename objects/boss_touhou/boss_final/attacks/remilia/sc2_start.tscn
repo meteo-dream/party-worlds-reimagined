@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://i1wpn3hhqtbh"]
+
+[ext_resource type="Script" uid="uid://c5beymxe7fc3y" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc2_1.gd" id="1_c8ju6"]
+
+[node name="Sc2_Start" type="Node"]
+script = ExtResource("1_c8ju6")
+is_new_spell_card = true
+
+[node name="ShotInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

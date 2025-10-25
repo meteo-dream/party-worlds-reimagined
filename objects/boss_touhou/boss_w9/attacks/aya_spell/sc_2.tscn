@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dir75ubdvx3xl"]
+
+[ext_resource type="Script" uid="uid://tdtxttiy6fuo" path="res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_2.gd" id="1_45qo5"]
+
+[node name="sc_2" type="Node"]
+script = ExtResource("1_45qo5")
+is_spell_card = true
+spellcard_name = "Telescoping \"Candid Shot\""
+spellcard_time = 31.0
+spellcard_score_bonus = 10000
+
+[node name="ViewfinderWaitTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="RestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

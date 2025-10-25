@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkadscsca78ph"]
+
+[ext_resource type="Texture2D" uid="uid://d4m4bfhr5jj7l" path="res://objects/spike_stone_ball/spike_stone_ball.png" id="1_574j3"]
+[ext_resource type="Script" uid="uid://cway2863r5lkh" path="res://engine/objects/enemies/spikes/spike.gd" id="1_fvxls"]
+[ext_resource type="Script" uid="uid://dcqgoeyw1kmpo" path="res://objects/spike_stone_ball/spike_stone_ball.gd" id="1_uwsp1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v3wks"]
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0kxng"]
+radius = 48.0
+
+[node name="SpikeStoneBall" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 34
+gravity_scale = 0.75
+continuous_cd = 1
+linear_damp = 0.07
+script = ExtResource("1_uwsp1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_v3wks")
+
+[node name="Body" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 39
+script = ExtResource("1_fvxls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+shape = SubResource("CircleShape2D_0kxng")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_574j3")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+modulate = Color(1, 1, 1, 0.0196078)
+position = Vector2(1.90735e-06, 1.90735e-06)
+scale = Vector2(3.2, 3.2)
+
+[connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]

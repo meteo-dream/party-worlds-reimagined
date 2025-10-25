@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqqekw1m16ftr"]
+
+[ext_resource type="Script" uid="uid://du8fhrjorqgkq" path="res://objects/boss_touhou/boss_w9/attacks/bullets/camera_viewfinder/hatate_camera.gd" id="1_p05dv"]
+[ext_resource type="AudioStream" uid="uid://byb1lt25iv5ei" path="res://objects/boss_touhou/common/sounds/se_focusin.wav" id="2_yjiqd"]
+[ext_resource type="AudioStream" uid="uid://dcpmh8765gsp5" path="res://objects/boss_touhou/common/sounds/se_shutter.wav" id="3_krw22"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="4_kdb12"]
+[ext_resource type="Texture2D" uid="uid://bjdfc3u4mnuyo" path="res://objects/boss_touhou/boss_w9/textures/hatate_photo.png" id="5_cj1wm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clw7h"]
+size = Vector2(248, 120)
+
+[node name="HatateCamera" type="Area2D"]
+collision_layer = 8388609
+script = ExtResource("1_p05dv")
+player_in_camera = ExtResource("2_yjiqd")
+camera_shutter = ExtResource("3_krw22")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("4_kdb12")
+texture = ExtResource("5_cj1wm")
+hframes = 2
+
+[node name="FlashEffect" type="Sprite2D" parent="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+material = ExtResource("4_kdb12")
+texture = ExtResource("5_cj1wm")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_clw7h")
+
+[node name="LifeTime" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="AmuletSpawner" type="Node2D" parent="."]
+position = Vector2(-124, -60)

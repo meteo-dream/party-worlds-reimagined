@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh7p5rj68ksgw"]
+
+[ext_resource type="PackedScene" uid="uid://b88ks57c23lyq" path="res://engine/objects/effects/bubble/lava_bubbles.tscn" id="1_p34gm"]
+[ext_resource type="Texture2D" uid="uid://hmxj4gr75qks" path="res://stages/world_final/Additives/8-2/misc/bubble_acid.png" id="2_t1u8w"]
+
+[node name="LavaBubbles" instance=ExtResource("1_p34gm")]
+texture = ExtResource("2_t1u8w")

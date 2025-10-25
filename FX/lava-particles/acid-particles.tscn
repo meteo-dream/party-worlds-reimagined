@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyh8itlx01dfq"]
+
+[ext_resource type="Texture2D" uid="uid://ds4prbk43p3j6" path="res://FX/lava-particles/bubble_acid.png" id="1_k5tlg"]
+
+[sub_resource type="Curve" id="Curve_6wvsv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.52, 0.868132), 0.0, 0.0, 0, 0, Vector2(1, 0.307692), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_y48cr"]
+curve = SubResource("Curve_6wvsv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_52u61"]
+lifetime_randomness = 0.5
+emission_shape_offset = Vector3(8600, 490, 0)
+emission_shape = 3
+emission_box_extents = Vector3(8600, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 180.0
+direction = Vector3(0, -90, 0)
+flatness = 0.055
+initial_velocity_min = 92.19
+initial_velocity_max = 102.19
+gravity = Vector3(0, -10, 0)
+scale_curve = SubResource("CurveTexture_y48cr")
+
+[node name="Acid Particles" type="GPUParticles2D"]
+amount = 1500
+texture = ExtResource("1_k5tlg")
+lifetime = 5.0
+preprocess = 5.0
+visibility_rect = Rect2(0, 0, 17024, 480)
+process_material = SubResource("ParticleProcessMaterial_52u61")

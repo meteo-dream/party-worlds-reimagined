@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxsdu68awivka"]
+
+[ext_resource type="PackedScene" uid="uid://v1d7jaq72wuu" path="res://stages/world_final/Additives/8-2/scripted/gate_pair.tscn" id="1_nsmw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsmw8"]
+size = Vector2(96, 160.5)
+
+[node name="GatePairOtherSide" instance=ExtResource("1_nsmw8")]
+
+[node name="CollisionShape2D" parent="PlayerDetector" index="0"]
+position = Vector2(80, 112.25)
+shape = SubResource("RectangleShape2D_nsmw8")
+
+[node name="BaseGate2" parent="." index="2"]
+position = Vector2(128, 32)

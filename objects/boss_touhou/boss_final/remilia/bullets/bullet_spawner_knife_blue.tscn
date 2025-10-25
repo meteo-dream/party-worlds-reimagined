@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cih5vvjb85q6h"]
+
+[ext_resource type="PackedScene" uid="uid://b02h6tufnrenr" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_knife_red.tscn" id="1_ix5fa"]
+[ext_resource type="Script" uid="uid://gm6mem1d1xn2" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_spawner_type.gd" id="2_oksya"]
+[ext_resource type="PackedScene" uid="uid://cmarptu23ofcx" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_circle_red.tscn" id="3_bn1f1"]
+
+[node name="BulletKnifeBlue" instance=ExtResource("1_ix5fa")]
+script = ExtResource("2_oksya")
+bullet_type = ExtResource("3_bn1f1")
+bullet_move_final_speed = 250.0
+bullet_angle = 90.0
+bullet_erase_color = Color(0, 0, 1, 1)
+ignore_modulate_alpha_for_collision = false
+deletable_bullet = false
+
+[node name="Sprite" parent="." index="1"]
+frame = 27
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+frame = 3
+
+[node name="Timer" type="Timer" parent="." index="3"]
+process_mode = 1
+one_shot = true

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4mls8584l40m"]
+
+[ext_resource type="Script" uid="uid://do0n0y48amkln" path="res://objects/boss_touhou/boss_final/attacks/marisa/scfinal_1.gd" id="1_il4n3"]
+
+[node name="ScFinal_Start" type="Node"]
+script = ExtResource("1_il4n3")
+is_new_spell_card = true
+next_attack_will_be_new = true
+is_spell_card = true
+spellcard_name = "Red Magicannon \"Final Spark\""
+
+[node name="BossRestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="MasterSparkTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="NoiseBulletTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="MasterSparkInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

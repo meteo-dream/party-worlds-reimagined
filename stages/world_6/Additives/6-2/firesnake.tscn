@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b32bn4s8rs5ng"]
+
+[ext_resource type="Texture2D" uid="uid://b4470k0efdrmb" path="res://gfx/world6/6-2/neons/fire_snake.png" id="1_cdcjl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x55bc"]
+atlas = ExtResource("1_cdcjl")
+region = Rect2(0, 0, 192, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0dkk"]
+atlas = ExtResource("1_cdcjl")
+region = Rect2(0, 64, 192, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqbmr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x55bc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0dkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_pqbmr")
+autoplay = "default"

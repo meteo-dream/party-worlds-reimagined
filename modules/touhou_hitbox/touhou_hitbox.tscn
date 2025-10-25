@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckcba4k4i6lmr"]
+
+[ext_resource type="Texture2D" uid="uid://dd3k5jit310eq" path="res://modules/touhou_hitbox/small_hitbox.png" id="1_pqm0c"]
+[ext_resource type="Script" uid="uid://vp3t0bxd0g6s" path="res://modules/touhou_hitbox/touhou_hitbox.gd" id="1_r1jqp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqm0c"]
+radius = 4.44444
+
+[node name="TouhouHitbox" type="Node"]
+script = ExtResource("1_r1jqp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("1_pqm0c")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+collision_layer = 8388609
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_pqm0c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("1_pqm0c")

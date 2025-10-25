@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt8y8srtcdtht"]
+
+[ext_resource type="Texture2D" uid="uid://cop6ys8kb3hsq" path="res://gfx/world6/6-2/neons/bullet_bills.png" id="1_6o5m1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fwn7"]
+atlas = ExtResource("1_6o5m1")
+region = Rect2(0, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cecy"]
+atlas = ExtResource("1_6o5m1")
+region = Rect2(0, 96, 128, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1fn72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fwn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cecy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1fn72")
+autoplay = "default"

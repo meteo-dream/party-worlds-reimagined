@@ -1,0 +1,182 @@
+[gd_scene load_steps=27 format=3 uid="uid://sjgkfkg51cmo"]
+
+[ext_resource type="Script" uid="uid://j1r4aktqxyc4" path="res://objects/boss_touhou/boss_final/bait_sakuya/sakuya_boss.gd" id="1_ctxsj"]
+[ext_resource type="Texture2D" uid="uid://mstq3nlnm1jm" path="res://objects/boss_touhou/boss_final/textures/sakuya_boss.png" id="2_f8e7u"]
+[ext_resource type="Script" uid="uid://btduwf01mijsg" path="res://objects/boss_touhou/boss_final/bait_sakuya/sprite.gd" id="3_f8e7u"]
+[ext_resource type="Script" uid="uid://dhaqb1incjw33" path="res://engine/objects/enemies/enemy_body_collision.gd" id="3_iee3g"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="4_l2bce"]
+[ext_resource type="PackedScene" uid="uid://ces7bytc0ugus" path="res://engine/objects/effects/explosion/explosion.tscn" id="5_pdadj"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="7_bxek0"]
+[ext_resource type="AudioStream" uid="uid://46ern2rknx3i" path="res://engine/objects/enemies/_sounds/stomp.wav" id="8_fdyie"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="9_mecf8"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="10_7so82"]
+[ext_resource type="AudioStream" uid="uid://be3uvqev2c1p6" path="res://engine/objects/players/prefabs/sounds/kick.wav" id="11_wuadj"]
+[ext_resource type="AudioStream" uid="uid://c162tqddc8eej" path="res://engine/objects/bumping_blocks/_sounds/bump.wav" id="12_dul3x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hna3u"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn07x"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(0, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyqau"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(64, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5cm3"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(128, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj1i3"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(192, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2170d"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(192, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlrow"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(128, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqamx"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(64, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdkch"]
+atlas = ExtResource("2_f8e7u")
+region = Rect2(0, 80, 64, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1n5cv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hna3u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn07x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyqau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5cm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj1i3")
+}],
+"loop": false,
+"name": &"move",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2170d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlrow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqamx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdkch")
+}],
+"loop": false,
+"name": &"stop",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8e7u"]
+size = Vector2(22, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo3bm"]
+size = Vector2(22, 80)
+
+[sub_resource type="Resource" id="Resource_hok10"]
+script = ExtResource("7_bxek0")
+creation_nodepack = ExtResource("5_pdadj")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(3, 3)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="Resource" id="Resource_iee3g"]
+resource_local_to_scene = true
+script = ExtResource("7_bxek0")
+creation_nodepack = ExtResource("9_mecf8")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("10_7so82")
+
+[node name="SakuyaBait" type="CharacterBody2D"]
+script = ExtResource("1_ctxsj")
+sprite = NodePath("Sprite")
+metadata/_custom_type_script = "uid://co5dvlw7m0osv"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 5.96046e-08)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_1n5cv")
+animation = &"stop"
+autoplay = "default"
+script = ExtResource("3_f8e7u")
+amplitude = Vector2(0, 5)
+frequency = 2.0
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-2, 3.5)
+shape = SubResource("RectangleShape2D_f8e7u")
+
+[node name="Body" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("3_iee3g")
+
+[node name="Collision" type="CollisionShape2D" parent="Body"]
+visible = false
+position = Vector2(-2, 4)
+shape = SubResource("RectangleShape2D_bo3bm")
+debug_color = Color(0, 0.643137, 0.309804, 0.419608)
+
+[node name="EnemyAttacked" type="Node" parent="Body"]
+script = ExtResource("4_l2bce")
+stomping_creation = SubResource("Resource_hok10")
+stomping_scores = 100
+stomping_sound = ExtResource("8_fdyie")
+killing_creation = SubResource("Resource_iee3g")
+killing_scores = 100
+killing_sound_succeeded = ExtResource("11_wuadj")
+killing_sound_failed = ExtResource("12_dul3x")
+ice_sprite = NodePath("../../Sprite")
+metadata/_edit_pinned_properties_ = [&"stomping_scores", &"stomping_creation", &"stomping_sound", &"killing_creation", &"ice_sprite"]
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="." method="purged_sakuya"]
+[connection signal="stomped_succeeded" from="Body/EnemyAttacked" to="." method="purged_sakuya"]

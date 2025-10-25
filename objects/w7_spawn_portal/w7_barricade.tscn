@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=4 uid="uid://cit5rtc5dohm5"]
+
+[ext_resource type="TileSet" uid="uid://cmeu3v437g56" path="res://objects/w7_spawn_portal/w7_barricade.tres" id="1_i6x0q"]
+[ext_resource type="Script" uid="uid://b2cjyjua731d" path="res://objects/w7_spawn_portal/w7_barricade.gd" id="1_jpuo3"]
+[ext_resource type="PackedScene" uid="uid://cobpaovc5ty3m" path="res://objects/w7_spawn_portal/barricade_spike.tscn" id="3_jpuo3"]
+
+[node name="W7 Barricade" type="Node2D"]
+z_index = -1
+script = ExtResource("1_jpuo3")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAP//AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAAAAPn/AAAAAAAAAAAAAPj/AAAAAAAAAAAAAPf/AAAAAAAAAAAAAAwAAAAAAAAAAAA=")
+tile_set = ExtResource("1_i6x0q")
+
+[node name="BarricadeSpike" parent="." instance=ExtResource("3_jpuo3")]
+position = Vector2(16, 432)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://8riasidfvdr8"]
+
+[ext_resource type="Script" uid="uid://dw37ump8fh6ia" path="res://modules/beetroot-grab/grabable_spawner.gd" id="1_gj2x0"]
+
+[sub_resource type="Gradient" id="Gradient_weeov"]
+colors = PackedColorArray(0.345098, 1, 0.454902, 1, 0.345098, 0, 0.454902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lch0b"]
+gradient = SubResource("Gradient_weeov")
+fill_to = Vector2(0, 1)
+
+[node name="Grabbable-spawner" type="Node2D"]
+script = ExtResource("1_gj2x0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_lch0b")

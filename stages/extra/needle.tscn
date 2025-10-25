@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=4 uid="uid://cjlcgplvvk7to"]
+
+[ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_ssd2m"]
+[ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_tffms"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="3_f1j62"]
+[ext_resource type="AudioStream" uid="uid://cvi77c1uj3arc" path="res://modules/short-die.ogg" id="5_f2dsr"]
+[ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="5_p3xpf"]
+[ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="7_p7xr7"]
+[ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_4ij5x"]
+[ext_resource type="Texture2D" uid="uid://djwe62jh83kf" path="res://engine/tilesets/overworld/hard_block.png" id="10_rjhsd"]
+[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_ieeya"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7801i"]
+texture = ExtResource("10_rjhsd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_c0acc"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 112
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_7801i")
+
+[node name="Needle" type="Node2D"]
+script = ExtResource("1_ssd2m")
+time = -1
+completion_music = ExtResource("2_tffms")
+metadata/_custom_type_script = "uid://dh7ob1sbo8lx7"
+
+[node name="MusicLoader" parent="." instance=ExtResource("3_f1j62")]
+
+[node name="Player" parent="." instance=ExtResource("5_p3xpf")]
+position = Vector2(80, 400)
+death_music_override = ExtResource("5_f2dsr")
+death_wait_time = 0.0
+death_check_for_lives = false
+death_stop_music = false
+
+[node name="PlayerCamera2D" type="Camera2D" parent="."]
+editor_draw_screen = false
+script = ExtResource("7_p7xr7")
+metadata/_edit_lock_ = true
+
+[node name="CameraArea" parent="." instance=ExtResource("8_4ij5x")]
+offset_right = 11008.0
+offset_bottom = 480.0
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAA0AAAAAAAAAAAAAAA0AAAAAAAAAAAABAA0AAAAAAAAAAAADAA0AAAAAAAAAAAAEAA0AAAAAAAAAAAAFAA0AAAAAAAAAAAAGAA0AAAAAAAAAAAAHAA0AAAAAAAAAAAAIAA0AAAAAAAAAAAAJAA0AAAAAAAAAAAAKAA0AAAAAAAAAAAALAA0AAAAAAAAAAAAMAA0AAAAAAAAAAAANAA0AAAAAAAAAAAAOAA0AAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_c0acc")
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." instance=ExtResource("11_ieeya")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground2/ParallaxLayer"]
+offset_right = 640.0
+offset_bottom = 480.0

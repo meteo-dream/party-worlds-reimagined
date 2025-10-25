@@ -1,0 +1,289 @@
+[gd_scene load_steps=47 format=3 uid="uid://b1as42ceyjt3e"]
+
+[ext_resource type="SpriteFrames" uid="uid://v5of08r6bo5f" path="res://objects/boss_touhou/boss_final/prefabs/marisa_kirisame.tres" id="1_78k8p"]
+[ext_resource type="Shader" uid="uid://dg38ndn8bx84j" path="res://stages/world_2/shaders/grayscale.gdshader" id="1_k21ev"]
+[ext_resource type="Script" uid="uid://q8d11el3ugpj" path="res://objects/boss_touhou/boss_final/kevin_marisa/kevin_marisa.gd" id="1_taoym"]
+[ext_resource type="AudioStream" uid="uid://cug6168hp7h0b" path="res://objects/boss_touhou/common/sounds/se_lazer01.wav" id="2_wbxyw"]
+[ext_resource type="AudioStream" uid="uid://builuvm72bfiq" path="res://objects/boss_touhou/common/sounds/se_nep00.wav" id="3_poiu4"]
+[ext_resource type="AudioStream" uid="uid://cxhnaayxaeksh" path="res://objects/boss_touhou/common/sounds/se_option.wav" id="4_0bc4a"]
+[ext_resource type="AudioStream" uid="uid://bsntchcp45yop" path="res://objects/boss_touhou/common/se_boon01.wav" id="4_kyycy"]
+[ext_resource type="AudioStream" uid="uid://4odebge034r8" path="res://stages/world_3/objects/chorniy_mario/appear.ogg" id="5_0bc4a"]
+[ext_resource type="AudioStream" uid="uid://daxnhpwsdkij1" path="res://objects/boss_touhou/common/sounds/se_kira00.wav" id="5_n88ma"]
+[ext_resource type="AudioStream" uid="uid://d0yopvi5bqs4" path="res://stages/world_3/objects/chorniy_mario/bomb_expl.ogg" id="6_n88ma"]
+[ext_resource type="AudioStream" uid="uid://0jqk1v6iikwf" path="res://objects/boss_touhou/common/sounds/se_fault.wav" id="7_x5mbi"]
+[ext_resource type="AudioStream" uid="uid://cs6u2jbf7prli" path="res://objects/boss_touhou/common/sounds/se_enep01.wav" id="8_hneie"]
+[ext_resource type="AudioStream" uid="uid://bqs4ewqi7b7s" path="res://objects/boss_touhou/common/sounds/se_cat00.wav" id="9_akbvb"]
+[ext_resource type="AudioStream" uid="uid://ct3neygbqda02" path="res://objects/boss_touhou/common/sounds/se_ch02.wav" id="10_yo5v7"]
+[ext_resource type="AudioStream" uid="uid://bx2s8ajo33k4h" path="res://objects/boss_touhou/common/sounds/se_ch00.wav" id="11_ckkkh"]
+[ext_resource type="AudioStream" uid="uid://w6jhk3cstw8t" path="res://objects/boss_touhou/common/sounds/se_enep02.wav" id="12_mipbo"]
+[ext_resource type="AudioStream" uid="uid://bglg4oksf6efl" path="res://objects/boss_touhou/common/sounds/se_tan00.wav" id="13_ycnsr"]
+[ext_resource type="AudioStream" uid="uid://dt24m275101pu" path="res://objects/boss_touhou/common/sounds/se_nice.wav" id="14_mipbo"]
+[ext_resource type="AudioStream" uid="uid://dwsab5vxrlwvc" path="res://objects/boss_touhou/common/sounds/se_lazer00.wav" id="15_r1yev"]
+[ext_resource type="AudioStream" uid="uid://c2fesk4mnf4w3" path="res://objects/boss_touhou/common/sounds/se_etbreak.wav" id="16_wjkm1"]
+[ext_resource type="AudioStream" uid="uid://bob0wlrx8p6y7" path="res://objects/boss_touhou/common/sounds/se_timeout.wav" id="17_n8cul"]
+[ext_resource type="AudioStream" uid="uid://cn5mt7emm8k4d" path="res://objects/boss_touhou/common/sounds/se_timeout2.wav" id="18_vxsu1"]
+[ext_resource type="Script" uid="uid://bu7n5s6htw2uo" path="res://objects/boss_touhou/common/components/boss_sprite.gd" id="21_hneie"]
+[ext_resource type="Script" uid="uid://dhaqb1incjw33" path="res://engine/objects/enemies/enemy_body_collision.gd" id="22_ycnsr"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="23_r1yev"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="24_wjkm1"]
+[ext_resource type="Texture2D" uid="uid://cyvsod71yq71g" path="res://objects/boss_touhou/common/textures/magic_circle.png" id="25_n8cul"]
+[ext_resource type="Script" uid="uid://buvqfvt3rnrx6" path="res://objects/boss_touhou/common/components/magic_circle_eff.gd" id="26_vxsu1"]
+[ext_resource type="Script" uid="uid://cgi8665ig40d1" path="res://objects/boss_touhou/boss_final/attacks/marisa/activate_boss.gd" id="27_r1yev"]
+[ext_resource type="PackedScene" uid="uid://pjgrb3lt8adf" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc0_1.tscn" id="28_wjkm1"]
+[ext_resource type="PackedScene" uid="uid://cgkko1uwpvlil" path="res://objects/boss_touhou/boss_final/attacks/do_nothing.tscn" id="29_n8cul"]
+[ext_resource type="PackedScene" uid="uid://ckuce0fgk6m1j" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc1_1.tscn" id="31_7wfnr"]
+[ext_resource type="PackedScene" uid="uid://7cqoemegxs2c" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc3_1.tscn" id="32_gpbfb"]
+[ext_resource type="PackedScene" uid="uid://b485gc4o8onis" path="res://objects/boss_touhou/boss_final/kevin_marisa/bullets/bullet_marisa_star_big.tscn" id="33_popc8"]
+[ext_resource type="PackedScene" uid="uid://d2tl00lommylo" path="res://objects/boss_touhou/boss_final/attacks/transition_to_dual.tscn" id="35_736eu"]
+[ext_resource type="PackedScene" uid="uid://ctbfieilq1318" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc6_1.tscn" id="36_u6x5i"]
+[ext_resource type="PackedScene" uid="uid://bqx4bpiglpwuq" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc7_1.tscn" id="37_l8t3r"]
+[ext_resource type="PackedScene" uid="uid://c4mls8584l40m" path="res://objects/boss_touhou/boss_final/attacks/marisa/scfinal_1.tscn" id="38_g0ws4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k21ev"]
+load_path = "res://.godot/imported/cp_star.png-8aad299551c69fcc1fb6b6d3d28cbf85.ctex"
+
+[sub_resource type="Curve" id="Curve_taoym"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.8608, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5t2j1"]
+curve = SubResource("Curve_taoym")
+
+[sub_resource type="Curve" id="Curve_j60d4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.746479, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -11.146, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1iurn"]
+curve = SubResource("Curve_j60d4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k21ev"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 24.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 167.18
+initial_velocity_max = 217.18
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_1iurn")
+alpha_curve = SubResource("CurveTexture_5t2j1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_taoym"]
+shader = ExtResource("1_k21ev")
+shader_parameter/offset = -0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wfnr"]
+size = Vector2(47, 66)
+
+[node name="KevinMarisa" type="Node2D" node_paths=PackedStringArray("phases")]
+script = ExtResource("1_taoym")
+bullet_laser_small = ExtResource("2_wbxyw")
+bullet_master_spark = ExtResource("3_poiu4")
+prepare_master_spark = ExtResource("4_kyycy")
+summon_minion = ExtResource("4_0bc4a")
+kevin_appear = ExtResource("5_0bc4a")
+kevin_explode = ExtResource("6_n88ma")
+internal_boss_name = "MARISA"
+battle_fail_sound = ExtResource("7_x5mbi")
+boss_defeat = ExtResource("8_hneie")
+declare_spell_card = ExtResource("9_akbvb")
+short_charge_up = ExtResource("10_yo5v7")
+long_charge_up = ExtResource("11_ckkkh")
+burst_sound = ExtResource("12_mipbo")
+bullet_shoot_1 = ExtResource("13_ycnsr")
+bullet_twinkle = ExtResource("5_n88ma")
+bullet_laser = ExtResource("15_r1yev")
+bullet_erase = ExtResource("16_wjkm1")
+sfx_timeout0 = ExtResource("17_n8cul")
+sfx_timeout1 = ExtResource("18_vxsu1")
+nice_aura = ExtResource("14_mipbo")
+phases = [NodePath("ActivateBoss"), NodePath("Sc0_Start"), NodePath("Sc0_Middle"), NodePath("Sc0_End"), NodePath("Sc1_Start"), NodePath("Sc2_Start"), NodePath("Sc3_Start"), NodePath("TransitionToDual"), NodePath("Sc4_Start"), NodePath("Sc5_Start"), NodePath("Sc5_End"), NodePath("Sc6_Start"), NodePath("Sc7_Start"), NodePath("TransitionToDual"), NodePath("Sc8_Start"), NodePath("ScFinal_Start"), null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Stars" type="GPUParticles2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+amount = 24
+texture = SubResource("CompressedTexture2D_k21ev")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_k21ev")
+
+[node name="BossSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_taoym")
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("1_78k8p")
+autoplay = "default"
+frame_progress = 0.832419
+script = ExtResource("21_hneie")
+amplitude = Vector2(0, 5)
+frequency = 2.0
+
+[node name="AttackBossSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_taoym")
+position = Vector2(19, -7)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("1_78k8p")
+animation = &"attack_enter"
+
+[node name="Body" type="Area2D" parent="."]
+z_index = -1
+script = ExtResource("22_ycnsr")
+turn_back = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+visible = false
+position = Vector2(-8.5, -1)
+shape = SubResource("RectangleShape2D_7wfnr")
+debug_color = Color(0, 0.648751, 0.170092, 0.42)
+
+[node name="EnemyAttacked" type="Node" parent="Body"]
+script = ExtResource("23_r1yev")
+stomping_enabled = false
+stomping_standard = Vector2(0, 0)
+stomping_creation = null
+stomping_scores = 0
+stomping_sound = null
+killing_enabled = false
+killing_creation = null
+frozen_enabled = false
+metadata/_edit_pinned_properties_ = [&"stomping_scores", &"stomping_creation", &"stomping_sound", &"killing_creation"]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.5, 1)
+scale = Vector2(6.25, 5.8)
+
+[node name="MagicCircleEff" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.337255)
+z_index = -1
+material = ExtResource("24_wjkm1")
+texture = ExtResource("25_n8cul")
+script = ExtResource("26_vxsu1")
+
+[node name="ActivateBoss" type="Node" parent="."]
+script = ExtResource("27_r1yev")
+
+[node name="DoNothing" parent="." instance=ExtResource("29_n8cul")]
+is_new_spell_card = true
+
+[node name="Sc0_Start" parent="." instance=ExtResource("28_wjkm1")]
+next_attack_will_be_new = true
+
+[node name="Sc0_Middle" parent="." instance=ExtResource("28_wjkm1")]
+clear_screen_on_active = true
+magic_circle_radius_growth_time_sec = 0.03
+magic_circle_orbit_speed = -360.0
+magic_circle_orbit_acceleration_time_sec = 0.02
+shooting_delay_time_sec = 0.03
+next_attack_will_be_new = true
+
+[node name="Sc0_End" parent="." instance=ExtResource("28_wjkm1")]
+clear_screen_on_active = true
+final_phase = true
+magic_circle_radius = 90.0
+magic_circle_radius_growth_time_sec = 0.9
+magic_circle_orbit_speed = 500.0
+magic_circle_orbit_acceleration_time_sec = 0.8
+shooting_speed = 120.0
+shooting_interval_sec = 0.05
+shooting_delay_time_sec = 1.0
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc1_Start" parent="." instance=ExtResource("31_7wfnr")]
+laser_resize_time = 0.25
+laser_disappear_time = 0.25
+next_attack_will_be_new = true
+end_spell_card_afterwards = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc2_Start" parent="." instance=ExtResource("28_wjkm1")]
+magic_circle_radius = 60.0
+magic_circle_radius_growth_time_sec = 0.5
+magic_circle_orbit_speed = 700.0
+magic_circle_orbit_acceleration_time_sec = 0.9
+magic_circle_escape_delay_sec = 3.0
+shooting_bullet_type = ExtResource("33_popc8")
+shooting_speed = 300.0
+shooting_interval_sec = 0.5
+shooting_delay_time_sec = 0.9
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc3_Start" parent="." instance=ExtResource("32_gpbfb")]
+cool_duration = 0.3
+
+[node name="TransitionToDual" parent="." instance=ExtResource("35_736eu")]
+is_side_boss = true
+
+[node name="Sc4_Start" parent="." instance=ExtResource("28_wjkm1")]
+combo_attack = true
+magic_circle_escape_delay_sec = 3.5
+shooting_speed = 200.0
+shooting_interval_sec = 0.5
+shooting_delay_time_sec = 1.7
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc5_Start" parent="." instance=ExtResource("31_7wfnr")]
+play_spell_end_sound = false
+spawner_count = 15
+spawner_shoot_delay_sec = 0.4
+spawner_interval_sec = 0.02
+spawner_boss_shoot_interval_sec = 2.8
+laser_desired_scale = 1.1
+laser_wait_time = 1.1
+laser_resize_time = 0.15
+laser_life_time = 0.6
+laser_disappear_time = 0.15
+next_attack_will_be_new = true
+is_spell_card = false
+spellcard_name = ""
+
+[node name="Sc5_End" parent="." instance=ExtResource("31_7wfnr")]
+spawner_count = 11
+spawner_shoot_delay_sec = 0.4
+spawner_interval_sec = 0.02
+spawner_boss_shoot_interval_sec = 1.5
+laser_desired_scale = 1.1
+laser_wait_time = 1.1
+laser_resize_time = 0.1
+laser_life_time = 0.5
+laser_disappear_time = 0.1
+laser_angular_variation = 15.0
+is_new_spell_card = false
+next_attack_will_be_new = true
+end_spell_card_afterwards = true
+player_should_get_pity_afterwards = true
+is_spell_card = false
+spellcard_name = ""
+
+[node name="Sc6_Start" parent="." instance=ExtResource("36_u6x5i")]
+
+[node name="Sc7_Start" parent="." instance=ExtResource("37_l8t3r")]
+
+[node name="TransitionToFinal" parent="." instance=ExtResource("35_736eu")]
+is_side_boss = true
+move_time_sec = 0.2
+prep_For_final = true
+
+[node name="Sc8_Start" parent="." instance=ExtResource("28_wjkm1")]
+combo_attack = true
+magic_circle_radius_growth_time_sec = 0.6
+magic_circle_orbit_acceleration_time_sec = 0.5
+magic_circle_escape_delay_sec = 3.5
+shooting_bullet_type = ExtResource("33_popc8")
+shooting_speed = 220.0
+shooting_interval_sec = 0.8
+shooting_delay_time_sec = 0.6
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="ScFinal_Start" parent="." instance=ExtResource("38_g0ws4")]
+show_warning_line = true
+next_attack_will_be_new = false
+
+[connection signal="animation_finished" from="BossSprite" to="." method="_on_boss_sprite_animation_finished"]

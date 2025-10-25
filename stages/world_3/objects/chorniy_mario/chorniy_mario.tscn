@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://xr7htqlinm6n"]
+
+[ext_resource type="Shader" uid="uid://dg38ndn8bx84j" path="res://stages/world_2/shaders/grayscale.gdshader" id="1_f513f"]
+[ext_resource type="Script" uid="uid://binm1s5cg8qdc" path="res://stages/world_3/objects/chorniy_mario/chorniy_mario.gd" id="1_jcrf4"]
+[ext_resource type="SpriteFrames" uid="uid://cp03ve7ed68js" path="res://engine/objects/players/prefabs/animations/mario/animation_mario_small.tres" id="2_mr4fj"]
+[ext_resource type="FontVariation" uid="uid://4h0cbbutybo2" path="res://engine/fonts/font_variations/mister_earl_variation.tres" id="4_t6qo1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e5vhl"]
+shader = ExtResource("1_f513f")
+shader_parameter/offset = -0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h7cef"]
+radius = 12.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w5wp1"]
+load_path = "res://.godot/imported/cp_star.png-8aad299551c69fcc1fb6b6d3d28cbf85.ctex"
+
+[sub_resource type="Curve" id="Curve_npi7g"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.8608, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ooec4"]
+curve = SubResource("Curve_npi7g")
+
+[sub_resource type="Curve" id="Curve_m7sk5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.746479, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -11.146, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7wgot"]
+curve = SubResource("Curve_m7sk5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ligya"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 24.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 25.0
+initial_velocity_max = 75.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_7wgot")
+alpha_curve = SubResource("CurveTexture_ooec4")
+
+[node name="ChorniyMario" type="Area2D"]
+script = ExtResource("1_jcrf4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+z_index = 5
+material = SubResource("ShaderMaterial_e5vhl")
+sprite_frames = ExtResource("2_mr4fj")
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h7cef")
+
+[node name="Stars" type="GPUParticles2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+amount = 24
+texture = SubResource("CompressedTexture2D_w5wp1")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_ligya")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = 5.0
+offset_right = 46.0
+offset_bottom = 41.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_t6qo1")
+theme_override_font_sizes/font_size = 18
+text = "my name is kevin"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

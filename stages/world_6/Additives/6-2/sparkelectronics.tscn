@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqrrrenrbmpbx"]
+
+[ext_resource type="Texture2D" uid="uid://io3lqndeeq1t" path="res://gfx/world6/6-2/neons/spark_electronics.png" id="1_a8seb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gjo7"]
+atlas = ExtResource("1_a8seb")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyc1k"]
+atlas = ExtResource("1_a8seb")
+region = Rect2(0, 64, 160, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1swro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gjo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyc1k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1swro")
+autoplay = "default"

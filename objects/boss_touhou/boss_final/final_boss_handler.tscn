@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c34altsfeex3n"]
+
+[ext_resource type="Script" uid="uid://dmy4lh815rcmn" path="res://objects/boss_touhou/boss_final/final_boss_handler.gd" id="1_8nnx5"]
+[ext_resource type="PackedScene" uid="uid://rkt3mgg0nu41" path="res://objects/boss_touhou/common/components/boss_borders.tscn" id="2_n7bgy"]
+[ext_resource type="Script" uid="uid://dpsqu70img5mm" path="res://objects/boss_touhou/boss_final/music_sync.gd" id="3_obxrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7bgy"]
+size = Vector2(304, 480)
+
+[node name="FinalBossHandler" type="Node2D" node_paths=PackedStringArray("trigger_boss_borders")]
+script = ExtResource("1_8nnx5")
+trigger_boss_borders = NodePath("BossBorders")
+boss_music_excluded_positions = Array[int]([0, 6, 8, 10, 11, 12, 14, 16, 18, 20, 32, 34, 36, 28, 30, 38, 40])
+phase_change_in_music_list = Array[float]([27.029, 51.019, 99.019, 123.019, 129.013, 141.045, 147.008, 153.003, 165.013, 177.003, 201.013, 213.013, 225.003, 231.008, 234.016])
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(168, 0)
+shape = SubResource("RectangleShape2D_n7bgy")
+metadata/_edit_lock_ = true
+
+[node name="BossBorders" parent="." instance=ExtResource("2_n7bgy")]
+position = Vector2(-320, -272)
+metadata/_edit_lock_ = true
+
+[node name="MusicSync" type="Node" parent="."]
+script = ExtResource("3_obxrk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sound"
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

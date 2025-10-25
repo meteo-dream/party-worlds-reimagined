@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=4 uid="uid://dt8fsykp4f2eq"]
+
+[ext_resource type="Script" uid="uid://bwpe24nufpj37" path="res://engine/scripts/classes/level_cutscene/level_cutscene.gd" id="1_mgmgr"]
+[ext_resource type="Script" uid="uid://c5qa4cufyf8pm" path="res://stages/world_final/Additives/10-1_cutscene_logic.gd" id="2_wyip6"]
+[ext_resource type="PackedScene" uid="uid://ctcfybo8itqdw" path="res://objects/w8_truck/miscellanous/8-1_truck_body.tscn" id="3_2kim6"]
+[ext_resource type="TileSet" uid="uid://h3f7j20apwf0" path="res://stages/world_final/Additives/w8_desert.tres" id="3_o4xg8"]
+[ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="5_kooke"]
+[ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_lpf50"]
+[ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_tdwgu"]
+[ext_resource type="Texture2D" uid="uid://boehij35imfw" path="res://gfx/worldfinal/10-3bg.png" id="8_o4xg8"]
+
+[sub_resource type="Gradient" id="Gradient_ul62k"]
+colors = PackedColorArray(0.227451, 0.345098, 0.470588, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fycfi"]
+gradient = SubResource("Gradient_ul62k")
+fill_to = Vector2(0, 1)
+
+[node name="StartTo10-1" type="Node2D"]
+script = ExtResource("1_mgmgr")
+goto_path = "uid://3lj443kh0yv"
+intro_music = null
+metadata/_custom_type_script = "uid://bwpe24nufpj37"
+
+[node name="CutsceneLogic" type="Node" parent="."]
+script = ExtResource("2_wyip6")
+
+[node name="JumpMarker" type="Marker2D" parent="CutsceneLogic"]
+position = Vector2(328, 416)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAUAA8AAQACAAIAAAAUAA4AAQACAAEAAAAUAA0AAQACAAAAAAATAA8AAQABAAIAAAATAA4AAQABAAEAAAATAA0AAQABAAAAAAASAA8AAQABAAIAAAASAA4AAQABAAEAAAASAA0AAQABAAAAAAARAA8AAQABAAIAAAARAA4AAQABAAEAAAARAA0AAQABAAAAAAAQAA8AAQABAAIAAAAQAA4AAQABAAEAAAAQAA0AAQABAAAAAAAPAA8AAQABAAIAAAAPAA4AAQABAAEAAAAPAA0AAQABAAAAAAAOAA8AAQABAAIAAAAOAA4AAQABAAEAAAAOAA0AAQABAAAAAAANAA8AAQABAAIAAAANAA4AAQABAAEAAAANAA0AAQABAAAAAAAMAA8AAQABAAIAAAAMAA4AAQABAAEAAAAMAA0AAQABAAAAAAALAA8AAQABAAIAAAALAA4AAQABAAEAAAALAA0AAQABAAAAAAAKAA8AAQABAAIAAAAKAA4AAQABAAEAAAAKAA0AAQABAAAAAAAJAA8AAQABAAIAAAAJAA4AAQABAAEAAAAJAA0AAQABAAAAAAAIAA8AAQABAAIAAAAIAA4AAQABAAEAAAAIAA0AAQABAAAAAAAHAA8AAQABAAIAAAAHAA4AAQABAAEAAAAHAA0AAQABAAAAAAAGAA8AAQABAAIAAAAGAA4AAQABAAEAAAAGAA0AAQABAAAAAAAFAA8AAQABAAIAAAAFAA4AAQABAAEAAAAFAA0AAQABAAAAAAAEAA8AAQABAAIAAAAEAA4AAQABAAEAAAAEAA0AAQABAAAAAAADAA8AAQABAAIAAAADAA4AAQABAAEAAAADAA0AAQABAAAAAAACAA8AAQABAAIAAAACAA4AAQABAAEAAAACAA0AAQABAAAAAAABAA8AAQABAAIAAAABAA4AAQABAAEAAAABAA0AAQABAAAAAAAAAA8AAQABAAIAAAAAAA4AAQABAAEAAAAAAA0AAQABAAAAAAD//w8AAQAAAAIAAAD//w4AAQAAAAEAAAD//w0AAQAAAAAAAAAZAAsAAQAMAAIAAAAaAAsAAQAMAAIAAAAbAAsAAQAMAAIAAAAcAAsAAQAMAAIAAAAcAAoAAQAMAAIAAAAcAAkAAQAMAAIAAAAcAAgAAQAMAAIAAAAcAAcAAQAMAAIAAAAcAAYAAQAMAAIAAAAcAAUAAQAMAAIAAAAcAAQAAQAMAAIAAAAcAAMAAQAMAAIAAAAcAAIAAQAMAAIAAAAcAAEAAQAMAAIAAAAcAAAAAQAMAAIAAAANAAwAAQAEAAQAAAAOAAwAAQAFAAQAAAAPAAwAAQAFAAQAAAAQAAwAAQAGAAQAAAAJAAwAAQAJAAQAAAAIAAwAAQAJAAQAAAAHAAwAAQAJAAQAAAAGAAwAAQAJAAQAAAASAAwAAQAMAAMAAAALAAwAAQAMAAMAAAAAAAwAAQAAAAQAAAACAAwAAQAMAAMAAAAFAAwAAQAHAAQAAAATAAwAAQAHAAQAAAADAAwAAQAIAAQAAAA=")
+tile_set = ExtResource("3_o4xg8")
+
+[node name="8-1Truck" parent="." instance=ExtResource("3_2kim6")]
+position = Vector2(616, 352)
+collision_enabled = true
+stop_wheels_on_scene_start = true
+
+[node name="Player" parent="." instance=ExtResource("5_kooke")]
+position = Vector2(0, 400)
+speed = Vector2(100, 0)
+gravity_scale = 0.4
+
+[node name="PlayerCamera2D" type="Camera2D" parent="."]
+position = Vector2(320, 240)
+editor_draw_screen = false
+script = ExtResource("6_lpf50")
+metadata/_edit_lock_ = true
+
+[node name="CameraArea" parent="." instance=ExtResource("7_tdwgu")]
+z_index = 100
+offset_right = 640.0
+offset_bottom = 480.0
+metadata/_edit_lock_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+z_index = -100
+position = Vector2(320, 240)
+scale = Vector2(10, 7.5)
+texture = SubResource("GradientTexture2D_fycfi")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground"]
+modulate = Color(0.490196, 0.490196, 0.490196, 1)
+offset_top = -512.0
+offset_right = 1024.0
+offset_bottom = 512.0
+texture = ExtResource("8_o4xg8")
+stretch_mode = 1
+metadata/_edit_lock_ = true

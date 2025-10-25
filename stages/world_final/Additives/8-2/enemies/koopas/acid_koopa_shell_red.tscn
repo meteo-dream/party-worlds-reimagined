@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://csubh3n31vmht"]
+
+[ext_resource type="PackedScene" uid="uid://bcfv3ma44i1dp" path="res://engine/objects/enemies/koopas/koopa_shell_red.tscn" id="1_18y3o"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_jwn04"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_ulv3j"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_bjjrg"]
+[ext_resource type="Texture2D" uid="uid://cdc3ulco5l5hh" path="res://gfx/worldfinal/10-2/acid_redkoopashell.png" id="5_jwn04"]
+
+[sub_resource type="Resource" id="Resource_41tfl"]
+resource_local_to_scene = true
+script = ExtResource("4_bjjrg")
+creation_nodepack = ExtResource("2_jwn04")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("3_ulv3j")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulv3j"]
+atlas = ExtResource("5_jwn04")
+region = Rect2(102, 0, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjjrg"]
+atlas = ExtResource("5_jwn04")
+region = Rect2(0, 0, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41tfl"]
+atlas = ExtResource("5_jwn04")
+region = Rect2(34, 0, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jelu7"]
+atlas = ExtResource("5_jwn04")
+region = Rect2(68, 0, 34, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_daysu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulv3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjjrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41tfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jelu7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="KoopaShellRed" instance=ExtResource("1_18y3o")]
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+killing_creation = SubResource("Resource_41tfl")
+
+[node name="Sprite" parent="." index="3"]
+sprite_frames = SubResource("SpriteFrames_daysu")

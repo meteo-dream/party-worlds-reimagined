@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpguud6vt8l4"]
+
+[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="1_p83vx"]
+[ext_resource type="FontFile" uid="uid://c8jv0dp8pfr4v" path="res://addons/localization/special_fonts/hud_font_new.fnt" id="2_m5eb3"]
+
+[node name="HUD" instance=ExtResource("1_p83vx")]
+
+[node name="Time" parent="Control" index="3"]
+offset_left = -553.0
+offset_top = 2.0
+offset_right = 79.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("2_m5eb3")
+theme_override_font_sizes/font_size = 38
+
+[node name="GameOver" parent="Control" index="5"]
+visible = true
+offset_left = -320.0
+offset_top = -19.0
+offset_right = 320.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("2_m5eb3")
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1

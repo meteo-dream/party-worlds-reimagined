@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cxntml8k0tfnu"
+path="res://.godot/imported/vs_reimu.dialogue-1e3123150e25275fd4b1d2e19a973991.tres"
+
+[deps]
+
+source_file="res://objects/boss_touhou/dialogue/vs_reimu.dialogue"
+dest_files=["res://.godot/imported/vs_reimu.dialogue-1e3123150e25275fd4b1d2e19a973991.tres"]
+
+[params]
+
+defaults=true

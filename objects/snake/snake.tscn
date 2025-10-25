@@ -1,0 +1,147 @@
+[gd_scene load_steps=18 format=3 uid="uid://brign3io03hys"]
+
+[ext_resource type="Script" uid="uid://tr8lcfhcx12i" path="res://objects/snake/snake.gd" id="1_e6dyl"]
+[ext_resource type="PackedScene" uid="uid://c4jlbnswk5dlw" path="res://engine/objects/projectiles/fireball/fireball.tscn" id="2_1ydqs"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="2_7jn7w"]
+[ext_resource type="Texture2D" uid="uid://c4tmy5h38du5h" path="res://objects/snake/texture/snake.png" id="2_qjvqv"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="3_cn8u4"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="4_y0mv8"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="5_s17su"]
+[ext_resource type="AudioStream" uid="uid://46ern2rknx3i" path="res://engine/objects/enemies/_sounds/stomp.wav" id="6_wjbmh"]
+[ext_resource type="AudioStream" uid="uid://be3uvqev2c1p6" path="res://engine/objects/players/prefabs/sounds/kick.wav" id="7_n7l6a"]
+
+[sub_resource type="Resource" id="Resource_d4dar"]
+script = ExtResource("5_s17su")
+creation_nodepack = ExtResource("2_1ydqs")
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwp1y"]
+size = Vector2(16, 56)
+
+[sub_resource type="Resource" id="Resource_gg20k"]
+resource_local_to_scene = true
+script = ExtResource("5_s17su")
+creation_nodepack = ExtResource("3_cn8u4")
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, 0)
+}
+custom_script = ExtResource("4_y0mv8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn3rf"]
+atlas = ExtResource("2_qjvqv")
+region = Rect2(0, 128, 31, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8uri"]
+atlas = ExtResource("2_qjvqv")
+region = Rect2(0, 192, 31, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6twf"]
+atlas = ExtResource("2_qjvqv")
+region = Rect2(0, 0, 31, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7pw5"]
+atlas = ExtResource("2_qjvqv")
+region = Rect2(0, 64, 31, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ivwa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bn3rf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8uri")
+}],
+"loop": true,
+"name": &"alert",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6twf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7pw5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Snake" type="CharacterBody2D"]
+z_index = -1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_e6dyl")
+attack_projectile = SubResource("Resource_d4dar")
+speed = Vector2(0, 100)
+gravity_scale = 0.3
+metadata/_edit_pinned_properties_ = [&"speed", &"attack_projectile"]
+
+[node name="Body" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_rwp1y")
+
+[node name="EnemyAttacked" type="Node" parent="Body"]
+script = ExtResource("2_7jn7w")
+stomping_creation = SubResource("Resource_gg20k")
+stomping_scores = 300
+stomping_sound = ExtResource("6_wjbmh")
+killing_immune = {
+"beetroot": false,
+"boomerang": false,
+"fireball": false,
+"hammer": false,
+"iceball": false,
+"shell": false,
+"shell_defence": 0,
+"shell_forced": false,
+"starman": false
+}
+killing_creation = SubResource("Resource_gg20k")
+killing_scores = 300
+killing_sound_succeeded = ExtResource("7_n7l6a")
+metadata/_edit_pinned_properties_ = [&"killing_immune", &"killing_sound_succeeded", &"killing_scores", &"stomping_sound", &"stomping_scores"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2ivwa")
+autoplay = "default"
+
+[node name="PosAttack" type="Marker2D" parent="."]
+visible = false
+position = Vector2(0, -16)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.0196078)
+position = Vector2(-3.05176e-06, -9.53674e-07)
+scale = Vector2(3.2, 4.8)
+metadata/_edit_lock_ = true
+
+[node name="Interval" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="." method="queue_free"]
+[connection signal="stomped_succeeded" from="Body/EnemyAttacked" to="." method="queue_free"]

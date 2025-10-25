@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://t00btcl5ov0y"]
+
+[ext_resource type="PackedScene" uid="uid://feaxlbx5empd" path="res://engine/objects/powerups/fire_flower/fire_flower_forced.tscn" id="1_s4rf5"]
+
+[node name="FireFlowerForced" instance=ExtResource("1_s4rf5")]
+collision_mask = 256
+slide = false
+appear_distance = 0.0
+appear_speed = 0.0
+appear_visible = 0.0
+appear_collectable = 0.0
+
+[node name="Body" parent="." index="1"]
+visible = false

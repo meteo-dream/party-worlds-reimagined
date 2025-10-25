@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvjgycoy5to6n"]
+
+[ext_resource type="PackedScene" uid="uid://b24hnsctae1a0" path="res://engine/objects/enemies/koopas/koopa_red.tscn" id="1_0ub3a"]
+[ext_resource type="PackedScene" uid="uid://bcfv3ma44i1dp" path="res://engine/objects/enemies/koopas/koopa_shell_red.tscn" id="2_arior"]
+[ext_resource type="Script" uid="uid://dixpcuwttxgcb" path="res://engine/objects/enemies/enemy_creation_extension_life_time.gd" id="3_ysvtv"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_chdqp"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="5_yx4gh"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="6_jwq4g"]
+
+[sub_resource type="Resource" id="Resource_oxkmo"]
+script = ExtResource("4_chdqp")
+creation_nodepack = ExtResource("2_arior")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"life_time": 4.0
+}
+custom_script = ExtResource("3_ysvtv")
+
+[sub_resource type="Resource" id="Resource_4xx3n"]
+resource_local_to_scene = true
+script = ExtResource("4_chdqp")
+creation_nodepack = ExtResource("5_yx4gh")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite/Dead"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("6_jwq4g")
+
+[node name="KoopaRed" instance=ExtResource("1_0ub3a")]
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+stomping_creation = SubResource("Resource_oxkmo")
+killing_creation = SubResource("Resource_4xx3n")

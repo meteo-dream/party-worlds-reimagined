@@ -1,0 +1,55 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=9 format=3 uid="uid://40osk1r8wecu"]
+
+[sub_resource type="Curve" id="Curve_c233m"]
+_data = [Vector2(0.0533333, 0), 0.0, 0.0, 0, 0, Vector2(0.166667, 1), 0.0, 0.0, 0, 0, Vector2(0.886667, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -7.01374, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_k1x06"]
+curve = SubResource("Curve_c233m")
+
+[sub_resource type="Curve" id="Curve_glx7d"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3xave"]
+curve = SubResource("Curve_glx7d")
+
+[sub_resource type="Curve" id="Curve_wofye"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.253333, 0.142857), 0.0, 0.0, 0, 0, Vector2(0.48, -0.340659), 0.0, 0.0, 0, 0, Vector2(0.773333, 0.0989012), 0.0, 0.0, 0, 0, Vector2(1, -0.388679), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_5ytvc"]
+curve_x = SubResource("Curve_wofye")
+
+[sub_resource type="Curve" id="Curve_7djip"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.756757, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.483516), -8.24177, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_tphpn"]
+curve = SubResource("Curve_7djip")
+
+[resource]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(430, -4, 0)
+emission_shape = 3
+emission_box_extents = Vector3(400, 0, 1)
+angle_min = -45.0
+angle_max = 45.0
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+directional_velocity_min = -0.5
+directional_velocity_max = 0.5
+directional_velocity_curve = SubResource("CurveXYZTexture_5ytvc")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.8
+scale_max = 0.8
+scale_curve = SubResource("CurveTexture_tphpn")
+alpha_curve = SubResource("CurveTexture_k1x06")
+anim_offset_max = 1.0
+anim_offset_curve = SubResource("CurveTexture_3xave")
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_use_scale = true

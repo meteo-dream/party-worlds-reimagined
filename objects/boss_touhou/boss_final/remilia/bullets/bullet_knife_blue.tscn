@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cakld0hhkn8we"]
+
+[ext_resource type="PackedScene" uid="uid://b02h6tufnrenr" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_knife_red.tscn" id="1_km3b5"]
+
+[node name="BulletKnifeBlue" instance=ExtResource("1_km3b5")]
+bullet_erase_color = Color(0, 0, 1, 1)
+
+[node name="Sprite" parent="." index="1"]
+frame = 27
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+frame = 3
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-0.5, -1.5)
+scale = Vector2(2.15, 1.45)

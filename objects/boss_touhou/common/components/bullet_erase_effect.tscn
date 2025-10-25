@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=3 uid="uid://dawwtqi2pt3en"]
+
+[ext_resource type="Texture2D" uid="uid://bnjt3e87o2gbj" path="res://objects/boss_touhou/common/textures/bullet_erase_effect.png" id="1_f55kt"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_ln1g4"]
+[ext_resource type="Script" uid="uid://bnq3s0mhkmxto" path="res://objects/boss_touhou/common/components/bullet_erase_effect.gd" id="2_lvcgx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvcgx"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln1g4"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w8wn"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mctf2"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s0uk"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beu8w"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob8rk"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jivc"]
+atlas = ExtResource("1_f55kt")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvfqs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvcgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln1g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w8wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mctf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s0uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beu8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob8rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jivc")
+}],
+"loop": false,
+"name": &"default",
+"speed": 28.0
+}]
+
+[node name="BulletEraseEffect" type="AnimatedSprite2D"]
+material = ExtResource("1_ln1g4")
+sprite_frames = SubResource("SpriteFrames_mvfqs")
+autoplay = "default"
+script = ExtResource("2_lvcgx")

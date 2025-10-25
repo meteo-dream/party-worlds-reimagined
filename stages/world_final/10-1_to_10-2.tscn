@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=4 uid="uid://ss4esaqal7tr"]
+
+[ext_resource type="Script" uid="uid://bwpe24nufpj37" path="res://engine/scripts/classes/level_cutscene/level_cutscene.gd" id="1_oqd2u"]
+[ext_resource type="Script" uid="uid://fc3ttuw2tksl" path="res://stages/world_final/10-1_to_10-2.gd" id="2_g24j8"]
+[ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="4_bjbrp"]
+[ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="5_g24j8"]
+[ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="6_2f4qy"]
+[ext_resource type="Texture2D" uid="uid://boehij35imfw" path="res://gfx/worldfinal/10-3bg.png" id="6_bjbrp"]
+[ext_resource type="TileSet" uid="uid://h3f7j20apwf0" path="res://stages/world_final/Additives/w8_desert.tres" id="8_g24j8"]
+[ext_resource type="Texture2D" uid="uid://dpo036rvlk6nj" path="res://gfx/worldfinal/cutscene/factory.png" id="10_g24j8"]
+[ext_resource type="Texture2D" uid="uid://dufkqhpbndadj" path="res://gfx/worldfinal/cutscene/factory_front.png" id="11_2f4qy"]
+[ext_resource type="PackedScene" uid="uid://xy2xj3ffcwyr" path="res://stages/world_final/Additives/vulkan_sign.tscn" id="12_2f4qy"]
+
+[sub_resource type="Gradient" id="Gradient_21qqm"]
+colors = PackedColorArray(0.227451, 0.345098, 0.470588, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g24j8"]
+gradient = SubResource("Gradient_21qqm")
+fill_to = Vector2(0, 1)
+
+[node name="10-1To10-2" type="Node2D"]
+script = ExtResource("1_oqd2u")
+goto_path = "uid://c1e0mr83pnipb"
+intro_music = null
+metadata/_custom_type_script = "uid://bwpe24nufpj37"
+
+[node name="CutsceneLogic" type="Node" parent="."]
+script = ExtResource("2_g24j8")
+cutscene_player_speed = 260.0
+
+[node name="DisappearMarker" type="Marker2D" parent="CutsceneLogic"]
+position = Vector2(528, 416)
+
+[node name="Player" parent="." instance=ExtResource("4_bjbrp")]
+position = Vector2(0, 400)
+speed = Vector2(1000, 0)
+
+[node name="PlayerCamera2D" type="Camera2D" parent="."]
+position = Vector2(320, 240)
+editor_draw_screen = false
+script = ExtResource("5_g24j8")
+metadata/_edit_lock_ = true
+
+[node name="CameraArea" parent="." instance=ExtResource("6_2f4qy")]
+z_index = 100
+offset_right = 640.0
+offset_bottom = 480.0
+metadata/_edit_lock_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+z_index = -100
+position = Vector2(320, 240)
+scale = Vector2(10, 7.5)
+texture = SubResource("GradientTexture2D_g24j8")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.489622, 0.489622, 0.489622, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -176.0
+offset_top = -504.0
+offset_right = 848.0
+offset_bottom = 520.0
+texture = ExtResource("6_bjbrp")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD//w0AAQAAAAAAAAAAAA0AAQABAAAAAAABAA0AAQABAAAAAAACAA0AAQABAAAAAAADAA0AAQABAAAAAAAEAA0AAQABAAAAAAAFAA0AAQABAAAAAAAGAA0AAQABAAAAAAAHAA0AAQABAAAAAAAIAA0AAQABAAAAAAAJAA0AAQABAAAAAAAKAA0AAQABAAAAAAALAA0AAQABAAAAAAAMAA0AAQABAAAAAAANAA0AAQABAAAAAAAOAA0AAQABAAAAAAAPAA0AAQABAAAAAAAQAA0AAQABAAAAAAARAA0AAQABAAAAAAASAA0AAQABAAAAAAATAA0AAQABAAAAAAAUAA0AAQACAAAAAAAUAA4AAQACAAEAAAATAA4AAQABAAEAAAASAA4AAQABAAEAAAARAA4AAQABAAEAAAAQAA4AAQABAAEAAAAPAA4AAQABAAEAAAAOAA4AAQABAAEAAAANAA4AAQABAAEAAAAMAA4AAQABAAEAAAALAA4AAQABAAEAAAAKAA4AAQABAAEAAAAJAA4AAQABAAEAAAAIAA4AAQABAAEAAAAHAA4AAQABAAEAAAAGAA4AAQABAAEAAAAFAA4AAQABAAEAAAAEAA4AAQABAAEAAAADAA4AAQABAAEAAAACAA4AAQABAAEAAAABAA4AAQABAAEAAAD//w4AAQAAAAEAAAD//w8AAQAAAAIAAAAAAA8AAQABAAIAAAABAA8AAQABAAIAAAACAA8AAQABAAIAAAADAA8AAQABAAIAAAAEAA8AAQABAAIAAAAFAA8AAQABAAIAAAAGAA8AAQABAAIAAAAHAA8AAQABAAIAAAAIAA8AAQABAAIAAAAJAA8AAQABAAIAAAAKAA8AAQABAAIAAAALAA8AAQABAAIAAAAMAA8AAQABAAIAAAANAA8AAQABAAIAAAAOAA8AAQABAAIAAAAPAA8AAQABAAIAAAAQAA8AAQABAAIAAAARAA8AAQABAAIAAAASAA8AAQABAAIAAAATAA8AAQABAAIAAAAUAA8AAQACAAIAAAAAAA4AAQABAAEAAAAVAA0AAQAMAAIAAAAWAA0AAQAMAAIAAAAXAA0AAQAMAAIAAAAYAA0AAQAMAAIAAAAZAA0AAQAMAAIAAAAZAAwAAQAMAAIAAAAZAAsAAQAMAAIAAAAZAAoAAQAMAAIAAAAZAAkAAQAMAAIAAAAZAAgAAQAMAAIAAAAZAAcAAQAMAAIAAAAAAAwAAQAMAAMAAAAFAAwAAQAFAAQAAAAEAAwAAQAFAAQAAAADAAwAAQAFAAQAAAACAAwAAQAFAAQAAAABAAwAAQAEAAQAAAA=")
+tile_set = ExtResource("8_g24j8")
+metadata/_edit_lock_ = true
+
+[node name="Factory" type="Sprite2D" parent="."]
+position = Vector2(413, 320)
+texture = ExtResource("10_g24j8")
+metadata/_edit_lock_ = true
+
+[node name="FactoryFront" type="Sprite2D" parent="."]
+z_index = 7
+position = Vector2(612, 320)
+texture = ExtResource("11_2f4qy")
+metadata/_edit_lock_ = true
+
+[node name="VulkanSign" parent="." instance=ExtResource("12_2f4qy")]
+position = Vector2(426, 151)

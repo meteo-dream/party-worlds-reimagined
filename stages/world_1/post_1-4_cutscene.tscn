@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqslxw5vvt3at"]
+
+[ext_resource type="Script" uid="uid://bwpe24nufpj37" path="res://engine/scripts/classes/level_cutscene/level_cutscene.gd" id="1_8dsdo"]
+
+[node name="Post1-4Cutscene" type="Node2D"]
+script = ExtResource("1_8dsdo")
+metadata/_custom_type_script = "uid://bwpe24nufpj37"

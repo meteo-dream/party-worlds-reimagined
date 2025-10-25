@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://xik1wtr0img2"]
+
+[ext_resource type="PackedScene" uid="uid://bevyddig02i1e" path="res://stages/world_9/Additives/9-2/waterfall.tscn" id="1_4kdvc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4kdvc"]
+load_path = "res://.godot/imported/waterfall.png-f1d8da6c6aebaba215fe5d3c8af65a02.ctex"
+
+[sub_resource type="Curve" id="Curve_kdu6j"]
+_data = [Vector2(0, 0), 0.0, 8.20688, 0, 0, Vector2(0.256329, 1), 0.0, 0.0, 0, 0, Vector2(0.661392, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.284, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_vavrs"]
+curve = SubResource("Curve_kdu6j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4kdvc"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(16, 80, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_vavrs")
+
+[node name="Waterfall" instance=ExtResource("1_4kdvc")]
+region_rect = Rect2(-16, -80, 32, 160)
+
+[node name="WaterfallStatic" parent="." index="0"]
+texture = SubResource("CompressedTexture2D_4kdvc")
+region_rect = Rect2(16, 0, 32, 160)
+
+[node name="GPUParticles2D" parent="." index="1"]
+visibility_rect = Rect2(-32, -80, 64, 160)
+process_material = SubResource("ParticleProcessMaterial_4kdvc")

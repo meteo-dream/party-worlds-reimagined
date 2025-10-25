@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpgows2gcv0ru"]
+
+[ext_resource type="Texture2D" uid="uid://dqkracvir5lj3" path="res://objects/w7_spawn_portal/texture/smoke.png" id="1_fvfk5"]
+[ext_resource type="Script" uid="uid://dqpsx6juw6vi0" path="res://objects/w7_spawn_portal/smoke_effect.gd" id="2_7a2sa"]
+
+[node name="SmokeEffect" type="Sprite2D"]
+texture = ExtResource("1_fvfk5")
+script = ExtResource("2_7a2sa")

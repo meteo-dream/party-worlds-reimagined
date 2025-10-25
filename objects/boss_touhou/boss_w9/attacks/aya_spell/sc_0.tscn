@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://4b6wyhwqgbl1"]
+
+[ext_resource type="Script" uid="uid://n77482nhxg4b" path="res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_0.gd" id="1_nyjf0"]
+
+[node name="sc_0" type="Node"]
+script = ExtResource("1_nyjf0")
+spellcard_time = 14.0
+
+[node name="WaveTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="IntervalTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

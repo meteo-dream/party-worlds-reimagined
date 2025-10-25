@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqgg0roxnvfd4"]
+
+[ext_resource type="PackedScene" uid="uid://deqaf1juj2xh7" path="res://objects/boss_touhou/common/components/spell_cutin.tscn" id="1_vawkr"]
+[ext_resource type="Script" uid="uid://by0y6pf1po3cc" path="res://objects/boss_touhou/boss_final/spell_cutin_final.gd" id="2_hwbqg"]
+[ext_resource type="Texture2D" uid="uid://dwkn0elv7coqi" path="res://objects/boss_touhou/boss_final/textures/remi_spell.png" id="2_pkqem"]
+[ext_resource type="Texture2D" uid="uid://xfnaj57xakr8" path="res://objects/boss_touhou/boss_final/textures/marisa_spell.png" id="4_p6odk"]
+
+[node name="SpellCutinFinal" instance=ExtResource("1_vawkr")]
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("2_pkqem")
+script = ExtResource("2_hwbqg")
+alt_portrait = ExtResource("4_p6odk")

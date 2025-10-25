@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg12bonbdhd2u"]
+
+[ext_resource type="Texture2D" uid="uid://cal8wgmni0vjp" path="res://stages/extra/d271/gfx/lava_cloud.png" id="1_7rg4l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrsve"]
+atlas = ExtResource("1_7rg4l")
+region = Rect2(0, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw8ff"]
+atlas = ExtResource("1_7rg4l")
+region = Rect2(65, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r75jx"]
+atlas = ExtResource("1_7rg4l")
+region = Rect2(130, 0, 65, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mnmj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrsve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vw8ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r75jx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LavaCloud" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_7mnmj")
+autoplay = "default"

@@ -1,0 +1,74 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=12 format=3 uid="uid://8vwwqyyax2g3"]
+
+[sub_resource type="Curve" id="Curve_uldmh"]
+_data = [Vector2(0, 0), 0.0, 11.7216, 0, 0, Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(0.76, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+metadata/_snap_enabled = true
+metadata/_snap_count = 12
+
+[sub_resource type="CurveTexture" id="CurveTexture_220ud"]
+curve = SubResource("Curve_uldmh")
+
+[sub_resource type="Curve" id="Curve_ngaf4"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, -5), 0.0, 55.0916, 0, 0, Vector2(0.0478723, 5), 32.2043, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ofgnf"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, -5), 0.0, 0.0, 0, 0, Vector2(0.18617, 5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_iyo5q"]
+curve_x = SubResource("Curve_ngaf4")
+curve_y = SubResource("Curve_ofgnf")
+
+[sub_resource type="Curve" id="Curve_qogjd"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, -5), 0.0, 1.4, 0, 0, Vector2(0.25, 5), 0.0, 0.0, 0, 0, Vector2(0.5, -5), 0.0, 0.0, 0, 0, Vector2(0.75, 5), 0.0, 0.0, 0, 0, Vector2(1, -5), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_i630p"]
+curve = SubResource("Curve_qogjd")
+
+[sub_resource type="Curve" id="Curve_nij8k"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0904255, 1), 0.0, 0.0, 0, 0, Vector2(0.808511, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_8cj86"]
+curve = SubResource("Curve_nij8k")
+
+[sub_resource type="Curve" id="Curve_86ku1"]
+_limits = [0.0, 103.4, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.143617, 103.4), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_0yjd2"]
+curve = SubResource("Curve_86ku1")
+
+[resource]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(360, 20, 0)
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.5
+directional_velocity_min = 1.0
+directional_velocity_max = 1.0
+directional_velocity_curve = SubResource("CurveXYZTexture_iyo5q")
+velocity_limit_curve = SubResource("CurveTexture_0yjd2")
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -1.0
+radial_accel_max = 0.999998
+radial_accel_curve = SubResource("CurveTexture_i630p")
+tangential_accel_min = -10.0
+tangential_accel_max = 10.0
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_8cj86")
+color = Color(1, 1, 1, 0.0117647)
+alpha_curve = SubResource("CurveTexture_220ud")
+hue_variation_min = -0.9
+hue_variation_max = 0.9

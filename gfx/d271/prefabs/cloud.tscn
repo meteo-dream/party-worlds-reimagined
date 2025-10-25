@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv4gmrqkvasjc"]
+
+[ext_resource type="Texture2D" uid="uid://dlcqe8o0t0uih" path="res://engine/tilesets/overworld/cloud.png" id="1_v1soi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b3b0"]
+atlas = ExtResource("1_v1soi")
+region = Rect2(0, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksq4d"]
+atlas = ExtResource("1_v1soi")
+region = Rect2(65, 0, 65, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iat72"]
+atlas = ExtResource("1_v1soi")
+region = Rect2(130, 0, 65, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f68mg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b3b0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksq4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iat72")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = -11
+sprite_frames = SubResource("SpriteFrames_f68mg")
+autoplay = "default"

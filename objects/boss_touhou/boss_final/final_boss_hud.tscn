@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfjmx5hk7bmic"]
+
+[ext_resource type="PackedScene" uid="uid://cefmm6mdbm842" path="res://objects/boss_touhou/boss_w9/boss_hud.tscn" id="1_tll4x"]
+[ext_resource type="Script" uid="uid://cpvgkwvx882ol" path="res://objects/boss_touhou/boss_final/final_boss_hud.gd" id="2_s1wyl"]
+[ext_resource type="Script" uid="uid://b2vm48nynnwtb" path="res://objects/boss_touhou/common/components/general_counter.gd" id="3_auwy2"]
+
+[node name="FinalBossHUD" instance=ExtResource("1_tll4x")]
+script = ExtResource("2_s1wyl")
+transition_boss_name = "PATCHOULI KNOWLEDGE"
+final_phase_name = "REMILIA & MARISA?"
+show_spell_count = false
+main_boss_name = "REMILIA SCARLET"
+secret_boss_name = "MARISA KIRISAME?"
+
+[node name="BossName" parent="." index="0"]
+offset_bottom = 72.0
+text = "REMILIA SCARLET"
+script = ExtResource("3_auwy2")
+
+[node name="Photos" parent="." index="4"]
+visible = false
+
+[node name="PhotoCounter" parent="." index="5"]
+visible = false

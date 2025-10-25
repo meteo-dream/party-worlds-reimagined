@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://qk2xxjpcf2o"]
+
+[ext_resource type="Script" uid="uid://5yj23087ot2u" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc3_1.gd" id="1_xep3n"]
+
+[node name="Sc3_Start" type="Node"]
+script = ExtResource("1_xep3n")
+is_new_spell_card = true
+is_spell_card = true
+spellcard_name = "Divine Art \"Vampire Illusion\""
+
+[node name="RemiInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

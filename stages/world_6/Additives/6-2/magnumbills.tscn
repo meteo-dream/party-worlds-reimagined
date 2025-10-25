@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c13lkq4i5lln1"]
+
+[ext_resource type="Texture2D" uid="uid://jm1asqdd0q1y" path="res://gfx/world6/6-2/neons/magnum_bills.png" id="1_8aqhn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5lhp"]
+atlas = ExtResource("1_8aqhn")
+region = Rect2(0, 0, 224, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofv05"]
+atlas = ExtResource("1_8aqhn")
+region = Rect2(0, 96, 224, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tnnv7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5lhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofv05")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_tnnv7")
+autoplay = "default"

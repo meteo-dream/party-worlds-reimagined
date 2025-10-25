@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://0168apun8l06"]
+
+[ext_resource type="Texture2D" uid="uid://cte6crj2wtdgl" path="res://gfx/world4/dark_grass_1.png" id="1_aoj2c"]
+[ext_resource type="Texture2D" uid="uid://wxf1w0jku4ab" path="res://gfx/world4/dark_grass_2.png" id="2_rme0h"]
+[ext_resource type="Texture2D" uid="uid://bvmidmbvb8iqx" path="res://gfx/world4/dark_grass_3.png" id="3_mjgwm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thvah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aoj2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rme0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mjgwm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Grass4-3" type="AnimatedSprite2D"]
+z_index = -2
+sprite_frames = SubResource("SpriteFrames_thvah")
+autoplay = "default"

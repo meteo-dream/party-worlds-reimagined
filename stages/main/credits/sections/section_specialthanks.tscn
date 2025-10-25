@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bukykb3uknqv"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_d8k4o"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_yjy4w"]
+
+[node name="SectionSpecialThanks" instance=ExtResource("1_d8k4o")]
+life_time_sec = 6.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 352.0
+offset_bottom = 416.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_yjy4w")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "Dasasdhba
+Chaos Kirby/yjs
+David YST
+GreenSweet
+Newlife2017
+Yakumo Ton
+TheEnigmaScribe
+Herolich1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." index="1"]
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 416.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_yjy4w")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "MFBoy
+Soundwave961
+OmerAras777
+Master 47
+Miyameon
+Nerton17
+Lokins2005
+ntmymike"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Special" type="Label" parent="." index="2"]
+offset_top = 24.0
+offset_right = 640.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_yjy4w")
+theme_override_font_sizes/font_size = 50
+text = "Special Thanks To..."
+horizontal_alignment = 1
+vertical_alignment = 1

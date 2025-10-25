@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://qgwf0ktqf4j"]
+
+[ext_resource type="PackedScene" uid="uid://bevyddig02i1e" path="res://stages/world_9/Additives/9-2/waterfall.tscn" id="1_mh0r5"]
+[ext_resource type="Shader" uid="uid://bwrvisfkvh5uc" path="res://stages/world_9/Additives/9-2/panning.gdshader" id="2_2mf40"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vj04r"]
+shader = ExtResource("2_2mf40")
+shader_parameter/speed = Vector2(0, 1)
+
+[sub_resource type="Curve" id="Curve_kdu6j"]
+_data = [Vector2(0, 0), 0.0, 8.20688, 0, 0, Vector2(0.256329, 1), 0.0, 0.0, 0, 0, Vector2(0.661392, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.284, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_vavrs"]
+curve = SubResource("Curve_kdu6j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mh0r5"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(16, 225, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_vavrs")
+
+[node name="Waterfall" instance=ExtResource("1_mh0r5")]
+self_modulate = Color(1, 1, 1, 0.258824)
+z_index = 0
+material = SubResource("ShaderMaterial_vj04r")
+region_rect = Rect2(0, 0, 32, 450)
+
+[node name="WaterfallStatic" parent="." index="0"]
+region_rect = Rect2(16, 0, 32, 450)
+
+[node name="GPUParticles2D" parent="." index="1"]
+amount = 2
+visibility_rect = Rect2(-32, -225, 64, 450)
+process_material = SubResource("ParticleProcessMaterial_mh0r5")

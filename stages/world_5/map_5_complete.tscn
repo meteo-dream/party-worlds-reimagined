@@ -1,0 +1,183 @@
+[gd_scene load_steps=29 format=3 uid="uid://cq881kn872wes"]
+
+[ext_resource type="Script" uid="uid://cgmeyo2w81dhx" path="res://engine/scenes/map/scripts/map-complete.gd" id="1_me63c"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_ft08l"]
+[ext_resource type="AudioStream" uid="uid://cx6jafqubqpsj" path="res://stages/main/intronumber102.mod" id="3_ap24t"]
+[ext_resource type="Texture2D" uid="uid://usm6n80msr7n" path="res://engine/scenes/map/textures/bg.png" id="4_phgqh"]
+[ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="5_dup2l"]
+[ext_resource type="Texture2D" uid="uid://b6hnnpa1sdewh" path="res://engine/scenes/map/textures/mario_icon.png" id="6_uslwp"]
+[ext_resource type="Texture2D" uid="uid://b8s1u1bh2ib31" path="res://gfx/map-labels/W5.png" id="7_ydcgs"]
+[ext_resource type="Script" uid="uid://dr3vhptgbru6r" path="res://engine/scenes/map/scripts/world_text.gd" id="8_paox1"]
+[ext_resource type="Texture2D" uid="uid://blumff1vegg4c" path="res://engine/scenes/map/textures/completed.png" id="9_uokii"]
+[ext_resource type="Texture2D" uid="uid://dejkphhhivmws" path="res://gfx/maps/w5_p2.png" id="10_k03q1"]
+[ext_resource type="Texture2D" uid="uid://t1ocvax46tla" path="res://gfx/maps/w5_p3.png" id="11_qm1ld"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uckvt"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 0, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mhhh"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 34, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udw5u"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 68, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnfoe"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 102, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7abs"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 136, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr8bi"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 170, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay1n8"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 204, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3kv5"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 238, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32jqr"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 272, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvatm"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 238, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa7hc"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 204, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dukt6"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 170, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejxv8"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 136, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uei27"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 102, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jmt0"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 68, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhowb"]
+atlas = ExtResource("9_uokii")
+region = Rect2(0, 34, 206, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypd1c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uckvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mhhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udw5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnfoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7abs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr8bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay1n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3kv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32jqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvatm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa7hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dukt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejxv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uei27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jmt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhowb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[node name="Map-1-complete" type="Node2D"]
+script = ExtResource("1_me63c")
+goto_scene = "res://stages/world_6/map6.tscn"
+world_name = "5"
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_ft08l")]
+music = Array[Resource]([ExtResource("3_ap24t")])
+volume_db = Array[float]([-6.0])
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("4_phgqh")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3333, 480)
+region_filter_clip_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="MusicOverlay" parent="." instance=ExtResource("5_dup2l")]
+text = Array[String](["wotw - intro number 102"])
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="MarioIcon" type="Sprite2D" parent="GUI"]
+position = Vector2(581, 436)
+texture = ExtResource("6_uslwp")
+metadata/_edit_lock_ = true
+
+[node name="WorldText" type="Sprite2D" parent="GUI"]
+position = Vector2(320, -64)
+texture = ExtResource("7_ydcgs")
+script = ExtResource("8_paox1")
+
+[node name="BounceMarker" type="Marker2D" parent="GUI/WorldText"]
+position = Vector2(0, 160)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GUI/WorldText"]
+position = Vector2(0, 80)
+sprite_frames = SubResource("SpriteFrames_ypd1c")
+autoplay = "default"
+offset = Vector2(0, -35)
+
+[node name="W5P2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-149, 144)
+texture = ExtResource("10_k03q1")
+
+[node name="W5P3" type="Sprite2D" parent="."]
+position = Vector2(340, 292)
+texture = ExtResource("11_qm1ld")

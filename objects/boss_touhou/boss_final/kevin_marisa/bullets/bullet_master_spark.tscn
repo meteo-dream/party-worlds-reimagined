@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://drcpyki3qtmig"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_72x6k"]
+[ext_resource type="Script" uid="uid://lyi3qad4nl8d" path="res://objects/boss_touhou/boss_final/kevin_marisa/bullets/bullet_master_spark.gd" id="2_1cnlh"]
+[ext_resource type="Texture2D" uid="uid://bgvi0ikdquld4" path="res://objects/boss_touhou/common/textures/master_spark.png" id="2_46a76"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="2_s5nu3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s5nu3"]
+radius = 57.0
+height = 212.0
+
+[node name="BulletMasterSpark" instance=ExtResource("1_72x6k")]
+script = ExtResource("2_1cnlh")
+bullet_erase_color = Color(1, 1, 0.45098, 1)
+ignore_modulate_alpha_for_collision = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_s5nu3")
+
+[node name="Sprite" parent="." index="1"]
+material = ExtResource("2_s5nu3")
+position = Vector2(2, 0)
+texture = ExtResource("2_46a76")
+hframes = 1
+vframes = 1
+frame = 0
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(0.5, 7.62939e-06)
+scale = Vector2(12.85, 8.5)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnkp5capd86eo"]
+
+[ext_resource type="Texture2D" uid="uid://c8w5imnof07yb" path="res://gfx/world2/clouds2-1.png" id="1_co77h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73d73"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or43r"]
+atlas = ExtResource("1_co77h")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1onkp"]
+atlas = ExtResource("1_co77h")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l60dr"]
+atlas = ExtResource("1_co77h")
+region = Rect2(96, 288, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2b72h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or43r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1onkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l60dr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1onkp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 112
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_73d73")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2b72h")
+autoplay = "default"

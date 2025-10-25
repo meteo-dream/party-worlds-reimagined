@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://box8kwmj5mmgg"]
+
+[ext_resource type="Script" uid="uid://bbde8w6uvib4d" path="res://objects/boss_touhou/common/components/summon_leaf_effect.gd" id="1_wbe3p"]
+
+[node name="SummonLeafEffect" type="Node2D"]
+script = ExtResource("1_wbe3p")

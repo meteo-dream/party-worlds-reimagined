@@ -1,0 +1,62 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=10 format=3 uid="uid://c1nmysma0hu3o"]
+
+[sub_resource type="Curve" id="Curve_ngaf4"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, -5), 0.0, 55.0916, 0, 0, Vector2(0.0478723, 5), 32.2043, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ofgnf"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, -5), 0.0, 0.0, 0, 0, Vector2(0.18617, 5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_iyo5q"]
+curve_x = SubResource("Curve_ngaf4")
+curve_y = SubResource("Curve_ofgnf")
+
+[sub_resource type="Curve" id="Curve_qogjd"]
+_limits = [-5.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, -5), 0.0, 1.4, 0, 0, Vector2(0.25, 5), 0.0, 0.0, 0, 0, Vector2(0.5, -5), 0.0, 0.0, 0, 0, Vector2(0.75, 5), 0.0, 0.0, 0, 0, Vector2(1, -5), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_i630p"]
+curve = SubResource("Curve_qogjd")
+
+[sub_resource type="Curve" id="Curve_nij8k"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0904255, 1), 0.0, 0.0, 0, 0, Vector2(0.808511, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_8cj86"]
+curve = SubResource("Curve_nij8k")
+
+[sub_resource type="Curve" id="Curve_86ku1"]
+_limits = [0.0, 103.4, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.143617, 103.4), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_0yjd2"]
+curve = SubResource("Curve_86ku1")
+
+[resource]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(480, 240, 0)
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+directional_velocity_min = 1.0
+directional_velocity_max = 1.0
+directional_velocity_curve = SubResource("CurveXYZTexture_iyo5q")
+velocity_limit_curve = SubResource("CurveTexture_0yjd2")
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -5.0
+radial_accel_max = 5.0
+radial_accel_curve = SubResource("CurveTexture_i630p")
+tangential_accel_min = -10.0
+tangential_accel_max = 10.0
+scale_min = 0.4
+scale_max = 0.75
+scale_curve = SubResource("CurveTexture_8cj86")

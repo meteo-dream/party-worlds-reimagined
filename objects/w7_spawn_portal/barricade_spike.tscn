@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cobpaovc5ty3m"]
+
+[ext_resource type="PackedScene" uid="uid://5pmwnbbklcjj" path="res://engine/objects/enemies/spikes/spike.tscn" id="1_qmcxn"]
+[ext_resource type="Shader" uid="uid://c1yibfdu766i8" path="res://engine/shaders/hsv_global.gdshader" id="2_qojfc"]
+[ext_resource type="Texture2D" uid="uid://pujov6sbhglg" path="res://engine/objects/enemies/spikes/textures/spike_hard_block.png" id="3_1mrsx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yjhit"]
+shader = ExtResource("2_qojfc")
+shader_parameter/hue = 0.0
+shader_parameter/saturation = -1.0
+shader_parameter/value = -0.36
+
+[node name="BarricadeSpike" instance=ExtResource("1_qmcxn")]
+rotation = 3.14159
+
+[node name="CollisionPolygon2D" parent="." index="0"]
+position = Vector2(-4.05629e-05, 16)
+
+[node name="Sprite" parent="." index="1"]
+material = SubResource("ShaderMaterial_yjhit")
+position = Vector2(0, 0)
+texture = ExtResource("3_1mrsx")

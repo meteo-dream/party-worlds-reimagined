@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkd0y1eminlt2"]
+
+[ext_resource type="Script" uid="uid://bs5eos0gwgajl" path="res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_0_alt.gd" id="1_x4cof"]
+
+[node name="sc_0_alt" type="Node"]
+script = ExtResource("1_x4cof")
+spellcard_time = 13.4
+
+[node name="WaveTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="IntervalTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="BossInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

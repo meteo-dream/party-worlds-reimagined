@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://btkte1gqm0nu6"]
+
+[ext_resource type="Texture2D" uid="uid://cuthdgcuxx486" path="res://gfx/world3/3-2drzewko.png" id="1_cndss"]
+[ext_resource type="Texture2D" uid="uid://g1q7t4m65csi" path="res://gfx/world3/starland.tres" id="2_trmoj"]
+
+[node name="Sprite2D" type="Sprite2D"]
+z_index = -1
+position = Vector2(0, -16)
+texture = ExtResource("1_cndss")
+
+[node name="Starland" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+z_index = 6
+position = Vector2(0, -16)
+texture = ExtResource("2_trmoj")

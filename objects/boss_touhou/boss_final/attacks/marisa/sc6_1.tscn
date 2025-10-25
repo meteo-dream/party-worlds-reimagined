@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctbfieilq1318"]
+
+[ext_resource type="Script" uid="uid://d0dd0yjvt11ap" path="res://objects/boss_touhou/boss_final/attacks/marisa/sc6_1.gd" id="1_136bo"]
+
+[node name="Sc6_Start" type="Node"]
+script = ExtResource("1_136bo")
+is_new_spell_card = true
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

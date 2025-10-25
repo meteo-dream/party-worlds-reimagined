@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://iumw7p10eqjf"]
+
+[ext_resource type="Texture2D" uid="uid://c56cpfcs1gnnb" path="res://gfx/world6/blucoin.png" id="1_hjc1e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtgba"]
+atlas = ExtResource("1_hjc1e")
+region = Rect2(0, 50, 41, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5riu"]
+atlas = ExtResource("1_hjc1e")
+region = Rect2(41, 50, 41, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewqjt"]
+atlas = ExtResource("1_hjc1e")
+region = Rect2(82, 50, 41, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy7n6"]
+atlas = ExtResource("1_hjc1e")
+region = Rect2(123, 50, 41, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hsr8"]
+atlas = ExtResource("1_hjc1e")
+region = Rect2(164, 50, 41, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jy64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtgba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5riu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewqjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy7n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hsr8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Blu-coin-effect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1jy64")
+autoplay = "default"
+offset = Vector2(-2, 3)
+
+[connection signal="animation_finished" from="." to="." method="queue_free"]

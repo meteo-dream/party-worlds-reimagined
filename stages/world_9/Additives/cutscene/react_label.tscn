@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqh4bihm4smh1"]
+
+[ext_resource type="FontFile" uid="uid://dod5x6pna7fub" path="res://engine/fonts/comix_heavy.ttf" id="1_nufte"]
+[ext_resource type="Script" uid="uid://gxwrq3tdcpla" path="res://stages/world_9/Additives/cutscene/react_label.gd" id="2_f1jkn"]
+
+[node name="ReactLabel" type="Label"]
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 34.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.435294, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("1_nufte")
+theme_override_font_sizes/font_size = 50
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_f1jkn")

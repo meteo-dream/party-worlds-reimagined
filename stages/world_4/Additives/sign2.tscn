@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbnamduxa1b3o"]
+
+[ext_resource type="Texture2D" uid="uid://bx74o3rkw4nor" path="res://gfx/world4/sign1.png" id="1_2erlk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8vjj"]
+atlas = ExtResource("1_2erlk")
+region = Rect2(0, 0, 84, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kexe2"]
+atlas = ExtResource("1_2erlk")
+region = Rect2(0, 26, 84, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbrn1"]
+atlas = ExtResource("1_2erlk")
+region = Rect2(0, 52, 84, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa5cg"]
+atlas = ExtResource("1_2erlk")
+region = Rect2(0, 78, 84, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rf5y3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8vjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kexe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbrn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa5cg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Sign2" type="AnimatedSprite2D"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_rf5y3")
+autoplay = "default"
+offset = Vector2(0, 3)

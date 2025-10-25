@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://8ulmklnlkpcp"]
+
+[ext_resource type="PackedScene" uid="uid://bnr3rfhkdf6j2" path="res://engine/objects/bumping_blocks/question_block/question_block.tscn" id="1_kqqpa"]
+[ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="2_m7baj"]
+[ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="3_bskj8"]
+[ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="4_8hops"]
+[ext_resource type="SpriteFrames" uid="uid://buo2w0jqubcm3" path="res://engine/objects/bumping_blocks/question_block/blue_qblock.tres" id="5_2nhsb"]
+[ext_resource type="Texture2D" uid="uid://dr27m02d1hglo" path="res://engine/objects/powerups/fire_flower/texture.png" id="6_hvlvs"]
+
+[sub_resource type="Resource" id="Resource_nll4y"]
+resource_local_to_scene = true
+script = ExtResource("4_8hops")
+creation_fallback_node = ExtResource("2_m7baj")
+creation_nodepack = ExtResource("3_bskj8")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4vm8"]
+atlas = ExtResource("6_hvlvs")
+region = Rect2(0, 0, 33, 32)
+
+[node name="QuestionBlock" instance=ExtResource("1_kqqpa")]
+result = SubResource("Resource_nll4y")
+
+[node name="AnimatedSprite2D" parent="Sprites" index="1"]
+sprite_frames = ExtResource("5_2nhsb")
+
+[node name="ItemDisplayer" parent="Sprites" index="2"]
+texture = SubResource("AtlasTexture_m4vm8")

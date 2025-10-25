@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqwqjckeyyhsf"]
+
+[ext_resource type="Texture2D" uid="uid://txkq44xcce4x" path="res://gfx/world6/6-2/neons/rexx.png" id="1_y1jju"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37ty0"]
+atlas = ExtResource("1_y1jju")
+region = Rect2(0, 0, 174, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsbbh"]
+atlas = ExtResource("1_y1jju")
+region = Rect2(0, 64, 174, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnfd8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37ty0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsbbh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_jnfd8")
+autoplay = "default"

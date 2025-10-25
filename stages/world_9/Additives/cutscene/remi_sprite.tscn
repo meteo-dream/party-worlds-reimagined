@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://drhbi6o26ua1b"]
+
+[ext_resource type="Texture2D" uid="uid://t6ga65kmc1at" path="res://objects/boss_touhou/boss_final/textures/remi_boss.png" id="1_ymuqf"]
+[ext_resource type="Script" uid="uid://cuguv5sff2ukm" path="res://stages/world_9/Additives/cutscene/remi_sprite.gd" id="2_7toxk"]
+
+[node name="RemiSprite" type="Sprite2D"]
+z_index = 2
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_ymuqf")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 80)
+script = ExtResource("2_7toxk")

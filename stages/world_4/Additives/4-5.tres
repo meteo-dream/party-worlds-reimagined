@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dr2i81ema20uk"]
+
+[ext_resource type="Shader" uid="uid://dbd87j36qtsuk" path="res://stages/world_2/shaders/2-3.gdshader" id="1_vnwit"]
+
+[resource]
+shader = ExtResource("1_vnwit")
+shader_parameter/wave_amplitude = 0.02
+shader_parameter/wave_frequency = 10.0
+shader_parameter/wave_speed = 20.0

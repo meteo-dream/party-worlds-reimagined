@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://tstw5qkhc8m3"]
+
+[ext_resource type="Texture2D" uid="uid://bq6twded2d7mk" path="res://objects/boss_touhou/boss_w9/textures/warning.png" id="1_6w6p8"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="1_241xu"]
+[ext_resource type="Script" uid="uid://cyb2wkjvbithj" path="res://objects/boss_touhou/boss_w9/components/viewfinder_eff.gd" id="1_c1puc"]
+[ext_resource type="Script" uid="uid://cqx8gbvjms82j" path="res://objects/boss_touhou/boss_w9/components/viewfinder_eff_circle.gd" id="3_2od4w"]
+[ext_resource type="Script" uid="uid://bxggbyvctjco7" path="res://objects/boss_touhou/boss_w9/components/viewfinder_eff_sprite.gd" id="4_fhtmc"]
+
+[node name="ViewfinderEffect" type="Node2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_c1puc")
+
+[node name="Viewfinder" type="Sprite2D" parent="."]
+material = ExtResource("1_241xu")
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_6w6p8")
+region_enabled = true
+region_rect = Rect2(0, 0, 46, 62)
+script = ExtResource("4_fhtmc")
+frequency = 8.0
+
+[node name="Circle" type="Sprite2D" parent="."]
+material = ExtResource("1_241xu")
+texture = ExtResource("1_6w6p8")
+region_enabled = true
+region_rect = Rect2(114, 0, 43, 33)
+script = ExtResource("3_2od4w")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b523h8td62u7t"]
+
+[ext_resource type="Script" uid="uid://c47qhskenfcf6" path="res://objects/boss_touhou/boss_final/platform_support.gd" id="1_ldswp"]
+[ext_resource type="PackedScene" uid="uid://rhrex2vth7at" path="res://engine/objects/platform/platform_path.tscn" id="2_almjm"]
+[ext_resource type="AudioStream" uid="uid://dx6nwg8ib2n2b" path="res://objects/boss_touhou/common/sounds/se_boon00.wav" id="2_s1v6u"]
+
+[node name="PlatformSupport" type="Node2D" node_paths=PackedStringArray("platforms")]
+script = ExtResource("1_ldswp")
+activation_sound_effect = ExtResource("2_s1v6u")
+platforms = [NodePath("PlatformPath"), NodePath("PlatformPath2"), NodePath("PlatformPath3"), NodePath("PlatformPath4"), NodePath("PlatformPath5"), NodePath("PlatformPath6")]
+
+[node name="PlatformPath" parent="." instance=ExtResource("2_almjm")]
+position = Vector2(168, -16)
+
+[node name="PlatformPath2" parent="." instance=ExtResource("2_almjm")]
+position = Vector2(472, -16)
+
+[node name="PlatformPath3" parent="." instance=ExtResource("2_almjm")]
+position = Vector2(168, -32)
+
+[node name="PlatformPath4" parent="." instance=ExtResource("2_almjm")]
+position = Vector2(472, -32)
+
+[node name="PlatformPath5" parent="." instance=ExtResource("2_almjm")]
+position = Vector2(168, -48)
+
+[node name="PlatformPath6" parent="." instance=ExtResource("2_almjm")]
+position = Vector2(472, -48)

@@ -1,0 +1,252 @@
+[gd_scene load_steps=34 format=3 uid="uid://5oalgh6nfmj6"]
+
+[ext_resource type="Script" uid="uid://b3ebtwoyxmnbe" path="res://objects/boss_touhou/boss_final/remilia/remilia_final_boss.gd" id="1_0n3y8"]
+[ext_resource type="SpriteFrames" uid="uid://k8s22ro5nmhi" path="res://objects/boss_touhou/boss_final/prefabs/remilia_scarlet.tres" id="1_nvc1h"]
+[ext_resource type="AudioStream" uid="uid://0jqk1v6iikwf" path="res://objects/boss_touhou/common/sounds/se_fault.wav" id="2_7xpmm"]
+[ext_resource type="AudioStream" uid="uid://diqi04q255naj" path="res://objects/boss_touhou/common/sounds/se_tan01.wav" id="2_vckoc"]
+[ext_resource type="AudioStream" uid="uid://cs6u2jbf7prli" path="res://objects/boss_touhou/common/sounds/se_enep01.wav" id="3_7y3wh"]
+[ext_resource type="Script" uid="uid://dhaqb1incjw33" path="res://engine/objects/enemies/enemy_body_collision.gd" id="3_xn7xm"]
+[ext_resource type="AudioStream" uid="uid://bqs4ewqi7b7s" path="res://objects/boss_touhou/common/sounds/se_cat00.wav" id="4_ddju6"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="4_qw828"]
+[ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="5_ih5jw"]
+[ext_resource type="AudioStream" uid="uid://ct3neygbqda02" path="res://objects/boss_touhou/common/sounds/se_ch02.wav" id="5_ms1ey"]
+[ext_resource type="AudioStream" uid="uid://bx2s8ajo33k4h" path="res://objects/boss_touhou/common/sounds/se_ch00.wav" id="6_apgsx"]
+[ext_resource type="Texture2D" uid="uid://cyvsod71yq71g" path="res://objects/boss_touhou/common/textures/magic_circle.png" id="6_f8oat"]
+[ext_resource type="Script" uid="uid://buvqfvt3rnrx6" path="res://objects/boss_touhou/common/components/magic_circle_eff.gd" id="7_55fi6"]
+[ext_resource type="AudioStream" uid="uid://w6jhk3cstw8t" path="res://objects/boss_touhou/common/sounds/se_enep02.wav" id="7_yjviw"]
+[ext_resource type="AudioStream" uid="uid://c13xibfdsa2rd" path="res://objects/boss_touhou/common/sounds/kira00eosd.wav" id="8_a6fck"]
+[ext_resource type="AudioStream" uid="uid://bglg4oksf6efl" path="res://objects/boss_touhou/common/sounds/se_tan00.wav" id="8_yjviw"]
+[ext_resource type="AudioStream" uid="uid://c2fesk4mnf4w3" path="res://objects/boss_touhou/common/sounds/se_etbreak.wav" id="9_05vnv"]
+[ext_resource type="AudioStream" uid="uid://dwsab5vxrlwvc" path="res://objects/boss_touhou/common/sounds/se_lazer00.wav" id="9_7y3wh"]
+[ext_resource type="AudioStream" uid="uid://bob0wlrx8p6y7" path="res://objects/boss_touhou/common/sounds/se_timeout.wav" id="10_vckoc"]
+[ext_resource type="AudioStream" uid="uid://cn5mt7emm8k4d" path="res://objects/boss_touhou/common/sounds/se_timeout2.wav" id="11_bfm0r"]
+[ext_resource type="AudioStream" uid="uid://dt24m275101pu" path="res://objects/boss_touhou/common/sounds/se_nice.wav" id="14_05vnv"]
+[ext_resource type="Script" uid="uid://bu7n5s6htw2uo" path="res://objects/boss_touhou/common/components/boss_sprite.gd" id="14_ms1ey"]
+[ext_resource type="Script" uid="uid://d0qdmp67qng43" path="res://objects/boss_touhou/boss_final/attacks/remilia/enter_battle.gd" id="21_apgsx"]
+[ext_resource type="PackedScene" uid="uid://b46a4ofewc74x" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc0_start.tscn" id="21_yjviw"]
+[ext_resource type="PackedScene" uid="uid://d3txvq2pb8wvp" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc1_start.tscn" id="23_a6fck"]
+[ext_resource type="PackedScene" uid="uid://cgkko1uwpvlil" path="res://objects/boss_touhou/boss_final/attacks/do_nothing.tscn" id="24_4k5bb"]
+[ext_resource type="PackedScene" uid="uid://i1wpn3hhqtbh" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc2_start.tscn" id="26_bfm0r"]
+[ext_resource type="PackedScene" uid="uid://qk2xxjpcf2o" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc3_start.tscn" id="28_xy000"]
+[ext_resource type="PackedScene" uid="uid://d2tl00lommylo" path="res://objects/boss_touhou/boss_final/attacks/transition_to_dual.tscn" id="29_fhgu3"]
+[ext_resource type="PackedScene" uid="uid://drdseg65y1147" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc4_start.tscn" id="30_3ry0r"]
+[ext_resource type="PackedScene" uid="uid://c4yytsw8odlpr" path="res://objects/boss_touhou/boss_final/attacks/remilia/scfinal.tscn" id="31_hkbx5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhnmj"]
+size = Vector2(25, 49)
+
+[sub_resource type="GDScript" id="GDScript_xy000"]
+script/source = "extends BossSpellcardFinal
+
+const PATCHOULI = preload(\"res://objects/boss_touhou/boss_final/patch_boss.tscn\")
+
+func _ready() -> void:
+	connect_patchouli_signal()
+
+func connect_patchouli_signal() -> void:
+	if is_instance_valid(patchouli_sprite):
+		patchouli_sprite.summoned_sub_boss.connect(func() -> void:
+			await _set_timer(1.0, true)
+			move_boss(boss.boss_handler.global_position + Vector2(-400, -400), 1.0)
+			boss.magic_circle_effect.disappear_animation()
+			)
+
+func middle_attack() -> void:
+	super()
+	move_boss(boss.boss_handler.global_position + Vector2(0.0, -150.0), 1.0)
+	await _set_timer(0.8, true)
+	change_boss_name(2)
+	summon_patchouli()
+	await _set_timer(0.7, true)
+	if !is_instance_valid(patchouli_sprite):
+		print(\"Patchouli not found.\")
+		return
+	if is_instance_valid(boss.boss_handler.side_boss):
+		patchouli_sprite.special_summon_sub_boss(boss.boss_handler.side_boss)
+	await _set_timer(2.5, true)
+
+func summon_patchouli() -> void:
+	if is_instance_valid(patchouli_sprite):
+		patchouli_sprite.queue_free()
+	patchouli_sprite = PATCHOULI.instantiate()
+	Scenes.current_scene.add_child(patchouli_sprite)
+	patchouli_sprite.z_index = boss.z_index - 1
+	patchouli_sprite.global_position = boss.boss_handler.global_position + Vector2(600.0, 0.0)
+	patchouli_sprite.reset_physics_interpolation()
+	patchouli_sprite.move_boss(boss.global_position + Vector2(0.0, 80.0), 0.7)
+	connect_patchouli_signal()
+"
+
+[node name="BossRemilia" type="Node2D" node_paths=PackedStringArray("phases") groups=["#finalboss"]]
+script = ExtResource("1_0n3y8")
+bullet_shoot_dimmed_sfx = ExtResource("2_vckoc")
+internal_boss_name = "REMILIA"
+battle_fail_sound = ExtResource("2_7xpmm")
+boss_defeat = ExtResource("3_7y3wh")
+declare_spell_card = ExtResource("4_ddju6")
+short_charge_up = ExtResource("5_ms1ey")
+long_charge_up = ExtResource("6_apgsx")
+burst_sound = ExtResource("7_yjviw")
+bullet_shoot_1 = ExtResource("8_yjviw")
+bullet_twinkle = ExtResource("8_a6fck")
+bullet_laser = ExtResource("9_7y3wh")
+bullet_erase = ExtResource("9_05vnv")
+sfx_timeout0 = ExtResource("10_vckoc")
+sfx_timeout1 = ExtResource("11_bfm0r")
+nice_aura = ExtResource("14_05vnv")
+phases = [NodePath("EnterBattle"), NodePath("Sc0_Start"), NodePath("Sc0_Blue"), NodePath("Sc0_Start"), NodePath("Sc0_End"), NodePath("Sc1_Start"), NodePath("Sc1_Middle"), NodePath("Sc2_Start"), NodePath("Sc2_Middle"), NodePath("Sc2_End"), NodePath("Sc3_Start"), NodePath("Sc3_Middle"), NodePath("SummonPatchouli"), null, null, null, null, null, null, NodePath("TransitionToDual"), NodePath("Sc4_Start"), NodePath("Sc5_Start"), NodePath("Sc5_End"), NodePath("Sc6_Start"), NodePath("DoNothing"), NodePath("TransitionToDual"), NodePath("Sc7_Start"), NodePath("ScFinal_Start")]
+
+[node name="BossSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+sprite_frames = ExtResource("1_nvc1h")
+autoplay = "default"
+script = ExtResource("14_ms1ey")
+amplitude = Vector2(0, 5)
+frequency = 2.0
+
+[node name="Body" type="Area2D" parent="."]
+z_index = -1
+script = ExtResource("3_xn7xm")
+turn_back = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+visible = false
+position = Vector2(2.5, -4.5)
+shape = SubResource("RectangleShape2D_hhnmj")
+debug_color = Color(0, 0.648751, 0.170092, 0.42)
+
+[node name="EnemyAttacked" type="Node" parent="Body"]
+script = ExtResource("4_qw828")
+stomping_enabled = false
+stomping_standard = Vector2(0, 0)
+stomping_creation = null
+stomping_scores = 0
+stomping_sound = null
+killing_enabled = false
+killing_creation = null
+frozen_enabled = false
+metadata/_edit_pinned_properties_ = [&"stomping_scores", &"stomping_creation", &"stomping_sound", &"killing_creation"]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1, -0.499996)
+scale = Vector2(3.3, 4.95)
+
+[node name="MagicCircleEff" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.337255)
+z_index = -1
+material = ExtResource("5_ih5jw")
+texture = ExtResource("6_f8oat")
+script = ExtResource("7_55fi6")
+
+[node name="EnterBattle" type="Node" parent="."]
+script = ExtResource("21_apgsx")
+
+[node name="SummonPatchouli" type="Node" parent="."]
+script = SubResource("GDScript_xy000")
+
+[node name="DoNothing" parent="." instance=ExtResource("24_4k5bb")]
+
+[node name="Sc0_Start" parent="." instance=ExtResource("21_yjviw")]
+is_new_spell_card = true
+next_attack_will_be_new = true
+
+[node name="Sc0_Blue" parent="." instance=ExtResource("21_yjviw")]
+alternate_fire = true
+next_attack_will_be_new = true
+
+[node name="Sc0_End" parent="." instance=ExtResource("21_yjviw")]
+alternate_fire = true
+sc0_knife_speed = 3000.0
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc1_Start" parent="." instance=ExtResource("23_a6fck")]
+droplet_interval = 0.25
+next_attack_will_be_new = true
+
+[node name="Sc1_Middle" parent="." instance=ExtResource("23_a6fck")]
+remilia_start_shooting = true
+is_new_spell_card = false
+next_attack_will_be_new = true
+end_spell_card_afterwards = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc2_Start" parent="." instance=ExtResource("26_bfm0r")]
+sc2_phase_interval = 1.0
+next_attack_will_be_new = true
+
+[node name="Sc2_Middle" parent="." instance=ExtResource("26_bfm0r")]
+is_new_spell_card = false
+next_attack_will_be_new = true
+
+[node name="Sc2_End" parent="." instance=ExtResource("26_bfm0r")]
+sc2_shot_spread = 10.0
+sc2_phase_interval = 0.1
+sc2_is_end_phase = true
+is_new_spell_card = false
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc3_Start" parent="." instance=ExtResource("28_xy000")]
+next_attack_will_be_new = true
+
+[node name="Sc3_Middle" parent="." instance=ExtResource("28_xy000")]
+use_bigger_bullet = true
+bullet_amount = 11
+bullet_shoot_interval_sec = 0.85
+is_new_spell_card = false
+next_attack_will_be_new = true
+end_spell_card_afterwards = true
+player_should_get_pity_afterwards = true
+
+[node name="TransitionToDual" parent="." instance=ExtResource("29_fhgu3")]
+
+[node name="Sc4_Start" parent="." instance=ExtResource("30_3ry0r")]
+is_new_spell_card = true
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="Sc5_Start" parent="." instance=ExtResource("23_a6fck")]
+droplet_interval = 0.3
+droplet_speed = 268.0
+next_attack_will_be_new = true
+spellcard_name = "Scarlet Light Blast \"Shoot the Blood Moon\""
+
+[node name="Sc5_End" parent="." instance=ExtResource("23_a6fck")]
+clear_screen_on_activate = true
+droplet_interval = 0.25
+droplet_speed = 320.0
+remilia_start_shooting = true
+remilia_shoot_interval = 3.2
+remilia_shoot_speed = 170.0
+remilia_shoot_cone = 120.0
+is_new_spell_card = false
+next_attack_will_be_new = true
+end_spell_card_afterwards = true
+player_should_get_pity_afterwards = true
+spellcard_name = "Scarlet Light \"Shoot the Blood Moon\""
+
+[node name="Sc6_Start" parent="." instance=ExtResource("26_bfm0r")]
+sc6_force_no_bounce = true
+sc2_shot_spread = 12.0
+sc2_phase_interval = 2.0
+sc2_is_end_phase = true
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="TransitionToFinal" parent="." instance=ExtResource("29_fhgu3")]
+move_time_sec = 0.2
+prep_For_final = true
+
+[node name="Sc7_Start" parent="." instance=ExtResource("30_3ry0r")]
+sc4_bullet_count = 13
+sc4_deceleration_time_sec = 0.8
+sc4_bullet_delay_speed = 0.5
+sc4_interval_sec = 7.0
+is_new_spell_card = true
+next_attack_will_be_new = true
+player_should_get_pity_afterwards = true
+
+[node name="ScFinal_Start" parent="." instance=ExtResource("31_hkbx5")]
+
+[connection signal="animation_finished" from="BossSprite" to="." method="_on_boss_sprite_animation_finished"]

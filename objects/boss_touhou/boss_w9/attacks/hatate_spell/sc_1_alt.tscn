@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://t007or3wo70m"]
+
+[ext_resource type="Script" uid="uid://d24ec80sfno4r" path="res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_1_alt.gd" id="1_mb6tu"]
+
+[node name="sc_1_alt" type="Node"]
+script = ExtResource("1_mb6tu")
+is_spell_card = true
+spellcard_name = "Reporting \"Hatate Himekaidou's Reporting Training\""
+spellcard_time = 24.7
+spellcard_score_bonus = 10000
+
+[node name="ViewfinderWaitTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="ViewfinderNoShowTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="ArrowIntervalTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="BossMoveInterval" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

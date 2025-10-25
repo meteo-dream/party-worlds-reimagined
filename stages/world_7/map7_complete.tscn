@@ -1,0 +1,177 @@
+[gd_scene load_steps=29 format=3 uid="uid://cmtdgxoy312og"]
+
+[ext_resource type="Script" uid="uid://cgmeyo2w81dhx" path="res://engine/scenes/map/scripts/map-complete.gd" id="1_s00aq"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_6dwll"]
+[ext_resource type="AudioStream" uid="uid://cx6jafqubqpsj" path="res://stages/main/intronumber102.mod" id="3_ahgbn"]
+[ext_resource type="Texture2D" uid="uid://usm6n80msr7n" path="res://engine/scenes/map/textures/bg.png" id="4_w3frn"]
+[ext_resource type="Texture2D" uid="uid://b6hnnpa1sdewh" path="res://engine/scenes/map/textures/mario_icon.png" id="5_3k5cr"]
+[ext_resource type="Script" uid="uid://84tklnoxykkh" path="res://engine/scenes/map/scripts/player_icon.gd" id="6_wiwal"]
+[ext_resource type="Texture2D" uid="uid://3mjsrfheq58g" path="res://gfx/map-labels/W7.png" id="7_yxcbc"]
+[ext_resource type="Script" uid="uid://dr3vhptgbru6r" path="res://engine/scenes/map/scripts/world_text.gd" id="8_ug5un"]
+[ext_resource type="Texture2D" uid="uid://blumff1vegg4c" path="res://engine/scenes/map/textures/completed.png" id="9_iks64"]
+[ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="10_ahgbn"]
+[ext_resource type="Texture2D" uid="uid://c6n4cq0ni7sn0" path="res://gfx/maps/PWR_world7_map_2.png" id="11_ffg28"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uckvt"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 0, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mhhh"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 34, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udw5u"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 68, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnfoe"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 102, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7abs"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 136, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr8bi"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 170, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay1n8"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 204, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3kv5"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 238, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32jqr"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 272, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvatm"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 238, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa7hc"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 204, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dukt6"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 170, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejxv8"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 136, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uei27"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 102, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jmt0"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 68, 206, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhowb"]
+atlas = ExtResource("9_iks64")
+region = Rect2(0, 34, 206, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypd1c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uckvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mhhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udw5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnfoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7abs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr8bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay1n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3kv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32jqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvatm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa7hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dukt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejxv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uei27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jmt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhowb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[node name="MAP7COMPLETE" type="Node2D"]
+script = ExtResource("1_s00aq")
+goto_scene = "res://stages/world_8/map8.tscn"
+world_name = "7"
+
+[node name="MusicLoader" parent="." instance=ExtResource("2_6dwll")]
+music = Array[Resource]([ExtResource("3_ahgbn")])
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(-408, 0)
+texture = ExtResource("4_w3frn")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3333, 480)
+region_filter_clip_enabled = true
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="MarioIcon" type="Sprite2D" parent="GUI"]
+position = Vector2(581, 436)
+texture = ExtResource("5_3k5cr")
+script = ExtResource("6_wiwal")
+metadata/_edit_lock_ = true
+
+[node name="WorldText" type="Sprite2D" parent="GUI"]
+position = Vector2(320, -64)
+texture = ExtResource("7_yxcbc")
+script = ExtResource("8_ug5un")
+
+[node name="BounceMarker" type="Marker2D" parent="GUI/WorldText"]
+position = Vector2(0, 146)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GUI/WorldText"]
+position = Vector2(0, 44)
+sprite_frames = SubResource("SpriteFrames_ypd1c")
+autoplay = "default"
+
+[node name="MusicOverlay" parent="." instance=ExtResource("10_ahgbn")]
+text = Array[String](["wotw - intro number 102"])
+
+[node name="PwrWorld7Map2" type="Sprite2D" parent="."]
+position = Vector2(272, 232)
+texture = ExtResource("11_ffg28")

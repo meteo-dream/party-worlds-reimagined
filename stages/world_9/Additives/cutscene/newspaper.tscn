@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://blyljjka46qyg"]
+
+[ext_resource type="Texture2D" uid="uid://bpk5girgri245" path="res://stages/world_9/Additives/cutscene/newspaper.png" id="1_dwyp7"]
+[ext_resource type="Script" uid="uid://cjorglrqpu31d" path="res://stages/world_9/Additives/cutscene/newspaper.gd" id="2_csj2j"]
+
+[node name="Newspaper" type="Sprite2D"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_dwyp7")
+script = ExtResource("2_csj2j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0.333333, -2.38419e-07)
+scale = Vector2(0.966667, 1.73333)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2f4dva8eso6e"]
+
+[ext_resource type="Texture2D" uid="uid://bihojoq546114" path="res://objects/boss_touhou/boss_w9/textures/cardbg_1.png" id="1_mrati"]
+[ext_resource type="Texture2D" uid="uid://cye4c4qntyyv1" path="res://objects/boss_touhou/boss_w9/textures/cardbg_2.png" id="2_81q48"]
+
+[sub_resource type="GDScript" id="GDScript_81q48"]
+script/source = "extends ParallaxBackground
+
+@export var scroll_speed: Vector2 = Vector2(-40.0, -60.0)
+@onready var bg_1 = $Sprite2D
+@onready var bg_2 = $ParallaxLayer
+var bg2_textures: Array
+
+@onready var quality: SettingsManager.QUALITY = SettingsManager.settings.quality
+@onready var QUALITY = SettingsManager.QUALITY
+
+func _ready() -> void:
+	bg2_textures = bg_2.get_children()
+	SettingsManager.settings_updated.connect(_update_visibility)
+	_update_visibility.call_deferred()
+
+func _update_visibility() -> void:
+	quality = SettingsManager.settings.quality
+	visible = !(quality == QUALITY.MIN)
+
+func _physics_process(delta: float) -> void:
+	for i in bg2_textures.size():
+		bg2_textures[i].position.x += scroll_speed.x * delta
+		if bg2_textures[i].position.x <= -384:
+			bg2_textures[i].position.x += 384 * 2
+		bg2_textures[i].position.y += scroll_speed.y * delta
+		if bg2_textures[i].position.y <= -384:
+			bg2_textures[i].position.y += 384 * 2
+"
+
+[node name="SpellcardBackground" type="ParallaxBackground"]
+script = SubResource("GDScript_81q48")
+scroll_speed = Vector2(-15, -60)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 312)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("1_mrati")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+modulate = Color(0.259294, 0.259294, 0.259294, 1)
+motion_mirroring = Vector2(768, 768)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+offset_right = 256.0
+offset_bottom = 256.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_81q48")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxLayer"]
+offset_left = 384.0
+offset_right = 640.0
+offset_bottom = 256.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_81q48")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxLayer"]
+offset_top = 384.0
+offset_right = 256.0
+offset_bottom = 640.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_81q48")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="ParallaxLayer"]
+offset_left = 384.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 640.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_81q48")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true

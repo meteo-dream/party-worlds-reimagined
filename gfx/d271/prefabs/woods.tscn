@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds28q7s8ryddd"]
+
+[ext_resource type="Texture2D" uid="uid://bnb5am431a3u8" path="res://engine/tilesets/overworld/woods.png" id="1_7v7x8"]
+
+[node name="Woods" type="Sprite2D"]
+z_index = -10
+position = Vector2(0, -46)
+texture = ExtResource("1_7v7x8")

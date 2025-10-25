@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhcy6yu847vik"]
+
+[ext_resource type="Texture2D" uid="uid://iblejf6a3nf0" path="res://gfx/world6/6-2/neons/koopa-kola.png" id="1_duag7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aep31"]
+atlas = ExtResource("1_duag7")
+region = Rect2(0, 0, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibkrk"]
+atlas = ExtResource("1_duag7")
+region = Rect2(0, 64, 256, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58l7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aep31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibkrk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_58l7m")
+autoplay = "default"

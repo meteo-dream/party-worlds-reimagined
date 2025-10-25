@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcmbnla4rvcop"]
+
+[ext_resource type="PackedScene" uid="uid://deqaf1juj2xh7" path="res://objects/boss_touhou/common/components/spell_cutin.tscn" id="1_hccmg"]
+[ext_resource type="Texture2D" uid="uid://2t88h6qxdt3b" path="res://objects/boss_touhou/boss_w9/textures/aya_spell.png" id="2_78m63"]
+[ext_resource type="Texture2D" uid="uid://ci3yypnl03mij" path="res://objects/boss_touhou/boss_w9/textures/hatate_spell.png" id="3_o1gso"]
+
+[sub_resource type="GDScript" id="GDScript_hccmg"]
+script/source = "extends SpellCardCutin
+
+@export var secret_boss_portrait: Resource
+
+func _ready() -> void:
+	if CustomGlobals.check_for_hatate_boss() and secret_boss_portrait:
+		texture = secret_boss_portrait
+		starting_pos += Vector2(0.0, 50.0)
+		target_pos += Vector2(-20.0, 50.0)
+	super()
+"
+
+[node name="SpellCutinW9" instance=ExtResource("1_hccmg")]
+texture = ExtResource("2_78m63")
+script = SubResource("GDScript_hccmg")
+secret_boss_portrait = ExtResource("3_o1gso")

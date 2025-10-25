@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpbcpmo7r3st8"]
+
+[ext_resource type="Texture2D" uid="uid://br3s6tb4yob3y" path="res://gfx/world6/6-2/neons/left.png" id="1_vk6l5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft7gi"]
+atlas = ExtResource("1_vk6l5")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vq0r"]
+atlas = ExtResource("1_vk6l5")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vk20i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft7gi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vq0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_vk20i")
+autoplay = "default"

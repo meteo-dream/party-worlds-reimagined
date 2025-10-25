@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5qoqaybhu3r"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_w704k"]
+[ext_resource type="Texture2D" uid="uid://c5pn73y35wetd" path="res://stages/main/credits/textures/engine_icon.png" id="3_8ojue"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="4_y17lv"]
+
+[node name="SectionEngine" instance=ExtResource("1_w704k")]
+life_time_sec = 5.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+offset_top = 56.0
+offset_right = 640.0
+offset_bottom = 384.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("4_y17lv")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "powered by [color=gold]thunder engine[/color]
+
+
+
+engine developers:
+
+reflex[color=FFC2C2]guru[/color]
+[color=BEFFCB]jue13[/color]
+[color=FFFBBE]yukana[/color]"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(320, 144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8ojue")

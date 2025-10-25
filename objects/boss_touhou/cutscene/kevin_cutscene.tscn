@@ -1,0 +1,106 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgx5v2ohrnfs2"]
+
+[ext_resource type="Script" uid="uid://cw1y0e38u1v3w" path="res://objects/boss_touhou/cutscene/kevin_cutscene.gd" id="1_02y13"]
+[ext_resource type="Script" uid="uid://dhaqb1incjw33" path="res://engine/objects/enemies/enemy_body_collision.gd" id="2_l5eu0"]
+[ext_resource type="Shader" uid="uid://dg38ndn8bx84j" path="res://stages/world_2/shaders/grayscale.gdshader" id="3_02y13"]
+[ext_resource type="SpriteFrames" uid="uid://cp03ve7ed68js" path="res://engine/objects/players/prefabs/animations/mario/animation_mario_small.tres" id="3_swy72"]
+[ext_resource type="FontVariation" uid="uid://4h0cbbutybo2" path="res://engine/fonts/font_variations/mister_earl_variation.tres" id="5_6cowv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qxmc"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spw6c"]
+size = Vector2(30, 30)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6cowv"]
+shader = ExtResource("3_02y13")
+shader_parameter/offset = -0.3
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_swy72"]
+load_path = "res://.godot/imported/cp_star.png-8aad299551c69fcc1fb6b6d3d28cbf85.ctex"
+
+[sub_resource type="Curve" id="Curve_02y13"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.8608, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ooec4"]
+curve = SubResource("Curve_02y13")
+
+[sub_resource type="Curve" id="Curve_6cowv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.746479, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -11.146, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7wgot"]
+curve = SubResource("Curve_6cowv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dscx8"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 24.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 25.0
+initial_velocity_max = 75.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_7wgot")
+alpha_curve = SubResource("CurveTexture_ooec4")
+
+[node name="KevinCutscene" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 32
+floor_max_angle = 0.837758
+floor_snap_length = 20.0
+script = ExtResource("1_02y13")
+turn_sprite = false
+sprite = NodePath("Sprite")
+visible_on_screen_notifier = NodePath("")
+speed = Vector2(190, -500)
+gravity_scale = 0.5
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_5qxmc")
+
+[node name="Body" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("2_l5eu0")
+
+[node name="Collision" type="CollisionShape2D" parent="Body"]
+visible = false
+shape = SubResource("RectangleShape2D_spw6c")
+debug_color = Color(0, 0.643137, 0.309804, 0.419608)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_6cowv")
+position = Vector2(0, -16)
+sprite_frames = ExtResource("3_swy72")
+autoplay = "default"
+
+[node name="Stars" type="GPUParticles2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+amount = 24
+texture = SubResource("CompressedTexture2D_swy72")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_dscx8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = 4.0
+offset_right = 46.0
+offset_bottom = 40.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_6cowv")
+theme_override_font_sizes/font_size = 18
+text = "my name is kevin"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="collided_wall" from="." to="." method="turn_x"]

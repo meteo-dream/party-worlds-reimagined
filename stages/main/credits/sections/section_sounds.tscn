@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctwlpb8pv7yal"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_2nvhn"]
+[ext_resource type="Texture2D" uid="uid://d3eeyegd7ymrk" path="res://stages/main/credits/textures/levelpng6.png" id="2_2nvhn"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="3_8nqfc"]
+[ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="4_ttg5v"]
+
+[node name="SectionSounds" instance=ExtResource("1_2nvhn")]
+life_time_sec = 6.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+z_index = -1
+position = Vector2(320, 208)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_2nvhn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
+offset_top = 8.0
+offset_right = 640.0
+offset_bottom = 408.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("3_8nqfc")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "SOUND SOURCES:
+The Sounds Resource, Nintendo
+
+
+
+
+
+
+
+Team Shanghai Alice, public domain
+Trick nostalgie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_top = 224.0
+offset_right = 640.0
+offset_bottom = 255.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_ttg5v")
+theme_override_font_sizes/font_size = 27
+text = "4-2: gaining altitude"
+horizontal_alignment = 1

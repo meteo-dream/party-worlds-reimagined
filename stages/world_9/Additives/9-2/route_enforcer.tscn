@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw3teq0s0f3a0"]
+
+[ext_resource type="Script" uid="uid://gnm55eh5q7ot" path="res://stages/world_9/Additives/9-2/scripts/route_detector.gd" id="1_rip02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te5h4"]
+size = Vector2(64, 26)
+
+[node name="RouteEnforcer" type="Node2D"]
+script = ExtResource("1_rip02")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+visible = false
+shape = SubResource("RectangleShape2D_te5h4")
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

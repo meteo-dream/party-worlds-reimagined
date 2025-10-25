@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b218h8ax6a3dm"]
+
+[ext_resource type="Shader" uid="uid://c1yibfdu766i8" path="res://engine/shaders/hsv_global.gdshader" id="1_auym7"]
+
+[resource]
+shader = ExtResource("1_auym7")
+shader_parameter/hue = -0.444
+shader_parameter/saturation = -0.352
+shader_parameter/value = 0.0

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8bafphmxhsr3"]
+
+[ext_resource type="PackedScene" uid="uid://cfdo54hg6gjgj" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_big_bubble_red.tscn" id="1_0pec4"]
+[ext_resource type="Script" uid="uid://gm6mem1d1xn2" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_spawner_type.gd" id="2_0bjn3"]
+[ext_resource type="PackedScene" uid="uid://cmarptu23ofcx" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_circle_red.tscn" id="3_kju0n"]
+
+[node name="BulletBigBubblePurple" instance=ExtResource("1_0pec4")]
+script = ExtResource("2_0bjn3")
+bullet_type = ExtResource("3_kju0n")
+bullet_move_final_speed = 250.0
+bullet_angle = 90.0
+bullet_erase_color = Color(0.698039, 0, 1, 1)
+deletable_bullet = false
+
+[node name="Sprite" parent="." index="1"]
+frame = 13
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+position = Vector2(-2.22222, -4.54747e-13)
+frame = 3
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-4.76837e-07, 4.76837e-07)
+scale = Vector2(4.2, 4.2)
+
+[node name="Timer" type="Timer" parent="." index="3"]
+process_mode = 1
+one_shot = true

@@ -1,0 +1,78 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://byuuhqffg5rnd"]
+
+[ext_resource type="Texture2D" uid="uid://gx34tn0trf0w" path="res://engine/objects/effects/coin_effect/texture_blockhit.png" id="1_8ljdk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87vy4"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(37, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6evs"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(111, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45wlo"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(0, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s6m5"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(74, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66b8f"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(148, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kecbu"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(185, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlm7d"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(222, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcq8g"]
+atlas = ExtResource("1_8ljdk")
+region = Rect2(259, 0, 37, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87vy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6evs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45wlo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s6m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s6m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s6m5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66b8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kecbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlm7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcq8g")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 10.0
+}]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw0qf02g4q0gt"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_4f2xw"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_nl0wt"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="2_ugf3j"]
+[ext_resource type="Texture2D" uid="uid://dey5eaopp8b8o" path="res://stages/main/credits/textures/looper_pfp.png" id="3_ugf3j"]
+
+[node name="SectionDev1Part2" instance=ExtResource("1_4f2xw")]
+life_time_sec = 18.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+z_index = 2
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 616.0
+offset_bottom = 392.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_ugf3j")
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+text = "\"This project wouldn't have been finished without Yaolinggui. He's carried it at the most important time ever, so big thanks to him, seriously. This project took more than a year to finish and thus might be the first and last MF project I release this year. I'm not done however, so expect more from Meteo Dream very soon!\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DevCom" type="Label" parent="." index="1"]
+offset_top = 8.0
+offset_right = 640.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_nl0wt")
+theme_override_font_sizes/font_size = 43
+text = "Developer Commentary"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Loop" type="Label" parent="." index="2"]
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_nl0wt")
+theme_override_font_sizes/font_size = 28
+text = "LooPer231 (2/2)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LooperPfp" type="Sprite2D" parent="." index="3"]
+self_modulate = Color(1, 1, 1, 0.368627)
+position = Vector2(184, 240)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_ugf3j")

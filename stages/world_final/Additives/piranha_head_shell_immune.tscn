@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://g3syu3u1ufg8"]
+
+[ext_resource type="PackedScene" uid="uid://dt52xvrtre8h3" path="res://engine/objects/enemies/piranha_plants/piranha_head.tscn" id="1_75d4p"]
+
+[node name="PiranhaHeadShellImmune" instance=ExtResource("1_75d4p")]
+
+[node name="EnemyAttacked" parent="Body" index="1"]
+killing_immune = {
+"beetroot": true,
+"boomerang": false,
+"fireball": true,
+"hammer": false,
+"head": false,
+"iceball": false,
+"shell": true,
+"shell_defence": 0,
+"shell_forced": false,
+"starman": true
+}

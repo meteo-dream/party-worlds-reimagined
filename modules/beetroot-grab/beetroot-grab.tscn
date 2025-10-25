@@ -1,0 +1,96 @@
+[gd_scene load_steps=16 format=3 uid="uid://dp5or7s0hii8l"]
+
+[ext_resource type="Shader" uid="uid://c1yibfdu766i8" path="res://engine/shaders/hsv_global.gdshader" id="1_0nest"]
+[ext_resource type="Script" uid="uid://ca28vcrr33knu" path="res://modules/beetroot-grab/beetroot_grab.gd" id="1_crnnx"]
+[ext_resource type="Texture2D" uid="uid://3y6dl3ecp4ph" path="res://engine/objects/powerups/beetroot/texture.png" id="1_ukahh"]
+[ext_resource type="PackedScene" uid="uid://djctwyk8b0tpm" path="res://engine/node_modifiers/grabbable_modifier/grabbable_modifier.tscn" id="3_kr5r7"]
+[ext_resource type="Script" uid="uid://ctnllsiq4nuie" path="res://engine/objects/projectiles/projectile_attack.gd" id="4_u64po"]
+[ext_resource type="Script" uid="uid://dolemaggvcspc" path="res://modules/beetroot-grab/grabbable_modifier-clone.gd" id="5_5lmiv"]
+[ext_resource type="Script" uid="uid://doq0qyrr5ihr6" path="res://engine/scripts/nodes/vision/vision.gd" id="5_yl5ri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd55a"]
+size = Vector2(22, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0k5f"]
+shader = ExtResource("1_0nest")
+shader_parameter/hue = -0.112
+shader_parameter/saturation = -0.652
+shader_parameter/value = -0.27
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n6gt"]
+atlas = ExtResource("1_ukahh")
+region = Rect2(0, 0, 27, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmpxk"]
+atlas = ExtResource("1_ukahh")
+region = Rect2(27, 0, 27, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c47gk"]
+atlas = ExtResource("1_ukahh")
+region = Rect2(54, 0, 27, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtjgc"]
+atlas = ExtResource("1_ukahh")
+region = Rect2(81, 0, 27, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_62kps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n6gt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmpxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c47gk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtjgc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owugp"]
+size = Vector2(20, 32)
+
+[node name="beetroot-grab" type="CharacterBody2D"]
+collision_layer = 112
+collision_mask = 64
+script = ExtResource("1_crnnx")
+gravity_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_fd55a")
+
+[node name="texture" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_g0k5f")
+sprite_frames = SubResource("SpriteFrames_62kps")
+autoplay = "default"
+
+[node name="Attack" type="ShapeCast2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_owugp")
+target_position = Vector2(0, 0)
+max_results = 8
+collision_mask = 67
+collide_with_areas = true
+script = ExtResource("4_u64po")
+killer_type = &"beetroot"
+metadata/_edit_pinned_properties_ = [&"killer_type"]
+
+[node name="GrabbableModifier" parent="." instance=ExtResource("3_kr5r7")]
+script = ExtResource("5_5lmiv")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.0196078)
+position = Vector2(1.43051e-06, 1.43051e-06)
+rect = Rect2(-16, -16, 32, 32)
+script = ExtResource("5_yl5ri")
+metadata/_edit_lock_ = true
+
+[connection signal="killed_notify" from="Attack" to="." method="process_bumping_blocks"]
+[connection signal="ungrabbed" from="GrabbableModifier" to="." method="_ungrabbed"]

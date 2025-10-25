@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn2ci4lqkvxew"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_2ri65"]
+[ext_resource type="Script" uid="uid://du1k208uwkxq8" path="res://objects/boss_touhou/boss_final/remilia/bullets/bullet_bounce.gd" id="2_rpt2s"]
+
+[node name="BulletRedCircleRinged" instance=ExtResource("1_2ri65")]
+script = ExtResource("2_rpt2s")
+bouncy = false
+bounce_once = false
+bullet_erase_color = Color(1, 0, 0, 1)
+
+[node name="Sprite" parent="." index="1"]
+frame = 34
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+scale = Vector2(1, 1)
+frame = 1
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(5.96046e-08, 5.96046e-08)
+scale = Vector2(1.1, 1.1)

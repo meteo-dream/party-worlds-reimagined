@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2t5a68eym8ht"]
+
+[ext_resource type="PackedScene" uid="uid://dhw4anf23ecng" path="res://engine/objects/enemies/goomba_in_bricks/goomba_in_bricks.tscn" id="1_ds58x"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_w1j4j"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_yp8wt"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_gid3g"]
+
+[sub_resource type="Resource" id="Resource_83qot"]
+resource_local_to_scene = true
+script = ExtResource("4_gid3g")
+creation_nodepack = ExtResource("2_w1j4j")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../SpriteGoomba"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("3_yp8wt")
+
+[node name="GoombaInBricks" instance=ExtResource("1_ds58x")]
+position = Vector2(0, 16)
+
+[node name="EnemyAttacked" parent="Hitbox" index="1"]
+stomping_creation = SubResource("Resource_83qot")
+killing_creation = SubResource("Resource_83qot")

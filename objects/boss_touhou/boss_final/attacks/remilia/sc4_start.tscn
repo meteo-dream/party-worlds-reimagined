@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drdseg65y1147"]
+
+[ext_resource type="Script" uid="uid://bxsj16nxq82xw" path="res://objects/boss_touhou/boss_final/attacks/remilia/sc4_0.gd" id="1_1q5ti"]
+
+[node name="Sc4_Start" type="Node"]
+script = ExtResource("1_1q5ti")
+
+[node name="RestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

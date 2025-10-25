@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4erxtnv452ud"]
+
+[ext_resource type="Script" uid="uid://ch6nel8l88gsn" path="res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_3_alt.gd" id="1_t4hc5"]
+
+[node name="sc_3_alt" type="Node"]
+script = ExtResource("1_t4hc5")
+is_spell_card = true
+spellcard_name = "Far-sightedness \"Tengu Psychography\""
+spellcard_time = 31.5
+spellcard_score_bonus = 10000
+
+[node name="ViewfinderExistTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true
+
+[node name="RestTimer" type="Timer" parent="."]
+process_mode = 1
+one_shot = true

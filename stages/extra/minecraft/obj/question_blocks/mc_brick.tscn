@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://xcmuy1cy2iae"]
+
+[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="1_bxs2f"]
+[ext_resource type="Texture2D" uid="uid://by6022t0w675a" path="res://stages/extra/minecraft/gfx/terrain.png" id="2_avbhj"]
+[ext_resource type="Texture2D" uid="uid://bullhcct0hurt" path="res://engine/objects/bumping_blocks/question_block/textures/empty.png" id="3_kutvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ueb54"]
+atlas = ExtResource("2_avbhj")
+region = Rect2(352, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mg541"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ueb54")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kutvk")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}]
+
+[node name="Brick" instance=ExtResource("1_bxs2f")]
+
+[node name="AnimatedSprite2D" parent="Sprites" index="1"]
+sprite_frames = SubResource("SpriteFrames_mg541")

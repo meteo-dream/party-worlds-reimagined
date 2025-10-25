@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8ya1rv4knlrv"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_785ml"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_785ml"]
+radius = 4.0
+
+[node name="BulletDropRed" instance=ExtResource("1_785ml")]
+bullet_erase_color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_785ml")
+
+[node name="Sprite" parent="." index="1"]
+rotation = 1.5708
+frame = 98
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+visible = true
+rotation = -1.5708
+scale = Vector2(0.7, 0.7)
+frame = 1
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(5.96046e-08, -0.5)
+scale = Vector2(1.1, 0.55)

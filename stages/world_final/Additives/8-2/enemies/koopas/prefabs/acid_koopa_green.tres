@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://cm3o8gfas8vyn"]
+
+[ext_resource type="Texture2D" uid="uid://cc0p87ooqolpa" path="res://gfx/worldfinal/10-2/acid_greenkoopa.png" id="1_wslvm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he5h0"]
+atlas = ExtResource("1_wslvm")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oqib"]
+atlas = ExtResource("1_wslvm")
+region = Rect2(32, 0, 32, 48)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oqib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

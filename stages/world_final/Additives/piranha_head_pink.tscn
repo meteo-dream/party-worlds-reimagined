@@ -1,0 +1,159 @@
+[gd_scene load_steps=23 format=3 uid="uid://bj8sgjq3mwkdx"]
+
+[ext_resource type="Script" uid="uid://osg4agqk1rtv" path="res://stages/world_final/Additives/piranha_head_pink.gd" id="1_dh2lc"]
+[ext_resource type="Texture2D" uid="uid://cn66b21sja8vk" path="res://engine/objects/enemies/piranha_plants/textures/head_pink.png" id="2_anpx6"]
+[ext_resource type="Script" uid="uid://dhaqb1incjw33" path="res://engine/objects/enemies/enemy_body_collision.gd" id="2_gb71d"]
+[ext_resource type="PackedScene" uid="uid://c4jlbnswk5dlw" path="res://engine/objects/projectiles/fireball/fireball.tscn" id="2_ogy7u"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="3_wml2n"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="4_4ny41"]
+[ext_resource type="AudioStream" uid="uid://dtr88jdx4yuq4" path="res://engine/objects/projectiles/sounds/shoot.wav" id="4_67vhw"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="5_ogy7u"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="6_67vhw"]
+[ext_resource type="AudioStream" uid="uid://be3uvqev2c1p6" path="res://engine/objects/players/prefabs/sounds/kick.wav" id="7_gcyl6"]
+[ext_resource type="AudioStream" uid="uid://c162tqddc8eej" path="res://engine/objects/bumping_blocks/_sounds/bump.wav" id="8_5h5kc"]
+[ext_resource type="Script" uid="uid://dufc72buf55ad" path="res://engine/scripts/classes/effecters/item_visibility_stage2d_controlled.gd" id="10_gb71d"]
+
+[sub_resource type="Resource" id="Resource_67vhw"]
+script = ExtResource("6_67vhw")
+creation_nodepack = ExtResource("2_ogy7u")
+creation_force_sibling = false
+trans_offset = Vector2(0, -16)
+trans_inheritances = 6
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w104"]
+size = Vector2(30, 30)
+
+[sub_resource type="Resource" id="Resource_l87kq"]
+script = ExtResource("6_67vhw")
+creation_nodepack = ExtResource("4_4ny41")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("5_ogy7u")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh2lc"]
+atlas = ExtResource("2_anpx6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb71d"]
+atlas = ExtResource("2_anpx6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wml2n"]
+atlas = ExtResource("2_anpx6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ny41"]
+atlas = ExtResource("2_anpx6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ogy7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh2lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb71d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wml2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ny41")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_h4xr3"]
+colors = PackedColorArray(1, 1, 1, 0.203922, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wml2n"]
+gradient = SubResource("Gradient_h4xr3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.1)
+metadata/_snap_enabled = true
+
+[node name="PiranhaHeadPink" type="Node2D"]
+script = ExtResource("1_dh2lc")
+attack_interval = 0.35
+attack_thrower = SubResource("Resource_67vhw")
+attack_sound = ExtResource("4_67vhw")
+
+[node name="Body" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("2_gb71d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+visible = false
+shape = SubResource("RectangleShape2D_3w104")
+
+[node name="EnemyAttacked" type="Node" parent="Body"]
+script = ExtResource("3_wml2n")
+stomping_standard = Vector2(0, 0)
+killing_immune = {
+"beetroot": true,
+"boomerang": false,
+"fireball": true,
+"hammer": false,
+"head": false,
+"iceball": false,
+"shell": true,
+"shell_defence": 0,
+"shell_forced": false,
+"starman": true
+}
+killing_creation = SubResource("Resource_l87kq")
+killing_scores = 100
+killing_sound_succeeded = ExtResource("7_gcyl6")
+killing_sound_failed = ExtResource("8_5h5kc")
+ice_sprite = NodePath("../../Sprite")
+metadata/_edit_pinned_properties_ = [&"stomping_standard", &"killing_immune", &"killing_creation", &"killing_scores", &"killing_sound_succeeded"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ogy7u")
+autoplay = "default"
+
+[node name="Vision" type="VisibleOnScreenNotifier2D" parent="."]
+modulate = Color(1, 1, 1, 0.0196078)
+position = Vector2(1.43051e-06, 1.43051e-06)
+scale = Vector2(1.6, 1.6)
+metadata/_edit_lock_ = true
+
+[node name="Fire" type="Timer" parent="."]
+one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-3.57628e-07, -3.57628e-07)
+scale = Vector2(0.5, 0.5)
+blend_mode = 2
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_wml2n")
+script = ExtResource("10_gb71d")
+
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="." method="queue_free" flags=3]
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="Sprite" method="stop"]
+[connection signal="screen_entered" from="Vision" to="." method="_on_vision_screen_entered"]
+[connection signal="screen_exited" from="Vision" to="." method="_on_vision_screen_exited"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3faphxb2ak5n"]
+
+[ext_resource type="PackedScene" uid="uid://bck46pm8sso1g" path="res://objects/boss_touhou/common/bullet_base.tscn" id="1_u7j1t"]
+[ext_resource type="Script" uid="uid://7phqx76embih" path="res://objects/boss_touhou/boss_w9/attacks/bullets/bullet_circle_ringed.gd" id="2_6stdi"]
+[ext_resource type="AudioStream" uid="uid://daxnhpwsdkij1" path="res://objects/boss_touhou/common/sounds/se_kira00.wav" id="3_6stdi"]
+
+[node name="BulletBlueCircleRinged" instance=ExtResource("1_u7j1t")]
+script = ExtResource("2_6stdi")
+sfx_twinkle = ExtResource("3_6stdi")
+bullet_erase_color = Color(0, 0, 1, 1)
+
+[node name="Sprite" parent="." index="1"]
+frame = 38
+
+[node name="AppearAnim" parent="Sprite" index="0"]
+scale = Vector2(0.9, 0.9)
+frame = 3
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(5.96046e-08, 5.96046e-08)
+scale = Vector2(1.1, 1.1)

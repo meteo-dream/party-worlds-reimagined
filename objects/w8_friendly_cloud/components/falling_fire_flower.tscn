@@ -1,0 +1,141 @@
+[gd_scene load_steps=18 format=3 uid="uid://5hrgihonj66u"]
+
+[ext_resource type="Script" uid="uid://ummucqwii448" path="res://objects/w8_friendly_cloud/components/falling_fire_flower.gd" id="1_an67y"]
+[ext_resource type="PackedScene" uid="uid://t00btcl5ov0y" path="res://objects/w8_friendly_cloud/components/fire_flower.tscn" id="2_t3ysl"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="3_mjiuj"]
+[ext_resource type="Script" uid="uid://bq7icuvs1dilb" path="res://engine/scripts/classes/effecters/point_light_2d_appear.gd" id="6_t3ysl"]
+[ext_resource type="Texture2D" uid="uid://dr27m02d1hglo" path="res://engine/objects/powerups/fire_flower/texture.png" id="9_o27u2"]
+[ext_resource type="Script" uid="uid://doq0qyrr5ihr6" path="res://engine/scripts/nodes/vision/vision.gd" id="11_5f7wr"]
+
+[sub_resource type="Resource" id="Resource_t3ysl"]
+script = ExtResource("3_mjiuj")
+creation_nodepack = ExtResource("2_t3ysl")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8k5kp"]
+size = Vector2(31, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17lvf"]
+size = Vector2(31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt5ct"]
+atlas = ExtResource("9_o27u2")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2gyq"]
+atlas = ExtResource("9_o27u2")
+region = Rect2(33, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwbx5"]
+atlas = ExtResource("9_o27u2")
+region = Rect2(66, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fwtq"]
+atlas = ExtResource("9_o27u2")
+region = Rect2(99, 0, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2l5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt5ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2gyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwbx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fwtq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_jy2tl"]
+colors = PackedColorArray(1, 1, 1, 0.313726, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5a82b"]
+gradient = SubResource("Gradient_jy2tl")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.1)
+metadata/_snap_enabled = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3cd5"]
+size = Vector2(32, 31)
+
+[node name="FallingFireFlower" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 256
+floor_constant_speed = true
+floor_snap_length = 20.0
+script = ExtResource("1_an67y")
+spiny_creation = SubResource("Resource_t3ysl")
+to_suit = "fireball"
+force_powerup_state = true
+appear_distance = 0.0
+appear_speed = 0.0
+appear_visible = 0.0
+appear_collectable = 0.0
+sprite = NodePath("Sprite")
+gravity_dir = Vector2(0, 4)
+gravity_scale = 0.2
+max_falling_speed = 500.0
+metadata/_edit_pinned_properties_ = [&"max_falling_speed", &"gravity_scale"]
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_8k5kp")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Body" type="Area2D" parent="."]
+visible = false
+collision_layer = 4
+
+[node name="Collision" type="CollisionShape2D" parent="Body"]
+visible = false
+shape = SubResource("RectangleShape2D_17lvf")
+debug_color = Color(0, 0.643137, 0.309804, 0.419608)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_q2l5l")
+autoplay = "default"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.0196078)
+rect = Rect2(-128, -128, 256, 256)
+script = ExtResource("11_5f7wr")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+blend_mode = 2
+range_layer_min = -100
+texture = SubResource("GradientTexture2D_5a82b")
+script = ExtResource("6_t3ysl")
+duration = 0.3
+
+[node name="SolidChecker" type="Area2D" parent="."]
+visible = false
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SolidChecker"]
+shape = SubResource("RectangleShape2D_j3cd5")
+
+[connection signal="collided_wall" from="." to="." method="turn_x"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckqmrx22q84fh"]
+
+[ext_resource type="Texture2D" uid="uid://en6cbsl5jcei" path="res://gfx/world6/6-2/neons/hammer_bros.png" id="1_v83xm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba6bw"]
+atlas = ExtResource("1_v83xm")
+region = Rect2(0, 0, 211, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1s2y"]
+atlas = ExtResource("1_v83xm")
+region = Rect2(0, 64, 211, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbq1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ba6bw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1s2y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="1Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_jbq1l")
+autoplay = "default"

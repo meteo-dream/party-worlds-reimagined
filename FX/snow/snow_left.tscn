@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2uwsvx31kct1"]
+
+[ext_resource type="Script" uid="uid://bsy7dvamhgvno" path="res://FX/snow/snow_for_qblock.gd" id="1_jae8o"]
+[ext_resource type="Texture2D" uid="uid://dt24qjka222vn" path="res://gfx/world5/texture.png" id="2_4jugt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owm7l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvopg"]
+atlas = ExtResource("2_4jugt")
+region = Rect2(64, 320, 32, 16)
+
+[node name="SnowLeft" type="Area2D" groups=["#snow_cover"]]
+z_index = 2
+collision_layer = 256
+collision_mask = 16
+monitorable = false
+script = ExtResource("1_jae8o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_owm7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = SubResource("AtlasTexture_hvopg")
+centered = false

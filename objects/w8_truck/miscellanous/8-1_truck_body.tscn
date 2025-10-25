@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=4 uid="uid://ctcfybo8itqdw"]
+
+[ext_resource type="Script" uid="uid://bkiy2ucc3vcfi" path="res://objects/w8_truck/miscellanous/8_1_truck_body.gd" id="1_yv8jn"]
+[ext_resource type="Texture2D" uid="uid://crys68drv5de4" path="res://gfx/worldfinal/tank.png" id="2_j13xq"]
+[ext_resource type="Texture2D" uid="uid://nwyeqno7oote" path="res://engine/tilesets/castle/gray_platform_tile.png" id="3_3tbrg"]
+[ext_resource type="PackedScene" uid="uid://bxhw4u8vc0wru" path="res://objects/w8_truck/miscellanous/wheel_right.tscn" id="3_j13xq"]
+[ext_resource type="Script" uid="uid://b2lf5drfe56a4" path="res://objects/w8_truck/miscellanous/tank_wheel.gd" id="4_3tbrg"]
+[ext_resource type="Texture2D" uid="uid://b3ff50hsbwpdg" path="res://gfx/worldfinal/10-3ground.png" id="4_y4r0x"]
+[ext_resource type="PackedScene" uid="uid://c26htf2wftiev" path="res://objects/w8_truck/miscellanous/wheel_left.tscn" id="5_y4r0x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80ah0"]
+texture = ExtResource("2_j13xq")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/z_index = -2
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jwpgf"]
+texture = ExtResource("3_3tbrg")
+texture_region_size = Vector2i(32, 16)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0, -16, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umxhn"]
+texture = ExtResource("4_y4r0x")
+texture_region_size = Vector2i(32, 32)
+12:2/0 = 0
+12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_lfmdh"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 112
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Ground"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_80ah0")
+sources/2 = SubResource("TileSetAtlasSource_jwpgf")
+sources/9 = SubResource("TileSetAtlasSource_umxhn")
+
+[node name="8-1Truck" type="Node2D"]
+script = ExtResource("1_yv8jn")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-208, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAABAAAAAgAAAAAAAAACAAAAAAABAAEAAAADAAAAAAADAAEAAAAEAAAAAgAAAAAAAAAFAAAAAgAAAAAAAAAIAAAAAgAAAAAAAAAHAAAAAgAAAAAAAAALAAAAAgAAAAAAAAAMAAAAAgAAAAAAAAAJAAAAAAABAAEAAAAKAAAAAAADAAEAAAAGAAAACQAMAAIAAAA=")
+tile_set = SubResource("TileSet_lfmdh")
+collision_enabled = false
+
+[node name="WheelRight" parent="." instance=ExtResource("3_j13xq")]
+position = Vector2(128, 48)
+script = ExtResource("4_3tbrg")
+
+[node name="WheelLeft" parent="." instance=ExtResource("5_y4r0x")]
+position = Vector2(-128, 48)
+script = ExtResource("4_3tbrg")
+
+[node name="WheelLeft2" parent="." instance=ExtResource("5_y4r0x")]
+position = Vector2(96, 48)
+script = ExtResource("4_3tbrg")
+
+[node name="WheelRight2" parent="." instance=ExtResource("3_j13xq")]
+position = Vector2(-96, 48)
+script = ExtResource("4_3tbrg")

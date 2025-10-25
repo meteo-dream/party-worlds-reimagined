@@ -1,0 +1,132 @@
+[gd_scene load_steps=20 format=3 uid="uid://n230pco8dn3g"]
+
+[ext_resource type="Script" uid="uid://b3s0xrop3xxxb" path="res://objects/w7_spawn_portal/w7_portal.gd" id="1_b7s7m"]
+[ext_resource type="Texture2D" uid="uid://d10g4k5awd7fu" path="res://objects/w7_spawn_portal/texture/w7_portal.png" id="1_xung5"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="2_fjxpk"]
+[ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="2_ytpsa"]
+[ext_resource type="PackedScene" uid="uid://dpgows2gcv0ru" path="res://objects/w7_spawn_portal/smoke_effect.tscn" id="3_fchmp"]
+[ext_resource type="PackedScene" uid="uid://cno8qn60lpnvv" path="res://engine/objects/enemies/koopas/koopa_green.tscn" id="3_fjxpk"]
+[ext_resource type="PackedScene" uid="uid://xugemt6nrnq" path="res://engine/objects/enemies/spinies/spiny_egg_iron.tscn" id="4_fchmp"]
+[ext_resource type="PackedScene" uid="uid://hqhtm2y4woh0" path="res://engine/objects/enemies/spinies/spiny_egg_red.tscn" id="5_vsrn4"]
+[ext_resource type="AudioStream" uid="uid://mrr713f174rh" path="res://objects/w7_spawn_portal/sounds/spawn.wav" id="8_vsrn4"]
+
+[sub_resource type="Resource" id="Resource_10qdx"]
+script = ExtResource("2_fjxpk")
+creation_nodepack = ExtResource("3_fchmp")
+creation_force_sibling = true
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 1
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="Resource" id="Resource_fchmp"]
+script = ExtResource("2_fjxpk")
+creation_nodepack = ExtResource("2_ytpsa")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="Resource" id="Resource_vsrn4"]
+script = ExtResource("2_fjxpk")
+creation_nodepack = ExtResource("3_fjxpk")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="Resource" id="Resource_jmhni"]
+script = ExtResource("2_fjxpk")
+creation_nodepack = ExtResource("5_vsrn4")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="Resource" id="Resource_tbir4"]
+script = ExtResource("2_fjxpk")
+creation_nodepack = ExtResource("4_fchmp")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 0
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+metadata/_custom_type_script = "uid://bm81fg3h4j8sj"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsrn4"]
+atlas = ExtResource("1_xung5")
+region = Rect2(0, 0, 35, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmhni"]
+atlas = ExtResource("1_xung5")
+region = Rect2(35, 0, 35, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbir4"]
+atlas = ExtResource("1_xung5")
+region = Rect2(70, 0, 35, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10qdx"]
+atlas = ExtResource("1_xung5")
+region = Rect2(105, 0, 35, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fchmp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsrn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmhni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbir4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10qdx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="W7Portal" type="Node2D"]
+script = ExtResource("1_b7s7m")
+spawn_table = Array[ExtResource("2_fjxpk")]([SubResource("Resource_10qdx"), SubResource("Resource_fchmp"), SubResource("Resource_vsrn4"), SubResource("Resource_jmhni"), SubResource("Resource_tbir4")])
+sounds = ExtResource("8_vsrn4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fchmp")
+autoplay = "default"
+frame_progress = 0.78012

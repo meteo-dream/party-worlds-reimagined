@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c56py35kpdhp1"]
+
+[ext_resource type="Shader" uid="uid://b0q305oth4dm0" path="res://objects/boss_touhou/common/components/spellcard_ring.gdshader" id="1_3am6o"]
+[ext_resource type="Texture2D" uid="uid://dfidh172t30g1" path="res://objects/boss_touhou/common/textures/eff_line.png" id="2_p3bj8"]
+[ext_resource type="Script" uid="uid://csiacatlgt86n" path="res://objects/boss_touhou/common/components/spellcard_ring.gd" id="3_uhj0s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3bj8"]
+shader = ExtResource("1_3am6o")
+
+[node name="SpellcardRing" type="Sprite2D"]
+material = SubResource("ShaderMaterial_p3bj8")
+instance_shader_parameters/repeat_count = 5.0
+instance_shader_parameters/source_offset = 0.375
+instance_shader_parameters/source_thickness = 0.125
+instance_shader_parameters/spin_speed = -4.0
+instance_shader_parameters/thickness = 0.1
+scale = Vector2(4, 4)
+texture = ExtResource("2_p3bj8")
+script = ExtResource("3_uhj0s")

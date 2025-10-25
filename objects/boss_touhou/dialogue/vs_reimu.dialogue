@@ -1,0 +1,30 @@
+~ start
+Reimu: Isn't it about time you showed yourself?
+Reimu: "Mistress?"
+???: [do! SPECIAL_move_boss_into_position()]I knew it. Humans are useless.[wait="allow_continue_dialog"]
+Reimu: So that maid was a human.
+Remilia: You're a murderer, you know.
+Reimu: One person doesn't make me a mass murderer, so it's fine.
+Remilia: Well?
+Reimu: Oh right, you're being a huge nuisance.
+Remilia: How quick you are to accuse.[wait=0.5] And I don't even know why.
+Reimu: Whatever, could you just leave?
+Remilia: This is my castle, is it not?
+Remilia: You are the one who will leave.
+Reimu: I want you to leave this world.
+Remilia: So that's how it's going to be.
+Remilia: I am already full, but...
+Reimu: Didn't you hire that maid to protect you?
+Reimu: I can take a sheltered young lady like you down in one blow!
+Remilia: Sakuya is an excellent cleaner.
+Remilia: Not a single head is on the floor, thanks to her.
+Reimu: Are you strong?
+Remilia: Who knows.[wait=0.5] I don't get to go outside often.
+Remilia: Since I'm weak to sunlight.
+Reimu: ...So you are strong, then.
+Remilia: As the Moon is so scarlet, I shall thus kill you for good.
+Reimu: Although the Moon is so scarlet...
+Remilia: Looks like it's going to be a fun night.
+Reimu: Looks like it's going to be a long night.
+do SPECIAL_start_fight()
+=> END

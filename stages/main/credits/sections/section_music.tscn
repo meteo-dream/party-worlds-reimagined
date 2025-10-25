@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1vawpag2sccp"]
+
+[ext_resource type="PackedScene" uid="uid://p23jgidr27o5" path="res://stages/main/credits/sections/template/credits_section.tscn" id="1_o6gsf"]
+[ext_resource type="Texture2D" uid="uid://iuaqym3bvxkq" path="res://stages/main/credits/textures/levelpng7.png" id="2_4x41h"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_s5kri"]
+[ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="4_w0vch"]
+
+[node name="SectionMusic" instance=ExtResource("1_o6gsf")]
+life_time_sec = 6.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+z_index = -1
+position = Vector2(384, 200)
+rotation = 0.174533
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_4x41h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
+offset_left = 24.0
+offset_right = 408.0
+offset_bottom = 384.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_s5kri")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "MUSIC SOURCES:
+[left]
+ remix.kwed.org
+ modarchive.org
+ newgrounds
+ nintendo
+ team shanghai alice"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = 248.0
+offset_top = 400.0
+offset_right = 777.0
+offset_bottom = 431.0
+rotation = -0.258309
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_w0vch")
+theme_override_font_sizes/font_size = 27
+text = "8-2: stroll out"
+horizontal_alignment = 1

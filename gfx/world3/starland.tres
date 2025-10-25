@@ -1,0 +1,53 @@
+[gd_resource type="AnimatedTexture" load_steps=7 format=3 uid="uid://g1q7t4m65csi"]
+
+[sub_resource type="Gradient" id="Gradient_kvylg"]
+offsets = PackedFloat32Array(0.1, 0.5, 1)
+colors = PackedColorArray(0.972549, 0.909804, 0.972549, 1, 0.662745, 0.545098, 0.984314, 0.74902, 0.662745, 0.545098, 0.984314, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bhb6l"]
+gradient = SubResource("Gradient_kvylg")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_q8qp0"]
+offsets = PackedFloat32Array(0, 0.4, 1)
+colors = PackedColorArray(0.972549, 0.909804, 0.972549, 1, 0.670588, 0.545098, 0.984314, 0.74902, 0.662745, 0.545098, 0.984314, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rfupf"]
+gradient = SubResource("Gradient_q8qp0")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_gm03p"]
+offsets = PackedFloat32Array(0.05, 0.45, 1)
+colors = PackedColorArray(0.972549, 0.909804, 0.972549, 1, 0.670588, 0.545098, 0.984314, 0.74902, 0.662745, 0.545098, 0.984314, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sj360"]
+gradient = SubResource("Gradient_gm03p")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
+[resource]
+frames = 3
+frame_0/texture = SubResource("GradientTexture2D_bhb6l")
+frame_0/duration = 0.05
+frame_1/texture = SubResource("GradientTexture2D_rfupf")
+frame_1/duration = 0.05
+frame_2/texture = SubResource("GradientTexture2D_sj360")
+frame_2/duration = 0.05
