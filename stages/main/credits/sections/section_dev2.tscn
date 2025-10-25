@@ -51,10 +51,24 @@ text = "Developer Commentary"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Yaolinggui" type="Sprite2D" parent="." index="3"]
+[node name="Art" type="Label" parent="." index="3"]
+offset_left = 496.0
+offset_top = 112.0
+offset_right = 631.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_dilmh")
+theme_override_font_sizes/font_size = 15
+text = "Art by QDylm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Yaolinggui" type="Sprite2D" parent="." index="4"]
 position = Vector2(560, 216)
 texture = ExtResource("3_vjkfs")
 
-[node name="PipeBig" type="Sprite2D" parent="." index="4"]
+[node name="PipeBig" type="Sprite2D" parent="." index="5"]
 position = Vector2(568, 336)
 texture = ExtResource("5_ilenx")
