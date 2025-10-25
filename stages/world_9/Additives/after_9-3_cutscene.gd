@@ -14,6 +14,7 @@ const SOUND_WHAT = preload("res://stages/world_9/Additives/cutscene/what.wav")
 const SOUND_PICK_UP = preload("res://stages/world_9/Additives/cutscene/se_ok00.wav")
 const SOUND_SHOW_NEWS = preload("res://engine/objects/bumping_blocks/message_block/message_block.wav")
 const SOUND_SHOCK = preload("res://stages/world_9/Additives/cutscene/warning.wav")
+const SOUND_TURN = preload("res://objects/boss_touhou/cutscene/sounds/smas_camera.wav")
 
 const AYA_START_POSITION = Vector2(7000.0, 96.0)
 const AYA_END_POSITION = Vector2(-7000.0, 96.0)
@@ -113,6 +114,7 @@ func play_sound_news_landing() -> void:
 ## Remilia picks up the newspaper.
 func pick_up_news() -> void:
 	spawn_reaction_text(0)
+	Audio.play_sound(SOUND_TURN, remi_node)
 	await _set_timer(1.2)
 	remi_node.flip_h = true
 	await _set_timer(0.5)
