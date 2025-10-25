@@ -307,7 +307,7 @@ func boss_fight_logistics() -> void:
 	trigger_boss_borders.process_mode = Node.PROCESS_MODE_ALWAYS
 
 func stop_music(fade: bool = true) -> void:
-	Audio.stop_music_channel(32, true)
+	Audio.stop_music_channel(32, fade)
 	Thunder._current_hud.timer.paused = true
 
 func battle_failed() -> void:
@@ -412,7 +412,7 @@ func _victory_sequence() -> void:
 	Scenes.current_scene.set_meta(&"boss_got_defeated", true)
 	if is_instance_valid(trigger_boss_HUD):
 		trigger_boss_HUD.disappear()
-	stop_music(true)
+	stop_music(false)
 	await get_tree().create_timer(1.2, false).timeout
 	_restore_time_scale()
 	var wait_time: float = 2.8
