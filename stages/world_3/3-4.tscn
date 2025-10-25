@@ -361,3 +361,19 @@ uppercase = true
 
 [node name="FinishLine" parent="." instance=ExtResource("16_8144s")]
 position = Vector2(10560, 416)
+
+[connection signal="collided_wall" from="Main/Goomba" to="Main/Goomba" method="turn_x"]
+[connection signal="collided_wall" from="Main/KoopaGreen" to="Main/KoopaGreen" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112565" to="Main/@CharacterBody2D@112565" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112566" to="Main/@CharacterBody2D@112566" method="turn_x"]
+[connection signal="collided_wall" from="Main/SpinyRed" to="Main/SpinyRed" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112567" to="Main/@CharacterBody2D@112567" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112568" to="Main/@CharacterBody2D@112568" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112569" to="Main/@CharacterBody2D@112569" method="turn_x"]
+[connection signal="collided_wall" from="Main/KoopaRed" to="Main/KoopaRed" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112604" to="Main/@CharacterBody2D@112604" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112605" to="Main/@CharacterBody2D@112605" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112606" to="Main/@CharacterBody2D@112606" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112607" to="Main/@CharacterBody2D@112607" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112608" to="Main/@CharacterBody2D@112608" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@112609" to="Main/@CharacterBody2D@112609" method="turn_x"]

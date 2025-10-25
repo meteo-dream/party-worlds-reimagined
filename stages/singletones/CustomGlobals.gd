@@ -44,8 +44,12 @@ func w9b_get_hint_visibility() -> bool:
 var unlock_fancy_credits: bool = false
 
 func load_unlockables_status() -> void:
-	if ProfileManager.current_profile.data.get("unlock_fancy_credits") == null: return
-	unlock_fancy_credits = ProfileManager.current_profile.data.get("unlock_fancy_credits")
+	for key in ProfileManager.profiles:
+		if key == "debug": return
+		var chosen_profile = ProfileManager.profiles[key]
+		if chosen_profile.data.get("unlock_fancy_credits") == null: continue
+		unlock_fancy_credits = chosen_profile.data.get("unlock_fancy_credits")
+		return
 
 func save_credits_status() -> void:
 	ProfileManager.current_profile.data.unlock_fancy_credits = unlock_fancy_credits

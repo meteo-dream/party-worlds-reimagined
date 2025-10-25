@@ -33,6 +33,10 @@ var play_dash_sound: bool = false
 var reporter_node: Node2D
 
 func _ready() -> void:
+	if ProfileManager.current_profile.has_completed_world("9"):
+		ProfileManager.current_profile.data.current_world = goto_path
+		ProfileManager.save_current_profile()
+	
 	player.completed = true
 	skippable = true
 	CustomGlobals.load_boss_status_w9()
