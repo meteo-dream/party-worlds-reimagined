@@ -658,3 +658,12 @@ id = 1
 
 [node name="FinishLine" parent="." instance=ExtResource("32_22cs7")]
 position = Vector2(15648, 416)
+
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54798" to="TileMapLayer/@CharacterBody2D@54798" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54823" to="TileMapLayer/@CharacterBody2D@54823" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54824" to="TileMapLayer/@CharacterBody2D@54824" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54886" to="TileMapLayer/@CharacterBody2D@54886" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54887" to="TileMapLayer/@CharacterBody2D@54887" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54915" to="TileMapLayer/@CharacterBody2D@54915" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54916" to="TileMapLayer/@CharacterBody2D@54916" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54917" to="TileMapLayer/@CharacterBody2D@54917" method="turn_x"]
