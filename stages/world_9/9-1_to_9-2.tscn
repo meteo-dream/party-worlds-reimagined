@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://dp2mvur34jdbv" path="res://engine/objects/enemies/paratroopas/paratroopa_green.tscn" id="28_pl32r"]
 [ext_resource type="PackedScene" uid="uid://c02uktgryh3ku" path="res://engine/objects/enemies/paratroopas/paratroopa_blue.tscn" id="29_0de5d"]
 [ext_resource type="PackedScene" uid="uid://c58i0gaq0il4o" path="res://engine/objects/enemies/spinies/spiny_red.tscn" id="30_0g6ho"]
-[ext_resource type="Texture2D" uid="uid://b4jq4y72d2vin" path="res://gfx/world9/cave/anim_cave_bg.png" id="42_mg5h8"]
+[ext_resource type="Texture2D" uid="uid://c0yfpptdfremq" path="res://gfx/world2/cave_waterfall_bg.png" id="42_pl3nl"]
 [ext_resource type="Texture2D" uid="uid://gctplmep8623" path="res://gfx/world9/cave/hills_and_trees.png" id="43_pl3nl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p4dp"]
@@ -518,28 +518,25 @@ initial_velocity_max = 27.94
 gravity = Vector3(0, -10, 0)
 scale_curve = SubResource("CurveTexture_y48cr")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pl3nl"]
-atlas = ExtResource("42_mg5h8")
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1n82"]
+atlas = ExtResource("42_pl3nl")
 region = Rect2(0, 0, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u1n82"]
-atlas = ExtResource("42_mg5h8")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae7s2"]
+atlas = ExtResource("42_pl3nl")
 region = Rect2(0, 864, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ae7s2"]
-atlas = ExtResource("42_mg5h8")
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8ivk"]
+atlas = ExtResource("42_pl3nl")
 region = Rect2(0, 1728, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e8ivk"]
-atlas = ExtResource("42_mg5h8")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtupd"]
+atlas = ExtResource("42_pl3nl")
 region = Rect2(0, 2592, 1024, 864)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u1n82"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pl3nl")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u1n82")
 }, {
@@ -548,6 +545,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e8ivk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtupd")
 }],
 "loop": true,
 "name": &"default",

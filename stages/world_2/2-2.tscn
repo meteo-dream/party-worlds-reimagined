@@ -12,10 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="8_dn2kd"]
 [ext_resource type="PackedScene" uid="uid://rhrex2vth7at" path="res://engine/objects/platform/platform_path.tscn" id="8_ta7tg"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="9_662vq"]
-[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="10_7ujmo"]
+[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="10_7ujmo"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="10_am8gh"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_rr82p"]
-[ext_resource type="Texture2D" uid="uid://c0yfpptdfremq" path="res://gfx/world2/OutputImage.png" id="10_yhjh1"]
+[ext_resource type="Texture2D" uid="uid://c0yfpptdfremq" path="res://gfx/world2/cave_waterfall_bg.png" id="10_yhjh1"]
 [ext_resource type="PackedScene" uid="uid://bqgumcf8nm07n" path="res://modules/switch-block/switch_block_switcher.tscn" id="12_cohie"]
 [ext_resource type="PackedScene" uid="uid://dbpihjuw0gc01" path="res://engine/objects/bumping_blocks/question_block/templates/Beetroot Question Block.tscn" id="13_pf43a"]
 [ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="14_5wjo6"]
@@ -34,36 +34,36 @@
 [ext_resource type="PackedScene" uid="uid://bc20ma7u6amr1" path="res://stages/world_2/additives/koopa_green_mindblow.tscn" id="23_xa5oh"]
 [ext_resource type="Texture2D" uid="uid://cube175uuy8i6" path="res://engine/objects/core/finish_line/textures/finishline.png" id="30_ghho6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_11c3w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4dpw"]
 atlas = ExtResource("10_yhjh1")
-region = Rect2(0, 0, 2048, 1728)
+region = Rect2(0, 0, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0smr5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpwy8"]
 atlas = ExtResource("10_yhjh1")
-region = Rect2(0, 1728, 2048, 1728)
+region = Rect2(0, 864, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ilg7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7qr5"]
 atlas = ExtResource("10_yhjh1")
-region = Rect2(0, 3456, 2048, 1728)
+region = Rect2(0, 1728, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wgkmm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iypq6"]
 atlas = ExtResource("10_yhjh1")
-region = Rect2(0, 5184, 2048, 1728)
+region = Rect2(0, 2592, 1024, 864)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ing2k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_11c3w")
+"texture": SubResource("AtlasTexture_i4dpw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0smr5")
+"texture": SubResource("AtlasTexture_gpwy8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ilg7")
+"texture": SubResource("AtlasTexture_s7qr5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wgkmm")
+"texture": SubResource("AtlasTexture_iypq6")
 }],
 "loop": true,
 "name": &"default",
@@ -443,17 +443,15 @@ text = "I forgot where am I going..."
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(640, 0)
+motion_mirroring = Vector2(1024, 0)
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.55, 0.55, 0.55, 1)
-position = Vector2(322.37, 272)
-scale = Vector2(0.314815, 0.314815)
+position = Vector2(512, 48)
 sprite_frames = SubResource("SpriteFrames_ing2k")
 autoplay = "default"
-metadata/_edit_group_ = true
 
 [node name="Objects-part1" type="Node2D" parent="."]
 

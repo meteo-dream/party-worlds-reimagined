@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dotboihfiv4iw" path="res://gfx/world1/UndergroundTileset.png" id="9_v7uki"]
 [ext_resource type="Texture2D" uid="uid://dmgmlo1tj1agk" path="res://gfx/world1/choco.png" id="10_c1upo"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_qb38s"]
-[ext_resource type="Texture2D" uid="uid://c0yfpptdfremq" path="res://gfx/world2/OutputImage.png" id="13_hj5it"]
-[ext_resource type="PackedScene" uid="uid://bl6y0yhdvjrab" path="res://modules/te-switch-block/switch_block.tscn" id="14_tyeh2"]
-[ext_resource type="PackedScene" uid="uid://bqgumcf8nm07n" path="res://modules/te-switch-block/switch_block_switcher.tscn" id="15_sjbvu"]
+[ext_resource type="Texture2D" uid="uid://c0yfpptdfremq" path="res://gfx/world2/cave_waterfall_bg.png" id="13_hj5it"]
+[ext_resource type="PackedScene" uid="uid://bl6y0yhdvjrab" path="res://modules/switch-block/switch_block.tscn" id="14_tyeh2"]
+[ext_resource type="PackedScene" uid="uid://bqgumcf8nm07n" path="res://modules/switch-block/switch_block_switcher.tscn" id="15_sjbvu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhrv7"]
 texture = ExtResource("9_v7uki")
@@ -336,36 +336,36 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_hhrv7")
 sources/2 = SubResource("TileSetAtlasSource_r666f")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nwt2b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xjs1"]
 atlas = ExtResource("13_hj5it")
-region = Rect2(0, 0, 2048, 1728)
+region = Rect2(0, 0, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldqyn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwpue"]
 atlas = ExtResource("13_hj5it")
-region = Rect2(0, 1728, 2048, 1728)
+region = Rect2(0, 864, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0n0rh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s16ls"]
 atlas = ExtResource("13_hj5it")
-region = Rect2(0, 3456, 2048, 1728)
+region = Rect2(0, 1728, 1024, 864)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c1pf3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcqw5"]
 atlas = ExtResource("13_hj5it")
-region = Rect2(0, 5184, 2048, 1728)
+region = Rect2(0, 2592, 1024, 864)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d4gwo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nwt2b")
+"texture": SubResource("AtlasTexture_3xjs1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ldqyn")
+"texture": SubResource("AtlasTexture_mwpue")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0n0rh")
+"texture": SubResource("AtlasTexture_s16ls")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c1pf3")
+"texture": SubResource("AtlasTexture_mcqw5")
 }],
 "loop": true,
 "name": &"default",
@@ -408,7 +408,6 @@ motion_mirroring = Vector2(1024, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(512, 48)
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_d4gwo")
 autoplay = "default"
 metadata/_edit_lock_ = true
