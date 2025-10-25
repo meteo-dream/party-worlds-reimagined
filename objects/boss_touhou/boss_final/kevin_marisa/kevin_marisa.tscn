@@ -272,13 +272,13 @@ prep_For_final = true
 
 [node name="Sc8_Start" parent="." instance=ExtResource("28_wjkm1")]
 combo_attack = true
-magic_circle_radius_growth_time_sec = 0.6
-magic_circle_orbit_acceleration_time_sec = 0.5
+magic_circle_radius_growth_time_sec = 0.4
+magic_circle_orbit_acceleration_time_sec = 0.3
 magic_circle_escape_delay_sec = 3.5
 shooting_bullet_type = ExtResource("33_popc8")
 shooting_speed = 220.0
 shooting_interval_sec = 0.8
-shooting_delay_time_sec = 0.6
+shooting_delay_time_sec = 0.4
 next_attack_will_be_new = true
 player_should_get_pity_afterwards = true
 

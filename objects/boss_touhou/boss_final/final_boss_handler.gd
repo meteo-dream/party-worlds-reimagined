@@ -413,7 +413,7 @@ func _victory_sequence() -> void:
 	if is_instance_valid(trigger_boss_HUD):
 		trigger_boss_HUD.disappear()
 	stop_music(false)
-	await get_tree().create_timer(1.2, false).timeout
+	await get_tree().create_timer(2.0, false, false).timeout
 	_restore_time_scale()
 	var wait_time: float = 2.8
 	if show_victory_screen:
