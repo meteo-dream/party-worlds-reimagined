@@ -31,6 +31,7 @@ var warning_line: Node2D
 var start_shooting_noise: bool = false
 var shoot_master_spark: bool = false
 var stop_tracking: bool = false
+var FORCE_STOP_SCREEN_SHAKE: bool = false
 var noise_color: int
 @onready var master_spark_timer: Timer = $MasterSparkTimer
 @onready var noise_bullet_interval: Timer = $NoiseBulletTimer
@@ -112,6 +113,7 @@ func end_attack() -> void:
 
 func end_attack_global() -> void:
 	begin_attack = false
+	FORCE_END_SPELLCARD = true
 	master_spark_timer.stop()
 	noise_bullet_interval.stop()
 	master_spark_interval.stop()

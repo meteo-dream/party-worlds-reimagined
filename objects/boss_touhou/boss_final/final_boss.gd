@@ -229,6 +229,8 @@ func spawn_spell_ring_effect() -> void:
 	if current_spell_index >= phases.size() - 1:
 		spellcard_ring.appear_faster_scale = 0.5
 	Scenes.current_scene.add_child(spellcard_ring)
+	spellcard_ring.global_position = global_position
+	spellcard_ring.reset_physics_interpolation()
 	if is_instance_valid(health_ring):
 		health_ring.queue_free()
 	health_ring = SPELL_RING_EFFECT.instantiate()
@@ -239,6 +241,8 @@ func spawn_spell_ring_effect() -> void:
 	if current_spell_index >= phases.size() - 1:
 		health_ring.appear_faster_scale = 0.5
 	Scenes.current_scene.add_child(health_ring)
+	health_ring.global_position = global_position
+	health_ring.reset_physics_interpolation()
 
 func delete_spell_ring_effect() -> void:
 	if is_instance_valid(spellcard_ring): spellcard_ring.play_end_anim()

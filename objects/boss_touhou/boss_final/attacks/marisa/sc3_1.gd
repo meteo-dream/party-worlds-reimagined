@@ -62,7 +62,7 @@ func middle_attack() -> void:
 func _physics_process(delta: float) -> void:
 	if stop_tracking:
 		do_screen_shake()
-	if !set_target_before_shooting and !shoot_master_spark and !stop_tracking:
+	if !set_target_before_shooting and !shoot_master_spark and !stop_tracking and !FORCE_END_SPELLCARD:
 		if is_instance_valid(the_player):
 			master_spark_target = post_bound_adjustment_value(boss.boss_handler.global_position, the_player.global_position)
 		if is_instance_valid(warning_line):
@@ -107,6 +107,7 @@ func _physics_process(delta: float) -> void:
 
 func end_attack() -> void:
 	Audio.play_sound(boss.bullet_shoot_1, boss.boss_handler)
+	FORCE_END_SPELLCARD = true
 	super()
 
 func end_attack_global() -> void:
@@ -129,8 +130,10 @@ func master_spark_prep() -> void:
 	leaf_gather_effect(1.4)
 	play_sound(boss.long_charge_up)
 	await _set_timer(0.6)
+	if _boss_attack_interrupt(): return
 	stop_tracking = true
 	await _set_timer(1.0)
+	if _boss_attack_interrupt(): return
 	play_sound(boss.burst_sound)
 	shoot_master_spark = true
 

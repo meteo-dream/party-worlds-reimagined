@@ -41,10 +41,8 @@ func _update_visibility() -> void:
 
 func _physics_process(delta: float) -> void:
 	rotate(rotation_speed * Engine.time_scale)
-	if is_instance_valid(boss_node):
-		global_position = boss_node.global_position
-		reset_physics_interpolation()
-	if !is_instance_valid(boss_node): return
+	if is_instance_valid(boss_node): global_position = boss_node.global_position
+	else: return
 	if ring_type == 0: set_instance_shader_parameter("thickness", appear_thickness_0)
 	if !can_shrink: return
 	var actual_percent_value = set_actual_percent_value(set_ring_percent_scale())

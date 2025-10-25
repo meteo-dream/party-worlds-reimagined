@@ -252,6 +252,8 @@ func spawn_spell_ring_effect() -> void:
 	spellcard_ring.ring_type = 0
 	spellcard_ring.boss_node = self
 	Scenes.current_scene.add_child(spellcard_ring)
+	spellcard_ring.global_position = global_position
+	spellcard_ring.reset_physics_interpolation()
 	if is_instance_valid(health_ring):
 		health_ring.queue_free()
 	health_ring = SPELL_RING_EFFECT.instantiate()
@@ -259,6 +261,8 @@ func spawn_spell_ring_effect() -> void:
 	health_ring.post_appear_scale = Vector2(4.4, 4.4)
 	health_ring.boss_node = self
 	Scenes.current_scene.add_child(health_ring)
+	health_ring.global_position = global_position
+	health_ring.reset_physics_interpolation()
 
 func delete_spell_ring_effect() -> void:
 	if is_instance_valid(spellcard_ring): spellcard_ring.play_end_anim()
