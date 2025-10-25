@@ -21,15 +21,15 @@
 [ext_resource type="PackedScene" uid="uid://dh4kf1w7jyseo" path="res://engine/objects/warps/pipe_in.tscn" id="18_0yiej"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="19_ln6ta"]
 [ext_resource type="Texture2D" uid="uid://cube175uuy8i6" path="res://engine/objects/core/finish_line/textures/finishline.png" id="20_fi3pe"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="21_lw0fx"]
+[ext_resource type="PackedScene" uid="uid://bvf7eu5tf645m" path="res://engine/objects/bumping_blocks/question_block/templates/blue/Blue Coin Question Block.tscn" id="21_lw0fx"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="22_amiga"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="23_upgwk"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="24_t7alb"]
+[ext_resource type="PackedScene" uid="uid://8ulmklnlkpcp" path="res://objects/colored_bumping_blocks/blue/Blue Flower Question Block.tscn" id="24_t7alb"]
 [ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="25_hkmuo"]
 [ext_resource type="PackedScene" uid="uid://0ugpa0ybv34g" path="res://engine/objects/enemies/rotos/roto_center.tscn" id="26_bicrd"]
 [ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="26_y1i5x"]
 [ext_resource type="PackedScene" uid="uid://cforx4e0v73a7" path="res://engine/objects/enemies/rotos/roto_red.tscn" id="27_htiwr"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="28_gpjjm"]
+[ext_resource type="PackedScene" uid="uid://3tgyqgylcvji" path="res://engine/objects/bumping_blocks/brick/brick_blue.tscn" id="28_gpjjm"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="31_ja8ii"]
 [ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="32_rhqmm"]
 [ext_resource type="PackedScene" uid="uid://cem1tcrhqrauj" path="res://engine/objects/enemies/hammer_bros/hammer_bro_jump_marker.tscn" id="33_t2fgr"]
@@ -794,9 +794,9 @@ position = Vector2(8624, -624)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("27_htiwr")]
-position = Vector2(-143, -45)
+position = Vector2(-57, -139)
 preview = true
-phase = -163.333
+phase = -113.333
 frequency = -50.0
 
 [node name="RotoCenter3" parent="Rotos" instance=ExtResource("26_bicrd")]
@@ -804,19 +804,19 @@ position = Vector2(4624, -496)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter3" instance=ExtResource("27_htiwr")]
-position = Vector2(30, 147)
+position = Vector2(132, 71)
 preview = true
-phase = 79.1667
+phase = 29.1667
 
 [node name="RotoCenter4" parent="Rotos" instance=ExtResource("26_bicrd")]
 position = Vector2(6864, -528)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter4" instance=ExtResource("27_htiwr")]
-position = Vector2(-50, 3)
+position = Vector2(-31, 94)
 preview = true
 amplitude = Vector2(50, 120)
-phase = 179.168
+phase = 129.168
 metadata/_edit_lock_ = true
 
 [node name="RotoCenter2" parent="Rotos" instance=ExtResource("26_bicrd")]
@@ -824,10 +824,10 @@ position = Vector2(1808, 624)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter2" instance=ExtResource("27_htiwr")]
-position = Vector2(63, -34)
+position = Vector2(-12, -79)
 preview = true
 amplitude = Vector2(70, 80)
-phase = -23.75
+phase = -98.75
 frequency = 75.0
 metadata/_edit_lock_ = true
 
