@@ -2,6 +2,3 @@
 	path = engine
 	url = https://github.com/Thunder-Engine-Dev/thunder-engine.git
 	branch = stable
-[submodule "modules/te-switch-block"]
-	path = modules/te-switch-block
-	url = https://github.com/Thunder-Engine-Dev/te-switch-block
