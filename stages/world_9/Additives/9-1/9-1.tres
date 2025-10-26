@@ -8,16 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://bib0xeipmk16t" path="res://gfx/world9/cave/ground_scenery.png" id="4_6qlfh"]
 [ext_resource type="Texture2D" uid="uid://bipb6ctstvxn6" path="res://gfx/world9/cave/plotekdark.png" id="5_c4xh3"]
 [ext_resource type="Texture2D" uid="uid://cbj43l2lhthop" path="res://gfx/world9/cave/purple_pipe.png" id="6_gyxgy"]
-[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="7_4oo3t"]
 [ext_resource type="Texture2D" uid="uid://putet4hko715" path="res://gfx/world9/cave/semisolid.png" id="7_81mr5"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="8_gusp1"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="9_neig1"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="10_fuasb"]
-[ext_resource type="PackedScene" uid="uid://cv7p8xyw12pbx" path="res://engine/objects/bumping_blocks/question_block/templates/Life Mushroom Question Block.tscn" id="11_qcsk0"]
-[ext_resource type="PackedScene" uid="uid://brkhmn6vdf25a" path="res://engine/objects/bumping_blocks/question_block/templates/Poison Mushroom Question Block.tscn" id="12_4pj1b"]
+[ext_resource type="PackedScene" uid="uid://c1tnw67dn7dmw" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Blue.tscn" id="10_hnnoo"]
+[ext_resource type="PackedScene" uid="uid://3tgyqgylcvji" path="res://engine/objects/bumping_blocks/brick/brick_blue.tscn" id="11_dklwq"]
+[ext_resource type="PackedScene" uid="uid://bvf7eu5tf645m" path="res://engine/objects/bumping_blocks/question_block/templates/blue/Blue Coin Question Block.tscn" id="12_1ide1"]
+[ext_resource type="PackedScene" uid="uid://8ulmklnlkpcp" path="res://objects/colored_bumping_blocks/blue/Blue Flower Question Block.tscn" id="13_4f2tt"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="13_bxlu3"]
+[ext_resource type="PackedScene" uid="uid://clxwsb5fnwy6d" path="res://objects/colored_bumping_blocks/blue/Blue Life Question Block.tscn" id="14_1sdal"]
 [ext_resource type="PackedScene" uid="uid://b4bjvmqtj8nv0" path="res://engine/objects/enemies/dry_bones/dry_bones.tscn" id="14_jdhop"]
 [ext_resource type="PackedScene" uid="uid://bcgt87mbq40gx" path="res://engine/objects/enemies/thwomp/thwomp.tscn" id="15_4uphx"]
+[ext_resource type="PackedScene" uid="uid://k7ukgpg00asn" path="res://objects/colored_bumping_blocks/blue/Blue Poison Question Block.tscn" id="15_hnnoo"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="16_cqv38"]
 [ext_resource type="PackedScene" uid="uid://ceaa5hopn8h7f" path="res://stages/world_9/Additives/9-1/lit_candle.tscn" id="17_4oo3t"]
 [ext_resource type="PackedScene" uid="uid://cno8qn60lpnvv" path="res://engine/objects/enemies/koopas/koopa_green.tscn" id="17_pbk1x"]
@@ -425,12 +425,12 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6o6ge"]
 resource_name = "Bonuses + Sceneries"
-scenes/1/scene = ExtResource("7_4oo3t")
-scenes/2/scene = ExtResource("8_gusp1")
-scenes/3/scene = ExtResource("9_neig1")
-scenes/4/scene = ExtResource("10_fuasb")
-scenes/5/scene = ExtResource("11_qcsk0")
-scenes/6/scene = ExtResource("12_4pj1b")
+scenes/1/scene = ExtResource("10_hnnoo")
+scenes/2/scene = ExtResource("11_dklwq")
+scenes/3/scene = ExtResource("12_1ide1")
+scenes/4/scene = ExtResource("13_4f2tt")
+scenes/5/scene = ExtResource("14_1sdal")
+scenes/6/scene = ExtResource("15_hnnoo")
 scenes/7/scene = ExtResource("13_bxlu3")
 scenes/8/scene = ExtResource("17_4oo3t")
 

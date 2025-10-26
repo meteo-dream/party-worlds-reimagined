@@ -5,14 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://crgf5xxx3jvlu" path="res://engine/tilesets/overworld/hard_block_only.png" id="3_3x6g6"]
 [ext_resource type="Texture2D" uid="uid://d0eodumnqtlm7" path="res://gfx/worldfinal/w10_pipe.png" id="4_sw6dk"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="5_fjwny"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="6_w84pl"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="7_qco7d"]
-[ext_resource type="PackedScene" uid="uid://brkhmn6vdf25a" path="res://engine/objects/bumping_blocks/question_block/templates/Poison Mushroom Question Block.tscn" id="8_luih6"]
-[ext_resource type="PackedScene" uid="uid://cv7p8xyw12pbx" path="res://engine/objects/bumping_blocks/question_block/templates/Life Mushroom Question Block.tscn" id="9_fi2v5"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="10_qdj82"]
-[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="11_rlcne"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="6_tmjrx"]
+[ext_resource type="PackedScene" uid="uid://bhkjyu70f8huu" path="res://objects/colored_bumping_blocks/gray/Gray Flower Question Block.tscn" id="7_3x6g6"]
+[ext_resource type="PackedScene" uid="uid://c1caykgqbwhxu" path="res://objects/colored_bumping_blocks/gray/Gray Poison Question Block.tscn" id="8_sw6dk"]
+[ext_resource type="PackedScene" uid="uid://cptduokc5nb2d" path="res://objects/colored_bumping_blocks/gray/Gray Life Question Block.tscn" id="9_fjwny"]
+[ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="10_w84pl"]
+[ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="11_qco7d"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="12_8jso0"]
-[ext_resource type="PackedScene" uid="uid://cdl5f86x0haop" path="res://engine/objects/bumping_blocks/question_block/templates/Green Lui Question Block.tscn" id="12_tmjrx"]
+[ext_resource type="PackedScene" uid="uid://q500lw4qstv2" path="res://objects/colored_bumping_blocks/gray/Gray Lui Question Block.tscn" id="12_luih6"]
 [ext_resource type="PackedScene" uid="uid://cno8qn60lpnvv" path="res://engine/objects/enemies/koopas/koopa_green.tscn" id="13_x21el"]
 [ext_resource type="PackedScene" uid="uid://b24hnsctae1a0" path="res://engine/objects/enemies/koopas/koopa_red.tscn" id="14_u0nn1"]
 [ext_resource type="PackedScene" uid="uid://dp2mvur34jdbv" path="res://engine/objects/enemies/paratroopas/paratroopa_green.tscn" id="15_jsst4"]
@@ -473,13 +473,13 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_icqqs"]
 resource_name = "Bonus and Stuff"
 scenes/1/scene = ExtResource("5_fjwny")
-scenes/2/scene = ExtResource("6_w84pl")
-scenes/3/scene = ExtResource("7_qco7d")
-scenes/4/scene = ExtResource("8_luih6")
-scenes/5/scene = ExtResource("9_fi2v5")
-scenes/6/scene = ExtResource("10_qdj82")
-scenes/7/scene = ExtResource("11_rlcne")
-scenes/8/scene = ExtResource("12_tmjrx")
+scenes/2/scene = ExtResource("6_tmjrx")
+scenes/3/scene = ExtResource("7_3x6g6")
+scenes/4/scene = ExtResource("8_sw6dk")
+scenes/5/scene = ExtResource("9_fjwny")
+scenes/6/scene = ExtResource("10_w84pl")
+scenes/7/scene = ExtResource("11_qco7d")
+scenes/8/scene = ExtResource("12_luih6")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4xopj"]
 resource_name = "Normal Enemies"

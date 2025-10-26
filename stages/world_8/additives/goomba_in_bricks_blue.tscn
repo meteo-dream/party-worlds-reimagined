@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://btpaak64kmoey"]
+
+[ext_resource type="PackedScene" uid="uid://d2t5a68eym8ht" path="res://stages/world_8/additives/goomba_in_bricks_fixeed.tscn" id="1_owaph"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="2_jcdcu"]
+[ext_resource type="PackedScene" uid="uid://c1q6x5rlqt71n" path="res://engine/objects/effects/brick_debris/brick_debris_blue.tscn" id="2_kirnc"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="3_kirnc"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="4_mewfi"]
+[ext_resource type="Texture2D" uid="uid://csbxd3j1ho55g" path="res://engine/objects/bumping_blocks/brick/textures/brickblue.png" id="5_jcdcu"]
+
+[sub_resource type="Resource" id="Resource_gqw0m"]
+resource_local_to_scene = true
+script = ExtResource("4_mewfi")
+creation_nodepack = ExtResource("2_jcdcu")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {
+"death": NodePath("../../SpriteGoomba"),
+"death_speed": Vector2(0, -250)
+}
+custom_script = ExtResource("3_kirnc")
+
+[node name="GoombaInBricks" instance=ExtResource("1_owaph")]
+effect_debris = ExtResource("2_kirnc")
+
+[node name="EnemyAttacked" parent="Hitbox" index="1"]
+stomping_creation = SubResource("Resource_gqw0m")
+killing_creation = SubResource("Resource_gqw0m")
+
+[node name="SpriteBricks" parent="." index="3"]
+texture = ExtResource("5_jcdcu")

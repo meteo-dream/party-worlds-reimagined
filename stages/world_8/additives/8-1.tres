@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=41 format=3 uid="uid://d03yqfh0iegnm"]
+[gd_resource type="TileSet" load_steps=46 format=3 uid="uid://d03yqfh0iegnm"]
 
 [ext_resource type="Texture2D" uid="uid://djwe62jh83kf" path="res://engine/tilesets/overworld/hard_block.png" id="1_ggryp"]
 [ext_resource type="Texture2D" uid="uid://beaflvh106ibq" path="res://gfx/world8/8-1.png" id="2_e0y8x"]
@@ -12,14 +12,19 @@
 [ext_resource type="Texture2D" uid="uid://bib0xeipmk16t" path="res://gfx/world9/cave/ground_scenery.png" id="6_m8shi"]
 [ext_resource type="PackedScene" uid="uid://b1ta344iwb83q" path="res://engine/objects/enemies/hammer_bros/koopa_bro.tscn" id="7_olm1h"]
 [ext_resource type="PackedScene" uid="uid://c02uktgryh3ku" path="res://engine/objects/enemies/paratroopas/paratroopa_blue.tscn" id="8_m8shi"]
+[ext_resource type="PackedScene" uid="uid://btpaak64kmoey" path="res://stages/world_8/additives/goomba_in_bricks_blue.tscn" id="8_sb02x"]
 [ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="9_5s13y"]
 [ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="10_3atym"]
 [ext_resource type="PackedScene" uid="uid://cdl5f86x0haop" path="res://engine/objects/bumping_blocks/question_block/templates/Green Lui Question Block.tscn" id="11_0iw5s"]
 [ext_resource type="PackedScene" uid="uid://cexk2yxt5uemn" path="res://engine/objects/bumping_blocks/question_block/templates/Star Question Block.tscn" id="12_wccjq"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="13_sb02x"]
+[ext_resource type="PackedScene" uid="uid://3tgyqgylcvji" path="res://engine/objects/bumping_blocks/brick/brick_blue.tscn" id="13_wccjq"]
 [ext_resource type="PackedScene" uid="uid://dw362fu3hooyg" path="res://engine/objects/items/coin/coin_out_of_bounds.tscn" id="14_qsu64"]
+[ext_resource type="PackedScene" uid="uid://c1tnw67dn7dmw" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Blue.tscn" id="14_sb02x"]
 [ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="15_hguea"]
+[ext_resource type="PackedScene" uid="uid://bvf7eu5tf645m" path="res://engine/objects/bumping_blocks/question_block/templates/blue/Blue Coin Question Block.tscn" id="15_qsu64"]
 [ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="16_d8do0"]
+[ext_resource type="PackedScene" uid="uid://8ulmklnlkpcp" path="res://objects/colored_bumping_blocks/blue/Blue Flower Question Block.tscn" id="16_hguea"]
 [ext_resource type="Texture2D" uid="uid://c8cqh10bsbdud" path="res://engine/tilesets/underwater/coral.png" id="17_bavfu"]
 [ext_resource type="Texture2D" uid="uid://bviqja31upt4m" path="res://engine/tilesets/overworld/green_pipe.png" id="18_u4nkn"]
 [ext_resource type="Texture2D" uid="uid://c2uhsw3sxuals" path="res://engine/tilesets/underwater/gfx/underwater_green_block.png" id="19_pxe1s"]
@@ -309,6 +314,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_7av81"]
 resource_name = "Enemies"
 scenes/1/scene = ExtResource("3_67gwm")
+scenes/2/scene = ExtResource("8_sb02x")
 scenes/3/scene = ExtResource("4_ggryp")
 scenes/4/scene = ExtResource("5_otkkq")
 scenes/5/scene = ExtResource("6_28di1")
@@ -317,6 +323,7 @@ scenes/7/scene = ExtResource("8_m8shi")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8geau"]
 resource_name = "Bonuses"
+scenes/1/scene = ExtResource("13_wccjq")
 scenes/2/scene = ExtResource("9_5s13y")
 scenes/3/scene = ExtResource("10_3atym")
 scenes/4/scene = ExtResource("11_0iw5s")
@@ -325,6 +332,9 @@ scenes/6/scene = ExtResource("13_sb02x")
 scenes/7/scene = ExtResource("14_qsu64")
 scenes/8/scene = ExtResource("15_hguea")
 scenes/9/scene = ExtResource("16_d8do0")
+scenes/10/scene = ExtResource("14_sb02x")
+scenes/11/scene = ExtResource("15_qsu64")
+scenes/12/scene = ExtResource("16_hguea")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftrec"]
 texture = ExtResource("17_bavfu")

@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://lomx01s1ohnj" path="res://gfx/worldfinal/10-3pipe.png" id="1_7af2a"]
 [ext_resource type="Texture2D" uid="uid://b3ff50hsbwpdg" path="res://gfx/worldfinal/10-3ground.png" id="2_2x7fo"]
 [ext_resource type="Texture2D" uid="uid://b56g56p7yco58" path="res://gfx/worldfinal/sign1.png" id="3_j1b1w"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="4_7m3na"]
-[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="5_x04ty"]
+[ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="4_x04ty"]
+[ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="5_x71dr"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="6_x71dr"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="7_v1fh8"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="8_le6lk"]
-[ext_resource type="PackedScene" uid="uid://brkhmn6vdf25a" path="res://engine/objects/bumping_blocks/question_block/templates/Poison Mushroom Question Block.tscn" id="9_ql5ei"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="7_v1fh8"]
+[ext_resource type="PackedScene" uid="uid://bhkjyu70f8huu" path="res://objects/colored_bumping_blocks/gray/Gray Flower Question Block.tscn" id="8_le6lk"]
+[ext_resource type="PackedScene" uid="uid://c1caykgqbwhxu" path="res://objects/colored_bumping_blocks/gray/Gray Poison Question Block.tscn" id="9_x04ty"]
 [ext_resource type="PackedScene" uid="uid://csj6le8ffyb3x" path="res://objects/w8_invis_spike/invis_spike.tscn" id="10_wfg4g"]
-[ext_resource type="PackedScene" uid="uid://cv7p8xyw12pbx" path="res://engine/objects/bumping_blocks/question_block/templates/Life Mushroom Question Block.tscn" id="10_x04ty"]
+[ext_resource type="PackedScene" uid="uid://cptduokc5nb2d" path="res://objects/colored_bumping_blocks/gray/Gray Life Question Block.tscn" id="10_x71dr"]
 [ext_resource type="PackedScene" uid="uid://dp2mvur34jdbv" path="res://engine/objects/enemies/paratroopas/paratroopa_green.tscn" id="11_2x7fo"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="11_gm0gd"]
 [ext_resource type="PackedScene" uid="uid://b24hnsctae1a0" path="res://engine/objects/enemies/koopas/koopa_red.tscn" id="12_0ehno"]
@@ -472,13 +472,13 @@ texture_region_size = Vector2i(107, 128)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_qy81n"]
 resource_name = "Bonuses"
-scenes/1/scene = ExtResource("4_7m3na")
-scenes/2/scene = ExtResource("5_x04ty")
+scenes/1/scene = ExtResource("4_x04ty")
+scenes/2/scene = ExtResource("5_x71dr")
 scenes/3/scene = ExtResource("6_x71dr")
 scenes/4/scene = ExtResource("7_v1fh8")
 scenes/5/scene = ExtResource("8_le6lk")
-scenes/6/scene = ExtResource("9_ql5ei")
-scenes/7/scene = ExtResource("10_x04ty")
+scenes/6/scene = ExtResource("9_x04ty")
+scenes/7/scene = ExtResource("10_x71dr")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_odug7"]
 resource_name = "Enemies"

@@ -21,15 +21,15 @@
 [ext_resource type="PackedScene" uid="uid://rhrex2vth7at" path="res://engine/objects/platform/platform_path.tscn" id="16_37t1r"]
 [ext_resource type="PackedScene" uid="uid://uhf6frao7p1m" path="res://engine/objects/enemies/podoboo/podoboo.tscn" id="17_2rqks"]
 [ext_resource type="Texture2D" uid="uid://fmwbxeob1quj" path="res://gfx/world1/platformtile-cropped.png" id="17_351bk"]
-[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="17_par3g"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="18_qyowi"]
+[ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="17_par3g"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="18_qyowi"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="19_43ryw"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="20_othjs"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="21_7a6mb"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="22_gcrel"]
+[ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="21_7a6mb"]
+[ext_resource type="PackedScene" uid="uid://bhkjyu70f8huu" path="res://objects/colored_bumping_blocks/gray/Gray Flower Question Block.tscn" id="22_gcrel"]
 [ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="23_158ly"]
 [ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="24_eybwj"]
-[ext_resource type="PackedScene" uid="uid://cdl5f86x0haop" path="res://engine/objects/bumping_blocks/question_block/templates/Green Lui Question Block.tscn" id="25_4g6at"]
+[ext_resource type="PackedScene" uid="uid://q500lw4qstv2" path="res://objects/colored_bumping_blocks/gray/Gray Lui Question Block.tscn" id="25_4g6at"]
 [ext_resource type="PackedScene" uid="uid://o3k018cbex8g" path="res://engine/objects/powerups/green_lui/green_lui.tscn" id="26_356x8"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="28_g0sgt"]
 [ext_resource type="PackedScene" uid="uid://c58i0gaq0il4o" path="res://engine/objects/enemies/spinies/spiny_red.tscn" id="29_xf65a"]
@@ -1205,10 +1205,10 @@ position = Vector2(8880, 400)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter6" instance=ExtResource("35_nu1kw")]
-position = Vector2(-61, -79)
+position = Vector2(46, -89)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -130.0
+phase = -65.0
 frequency = -150.0
 
 [node name="RotoCenter5" parent="Enemies" instance=ExtResource("34_qx2lq")]
@@ -1216,23 +1216,23 @@ position = Vector2(7440, 272)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter5" instance=ExtResource("35_nu1kw")]
-position = Vector2(4, -76)
+position = Vector2(143, 30)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(77.7818, 77.7818)
+amplitude = Vector2(147.643, 147.643)
 amplitude_changing_speed = 100.0
 amplitude_max = Vector2(150, 150)
-phase = -85.833
+phase = 12.5
 
 [node name="RotoCenter4" parent="Enemies" instance=ExtResource("34_qx2lq")]
 position = Vector2(2992, 368)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter4" instance=ExtResource("35_nu1kw")]
-position = Vector2(-11, -49)
+position = Vector2(43, -25)
 preview = true
 amplitude = Vector2(50, 50)
-phase = -100.999
+phase = -28.6657
 frequency = 110.0
 
 [node name="RotoCenter3" parent="Enemies" instance=ExtResource("34_qx2lq")]
@@ -1240,10 +1240,10 @@ position = Vector2(1776, 432)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter3" instance=ExtResource("35_nu1kw")]
-position = Vector2(-99, 34)
+position = Vector2(144, -13)
 preview = true
 amplitude = Vector2(150, 45)
-phase = 129.96
+phase = -17.54
 frequency = -75.0
 
 [node name="RotoCenter2" parent="Enemies" instance=ExtResource("34_qx2lq")]
@@ -1251,13 +1251,13 @@ position = Vector2(1168, 304)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter2" instance=ExtResource("35_nu1kw")]
-position = Vector2(-31, -23)
+position = Vector2(30, 11)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(40.0694, 40.0694)
+amplitude = Vector2(31.1091, 31.1091)
 amplitude_changing_speed = 100.0
 amplitude_max = Vector2(70, 70)
-phase = -145.0
+phase = 18.3334
 frequency = -100.0
 
 [node name="PiranhaGreen" parent="Enemies" instance=ExtResource("36_ug88a")]

@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://px2631u4jciu" path="res://gfx/world3/3-2choco.png" id="2_6h682"]
 [ext_resource type="Texture2D" uid="uid://cjsixk4iq32bo" path="res://gfx/world3/gorka-night.png" id="3_6xfmg"]
 [ext_resource type="PackedScene" uid="uid://btkte1gqm0nu6" path="res://stages/world_3/additives/3-2drzewko.tscn" id="4_m0la5"]
-[ext_resource type="PackedScene" uid="uid://dbpihjuw0gc01" path="res://engine/objects/bumping_blocks/question_block/templates/Beetroot Question Block.tscn" id="5_86rat"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="6_kr32y"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="7_71eov"]
-[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="8_p8hqs"]
+[ext_resource type="PackedScene" uid="uid://bmn3h8x3rv47u" path="res://objects/colored_bumping_blocks/blue/Blue Beetroot Question Block.tscn" id="5_oe7ic"]
+[ext_resource type="PackedScene" uid="uid://bvf7eu5tf645m" path="res://engine/objects/bumping_blocks/question_block/templates/blue/Blue Coin Question Block.tscn" id="6_ny5yb"]
+[ext_resource type="PackedScene" uid="uid://8ulmklnlkpcp" path="res://objects/colored_bumping_blocks/blue/Blue Flower Question Block.tscn" id="7_65gsn"]
+[ext_resource type="PackedScene" uid="uid://c1tnw67dn7dmw" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Blue.tscn" id="8_hu2w1"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="9_f5ymg"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="10_d6m1r"]
+[ext_resource type="PackedScene" uid="uid://3tgyqgylcvji" path="res://engine/objects/bumping_blocks/brick/brick_blue.tscn" id="10_l3ofm"]
 [ext_resource type="Texture2D" uid="uid://jjgcanm1e3kf" path="res://gfx/world1/under_pipe.png" id="11_ivaip"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="12_qb3l6"]
 [ext_resource type="PackedScene" uid="uid://dt52xvrtre8h3" path="res://engine/objects/enemies/piranha_plants/piranha_head.tscn" id="13_nij41"]
@@ -468,12 +468,12 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5g2m1"]
 resource_name = "Scenery-Bonuses"
 scenes/1/scene = ExtResource("4_m0la5")
-scenes/3/scene = ExtResource("5_86rat")
-scenes/4/scene = ExtResource("6_kr32y")
-scenes/5/scene = ExtResource("7_71eov")
-scenes/6/scene = ExtResource("8_p8hqs")
+scenes/3/scene = ExtResource("5_oe7ic")
+scenes/4/scene = ExtResource("6_ny5yb")
+scenes/5/scene = ExtResource("7_65gsn")
+scenes/6/scene = ExtResource("8_hu2w1")
 scenes/7/scene = ExtResource("9_f5ymg")
-scenes/8/scene = ExtResource("10_d6m1r")
+scenes/8/scene = ExtResource("10_l3ofm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bljvd"]
 texture = ExtResource("11_ivaip")

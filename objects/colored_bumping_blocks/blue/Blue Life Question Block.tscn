@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://clxwsb5fnwy6d"]
+
+[ext_resource type="PackedScene" uid="uid://cv7p8xyw12pbx" path="res://engine/objects/bumping_blocks/question_block/templates/Life Mushroom Question Block.tscn" id="1_sx52j"]
+[ext_resource type="PackedScene" uid="uid://ltoqkqmxpt65" path="res://engine/objects/powerups/life_mushroom/life_mushroom.tscn" id="2_s2i0q"]
+[ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="3_e38o7"]
+[ext_resource type="SpriteFrames" uid="uid://buo2w0jqubcm3" path="res://engine/objects/bumping_blocks/question_block/blue_qblock.tres" id="4_s2i0q"]
+
+[sub_resource type="Resource" id="Resource_kkicx"]
+resource_local_to_scene = true
+script = ExtResource("3_e38o7")
+creation_nodepack = ExtResource("2_s2i0q")
+creation_force_sibling = false
+trans_offset = Vector2(0, 0)
+trans_inheritances = 7
+trans_rotation = 0.0
+trans_scale = Vector2(1, 1)
+trans_skew = 0.0
+visi_z_index = 0
+visi_z_as_relative = true
+visi_y_sort_enabled = false
+custom_vars = {}
+
+[node name="QuestionBlockLife" instance=ExtResource("1_sx52j")]
+result = SubResource("Resource_kkicx")
+
+[node name="AnimatedSprite2D" parent="Sprites" index="1"]
+sprite_frames = ExtResource("4_s2i0q")
+animation = &"empty"

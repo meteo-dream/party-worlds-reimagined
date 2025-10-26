@@ -24,9 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://boehij35imfw" path="res://gfx/worldfinal/10-3bg.png" id="20_21qqm"]
 [ext_resource type="PackedScene" uid="uid://4xvjyjrcgfac" path="res://stages/world_final/Additives/8-1/left_jumping_cheeps_generator.tscn" id="20_xhjqr"]
 [ext_resource type="Script" uid="uid://belqtxci5jyp5" path="res://stages/world_final/Additives/8-1/8-1_fish_generator.gd" id="21_w50w0"]
-[ext_resource type="PackedScene" uid="uid://cv7p8xyw12pbx" path="res://engine/objects/bumping_blocks/question_block/templates/Life Mushroom Question Block.tscn" id="24_hr333"]
 [ext_resource type="PackedScene" uid="uid://ltoqkqmxpt65" path="res://engine/objects/powerups/life_mushroom/life_mushroom.tscn" id="25_3hvwg"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="26_2b1gy"]
+[ext_resource type="PackedScene" uid="uid://cptduokc5nb2d" path="res://objects/colored_bumping_blocks/gray/Gray Life Question Block.tscn" id="26_21qqm"]
 [ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="27_3hvwg"]
 [ext_resource type="PackedScene" uid="uid://b1aibpt7836h7" path="res://engine/objects/enemies/hammer_bros/hammer_bro.tscn" id="28_2b1gy"]
 [ext_resource type="PackedScene" uid="uid://0ugpa0ybv34g" path="res://engine/objects/enemies/rotos/roto_center.tscn" id="29_u5je0"]
@@ -50,7 +50,7 @@ colors = PackedColorArray(0.227451, 0.345098, 0.470588, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_21qqm")
 fill_to = Vector2(0, 1)
 
-[sub_resource type="Resource" id="Resource_q8dqp"]
+[sub_resource type="Resource" id="Resource_rkj87"]
 resource_local_to_scene = true
 script = ExtResource("26_2b1gy")
 creation_nodepack = ExtResource("25_3hvwg")
@@ -216,13 +216,13 @@ max_on_screen = 20
 speed_min = Vector2i(250, -660)
 speed_max = Vector2i(550, -200)
 
-[node name="QuestionBlockLife" parent="Objects" instance=ExtResource("24_hr333")]
-position = Vector2(688, 208)
-result = SubResource("Resource_q8dqp")
-initially_visible_and_solid = false
-
 [node name="BorderBlocker10-1" parent="Objects" instance=ExtResource("34_ojp4b")]
 position = Vector2(29048, 184)
+
+[node name="QuestionBlockLife" parent="Objects" instance=ExtResource("26_21qqm")]
+position = Vector2(688, 208)
+result = SubResource("Resource_rkj87")
+initially_visible_and_solid = false
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -330,8 +330,8 @@ frequency = -360.0
 [connection signal="scroll_stopped" from="Path2D/PathFollow2D" to="Objects/BorderBlocker10-1" method="_on_path_follow_2d_scroll_stopped"]
 [connection signal="speed_change" from="Path2D/PathFollow2D" to="Objects/JumpingCheepsGeneratorLeft" method="_on_path_follow_2d_speed_change"]
 [connection signal="collided_wall" from="NewTileMapLayer/Goomba" to="NewTileMapLayer/Goomba" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@24232" to="NewTileMapLayer/@CharacterBody2D@24232" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@71055" to="NewTileMapLayer/@CharacterBody2D@71055" method="turn_x"]
 [connection signal="collided_wall" from="NewTileMapLayer/KoopaRed" to="NewTileMapLayer/KoopaRed" method="turn_x"]
 [connection signal="collided_wall" from="NewTileMapLayer/SpinyRed" to="NewTileMapLayer/SpinyRed" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@24316" to="NewTileMapLayer/@CharacterBody2D@24316" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@24387" to="NewTileMapLayer/@CharacterBody2D@24387" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@71139" to="NewTileMapLayer/@CharacterBody2D@71139" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@71210" to="NewTileMapLayer/@CharacterBody2D@71210" method="turn_x"]

@@ -7,14 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="5_gys8t"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="7_t8iax"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_31qm3"]
+[ext_resource type="PackedScene" uid="uid://bhkjyu70f8huu" path="res://objects/colored_bumping_blocks/gray/Gray Flower Question Block.tscn" id="8_gfhgt"]
 [ext_resource type="Texture2D" uid="uid://cangjx7jtmi6i" path="res://gfx/world1/green_pipe.png" id="8_gys8t"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="8_ve6ft"]
-[ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="9_gfhgt"]
-[ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="10_ops48"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="9_ops48"]
+[ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="10_gfhgt"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_6ht0w"]
 [ext_resource type="Texture2D" uid="uid://iormdxfoigp7" path="res://gfx/world8/8-3.png" id="11_42ejt"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="11_77oud"]
-[ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="11_qj0og"]
+[ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="11_gfhgt"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="12_ukia1"]
 [ext_resource type="PackedScene" uid="uid://dw362fu3hooyg" path="res://engine/objects/items/coin/coin_out_of_bounds.tscn" id="13_cuu0b"]
 [ext_resource type="PackedScene" uid="uid://bv7qtx6kahivy" path="res://FX/fg_fog/fg_fog.tscn" id="14_ac8v6"]
@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bhfwqgt43qcg5" path="res://engine/objects/effects/wide_clouds_moving/wide_clouds_moving_2.tscn" id="17_6dfwd"]
 [ext_resource type="Texture2D" uid="uid://cqkw44t5i44l4" path="res://gfx/world8/winter_mounts.png" id="17_6ht0w"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="17_ac8v6"]
-[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="18_gfhgt"]
+[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="18_gfhgt"]
 [ext_resource type="PackedScene" uid="uid://ddwxc43m3q1c6" path="res://engine/objects/core/checkpoint/checkpoint.tscn" id="18_t8iax"]
 [ext_resource type="PackedScene" uid="uid://ddldd020oordq" path="res://engine/objects/platform/platform_path_small.tscn" id="19_31qm3"]
 [ext_resource type="PackedScene" uid="uid://dk7vdi07qwtyc" path="res://engine/objects/enemies/cannon/cannon_cross.tscn" id="20_6dfwd"]
@@ -39,10 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://bkaivnr6tufb" path="res://engine/objects/enemies/bullet_bill/launcher/bullet_launcher_base.tscn" id="30_g8kxe"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_o2t8q"]
-scenes/1/scene = ExtResource("8_ve6ft")
-scenes/2/scene = ExtResource("9_gfhgt")
-scenes/3/scene = ExtResource("10_ops48")
-scenes/4/scene = ExtResource("11_qj0og")
+scenes/1/scene = ExtResource("8_gfhgt")
+scenes/2/scene = ExtResource("9_ops48")
+scenes/3/scene = ExtResource("10_gfhgt")
+scenes/4/scene = ExtResource("11_gfhgt")
 scenes/5/scene = ExtResource("12_ukia1")
 scenes/6/scene = ExtResource("13_cuu0b")
 

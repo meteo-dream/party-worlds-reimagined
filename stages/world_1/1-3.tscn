@@ -794,9 +794,9 @@ position = Vector2(8624, -624)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("27_htiwr")]
-position = Vector2(-57, -139)
+position = Vector2(-145, -39)
 preview = true
-phase = -113.333
+phase = -165.833
 frequency = -50.0
 
 [node name="RotoCenter3" parent="Rotos" instance=ExtResource("26_bicrd")]
@@ -804,19 +804,19 @@ position = Vector2(4624, -496)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter3" instance=ExtResource("27_htiwr")]
-position = Vector2(132, 71)
+position = Vector2(24, 148)
 preview = true
-phase = 29.1667
+phase = 81.6667
 
 [node name="RotoCenter4" parent="Rotos" instance=ExtResource("26_bicrd")]
 position = Vector2(6864, -528)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter4" instance=ExtResource("27_htiwr")]
-position = Vector2(-31, 94)
+position = Vector2(-50, -2)
 preview = true
 amplitude = Vector2(50, 120)
-phase = 129.168
+phase = -178.332
 metadata/_edit_lock_ = true
 
 [node name="RotoCenter2" parent="Rotos" instance=ExtResource("26_bicrd")]
@@ -824,10 +824,10 @@ position = Vector2(1808, 624)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter2" instance=ExtResource("27_htiwr")]
-position = Vector2(-12, -79)
+position = Vector2(65, -29)
 preview = true
 amplitude = Vector2(70, 80)
-phase = -98.75
+phase = -20.0
 frequency = 75.0
 metadata/_edit_lock_ = true
 
