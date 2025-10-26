@@ -114,8 +114,8 @@ func play_sound_news_landing() -> void:
 ## Remilia picks up the newspaper.
 func pick_up_news() -> void:
 	spawn_reaction_text(0)
-	Audio.play_sound(SOUND_TURN, remi_node)
 	await _set_timer(1.2)
+	Audio.play_sound(SOUND_TURN, remi_node)
 	remi_node.flip_h = true
 	await _set_timer(0.5)
 	Audio.play_sound(SOUND_PICK_UP, remi_node)
