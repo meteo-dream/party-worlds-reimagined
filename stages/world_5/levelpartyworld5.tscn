@@ -2650,18 +2650,6 @@ position = Vector2(4560, -1968)
 [node name="KoopaRed6" parent="Enemies" instance=ExtResource("33_3u01w")]
 position = Vector2(1072, -1936)
 
-[node name="SpinyRed2" parent="Enemies" instance=ExtResource("36_405di")]
-position = Vector2(6928, -2192)
-
-[node name="SpinyRed3" parent="Enemies" instance=ExtResource("36_405di")]
-position = Vector2(6160, -2128)
-
-[node name="SpinyRed4" parent="Enemies" instance=ExtResource("36_405di")]
-position = Vector2(6288, -2128)
-
-[node name="SpinyRed5" parent="Enemies" instance=ExtResource("36_405di")]
-position = Vector2(6416, -2128)
-
 [node name="Goomba23" parent="Enemies" instance=ExtResource("31_ma2mc")]
 position = Vector2(6864, -1872)
 
@@ -2716,13 +2704,11 @@ position = Vector2(9488, -1872)
 [node name="KoopaGreen5" parent="Enemies" instance=ExtResource("32_15r8b")]
 position = Vector2(10272, -1968)
 
-[node name="SpinyRed6" parent="Enemies" instance=ExtResource("36_405di")]
+[node name="SpinyRed8" parent="Enemies" instance=ExtResource("36_405di")]
 position = Vector2(2720, -1872)
-sprite = NodePath("../SpinyRed/Sprite")
 
-[node name="SpinyRed7" parent="Enemies" instance=ExtResource("36_405di")]
+[node name="SpinyRed9" parent="Enemies" instance=ExtResource("36_405di")]
 position = Vector2(3136, -1872)
-sprite = NodePath("../SpinyRed2/Sprite")
 
 [node name="Platform" type="Node2D" parent="."]
 
@@ -2830,10 +2816,10 @@ position = Vector2(1168, 336)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("30_ej2eg")]
-position = Vector2(-10, -49)
+position = Vector2(23, 44)
 preview = true
 amplitude = Vector2(50, 50)
-phase = -104.166
+phase = 59.334
 frequency = -170.0
 
 [node name="RotoCenter2" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2841,10 +2827,10 @@ position = Vector2(1680, 336)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter2" instance=ExtResource("30_ej2eg")]
-position = Vector2(-10, 49)
+position = Vector2(23, -44)
 preview = true
 amplitude = Vector2(50, 50)
-phase = 104.167
+phase = -59.333
 frequency = 170.0
 
 [node name="RotoCenter3" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2852,10 +2838,10 @@ position = Vector2(4048, 368)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter3" instance=ExtResource("30_ej2eg")]
-position = Vector2(8, 49)
+position = Vector2(7, -50)
 preview = true
 amplitude = Vector2(50, 50)
-phase = 83.8338
+phase = -79.6662
 frequency = 170.0
 
 [node name="RotoCenter4" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2863,10 +2849,10 @@ position = Vector2(4144, 368)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter4" instance=ExtResource("30_ej2eg")]
-position = Vector2(-8, 49)
+position = Vector2(-7, -50)
 preview = true
 amplitude = Vector2(50, 50)
-phase = 96.1687
+phase = -100.331
 frequency = -170.0
 
 [node name="RotoCenter5" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2874,20 +2860,20 @@ position = Vector2(5296, 208)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter5" instance=ExtResource("30_ej2eg")]
-position = Vector2(73, -69)
+position = Vector2(-16, 99)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -42.4987
+phase = 100.001
 
 [node name="RotoCenter6" parent="Rotos" instance=ExtResource("29_gfsuv")]
 position = Vector2(5392, 208)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter6" instance=ExtResource("30_ej2eg")]
-position = Vector2(-73, -69)
+position = Vector2(16, 99)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -137.5
+phase = 80.0
 frequency = -50.0
 
 [node name="RotoCenter7" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2895,10 +2881,10 @@ position = Vector2(3504, -2000)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter7" instance=ExtResource("30_ej2eg")]
-position = Vector2(-9, 69)
+position = Vector2(61, 35)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 95.0
+phase = 27.5
 frequency = -150.0
 
 [node name="RotoCenter8" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2906,10 +2892,10 @@ position = Vector2(4208, -2000)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter8" instance=ExtResource("30_ej2eg")]
-position = Vector2(-3, 70)
+position = Vector2(-66, 24)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 95.0
+phase = 162.5
 frequency = 150.0
 metadata/_edit_lock_ = true
 
@@ -2918,10 +2904,10 @@ position = Vector2(2320, -2032)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter10" instance=ExtResource("30_ej2eg")]
-position = Vector2(-3, 70)
+position = Vector2(-66, 24)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 95.0
+phase = 162.5
 frequency = 150.0
 metadata/_edit_lock_ = true
 
@@ -2930,13 +2916,13 @@ position = Vector2(5008, -1936)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter9" instance=ExtResource("30_ej2eg")]
-position = Vector2(2, -2)
+position = Vector2(-23, 1)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(5.89256, 5.89256)
+amplitude = Vector2(20.3637, 20.3637)
 amplitude_changing_speed = 250.0
 amplitude_max = Vector2(150, 150)
-phase = -35.0
+phase = 178.75
 frequency = 75.0
 metadata/_edit_lock_ = true
 
@@ -2966,6 +2952,18 @@ use_strict_detection_area = true
 position = Vector2(14208, -848)
 warp_to = NodePath("../PipeOut2")
 use_circle_transition = true
+
+[node name="SpinyRed" parent="." instance=ExtResource("36_405di")]
+position = Vector2(6152, -2128)
+
+[node name="SpinyRed2" parent="." instance=ExtResource("36_405di")]
+position = Vector2(6280, -2128)
+
+[node name="SpinyRed3" parent="." instance=ExtResource("36_405di")]
+position = Vector2(6408, -2128)
+
+[node name="SpinyRed4" parent="." instance=ExtResource("36_405di")]
+position = Vector2(6928, -2192)
 
 [connection signal="view_section_changed" from="Part2" to="HUD/Label" method="_on_part_2_view_section_changed"]
 [connection signal="view_section_changed" from="Part3" to="HUD/Label" method="_on_part_3_view_section_changed"]
