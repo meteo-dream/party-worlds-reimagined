@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfwkw1bohojsi"]
+
+[ext_resource type="PackedScene" uid="uid://c2mch7wqmlcgp" path="res://stages/main_menu/objects/tweaks.tscn" id="1_2sct7"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_uc8mt"]
+
+[node name="Tweaks" instance=ExtResource("1_2sct7")]
+
+[node name="Text2" parent="CanvasLayer/Box/Texture" index="1"]
+theme_override_fonts/font = ExtResource("2_uc8mt")

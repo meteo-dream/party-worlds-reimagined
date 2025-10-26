@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bs5xxybk0ioet" path="res://gfx/world1/sign1.png" id="22_jay7j"]
 [ext_resource type="PackedScene" uid="uid://u6gxj4cj5m4f" path="res://engine/objects/bumping_blocks/message_block/message_block.tscn" id="22_yx5jh"]
 [ext_resource type="Script" uid="uid://d2h18okmm7hfk" path="res://stages/world_9/Additives/9-3/hint_arrow_sign.gd" id="23_chjis"]
-[ext_resource type="PackedScene" uid="uid://cefmm6mdbm842" path="res://objects/boss_touhou/boss_w9/boss_hud.tscn" id="28_y80lx"]
+[ext_resource type="PackedScene" uid="uid://c6uevubs47fp0" path="res://addons/localization/boss_hud.tscn" id="28_3nuat"]
 
 [sub_resource type="Curve" id="Curve_c233m"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.616216, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -7.01374, 0.0, 0, 0]
@@ -150,9 +150,9 @@ layer = 2
 anchors_preset = -1
 anchor_left = 0.619
 anchor_right = 0.619
-offset_left = -100.16
+offset_left = -68.16
 offset_top = 12.0
-offset_right = 99.84
+offset_right = 67.84
 offset_bottom = 63.0
 theme_override_constants/line_spacing = -1
 theme_override_font_sizes/font_size = 28
@@ -493,7 +493,7 @@ position = Vector2(1600, -32)
 position = Vector2(2744, -136)
 disable_hurtbox = true
 
-[node name="BossHUD" parent="." instance=ExtResource("28_y80lx")]
+[node name="BossHUD" parent="." instance=ExtResource("28_3nuat")]
 
 [connection signal="died" from="Player" to="BossW9Handler" method="_on_player_died"]
 [connection signal="boss_w9_triggered" from="BossW9Handler" to="CameraArea" method="_on_boss_w_9_handler_boss_w_9_triggered"]

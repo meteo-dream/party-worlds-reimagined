@@ -213,7 +213,7 @@ func show_balloon(time: float = 0.5) -> void:
 	if !is_instance_valid(balloon_bg): return
 	balloon_bg.show()
 	var tw = get_tree().create_tween()
-	tw.tween_property(balloon_bg, "scale:x", 2.0, time)
+	tw.tween_property(balloon_bg, "scale:x", 2.1, time)
 	if is_instance_valid(skip_text):
 		skip_text.modulate.a = 0.0
 		skip_text.show()

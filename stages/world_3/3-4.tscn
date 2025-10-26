@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://ivo5leit4ga2"]
+[gd_scene load_steps=39 format=4 uid="uid://ivo5leit4ga2"]
 
 [ext_resource type="Script" uid="uid://b3i6mj6p0i05l" path="res://stages/world_3/3_4.gd" id="1_70k2c"]
 [ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_146wu"]
@@ -25,8 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="19_lwjt4"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="20_eqe6h"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="21_eebk8"]
-[ext_resource type="FontFile" uid="uid://dacnp4qwdpr2r" path="res://engine/fonts/mister_earl.otf" id="23_lew6t"]
 [ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="23_o5b2h"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="26_ivnck"]
 
 [sub_resource type="Gradient" id="Gradient_a22wl"]
 colors = PackedColorArray(0, 0, 0.59, 1, 0.408, 0.336, 0.48, 1)
@@ -99,12 +99,6 @@ visi_z_index = 0
 visi_z_as_relative = true
 visi_y_sort_enabled = false
 custom_vars = {}
-
-[sub_resource type="FontVariation" id="FontVariation_ooa0s"]
-base_font = ExtResource("23_lew6t")
-variation_transform = Transform2D(1, 0, 0, 0.6, 0, 0)
-spacing_top = -8
-spacing_bottom = -8
 
 [node name="3-4" type="Node2D"]
 script = ExtResource("1_70k2c")
@@ -350,7 +344,7 @@ offset_right = 27.0
 offset_bottom = -13.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
 theme_override_constants/outline_size = 6
-theme_override_fonts/font = SubResource("FontVariation_ooa0s")
+theme_override_fonts/font = ExtResource("26_ivnck")
 theme_override_font_sizes/font_size = 18
 text = "Prepare to
 meet your
@@ -364,16 +358,16 @@ position = Vector2(10560, 416)
 
 [connection signal="collided_wall" from="Main/Goomba" to="Main/Goomba" method="turn_x"]
 [connection signal="collided_wall" from="Main/KoopaGreen" to="Main/KoopaGreen" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112565" to="Main/@CharacterBody2D@112565" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112566" to="Main/@CharacterBody2D@112566" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159380" to="Main/@CharacterBody2D@159380" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159381" to="Main/@CharacterBody2D@159381" method="turn_x"]
 [connection signal="collided_wall" from="Main/SpinyRed" to="Main/SpinyRed" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112567" to="Main/@CharacterBody2D@112567" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112568" to="Main/@CharacterBody2D@112568" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112569" to="Main/@CharacterBody2D@112569" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159382" to="Main/@CharacterBody2D@159382" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159383" to="Main/@CharacterBody2D@159383" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159384" to="Main/@CharacterBody2D@159384" method="turn_x"]
 [connection signal="collided_wall" from="Main/KoopaRed" to="Main/KoopaRed" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112604" to="Main/@CharacterBody2D@112604" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112605" to="Main/@CharacterBody2D@112605" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112606" to="Main/@CharacterBody2D@112606" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112607" to="Main/@CharacterBody2D@112607" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112608" to="Main/@CharacterBody2D@112608" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@112609" to="Main/@CharacterBody2D@112609" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159419" to="Main/@CharacterBody2D@159419" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159420" to="Main/@CharacterBody2D@159420" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159421" to="Main/@CharacterBody2D@159421" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159422" to="Main/@CharacterBody2D@159422" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159423" to="Main/@CharacterBody2D@159423" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@159424" to="Main/@CharacterBody2D@159424" method="turn_x"]

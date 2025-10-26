@@ -5,16 +5,13 @@
 [ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="3_ppq3l"]
 
 [node name="BossHUD" instance=ExtResource("1_uxbw3")]
-main_boss_name = "АЯ ШАМЕЙМАРУ"
-secret_boss_name = "ХАТАТЕ ХИМЕКАЙДО"
 
 [node name="BossName" parent="." index="0"]
-anchors_preset = 0
-offset_top = 40.16
-offset_bottom = 78.16
+offset_top = 42.0
+offset_right = 592.0
+offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("2_1scl0")
 theme_override_font_sizes/font_size = 38
-text = "АЯ ШАМЕЙМАРУ"
 
 [node name="SpellCardCount" parent="BossName" index="0"]
 anchor_top = 1.0
@@ -23,14 +20,13 @@ offset_top = -4.0
 offset_bottom = 15.0
 
 [node name="SpellCardName" parent="." index="1"]
+theme_override_constants/line_spacing = -5
 theme_override_fonts/font = ExtResource("3_ppq3l")
+text = "Default Sign \"Default Spell\""
 
 [node name="PowerBonus" parent="." index="3"]
-offset_top = 120.0
-offset_bottom = 160.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_ppq3l")
-text = "Взят бонус спелл-карты!!"
 
 [node name="Photos" parent="." index="4"]
 offset_top = 2.0
@@ -38,4 +34,3 @@ offset_bottom = 40.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("2_1scl0")
 theme_override_font_sizes/font_size = 38
-text = "ФОТОГРАФИИ"

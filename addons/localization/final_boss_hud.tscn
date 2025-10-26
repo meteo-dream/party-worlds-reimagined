@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://qv1pk2ssy43f"]
+
+[ext_resource type="PackedScene" uid="uid://bfjmx5hk7bmic" path="res://objects/boss_touhou/boss_final/final_boss_hud.tscn" id="1_ptvx6"]
+[ext_resource type="FontFile" uid="uid://c8jv0dp8pfr4v" path="res://addons/localization/special_fonts/hud_font_new.fnt" id="2_t28sv"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="3_gotpy"]
+
+[node name="FinalBossHUD" instance=ExtResource("1_ptvx6")]
+
+[node name="BossName" parent="." index="0"]
+offset_top = 42.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("2_t28sv")
+theme_override_font_sizes/font_size = 38
+
+[node name="SpellCardCount" parent="BossName" index="0"]
+offset_top = 33.0
+offset_bottom = 52.0
+
+[node name="SpellCardName" parent="." index="1"]
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("3_gotpy")
+
+[node name="PowerBonus" parent="." index="3"]
+theme_override_fonts/font = ExtResource("3_gotpy")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfith7j4lxhn1"]
+
+[ext_resource type="PackedScene" uid="uid://e1hxnaxfnvbl" path="res://engine/scenes/save_game_room/scripts/reset.tscn" id="1_1nwm4"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="2_6erlh"]
+
+[node name="Reset" instance=ExtResource("1_1nwm4")]
+
+[node name="Label" parent="." index="1"]
+theme_override_fonts/font = ExtResource("2_6erlh")

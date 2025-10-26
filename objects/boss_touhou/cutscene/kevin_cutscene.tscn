@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dhaqb1incjw33" path="res://engine/objects/enemies/enemy_body_collision.gd" id="2_l5eu0"]
 [ext_resource type="Shader" uid="uid://dg38ndn8bx84j" path="res://stages/world_2/shaders/grayscale.gdshader" id="3_02y13"]
 [ext_resource type="SpriteFrames" uid="uid://cp03ve7ed68js" path="res://engine/objects/players/prefabs/animations/mario/animation_mario_small.tres" id="3_swy72"]
-[ext_resource type="FontVariation" uid="uid://4h0cbbutybo2" path="res://engine/fonts/font_variations/mister_earl_variation.tres" id="5_6cowv"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="5_6cowv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qxmc"]
 size = Vector2(30, 30)

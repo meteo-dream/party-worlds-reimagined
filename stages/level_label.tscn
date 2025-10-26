@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtabu5xxrq1yl"]
 
-[ext_resource type="FontFile" uid="uid://blaokmcj1basl" path="res://gfx/whoopass.regular.ttf" id="1_gxlbo"]
+[ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="1_q3ikk"]
 
 [sub_resource type="FontVariation" id="FontVariation_mux5g"]
-base_font = ExtResource("1_gxlbo")
+base_font = ExtResource("1_q3ikk")
 spacing_bottom = -10
 
 [node name="Label" type="Label"]

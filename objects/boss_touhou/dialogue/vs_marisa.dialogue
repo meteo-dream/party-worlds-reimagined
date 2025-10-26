@@ -1,29 +1,29 @@
 ~ start
 Marisa: She's definitely here.\nThis weird air is giving me the chills.
 Marisa: Why do the strong ones always hide?
-???: [do! SPECIAL_move_boss_into_position()]A skilled hawk doesn't hide its tail.[wait="allow_continue_dialog"]
+[right]???: [do! SPECIAL_move_boss_into_position()][right]A skilled hawk doesn't hide its tail.[wait="allow_continue_dialog"]
 Marisa: ...you don't seem to have a brain.
-Remilia: Humans are the only ones who need simple chemical thought centers such as brains.
+[right]Remilia: [right]Humans are the only ones who need simple chemical thought centers such as brains.
 Marisa: You're one of those, right?
 Marisa: Can't stand sunlight or smelly vegetables,[wait=0.5] or that one silver thing.
 Marisa: You know, the masters of the night with tons of weaknesses for some reason...
-Remilia: Yes, I'm a sickly girl.
+[right]Remilia: [right]Yes, I'm a sickly girl.
 Marisa: Interesting. So you really drink it? You know, that.
-Remilia: Of course. But I'm a light eater and always leave some on the plate.
+[right]Remilia: [right]Of course. But I'm a light eater and always leave some on the plate.
 Marisa: How many people's blood have you sucked up to now?
-Remilia: Can you remember how many slices of bread you have eaten until now?
+[right]Remilia: [right]Can you remember how many slices of bread you have eaten until now?
 Marisa: Thirteen. I prefer Japanese food.
-Remilia: So, what are you here for?
-Remilia: I'm already quite full, but...
+[right]Remilia: [right]So, what are you here for?
+[right]Remilia: [right]I'm already quite full, but...
 Marisa: Oh yeah, I'm hungry.
-Remilia: ...Eating may be good.
+[right]Remilia: [right]...Eating may be good.
 Marisa: Ah, so that's what you meant...
 Marisa: Just now, that sounded like the name of a plant: "mint."
-Remilia: Humans are fun.
-Remilia: Or maybe you're not a human?
+[right]Remilia: [right]Humans are fun.
+[right]Remilia: [right]Or maybe you're not a human?
 Marisa: I'm a fun human.
-Remilia: Heehee, because the moon is so red?
-Remilia: It looks like it's going to be a hot night.
+[right]Remilia: [right]Heehee, because the moon is so red?
+[right]Remilia: [right]It looks like it's going to be a hot night.
 Marisa: Looks like it's gonna be a cold night.
 do SPECIAL_start_fight()
 => END

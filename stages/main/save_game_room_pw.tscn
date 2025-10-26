@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://db8widi15epm" path="res://engine/scenes/save_game_room/scripts/save_room_logic.gd" id="5_a2pht"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="5_axrby"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="6_rd34b"]
-[ext_resource type="PackedScene" uid="uid://e1hxnaxfnvbl" path="res://engine/scenes/save_game_room/scripts/reset.tscn" id="6_tgxd0"]
+[ext_resource type="PackedScene" uid="uid://dfith7j4lxhn1" path="res://addons/localization/reset_tl.tscn" id="6_tgxd0"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="9_nq56u"]
 [ext_resource type="TileSet" uid="uid://cjoxdod5qfcit" path="res://stages/main/save_game_room_pw.tres" id="10_nilg5"]
 [ext_resource type="PackedScene" uid="uid://u383towqhd0i" path="res://engine/objects/warps/pipe_out.tscn" id="12_kj0k2"]
@@ -19,12 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://o3k018cbex8g" path="res://engine/objects/powerups/green_lui/green_lui.tscn" id="17_elo2e"]
 [ext_resource type="PackedScene" uid="uid://b2d7bys2llvfr" path="res://engine/objects/bumping_blocks/reset_power_block/reset_power_block.tscn" id="18_eof12"]
 [ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="21_f1o1t"]
-[ext_resource type="FontVariation" uid="uid://4h0cbbutybo2" path="res://engine/fonts/font_variations/mister_earl_variation.tres" id="22_dbn72"]
 [ext_resource type="Texture2D" uid="uid://dh5ox7gb4u8fq" path="res://gfx/world3/3-1cloud.png" id="23_8x5mf"]
 [ext_resource type="Script" uid="uid://blthfq00iwm17" path="res://engine/scenes/save_game_room/scripts/saved_level_label.gd" id="23_j0sbb"]
 [ext_resource type="Texture2D" uid="uid://y4ikbppnbo64" path="res://gfx/world3/bg3-1.png" id="25_mwdyk"]
 [ext_resource type="PackedScene" uid="uid://dh4kf1w7jyseo" path="res://engine/objects/warps/pipe_in.tscn" id="28_cenxx"]
 [ext_resource type="AudioStream" uid="uid://b1bxtmesp2bfq" path="res://engine/objects/players/prefabs/sounds/powerup.wav" id="28_cvwyd"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="28_ouyii"]
 [ext_resource type="AudioStream" uid="uid://b76ae2v10akqg" path="res://engine/objects/players/prefabs/sounds/pipe_cutscene.wav" id="29_fo23o"]
 [ext_resource type="Script" uid="uid://b5elfpo3prfm8" path="res://stages/main/fancy_credits_unlockable.gd" id="29_xdqm1"]
 [ext_resource type="Texture2D" uid="uid://bppw8gp6m4wl0" path="res://engine/objects/core/checkpoint/textures/sign.png" id="30_hgs5s"]
@@ -262,7 +262,7 @@ offset_right = 64.0
 offset_bottom = -57.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "WORLD
 %s"
@@ -290,7 +290,7 @@ offset_right = 64.0
 offset_bottom = -57.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "WORLD
 %s"
@@ -318,7 +318,7 @@ offset_right = 64.0
 offset_bottom = -57.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "WORLD
 %s"
@@ -380,7 +380,7 @@ offset_right = 784.0
 offset_bottom = 183.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "RESET POWERUP"
 horizontal_alignment = 1
@@ -398,7 +398,7 @@ offset_right = 1245.0
 offset_bottom = 189.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "YOU CAN EXCHANGE SOME LIVES FOR ONE OF THESE ITEMS!!!
 BUT BE CAREFUL, SOMETIMES LIVES ARE MORE IMPORTANT THAN THIS STUFF."
@@ -411,7 +411,7 @@ offset_right = 880.0
 offset_bottom = 343.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "COSTS 1 LIFE"
 horizontal_alignment = 1
@@ -423,7 +423,7 @@ offset_right = 1008.0
 offset_bottom = 343.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "COSTS 2 LIVES"
 horizontal_alignment = 1
@@ -435,7 +435,7 @@ offset_right = 1136.0
 offset_bottom = 343.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "COSTS 2 LIVES"
 horizontal_alignment = 1
@@ -447,7 +447,7 @@ offset_right = 1280.0
 offset_bottom = 343.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "COSTS 2 LIVES"
 horizontal_alignment = 1
@@ -459,7 +459,7 @@ offset_right = 480.0
 offset_bottom = 167.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "SELECT SAVE"
 horizontal_alignment = 1
@@ -477,7 +477,7 @@ offset_right = 40.0
 offset_bottom = -14.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 18
 text = "mario forever
 party worlds"
@@ -507,12 +507,12 @@ script = ExtResource("29_xdqm1")
 
 [node name="Label" type="Label" parent="FancyCreditsUnlockable"]
 offset_left = 1600.0
-offset_top = 264.0
+offset_top = 232.0
 offset_right = 1728.0
-offset_bottom = 293.0
+offset_bottom = 261.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("22_dbn72")
+theme_override_fonts/font = ExtResource("28_ouyii")
 theme_override_font_sizes/font_size = 21
 text = "POST-GAME
 CREDITS"

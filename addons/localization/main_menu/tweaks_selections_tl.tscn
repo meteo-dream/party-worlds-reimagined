@@ -1,0 +1,150 @@
+[gd_scene load_steps=21 format=3 uid="uid://bjybbmmlgbp0w"]
+
+[ext_resource type="PackedScene" uid="uid://kiw6yxeov3fj" path="res://stages/main_menu/objects/tweaks_selections.tscn" id="1_jrlth"]
+[ext_resource type="Texture2D" uid="uid://byetryv2ltxkl" path="res://stages/main_menu/textures/check-mark-check.png" id="2_c5crk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi1xf"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rslvp"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5wfi"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc8mf"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jymbt"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pc8i"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1l52"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjygh"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxw13"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f13ck"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vbuf"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chnap"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l3y7"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eynf6"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chd47"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lvgl"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yohcs"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk7l7"]
+resource_local_to_scene = true
+atlas = ExtResource("2_c5crk")
+region = Rect2(0, 0, 16, 16)
+
+[node name="Control" instance=ExtResource("1_jrlth")]
+
+[node name="Toggle" parent="Tweaks/HBoxContainer25" index="1"]
+texture = SubResource("AtlasTexture_hi1xf")
+
+[node name="Toggle" parent="Gameplay/HBoxContainer24" index="1"]
+texture = SubResource("AtlasTexture_rslvp")
+
+[node name="Toggle" parent="Gameplay/HBoxContainer4" index="1"]
+texture = SubResource("AtlasTexture_e5wfi")
+
+[node name="Toggle" parent="Gameplay/HBoxContainer10" index="1"]
+texture = SubResource("AtlasTexture_cc8mf")
+
+[node name="Toggle" parent="Gameplay/HBoxContainer12" index="1"]
+texture = SubResource("AtlasTexture_jymbt")
+
+[node name="Toggle" parent="Gameplay/HBoxContainer14" index="1"]
+texture = SubResource("AtlasTexture_4pc8i")
+
+[node name="Toggle" parent="Gameplay/HBoxContainer6" index="1"]
+texture = SubResource("AtlasTexture_y1l52")
+
+[node name="Toggle" parent="Aesthetic/HBoxContainer27" index="1"]
+texture = SubResource("AtlasTexture_jjygh")
+
+[node name="Toggle" parent="Aesthetic/HBoxContainer22" index="1"]
+texture = SubResource("AtlasTexture_mxw13")
+
+[node name="Toggle" parent="Aesthetic/HBoxContainer23" index="1"]
+texture = SubResource("AtlasTexture_f13ck")
+
+[node name="Toggle" parent="Aesthetic/HBoxContainer16" index="1"]
+texture = SubResource("AtlasTexture_7vbuf")
+
+[node name="Toggle" parent="Aesthetic/HBoxContainer17" index="1"]
+texture = SubResource("AtlasTexture_chnap")
+
+[node name="Toggle" parent="Aesthetic/HBoxContainer26" index="1"]
+texture = SubResource("AtlasTexture_6l3y7")
+
+[node name="Toggle" parent="Presets/HBoxContainer20" index="1"]
+texture = SubResource("AtlasTexture_eynf6")
+
+[node name="Toggle" parent="Presets/HBoxContainer16" index="1"]
+texture = SubResource("AtlasTexture_chd47")
+
+[node name="Toggle" parent="Presets/HBoxContainer17" index="1"]
+texture = SubResource("AtlasTexture_5lvgl")
+
+[node name="Toggle" parent="Presets/HBoxContainer21" index="1"]
+texture = SubResource("AtlasTexture_yohcs")
+
+[node name="Toggle" parent="Presets/HBoxContainer22" index="1"]
+texture = SubResource("AtlasTexture_rk7l7")
