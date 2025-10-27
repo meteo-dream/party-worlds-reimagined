@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://sgxx61mf6x1r"]
+[gd_scene load_steps=62 format=4 uid="uid://sgxx61mf6x1r"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_mxguh"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_xxq6x"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://e0fc35khrd18" path="res://engine/objects/enemies/buzzle_bettle/buzzle_beetle.tscn" id="31_5nixr"]
 [ext_resource type="PackedScene" uid="uid://bcgt87mbq40gx" path="res://engine/objects/enemies/thwomp/thwomp.tscn" id="31_86kt1"]
 [ext_resource type="PackedScene" uid="uid://b4bjvmqtj8nv0" path="res://engine/objects/enemies/dry_bones/dry_bones.tscn" id="32_v1qnx"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="34_0c5fi"]
 [ext_resource type="PackedScene" uid="uid://cem1tcrhqrauj" path="res://engine/objects/enemies/hammer_bros/hammer_bro_jump_marker.tscn" id="35_0c5fi"]
 [ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="36_1spmc"]
 [ext_resource type="PackedScene" uid="uid://b3ra08356pxkg" path="res://objects/balance_platform/balance_platform.tscn" id="37_mnw6h"]
@@ -711,9 +712,10 @@ texture = ExtResource("29_cts8x")
 
 [node name="LabelMisterEarl" parent="Objects/BalancePlatform3/Sign3" instance=ExtResource("30_jd42p")]
 offset_left = -48.0
-offset_top = -48.0
+offset_top = -46.0
 offset_right = 50.0
-offset_bottom = -32.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("34_0c5fi")
 text = "also watch out
 for stoneballs"
 
@@ -727,9 +729,10 @@ texture = ExtResource("29_cts8x")
 
 [node name="LabelMisterEarl" parent="Objects/BalancePlatform2/Sign2" instance=ExtResource("30_jd42p")]
 offset_left = -48.0
-offset_top = -48.0
+offset_top = -46.0
 offset_right = 50.0
-offset_bottom = -32.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("34_0c5fi")
 text = "This platform
 can tilt"
 
@@ -752,10 +755,10 @@ position = Vector2(3968, 32)
 position = Vector2(11152, 368)
 
 [node name="RotoRed" parent="Objects/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(5, -160)
+position = Vector2(116, -110)
 preview = true
 amplitude = Vector2(160, 160)
-phase = -85.333
+phase = -40.333
 frequency = 180.0
 
 [node name="Bonuses" type="Node2D" parent="."]
@@ -794,16 +797,16 @@ preview = true
 visible = false
 
 [node name="RotoRed" parent="Paths/Path2D/PlatformPath/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(99, 17)
+position = Vector2(76, -98)
 preview = true
 amplitude = Vector2(100, 150)
-phase = 7.5013
+phase = -39.9987
 
 [node name="RotoRed2" parent="Paths/Path2D/PlatformPath/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(-99, -17)
+position = Vector2(-76, 98)
 preview = true
 amplitude = Vector2(100, 150)
-phase = -172.5
+phase = 140.0
 
 [node name="PlatformPath2" parent="Paths/Path2D" instance=ExtResource("41_gt5ih")]
 position = Vector2(5023.98, 126.511)
@@ -819,17 +822,17 @@ preview = true
 visible = false
 
 [node name="RotoRed" parent="Paths/Path2D/PlatformPath2/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(99, -17)
+position = Vector2(76, 98)
 preview = true
 amplitude = Vector2(100, 150)
-phase = -7.5
+phase = 40.0
 frequency = -50.0
 
 [node name="RotoRed2" parent="Paths/Path2D/PlatformPath2/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(-99, 17)
+position = Vector2(-76, -98)
 preview = true
 amplitude = Vector2(100, 150)
-phase = 172.5
+phase = -140.0
 frequency = -50.0
 
 [node name="Path2D2" type="Path2D" parent="Paths"]
@@ -899,6 +902,7 @@ offset_left = 7968.0
 offset_top = 320.0
 offset_right = 8066.0
 offset_bottom = 336.0
+theme_override_fonts/font = ExtResource("34_0c5fi")
 text = "hello to das"
 
 [node name="RotoCenter" parent="." instance=ExtResource("45_6r2i1")]
@@ -906,14 +910,14 @@ position = Vector2(8016, 432)
 preview = true
 
 [node name="RotoRed" parent="RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(95, 116)
+position = Vector2(150, 9)
 preview = true
-phase = 51.6673
+phase = 4.1673
 
 [node name="RotoRed2" parent="RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(-95, -116)
+position = Vector2(-150, -9)
 preview = true
-phase = -128.333
+phase = -175.833
 
 [node name="Lava Particles" parent="." instance=ExtResource("52_0c5fi")]
 

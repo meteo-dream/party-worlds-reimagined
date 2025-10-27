@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://bk3l0dtaiqn2n"]
+[gd_scene load_steps=77 format=3 uid="uid://bk3l0dtaiqn2n"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_sh1nc"]
 [ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_klknx"]
@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://bmx7lm32plesr" path="res://engine/objects/signs/sign2.png" id="44_rrxxx"]
 [ext_resource type="Texture2D" uid="uid://cwwn5i5xn7j32" path="res://engine/objects/enemies/rotos/roto_center.png" id="44_y4rkx"]
 [ext_resource type="PackedScene" uid="uid://bj3fvmd6bah6d" path="res://engine/fonts/templates/mister_earl_font.tscn" id="45_a4asv"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="45_bcpyd"]
 [ext_resource type="PackedScene" uid="uid://ddwxc43m3q1c6" path="res://engine/objects/core/checkpoint/checkpoint.tscn" id="47_lpth0"]
 [ext_resource type="Texture2D" uid="uid://bppw8gp6m4wl0" path="res://engine/objects/core/checkpoint/textures/sign.png" id="48_tkrvk"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="49_b3aad"]
@@ -878,13 +879,15 @@ offset_top = -50.0
 offset_right = 50.0
 offset_bottom = -34.0
 theme_override_colors/font_color = Color(1, 0.619608, 0.619608, 1)
-text = "warning"
+theme_override_fonts/font = ExtResource("45_bcpyd")
+text = "WARNING"
 
 [node name="LabelMisterEarl2" parent="Objects/Sign2" instance=ExtResource("45_a4asv")]
 offset_left = -48.0
 offset_top = -33.0
 offset_right = 50.0
 offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("45_bcpyd")
 theme_override_font_sizes/font_size = 17
 text = "chaotic rotodiscs
 ahead"
@@ -924,13 +927,13 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/Path2D/PlatformPath/RotoCenter5" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(-48, -65)
+position = Vector2(-68, -21)
 preview = true
 amplitude = Vector2(70, 90)
 amplitude_changing_speed = 100.0
 amplitude_min = Vector2(150, 32)
 amplitude_max = Vector2(150, 170)
-phase = -131.666
+phase = -164.999
 frequency = 100.0
 
 [node name="Path2D2" type="Path2D" parent="Platforms"]
@@ -949,13 +952,13 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/Path2D2/PlatformPath2/RotoCenter6" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(0, 90)
+position = Vector2(-38, 75)
 preview = true
 amplitude = Vector2(70, 90)
 amplitude_changing_speed = 100.0
 amplitude_min = Vector2(150, 32)
 amplitude_max = Vector2(150, 170)
-phase = 88.3333
+phase = 121.667
 frequency = -100.0
 
 [node name="PlatformPath3" parent="Platforms" instance=ExtResource("43_ewbun")]
@@ -970,10 +973,10 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/PlatformPath3/RotoCenter6" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(-25, 0)
+position = Vector2(3, 0)
 preview = true
 amplitude = Vector2(50, 0)
-phase = -121.666
+phase = -88.3327
 frequency = -100.0
 
 [node name="PlatformPath4" parent="Platforms" instance=ExtResource("43_ewbun")]
@@ -988,10 +991,10 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/PlatformPath4/RotoCenter6" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(-46, 0)
+position = Vector2(-49, 0)
 preview = true
 amplitude = Vector2(50, 0)
-phase = -155.0
+phase = 171.667
 frequency = 100.0
 
 [node name="PlatformPath5" parent="Platforms" instance=ExtResource("43_ewbun")]
@@ -1007,10 +1010,10 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/PlatformPath5/RotoCenter6" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(-46, 0)
+position = Vector2(-49, 0)
 preview = true
 amplitude = Vector2(50, 0)
-phase = -155.0
+phase = 171.667
 frequency = 100.0
 metadata/_edit_lock_ = true
 
@@ -1030,13 +1033,13 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/Path2D3/PlatformPath3/RotoCenter6" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(58, -23)
+position = Vector2(10, -30)
 preview = true
 amplitude = Vector2(90, 30)
 amplitude_changing_speed = 100.0
 amplitude_min = Vector2(150, 32)
 amplitude_max = Vector2(150, 170)
-phase = -48.3333
+phase = -81.6666
 frequency = 100.0
 
 [node name="PlatformPath4" parent="Platforms/Path2D3" instance=ExtResource("43_ewbun")]
@@ -1052,13 +1055,13 @@ visible = false
 
 [node name="RotoRed" parent="Platforms/Path2D3/PlatformPath4/RotoCenter6" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(0, 30)
+position = Vector2(-49, 25)
 preview = true
 amplitude = Vector2(90, 30)
 amplitude_changing_speed = 100.0
 amplitude_min = Vector2(150, 32)
 amplitude_max = Vector2(150, 170)
-phase = 88.3333
+phase = 121.667
 frequency = -100.0
 
 [node name="Path2D4" type="Path2D" parent="Platforms"]
@@ -1086,10 +1089,10 @@ position = Vector2(2064, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 2)
+position = Vector2(0, 37)
 preview = true
 amplitude = Vector2(0, 64)
-phase = -179.906
+phase = 146.761
 frequency = 100.0
 
 [node name="RotoCenter2" type="Sprite2D" parent="Rotos"]
@@ -1097,10 +1100,10 @@ position = Vector2(2032, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter2" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, -8)
+position = Vector2(0, 28)
 preview = true
 amplitude = Vector2(0, 64)
-phase = -170.786
+phase = 155.881
 frequency = 100.0
 
 [node name="RotoCenter3" type="Sprite2D" parent="Rotos"]
@@ -1108,10 +1111,10 @@ position = Vector2(2096, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter3" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 12)
+position = Vector2(0, 44)
 preview = true
 amplitude = Vector2(0, 64)
-phase = 170.974
+phase = 137.641
 frequency = 100.0
 
 [node name="RotoCenter4" type="Sprite2D" parent="Rotos"]
@@ -1119,10 +1122,10 @@ position = Vector2(2128, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter4" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 22)
+position = Vector2(0, 51)
 preview = true
 amplitude = Vector2(0, 64)
-phase = 161.854
+phase = 128.521
 frequency = 100.0
 
 [node name="RotoCenter5" type="Sprite2D" parent="Rotos"]
@@ -1130,10 +1133,10 @@ position = Vector2(2160, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter5" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 31)
+position = Vector2(0, 57)
 preview = true
 amplitude = Vector2(0, 64)
-phase = 152.734
+phase = 119.401
 frequency = 100.0
 
 [node name="RotoCenter6" type="Sprite2D" parent="Rotos"]
@@ -1141,10 +1144,10 @@ position = Vector2(2192, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter6" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 39)
+position = Vector2(0, 61)
 preview = true
 amplitude = Vector2(0, 64)
-phase = 143.614
+phase = 110.281
 frequency = 100.0
 
 [node name="RotoCenter7" type="Sprite2D" parent="Rotos"]
@@ -1152,10 +1155,10 @@ position = Vector2(2224, 176)
 texture = ExtResource("44_y4rkx")
 
 [node name="RotoRed" parent="Rotos/RotoCenter7" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 47)
+position = Vector2(0, 63)
 preview = true
 amplitude = Vector2(0, 64)
-phase = 134.494
+phase = 101.161
 frequency = 100.0
 
 [node name="RotoCenter8" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1163,17 +1166,17 @@ position = Vector2(4656, 336)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter8" instance=ExtResource("39_w6t4y")]
-position = Vector2(112, 15)
+position = Vector2(87, -13)
 preview = true
 amplitude = Vector2(150, 64)
-phase = -45.8333
+phase = -62.5
 track_rot = 32.0
 
 [node name="RotoRed2" parent="Rotos/RotoCenter8" instance=ExtResource("39_w6t4y")]
-position = Vector2(-112, -15)
+position = Vector2(-87, 13)
 preview = true
 amplitude = Vector2(150, 64)
-phase = 134.167
+phase = 117.5
 track_rot = 32.0
 
 [node name="RotoCenter9" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1181,13 +1184,13 @@ position = Vector2(1264, 304)
 
 [node name="RotoRed" parent="Rotos/RotoCenter9" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(13, -3)
+position = Vector2(6, -29)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(14.1421, 14.1421)
+amplitude = Vector2(28.1107, 28.1107)
 amplitude_changing_speed = 100.0
 amplitude_max = Vector2(100, 100)
-phase = -8.333
+phase = -74.9997
 frequency = 200.0
 
 [node name="RotoCenter10" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1195,11 +1198,11 @@ position = Vector2(2672, 272)
 
 [node name="RotoRed" parent="Rotos/RotoCenter10" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(19, -40)
+position = Vector2(-16, -43)
 preview = true
 amplitude = Vector2(32, 50)
 amplitude_max = Vector2(100, 100)
-phase = -50.0
+phase = -116.667
 frequency = 200.0
 
 [node name="RotoCenter11" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1207,11 +1210,11 @@ position = Vector2(2672, 368)
 
 [node name="RotoRed" parent="Rotos/RotoCenter11" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(19, 40)
+position = Vector2(-16, 43)
 preview = true
 amplitude = Vector2(32, 50)
 amplitude_max = Vector2(100, 100)
-phase = 50.0
+phase = 116.667
 frequency = -200.0
 
 [node name="RotoCenter12" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1219,14 +1222,14 @@ position = Vector2(3728, 144)
 
 [node name="RotoRed" parent="Rotos/RotoCenter12" instance=ExtResource("39_w6t4y")]
 z_index = 1
-position = Vector2(75, 29)
+position = Vector2(-90, 54)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(150, 32)
+amplitude = Vector2(150, 68.6667)
 amplitude_changing_speed = 100.0
 amplitude_min = Vector2(150, 32)
 amplitude_max = Vector2(150, 170)
-phase = 56.667
+phase = 123.334
 frequency = -200.0
 
 [node name="RotoCenter13" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1320,20 +1323,20 @@ amplitude = Vector2(120, 0)
 position = Vector2(10448, 144)
 
 [node name="RotoRed" parent="Rotos/RotoCenter21" instance=ExtResource("39_w6t4y")]
-position = Vector2(-21, 0)
+position = Vector2(-31, 0)
 preview = true
 amplitude = Vector2(32, 0)
-phase = -130.0
+phase = -163.333
 frequency = 100.0
 
 [node name="RotoCenter22" parent="Rotos" instance=ExtResource("38_8mkdg")]
 position = Vector2(10448, 272)
 
 [node name="RotoRed" parent="Rotos/RotoCenter22" instance=ExtResource("39_w6t4y")]
-position = Vector2(21, 0)
+position = Vector2(31, 0)
 preview = true
 amplitude = Vector2(32, 0)
-phase = 50.001
+phase = 16.6677
 frequency = 100.0
 
 [node name="RotoCenter23" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1354,10 +1357,10 @@ frequency = 0.0
 position = Vector2(12848, 400)
 
 [node name="RotoRed" parent="Rotos/RotoCenter25" instance=ExtResource("39_w6t4y")]
-position = Vector2(214, 87)
+position = Vector2(146, 99)
 preview = true
 amplitude = Vector2(300, 100)
-phase = 41.6667
+phase = 58.3334
 frequency = -50.0
 track_rot = 5.0
 
@@ -1365,10 +1368,10 @@ track_rot = 5.0
 position = Vector2(12720, 368)
 
 [node name="RotoRed" parent="Rotos/RotoCenter26" instance=ExtResource("39_w6t4y")]
-position = Vector2(226, -48)
+position = Vector2(161, -72)
 preview = true
 amplitude = Vector2(300, 100)
-phase = -41.6667
+phase = -58.3333
 track_rot = 5.0
 
 [node name="RotoCenter27" parent="Rotos" instance=ExtResource("38_8mkdg")]
@@ -1378,10 +1381,10 @@ position = Vector2(13520, 304)
 visible = false
 
 [node name="RotoRed" parent="Rotos/RotoCenter27" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, -5)
+position = Vector2(0, 150)
 preview = true
 amplitude = Vector2(0, 150)
-phase = -177.0
+phase = 87.6667
 frequency = 70.0
 metadata/_edit_lock_ = true
 
@@ -1392,10 +1395,10 @@ position = Vector2(13552, 304)
 visible = false
 
 [node name="RotoRed" parent="Rotos/RotoCenter28" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 21)
+position = Vector2(0, 146)
 preview = true
 amplitude = Vector2(0, 150)
-phase = 173.001
+phase = 77.6677
 frequency = 70.0
 metadata/_edit_lock_ = true
 
@@ -1406,10 +1409,10 @@ position = Vector2(13584, 304)
 visible = false
 
 [node name="RotoRed" parent="Rotos/RotoCenter29" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 47)
+position = Vector2(0, 138)
 preview = true
 amplitude = Vector2(0, 150)
-phase = 163.001
+phase = 67.6677
 frequency = 70.0
 metadata/_edit_lock_ = true
 
@@ -1420,10 +1423,10 @@ position = Vector2(13616, 304)
 visible = false
 
 [node name="RotoRed" parent="Rotos/RotoCenter30" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 71)
+position = Vector2(0, 125)
 preview = true
 amplitude = Vector2(0, 150)
-phase = 153.001
+phase = 57.6677
 frequency = 70.0
 metadata/_edit_lock_ = true
 
@@ -1434,10 +1437,10 @@ position = Vector2(13648, 304)
 visible = false
 
 [node name="RotoRed" parent="Rotos/RotoCenter31" instance=ExtResource("39_w6t4y")]
-position = Vector2(0, 93)
+position = Vector2(0, 109)
 preview = true
 amplitude = Vector2(0, 150)
-phase = 143.001
+phase = 47.6677
 frequency = 70.0
 metadata/_edit_lock_ = true
 
@@ -1448,10 +1451,10 @@ position = Vector2(14384, 112)
 visible = false
 
 [node name="RotoRed" parent="Rotos/RotoCenter32" instance=ExtResource("39_w6t4y")]
-position = Vector2(-138, 0)
+position = Vector2(-115, 0)
 preview = true
 amplitude = Vector2(150, 0)
-phase = 157.5
+phase = 140.833
 
 [node name="Sign" type="Sprite2D" parent="."]
 z_index = -1
@@ -1461,13 +1464,15 @@ scale = Vector2(-1, 1)
 texture = ExtResource("48_tkrvk")
 
 [node name="LabelMisterEarl" parent="Sign" instance=ExtResource("45_a4asv")]
-offset_left = -54.8698
-offset_top = -21.533
-offset_right = 43.1302
-offset_bottom = -5.53302
+offset_left = -55.0
+offset_top = -9.0
+offset_right = 43.0
+offset_bottom = 32.0
 rotation = -3.14159
 scale = Vector2(-1, 1)
+theme_override_fonts/font = ExtResource("45_bcpyd")
 text = "wall ahead"
+vertical_alignment = 1
 
 [node name="FinishLine" parent="." instance=ExtResource("49_b3aad")]
 position = Vector2(16064, 416)
@@ -1476,10 +1481,10 @@ position = Vector2(16064, 416)
 position = Vector2(15344, 176)
 
 [node name="RotoRed" parent="RotoCenter" instance=ExtResource("39_w6t4y")]
-position = Vector2(149, -6)
+position = Vector2(-35, -39)
 preview = true
 amplitude = Vector2(150, 40)
-phase = -6.833
+phase = -102.166
 frequency = 70.0
 
 [editable path="Platforms/Path2D/PlatformPath/RotoCenter5"]

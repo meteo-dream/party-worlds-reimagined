@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c18n55pubsjhd"
-path="res://.godot/imported/sign2.png-42482328e5a657cc0a7f1e2fed0ac2a6.ctex"
+uid="uid://o40imxadq0qg"
+path="res://.godot/imported/w10_sign.png-4d0ae929ce7cf3f0290ad72297fb845d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/worldfinal/10-2/sign2.png"
-dest_files=["res://.godot/imported/sign2.png-42482328e5a657cc0a7f1e2fed0ac2a6.ctex"]
+source_file="res://gfx/worldfinal/w10_sign.png"
+dest_files=["res://.godot/imported/w10_sign.png-4d0ae929ce7cf3f0290ad72297fb845d.ctex"]
 
 [params]
 

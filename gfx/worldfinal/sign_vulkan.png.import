@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b56g56p7yco58"
-path="res://.godot/imported/sign1.png-e464a75e9f29138570e04063978342e1.ctex"
+uid="uid://bvj7mt41fj54l"
+path="res://.godot/imported/sign_vulkan.png-f7c72091a8d2376efae07573e4fe847d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/worldfinal/sign1.png"
-dest_files=["res://.godot/imported/sign1.png-e464a75e9f29138570e04063978342e1.ctex"]
+source_file="res://gfx/worldfinal/sign_vulkan.png"
+dest_files=["res://.godot/imported/sign_vulkan.png-f7c72091a8d2376efae07573e4fe847d.ctex"]
 
 [params]
 

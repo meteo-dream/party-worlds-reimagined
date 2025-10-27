@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://3lj443kh0yv"]
+[gd_scene load_steps=39 format=4 uid="uid://3lj443kh0yv"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_8o44y"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_n4e4u"]
@@ -14,7 +14,6 @@
 [ext_resource type="TileSet" uid="uid://h3f7j20apwf0" path="res://stages/world_final/Additives/w8_desert.tres" id="11_xmek8"]
 [ext_resource type="PackedScene" uid="uid://cmakq2gchcve8" path="res://objects/w8_truck/8-1_truck.tscn" id="12_8o44y"]
 [ext_resource type="PackedScene" uid="uid://stost5h6thww" path="res://stages/world_final/Additives/8-1/progress_bar.tscn" id="13_dd4ux"]
-[ext_resource type="Texture2D" uid="uid://batmgqxguv8ju" path="res://gfx/worldfinal/10-1sign2.png" id="14_ul62k"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="15_8hieh"]
 [ext_resource type="PackedScene" uid="uid://hkhy751lpyx5" path="res://engine/objects/fluid/water_area.tscn" id="15_8o6oh"]
 [ext_resource type="Texture2D" uid="uid://bce6uayge67oa" path="res://gfx/worldfinal/10-1sign1.png" id="15_q3ell"]
@@ -31,7 +30,9 @@
 [ext_resource type="PackedScene" uid="uid://b1aibpt7836h7" path="res://engine/objects/enemies/hammer_bros/hammer_bro.tscn" id="28_2b1gy"]
 [ext_resource type="PackedScene" uid="uid://0ugpa0ybv34g" path="res://engine/objects/enemies/rotos/roto_center.tscn" id="29_u5je0"]
 [ext_resource type="PackedScene" uid="uid://cforx4e0v73a7" path="res://engine/objects/enemies/rotos/roto_red.tscn" id="30_vrjny"]
+[ext_resource type="Texture2D" uid="uid://o40imxadq0qg" path="res://gfx/worldfinal/w10_sign.png" id="33_ojp4b"]
 [ext_resource type="PackedScene" uid="uid://dfo0u8i8mqtdq" path="res://stages/world_final/Additives/8-1/BorderBlocker10-1.tscn" id="34_ojp4b"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="34_xmek8"]
 
 [sub_resource type="Curve2D" id="Curve2D_ixihe"]
 _data = {
@@ -150,9 +151,28 @@ tile_set = ExtResource("11_xmek8")
 collision_enabled = false
 metadata/_edit_lock_ = true
 
-[node name="8-1Sign2" type="Sprite2D" parent="NewBackgroundLayer"]
-position = Vector2(30328, 360)
-texture = ExtResource("14_ul62k")
+[node name="Sign" type="Sprite2D" parent="NewBackgroundLayer"]
+position = Vector2(30328, 359)
+texture = ExtResource("33_ojp4b")
+hframes = 2
+region_rect = Rect2(0, 0, 104, 114)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="NewBackgroundLayer/Sign"]
+offset_left = -63.0
+offset_top = -65.0
+offset_right = 64.0
+offset_bottom = -2.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -1
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("34_xmek8")
+theme_override_font_sizes/font_size = 12
+text = "\"VuLKAN\"
+8KM. ->"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="8-1Sign1" type="Sprite2D" parent="NewBackgroundLayer"]
 position = Vector2(30504, 368)
@@ -330,8 +350,8 @@ frequency = -360.0
 [connection signal="scroll_stopped" from="Path2D/PathFollow2D" to="Objects/BorderBlocker10-1" method="_on_path_follow_2d_scroll_stopped"]
 [connection signal="speed_change" from="Path2D/PathFollow2D" to="Objects/JumpingCheepsGeneratorLeft" method="_on_path_follow_2d_speed_change"]
 [connection signal="collided_wall" from="NewTileMapLayer/Goomba" to="NewTileMapLayer/Goomba" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@71055" to="NewTileMapLayer/@CharacterBody2D@71055" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@69543" to="NewTileMapLayer/@CharacterBody2D@69543" method="turn_x"]
 [connection signal="collided_wall" from="NewTileMapLayer/KoopaRed" to="NewTileMapLayer/KoopaRed" method="turn_x"]
 [connection signal="collided_wall" from="NewTileMapLayer/SpinyRed" to="NewTileMapLayer/SpinyRed" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@71139" to="NewTileMapLayer/@CharacterBody2D@71139" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@71210" to="NewTileMapLayer/@CharacterBody2D@71210" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@69627" to="NewTileMapLayer/@CharacterBody2D@69627" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@69698" to="NewTileMapLayer/@CharacterBody2D@69698" method="turn_x"]

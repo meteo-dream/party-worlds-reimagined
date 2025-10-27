@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://iq8baf2lelf"]
+
+[ext_resource type="Texture2D" uid="uid://o40imxadq0qg" path="res://gfx/worldfinal/w10_sign.png" id="1_a3qbk"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="2_1do1u"]
+
+[node name="LjdArrowSign" type="Sprite2D"]
+position = Vector2(5.5, -9)
+texture = ExtResource("1_a3qbk")
+hframes = 2
+frame = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -72.0
+offset_top = -64.0
+offset_right = 55.0
+offset_bottom = -1.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -1
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_1do1u")
+theme_override_font_sizes/font_size = 15
+text = "L.J.D
+OFFICE"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://b5rtgl21y2bbn"]
+[gd_scene load_steps=49 format=4 uid="uid://b5rtgl21y2bbn"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_qy1au"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_h2sa3"]
@@ -10,12 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_g18yq"]
 [ext_resource type="Texture2D" uid="uid://bf1ya20aq1row" path="res://gfx/world7/w7bg.png" id="9_dr72r"]
 [ext_resource type="Texture2D" uid="uid://bau5l64671pv4" path="res://gfx/world7/w7_bg33.png" id="10_0bejc"]
-[ext_resource type="Texture2D" uid="uid://kurqrbc22xhp" path="res://gfx/world7/sign1.png" id="10_g18yq"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_3aa3v"]
 [ext_resource type="Texture2D" uid="uid://j0wd3ci40a88" path="res://gfx/world7/w7_bg22.png" id="11_v2bg0"]
-[ext_resource type="Texture2D" uid="uid://c526fj3m7ssh" path="res://gfx/world7/sign2.png" id="12_t6ry4"]
 [ext_resource type="TileSet" uid="uid://co61k86k5y2qh" path="res://gfx/world7/additives/7-1tileset.tres" id="12_uylap"]
-[ext_resource type="Texture2D" uid="uid://x3ubvdpor71t" path="res://gfx/world7/sign3.png" id="13_3kyt6"]
 [ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="13_vjyg6"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="14_3aa3v"]
 [ext_resource type="PackedScene" uid="uid://cem1tcrhqrauj" path="res://engine/objects/enemies/hammer_bros/hammer_bro_jump_marker.tscn" id="14_uylap"]
@@ -34,6 +31,8 @@
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="31_uadtv"]
 [ext_resource type="PackedScene" uid="uid://b15mtpvvr38vx" path="res://engine/objects/warps/door/door_in.tscn" id="32_3yt5b"]
 [ext_resource type="PackedScene" uid="uid://ckw8xkx6hmy4d" path="res://engine/objects/warps/door/door_out.tscn" id="33_6eo2n"]
+[ext_resource type="Texture2D" uid="uid://de5hk77lmaf5c" path="res://engine/tilesets/signs/sign.png" id="35_v2bg0"]
+[ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="36_y7wki"]
 
 [sub_resource type="Gradient" id="Gradient_pxkkk"]
 interpolation_mode = 2
@@ -129,6 +128,25 @@ func _physics_process(delta):
 		position.y = 0
 		modulate.a = min(modulate.a +0.5 * delta, 1)
 "
+
+[sub_resource type="FontVariation" id="FontVariation_obd1f"]
+base_font = ExtResource("36_y7wki")
+variation_transform = Transform2D(0.9, 0, 0, 1, 0, 0)
+spacing_glyph = -2
+spacing_space = -1
+
+[sub_resource type="FontVariation" id="FontVariation_v2bg0"]
+base_font = ExtResource("36_y7wki")
+variation_transform = Transform2D(0.9, 0, 0, 1, 0, 0)
+spacing_glyph = -1
+spacing_space = -1
+
+[sub_resource type="FontVariation" id="FontVariation_y7wki"]
+base_font = ExtResource("36_y7wki")
+variation_transform = Transform2D(0.59, 0, 0, 1, 0, 0)
+spacing_glyph = -4
+spacing_space = -1
+spacing_top = 1
 
 [node name="7-3" type="Node2D"]
 script = ExtResource("1_qy1au")
@@ -231,24 +249,6 @@ DIVINE LOVE"
 [node name="MusicOverlay" parent="." instance=ExtResource("23_ans7r")]
 layer = 5
 text = Array[String](["TJ TechnoiZ - Divine (Curse of Love)"])
-
-[node name="Sign1" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(1386, 340)
-texture = ExtResource("10_g18yq")
-metadata/_edit_lock_ = true
-
-[node name="Sign2" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(1587, 375)
-texture = ExtResource("12_t6ry4")
-metadata/_edit_lock_ = true
-
-[node name="Sign3" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(3629, 369)
-texture = ExtResource("13_3kyt6")
-metadata/_edit_lock_ = true
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -401,28 +401,94 @@ warp_to = NodePath("../DoorOut2")
 [node name="DoorOut2" parent="DoorSpawner" instance=ExtResource("33_6eo2n")]
 position = Vector2(6624, 416)
 
+[node name="TextSign1" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(1396, 341)
+rotation = -0.226893
+texture = ExtResource("35_v2bg0")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="TextSign1"]
+offset_left = -49.0
+offset_top = -50.0
+offset_right = 34.0
+offset_bottom = -11.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.454902, 1)
+theme_override_constants/line_spacing = -1
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("FontVariation_obd1f")
+theme_override_font_sizes/font_size = 14
+text = "YOUR ONLY
+POWERUPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextSign2" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(1584, 380)
+rotation = 0.191986
+texture = ExtResource("35_v2bg0")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="TextSign2"]
+offset_left = -49.0
+offset_top = -50.0
+offset_right = 34.0
+offset_bottom = -11.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.454902, 1)
+theme_override_constants/line_spacing = -1
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("FontVariation_v2bg0")
+theme_override_font_sizes/font_size = 14
+text = "USE THEM
+WISELY..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextSign3" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(3621, 386)
+rotation = 0.628319
+texture = ExtResource("35_v2bg0")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="TextSign3"]
+offset_left = -48.0
+offset_top = -50.0
+offset_right = 40.0
+offset_bottom = -11.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.454902, 1)
+theme_override_constants/line_spacing = -1
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("FontVariation_y7wki")
+theme_override_font_sizes/font_size = 14
+text = "BE AWARE OF YOUR
+SURROUNDINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="collided_wall" from="TileMapLayer/Goomba" to="TileMapLayer/Goomba" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53481" to="TileMapLayer/@CharacterBody2D@53481" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53482" to="TileMapLayer/@CharacterBody2D@53482" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164251" to="TileMapLayer/@CharacterBody2D@164251" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164252" to="TileMapLayer/@CharacterBody2D@164252" method="turn_x"]
 [connection signal="collided_wall" from="TileMapLayer/KoopaRed" to="TileMapLayer/KoopaRed" method="turn_x"]
 [connection signal="collided_wall" from="TileMapLayer/SpinyIron" to="TileMapLayer/SpinyIron" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53500" to="TileMapLayer/@CharacterBody2D@53500" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53508" to="TileMapLayer/@CharacterBody2D@53508" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164270" to="TileMapLayer/@CharacterBody2D@164270" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164278" to="TileMapLayer/@CharacterBody2D@164278" method="turn_x"]
 [connection signal="collided_wall" from="TileMapLayer/SpinyIron_EdgeTurn" to="TileMapLayer/SpinyIron_EdgeTurn" method="turn_x"]
 [connection signal="collided_wall" from="TileMapLayer/KoopaGreen" to="TileMapLayer/KoopaGreen" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53537" to="TileMapLayer/@CharacterBody2D@53537" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53561" to="TileMapLayer/@CharacterBody2D@53561" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53573" to="TileMapLayer/@CharacterBody2D@53573" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53604" to="TileMapLayer/@CharacterBody2D@53604" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53605" to="TileMapLayer/@CharacterBody2D@53605" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53606" to="TileMapLayer/@CharacterBody2D@53606" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53649" to="TileMapLayer/@CharacterBody2D@53649" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53650" to="TileMapLayer/@CharacterBody2D@53650" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53651" to="TileMapLayer/@CharacterBody2D@53651" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53665" to="TileMapLayer/@CharacterBody2D@53665" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53669" to="TileMapLayer/@CharacterBody2D@53669" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53670" to="TileMapLayer/@CharacterBody2D@53670" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53671" to="TileMapLayer/@CharacterBody2D@53671" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53673" to="TileMapLayer/@CharacterBody2D@53673" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53674" to="TileMapLayer/@CharacterBody2D@53674" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@53675" to="TileMapLayer/@CharacterBody2D@53675" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164307" to="TileMapLayer/@CharacterBody2D@164307" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164331" to="TileMapLayer/@CharacterBody2D@164331" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164343" to="TileMapLayer/@CharacterBody2D@164343" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164374" to="TileMapLayer/@CharacterBody2D@164374" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164375" to="TileMapLayer/@CharacterBody2D@164375" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164376" to="TileMapLayer/@CharacterBody2D@164376" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164419" to="TileMapLayer/@CharacterBody2D@164419" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164420" to="TileMapLayer/@CharacterBody2D@164420" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164421" to="TileMapLayer/@CharacterBody2D@164421" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164435" to="TileMapLayer/@CharacterBody2D@164435" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164439" to="TileMapLayer/@CharacterBody2D@164439" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164440" to="TileMapLayer/@CharacterBody2D@164440" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164441" to="TileMapLayer/@CharacterBody2D@164441" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164443" to="TileMapLayer/@CharacterBody2D@164443" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164444" to="TileMapLayer/@CharacterBody2D@164444" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@164445" to="TileMapLayer/@CharacterBody2D@164445" method="turn_x"]

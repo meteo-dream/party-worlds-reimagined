@@ -1,4 +1,4 @@
-[gd_scene load_steps=150 format=4 uid="uid://ea63cgm31wbd"]
+[gd_scene load_steps=151 format=4 uid="uid://ea63cgm31wbd"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_55ucl"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_7k3co"]
@@ -65,6 +65,7 @@
 [ext_resource type="PackedScene" uid="uid://cforx4e0v73a7" path="res://engine/objects/enemies/rotos/roto_red.tscn" id="61_8ionl"]
 [ext_resource type="PackedScene" uid="uid://b1aibpt7836h7" path="res://engine/objects/enemies/hammer_bros/hammer_bro.tscn" id="62_x3sr5"]
 [ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="63_dxrh1"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="63_txt2a"]
 [ext_resource type="PackedScene" uid="uid://cem1tcrhqrauj" path="res://engine/objects/enemies/hammer_bros/hammer_bro_jump_marker.tscn" id="64_ke645"]
 [ext_resource type="PackedScene" uid="uid://oja3uy1y4hpl" path="res://engine/objects/enemies/piranha_plants/piranha_pink.tscn" id="66_e2hg0"]
 [ext_resource type="PackedScene" uid="uid://da16joa30w76a" path="res://engine/objects/enemies/piranha_plants/piranha_green.tscn" id="67_cv0xx"]
@@ -2994,48 +2995,48 @@ amplitude = Vector2(0, 150)
 position = Vector2(5776, 208)
 
 [node name="RotoRed" parent="Enemies/RotoCenter6" instance=ExtResource("61_8ionl")]
-position = Vector2(-3, -70)
+position = Vector2(-69, 11)
 preview = true
 amplitude = Vector2(70, 70)
-phase = -93.333
+phase = 170.0
 frequency = -50.0
 
 [node name="RotoCenter5" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(2800, -208)
 
 [node name="RotoRed" parent="Enemies/RotoCenter5" instance=ExtResource("61_8ionl")]
-position = Vector2(96, 27)
+position = Vector2(-38, 92)
 preview = true
 amplitude = Vector2(100, 100)
-phase = 16.6674
+phase = 113.334
 
 [node name="RotoCenter4" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(3824, 144)
 
 [node name="RotoRed" parent="Enemies/RotoCenter4" instance=ExtResource("61_8ionl")]
-position = Vector2(-80, 2)
+position = Vector2(66, -70)
 preview = true
 amplitude = Vector2(110, 50)
-phase = -129.165
+phase = -32.4983
 track_rot = -30.0
 
 [node name="RotoCenter2" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(4432, 368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter2" instance=ExtResource("61_8ionl")]
-position = Vector2(79, 43)
+position = Vector2(-136, 21)
 preview = true
 amplitude = Vector2(150, 50)
-phase = 59.167
+phase = 155.834
 
 [node name="RotoCenter3" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(4464, 368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter3" instance=ExtResource("61_8ionl")]
-position = Vector2(-79, -43)
+position = Vector2(136, -21)
 preview = true
 amplitude = Vector2(150, 50)
-phase = -120.833
+phase = -24.1663
 
 [node name="HammerBro" parent="Enemies" instance=ExtResource("62_x3sr5")]
 position = Vector2(11712, -96)
@@ -3170,64 +3171,77 @@ position = Vector2(9648, 368)
 touching_player_touched_movement = true
 
 [node name="LabelMisterEarl" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 192.0
-offset_top = 208.0
-offset_right = 290.0
-offset_bottom = 224.0
+offset_left = 168.0
+offset_top = 199.0
+offset_right = 312.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "welcome to
 \"neo-koopa\"!"
+vertical_alignment = 1
 
 [node name="LabelMisterEarl2" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 432.0
+offset_left = 424.0
 offset_top = -336.0
-offset_right = 530.0
+offset_right = 536.0
 offset_bottom = -307.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "Follow
 the prophets"
 
 [node name="LabelMisterEarl3" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 1098.0
-offset_top = -361.0
-offset_right = 1301.0
-offset_bottom = -332.0
+offset_left = 1096.0
+offset_top = -376.0
+offset_right = 1304.0
+offset_bottom = -328.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "infinite possibilities await you"
+vertical_alignment = 1
 
 [node name="LabelMisterEarl8" parent="." instance=ExtResource("27_wlmu3")]
 offset_left = 2224.0
 offset_top = -256.0
 offset_right = 2428.0
 offset_bottom = -227.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "Barracks"
 
 [node name="LabelMisterEarl4" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 7408.0
-offset_top = -16.0
-offset_right = 7536.0
-offset_bottom = 13.0
+offset_left = 7400.0
+offset_top = -26.0
+offset_right = 7544.0
+offset_bottom = 22.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "Warning!
 Dangerous height!"
+vertical_alignment = 1
 
 [node name="LabelMisterEarl5" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 9456.0
-offset_top = -336.0
-offset_right = 9648.0
-offset_bottom = -307.0
+offset_left = 9448.0
+offset_top = -345.0
+offset_right = 9656.0
+offset_bottom = -297.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "We hope you enjoyed
 your stay!"
+vertical_alignment = 1
 
 [node name="LabelMisterEarl7" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 9552.0
-offset_top = 80.0
-offset_right = 9648.0
-offset_bottom = 109.0
+offset_left = 9544.0
+offset_top = 71.0
+offset_right = 9656.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "All hail
 Greensweet"
+vertical_alignment = 1
 
 [node name="LabelMisterEarl6" parent="." instance=ExtResource("27_wlmu3")]
-offset_left = 10064.0
-offset_top = -400.0
-offset_right = 10160.0
-offset_bottom = -371.0
+offset_left = 10056.0
+offset_top = -409.0
+offset_right = 10168.0
+offset_bottom = -361.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "you're leaving
 \"Neo-koopa\""
 vertical_alignment = 1
@@ -3257,11 +3271,13 @@ texture = ExtResource("36_wtnsp")
 
 [node name="LabelMisterEarl5" parent="Sign3" instance=ExtResource("27_wlmu3")]
 offset_left = -48.0
-offset_top = -48.0
-offset_right = 48.0
-offset_bottom = -15.0
+offset_top = -50.0
+offset_right = 49.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "Collect the
 blue coins!"
+vertical_alignment = 1
 
 [node name="locker-base" type="Node" parent="."]
 
@@ -3279,6 +3295,7 @@ offset_left = -48.0
 offset_top = -47.0
 offset_right = 48.0
 offset_bottom = -14.0
+theme_override_fonts/font = ExtResource("63_txt2a")
 text = "Bring me
 5 blue coins"
 
