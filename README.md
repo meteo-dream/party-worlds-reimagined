@@ -85,8 +85,8 @@ Touhou assets: Team Shanghai Alice - ZUN
   
 **Music Sources:**
 
-Remix.Kwed.org, Modarchive.org,<br/>
-Newgrounds, Nintendo,<br/>
+Remix.Kwed.org, Modarchive.org, SMWCentral.net<br/>
+Demoscene, Newgrounds, Nintendo,<br/>
 Team Shanghai Alice
 
 **SFX Sources:**
