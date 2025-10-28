@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_31qm3"]
 [ext_resource type="PackedScene" uid="uid://bhkjyu70f8huu" path="res://objects/colored_bumping_blocks/gray/Gray Flower Question Block.tscn" id="8_gfhgt"]
 [ext_resource type="Texture2D" uid="uid://cangjx7jtmi6i" path="res://gfx/world1/green_pipe.png" id="8_gys8t"]
-[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="9_ops48"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="9_ops48"]
 [ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="10_gfhgt"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_6ht0w"]
 [ext_resource type="Texture2D" uid="uid://iormdxfoigp7" path="res://gfx/world8/8-3.png" id="11_42ejt"]

@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://uhf6frao7p1m" path="res://engine/objects/enemies/podoboo/podoboo.tscn" id="17_2rqks"]
 [ext_resource type="Texture2D" uid="uid://fmwbxeob1quj" path="res://gfx/world1/platformtile-cropped.png" id="17_351bk"]
 [ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="17_par3g"]
-[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="18_qyowi"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="18_qyowi"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="19_43ryw"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="20_othjs"]
 [ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="21_7a6mb"]

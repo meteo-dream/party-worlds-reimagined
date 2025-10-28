@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_5ba4k"]
 [ext_resource type="Texture2D" uid="uid://cjjvhjqd0cqqo" path="res://gfx/world4/bg4-1.png" id="11_l1y28"]
 [ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="12_vx56x"]
-[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="12_w2kri"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="12_w2kri"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="14_bspt7"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="15_0o4t0"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="20_3gd25"]

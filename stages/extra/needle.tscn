@@ -69,3 +69,4 @@ motion_scale = Vector2(0, 1)
 [node name="ColorRect" type="ColorRect" parent="ParallaxBackground2/ParallaxLayer"]
 offset_right = 640.0
 offset_bottom = 480.0
+metadata/_edit_lock_ = true

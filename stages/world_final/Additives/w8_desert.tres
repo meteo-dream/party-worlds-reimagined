@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=25 format=3 uid="uid://h3f7j20apwf0"]
+[gd_resource type="TileSet" load_steps=23 format=3 uid="uid://h3f7j20apwf0"]
 
 [ext_resource type="Texture2D" uid="uid://lomx01s1ohnj" path="res://gfx/worldfinal/10-3pipe.png" id="1_7af2a"]
 [ext_resource type="Texture2D" uid="uid://b3ff50hsbwpdg" path="res://gfx/worldfinal/10-3ground.png" id="2_2x7fo"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://iq8baf2lelf" path="res://stages/world_final/Additives/ljd_arrow_sign.tscn" id="4_x71dr"]
 [ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="5_x71dr"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="6_x71dr"]
-[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="7_v1fh8"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="7_x04ty"]
 [ext_resource type="PackedScene" uid="uid://bhkjyu70f8huu" path="res://objects/colored_bumping_blocks/gray/Gray Flower Question Block.tscn" id="8_le6lk"]
 [ext_resource type="PackedScene" uid="uid://c1caykgqbwhxu" path="res://objects/colored_bumping_blocks/gray/Gray Poison Question Block.tscn" id="9_x04ty"]
 [ext_resource type="PackedScene" uid="uid://csj6le8ffyb3x" path="res://objects/w8_invis_spike/invis_spike.tscn" id="10_wfg4g"]
@@ -462,17 +462,6 @@ texture_region_size = Vector2i(32, 32)
 12:3/0 = 0
 12:3/0/texture_origin = Vector2i(0, 16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x04ty"]
-load_path = "res://.godot/imported/sign1.png-e464a75e9f29138570e04063978342e1.ctex"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1rxl"]
-texture = SubResource("CompressedTexture2D_x04ty")
-texture_region_size = Vector2i(107, 128)
-1:0/0 = 0
-1:0/0/texture_origin = Vector2i(-6, 47)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(-6, 47)
-
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_v1fh8"]
 scenes/1/scene = ExtResource("4_x71dr")
 
@@ -481,7 +470,7 @@ resource_name = "Bonuses"
 scenes/1/scene = ExtResource("4_x04ty")
 scenes/2/scene = ExtResource("5_x71dr")
 scenes/3/scene = ExtResource("6_x71dr")
-scenes/4/scene = ExtResource("7_v1fh8")
+scenes/4/scene = ExtResource("7_x04ty")
 scenes/5/scene = ExtResource("8_le6lk")
 scenes/6/scene = ExtResource("9_x04ty")
 scenes/7/scene = ExtResource("10_x71dr")
@@ -508,4 +497,3 @@ sources/0 = SubResource("TileSetAtlasSource_qy81n")
 sources/8 = SubResource("TileSetScenesCollectionSource_qy81n")
 sources/9 = SubResource("TileSetScenesCollectionSource_odug7")
 sources/3 = SubResource("TileSetScenesCollectionSource_v1fh8")
-sources/2 = SubResource("TileSetAtlasSource_j1rxl")

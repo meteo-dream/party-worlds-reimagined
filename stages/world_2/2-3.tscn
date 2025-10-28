@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://uhf6frao7p1m" path="res://engine/objects/enemies/podoboo/podoboo.tscn" id="17_m2gw7"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="18_igex3"]
 [ext_resource type="PackedScene" uid="uid://diu2ipea3k8qy" path="res://engine/objects/enemies/hammer_bros/fire_bro.tscn" id="18_ojcdt"]
-[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://stages/extra/d271/obj/gray_qblocks/Gray Coin Question Block.tscn" id="19_6jofq"]
+[ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="19_6jofq"]
 [ext_resource type="PackedScene" uid="uid://cem1tcrhqrauj" path="res://engine/objects/enemies/hammer_bros/hammer_bro_jump_marker.tscn" id="19_31aog"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="20_3ni17"]
 [ext_resource type="PackedScene" uid="uid://b24hnsctae1a0" path="res://engine/objects/enemies/koopas/koopa_red.tscn" id="20_k44ym"]
