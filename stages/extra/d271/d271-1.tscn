@@ -12,7 +12,7 @@
 [ext_resource type="TileSet" uid="uid://bn337yp5bsu8p" path="res://stages/world_1/tilesets/1-2.tres" id="7_tslp6"]
 [ext_resource type="Script" uid="uid://pw7svhovnfmq" path="res://stages/extra/d271/obj/wide_clouds_moving/parallax_layer_offset.gd" id="8_kw7ac"]
 [ext_resource type="PackedScene" uid="uid://da16joa30w76a" path="res://engine/objects/enemies/piranha_plants/piranha_green.tscn" id="9_4ggia"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_72dks"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_72dks"]
 [ext_resource type="PackedScene" uid="uid://oja3uy1y4hpl" path="res://engine/objects/enemies/piranha_plants/piranha_pink.tscn" id="10_qf3sy"]
 [ext_resource type="Texture2D" uid="uid://dboyy56p5qal4" path="res://stages/extra/d271/obj/wide_clouds_moving/texture_alpha.png" id="11_be0cx"]
 [ext_resource type="PackedScene" uid="uid://cem1tcrhqrauj" path="res://engine/objects/enemies/hammer_bros/hammer_bro_jump_marker.tscn" id="11_fhul4"]

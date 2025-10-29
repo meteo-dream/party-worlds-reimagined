@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://nb73iuycaqgi" path="res://FX/snow/snow.tscn" id="7_edcyc"]
 [ext_resource type="Texture2D" uid="uid://8mvqi0nwfriu" path="res://gfx/world1/clouds.png" id="8_760od"]
 [ext_resource type="TileSet" uid="uid://c41qc3h8bntib" path="res://stages/world_1/tilesets/1-1.tres" id="8_baxwj"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="8_vm3bo"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="8_vm3bo"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="10_racpv"]
 [ext_resource type="PackedScene" uid="uid://rhrex2vth7at" path="res://engine/objects/platform/platform_path.tscn" id="11_8fcak"]
 [ext_resource type="PackedScene" uid="uid://ddwxc43m3q1c6" path="res://engine/objects/core/checkpoint/checkpoint.tscn" id="12_4f1vl"]

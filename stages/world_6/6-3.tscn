@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dpbcpmo7r3st8" path="res://stages/world_6/Additives/6-2/left.tscn" id="8_u7gub"]
 [ext_resource type="Texture2D" uid="uid://drp4w3ht83we" path="res://gfx/world4/bg_4-5.png" id="8_y35up"]
 [ext_resource type="PackedScene" uid="uid://b0305bmyyifk4" path="res://stages/world_6/Additives/6-2/lizardlounge.tscn" id="9_ip56t"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_1dpxf"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_1dpxf"]
 [ext_resource type="PackedScene" uid="uid://c13lkq4i5lln1" path="res://stages/world_6/Additives/6-2/magnumbills.tscn" id="10_6u873"]
 [ext_resource type="PackedScene" uid="uid://csdyfamcjotxh" path="res://stages/world_6/Additives/6-2/plazakoopa.tscn" id="11_6s8ek"]
 [ext_resource type="PackedScene" uid="uid://cqwqjckeyyhsf" path="res://stages/world_6/Additives/6-2/rexx.tscn" id="12_smqtl"]

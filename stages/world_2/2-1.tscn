@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cbmgyod70w8hv" path="res://gfx/world2/additives/cloud_anim_tl.tscn" id="7_2i34d"]
 [ext_resource type="PackedScene" uid="uid://cv85vjp1i2143" path="res://gfx/world2/additives/cloud_anim_line_c.tscn" id="7_db82y"]
 [ext_resource type="Texture2D" uid="uid://dlqfkgyyyc1b2" path="res://gfx/world2/2-1.png" id="7_xn3uk"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="8_3so1l"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="8_3so1l"]
 [ext_resource type="PackedScene" uid="uid://csu3ajr0x30ru" path="res://gfx/world2/additives/cloud_anim_line_l.tscn" id="8_m6cs7"]
 [ext_resource type="PackedScene" uid="uid://c46asfrvkdax5" path="res://gfx/world2/additives/cloud_anim_tr.tscn" id="8_mseod"]
 [ext_resource type="PackedScene" uid="uid://dons1kndfdav8" path="res://gfx/world2/additives/cloud_anim_cc.tscn" id="9_3wdwl"]

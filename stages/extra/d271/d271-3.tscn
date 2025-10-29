@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_hfhmn"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_6kqbs"]
 [ext_resource type="TileSet" uid="uid://bn337yp5bsu8p" path="res://stages/world_1/tilesets/1-2.tres" id="9_q5xh3"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_vwks5"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_vwks5"]
 [ext_resource type="FontFile" uid="uid://b1pi0t5byork2" path="res://engine/components/hud/hud_font.fnt" id="12_4jnrj"]
 [ext_resource type="TileSet" uid="uid://duodk2nyl4k2h" path="res://stages/extra/d271/prefabs/overworld_green.tres" id="13_25dvm"]
 [ext_resource type="Texture2D" uid="uid://b86bmc8mhm875" path="res://gfx/d271/underground.png" id="13_v4uil"]

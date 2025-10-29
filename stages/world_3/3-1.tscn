@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://lhp0d6fuom4u" path="res://gfx/world3/3-1-pipe.png" id="7_lf8jp"]
 [ext_resource type="Texture2D" uid="uid://cickx28h6r5ou" path="res://gfx/world3/3-1.png" id="9_g58uo"]
 [ext_resource type="PackedScene" uid="uid://vkk13sb8mecf" path="res://stages/world_3/additives/3-1grass.tscn" id="10_3h847"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_e7m4s"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_e7m4s"]
 [ext_resource type="PackedScene" uid="uid://bcjwe54awkjxq" path="res://stages/world_3/additives/3-1cloud.tscn" id="11_615eb"]
 [ext_resource type="Texture2D" uid="uid://y4ikbppnbo64" path="res://gfx/world3/bg3-1.png" id="13_ug17w"]
 [ext_resource type="Texture2D" uid="uid://bc2xibbc25g6v" path="res://gfx/world3/3-1leaves.png" id="15_4k2nn"]

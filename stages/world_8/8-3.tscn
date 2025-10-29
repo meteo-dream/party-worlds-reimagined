@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cangjx7jtmi6i" path="res://gfx/world1/green_pipe.png" id="8_gys8t"]
 [ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="9_ops48"]
 [ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_grey.tscn" id="10_gfhgt"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_6ht0w"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_6ht0w"]
 [ext_resource type="Texture2D" uid="uid://iormdxfoigp7" path="res://gfx/world8/8-3.png" id="11_42ejt"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="11_77oud"]
 [ext_resource type="PackedScene" uid="uid://bqjnaf8ggec04" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick Gray.tscn" id="11_gfhgt"]

@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://85affu5ohmcm" path="res://FX/fg_fog/fg_fog2.tscn" id="9_2usti"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="9_whg8u"]
 [ext_resource type="Texture2D" uid="uid://djwe62jh83kf" path="res://engine/tilesets/overworld/hard_block.png" id="10_aot5w"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_546hb"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_546hb"]
 [ext_resource type="Texture2D" uid="uid://y6nb2k8qwupk" path="res://gfx/world6/lavalevel.png" id="13_hlval"]
 [ext_resource type="Texture2D" uid="uid://djwlg16v81fgh" path="res://gfx/world6/Lava_Bg/lava_background1.png" id="14_aot5w"]
 [ext_resource type="Texture2D" uid="uid://20ivu6our5d8" path="res://gfx/world2/gray_pipe.png" id="14_mpjdx"]

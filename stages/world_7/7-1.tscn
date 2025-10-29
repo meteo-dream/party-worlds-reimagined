@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://biwivivj37vb2" path="res://stages/world_7/music/another_world.it" id="4_kw63y"]
 [ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="4_te2ha"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="5_qbodn"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="7_cwt8f"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="7_cwt8f"]
 [ext_resource type="TileSet" uid="uid://co61k86k5y2qh" path="res://gfx/world7/additives/7-1tileset.tres" id="8_mh4er"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="10_gcyel"]
 [ext_resource type="Texture2D" uid="uid://bf1ya20aq1row" path="res://gfx/world7/w7bg.png" id="11_cgab8"]

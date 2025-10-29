@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://cqp7cf6gqvq6k" path="res://objects/w8_truck/8_1_truck_special.gd" id="7_n4e4u"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_8o6oh"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="10_ixihe"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_k04e2"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_k04e2"]
 [ext_resource type="TileSet" uid="uid://h3f7j20apwf0" path="res://stages/world_final/Additives/w8_desert.tres" id="11_xmek8"]
 [ext_resource type="PackedScene" uid="uid://cmakq2gchcve8" path="res://objects/w8_truck/8-1_truck.tscn" id="12_8o44y"]
 [ext_resource type="PackedScene" uid="uid://stost5h6thww" path="res://stages/world_final/Additives/8-1/progress_bar.tscn" id="13_dd4ux"]

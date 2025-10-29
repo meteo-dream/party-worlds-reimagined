@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_xrfta"]
 [ext_resource type="Texture2D" uid="uid://b5irbjty8j80b" path="res://gfx/world1/1-1set.png" id="7_kf5d4"]
 [ext_resource type="Texture2D" uid="uid://3owec4frni7m" path="res://gfx/world1/hard_block_white.png" id="8_rqdhl"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="8_xnu3q"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="8_xnu3q"]
 [ext_resource type="Texture2D" uid="uid://cangjx7jtmi6i" path="res://gfx/world1/green_pipe.png" id="9_ucsvt"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="12_cxjqv"]
 [ext_resource type="PackedScene" uid="uid://rhrex2vth7at" path="res://engine/objects/platform/platform_path.tscn" id="12_juciv"]

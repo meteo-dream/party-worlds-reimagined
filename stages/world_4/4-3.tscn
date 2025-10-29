@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://1nqgpacgkquq" path="res://gfx/bg-elements/leaves/cherry1_g.png" id="9_atkpn"]
 [ext_resource type="Texture2D" uid="uid://b80e8r8hqkd2l" path="res://gfx/world4/grass_dark.png" id="10_1igf7"]
 [ext_resource type="Texture2D" uid="uid://ui2dh42qqyem" path="res://gfx/bg-elements/leaves/cherry2_g.png" id="10_81nt2"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_jfo3k"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_jfo3k"]
 [ext_resource type="Texture2D" uid="uid://gj624exni85w" path="res://gfx/world4/dark_green_pipe.png" id="10_lx5pe"]
 [ext_resource type="Texture2D" uid="uid://ha8qmxtef7c5" path="res://gfx/world4/dark_grassland_scenery.png" id="11_80xm6"]
 [ext_resource type="PackedScene" uid="uid://0168apun8l06" path="res://stages/world_4/Additives/grass4-3.tscn" id="12_j2gjw"]

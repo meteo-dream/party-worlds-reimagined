@@ -1,8 +1,8 @@
 [gd_scene load_steps=30 format=4 uid="uid://dpmk8p0lknr8p"]
 
-[ext_resource type="Script" uid="uid://bj7kkt8d3ximu" path="res://stages/main/credits/credits_pw.gd" id="1_enqoa"]
+[ext_resource type="Script" uid="uid://bj7kkt8d3ximu" path="res://stages/main/credits/credits_pw_end.gd" id="1_enqoa"]
 [ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="2_x2rqg"]
-[ext_resource type="AudioStream" uid="uid://dbei5xq2v8y1h" path="res://stages/main/credits/sounds/smas_chat.ogg" id="3_6ntgv"]
+[ext_resource type="AudioStream" uid="uid://dbei5xq2v8y1h" path="res://stages/main/credits/music/smas_chat.ogg" id="3_6ntgv"]
 [ext_resource type="AudioStream" uid="uid://bdi7r63yg63jb" path="res://stages/main/credits/music/k_jose_-_a_light_waltz.it" id="4_gsx12"]
 [ext_resource type="Texture2D" uid="uid://gck1i1ncrdk4" path="res://engine/scenes/credits/textures/credits_bg.png" id="5_ggwl6"]
 [ext_resource type="TileSet" uid="uid://ceyaubm1ltkgh" path="res://stages/main/credits/credits_tileset.tres" id="13_jc6ks"]
@@ -83,7 +83,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("17_x2rqg")
 theme_override_font_sizes/font_size = 25
-text = "Press the %s to skip"
+text = "Press the %s to begin/skip"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("18_6ntgv")

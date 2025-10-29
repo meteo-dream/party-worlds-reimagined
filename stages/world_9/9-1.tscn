@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c4rw8diygi84w" path="res://gfx/world9/cave/pipe_bg.png" id="9_brrtb"]
 [ext_resource type="TileSet" uid="uid://cihor4exun2o" path="res://stages/world_9/Additives/9-1/9-1.tres" id="9_mt8pk"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="10_2ufkg"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_658ao"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_658ao"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="12_bkip8"]
 [ext_resource type="Texture2D" uid="uid://c2xfexiy1rnqh" path="res://engine/tilesets/overworld/overworld_classic.png" id="12_ubh6e"]
 [ext_resource type="PackedScene" uid="uid://vqn6y17pt5mx" path="res://engine/objects/enemies/goombas/goomba.tscn" id="13_anuhi"]

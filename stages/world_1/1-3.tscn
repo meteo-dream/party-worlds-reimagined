@@ -10,7 +10,7 @@
 [ext_resource type="TileSet" uid="uid://bn337yp5bsu8p" path="res://stages/world_1/tilesets/1-2.tres" id="7_fkrts"]
 [ext_resource type="Texture2D" uid="uid://dg3vkhsfm2xth" path="res://gfx/world1/unbg22.png" id="8_0hgmn"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_keby2"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="8_veit0"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="8_veit0"]
 [ext_resource type="Texture2D" uid="uid://bqhbycaumj3vf" path="res://gfx/world1/unbg11.png" id="9_sl8nr"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="10_glwqj"]
 [ext_resource type="PackedScene" uid="uid://u383towqhd0i" path="res://engine/objects/warps/pipe_out.tscn" id="12_2rrq1"]

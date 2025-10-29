@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="9_662vq"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="10_7ujmo"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="10_am8gh"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_rr82p"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_rr82p"]
 [ext_resource type="Texture2D" uid="uid://c0yfpptdfremq" path="res://gfx/world2/cave_waterfall_bg.png" id="10_yhjh1"]
 [ext_resource type="PackedScene" uid="uid://bqgumcf8nm07n" path="res://modules/switch-block/switch_block_switcher.tscn" id="12_cohie"]
 [ext_resource type="PackedScene" uid="uid://bmn3h8x3rv47u" path="res://objects/colored_bumping_blocks/blue/Blue Beetroot Question Block.tscn" id="13_pf43a"]

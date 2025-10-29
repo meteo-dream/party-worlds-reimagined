@@ -157,8 +157,7 @@ func adapt_direction(vector_x: float, force_direction_to_take: bool = false, dir
 
 func _start_first_spell_card() -> void:
 	begin_proper_battle = true
-	if !skip_setup:
-		start_next_spell_card(start_at_phase_number)
+	start_next_spell_card(start_at_phase_number)
 
 func start_next_spell_card(index: int = current_spell_index) -> void:
 	if index >= phases.size():

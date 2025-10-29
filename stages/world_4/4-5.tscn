@@ -10,7 +10,7 @@
 [ext_resource type="TileSet" uid="uid://cb4i172x030w1" path="res://stages/world_4/Additives/4-5tile.tres" id="7_wi380"]
 [ext_resource type="PackedScene" uid="uid://dlgsihkpfr6al" path="res://stages/world_4/Additives/sign1.tscn" id="9_n4xc4"]
 [ext_resource type="PackedScene" uid="uid://cbnamduxa1b3o" path="res://stages/world_4/Additives/sign2.tscn" id="10_6cpny"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_qeofs"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_qeofs"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="12_1en7d"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="12_y4h5s"]
 [ext_resource type="PackedScene" uid="uid://smklpi8tm71d" path="res://stages/world_4/Additives/platform_path4-5.tscn" id="13_ouhbr"]

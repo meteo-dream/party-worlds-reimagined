@@ -8,7 +8,7 @@
 [ext_resource type="TileSet" uid="uid://cyy2bie5omgge" path="res://stages/extra/minecraft/tilesets/mine_solid_tiles.tres" id="5_0qbbc"]
 [ext_resource type="TileSet" uid="uid://cgqfnknxp7a66" path="res://stages/extra/minecraft/tilesets/mine_non-solid_tiles.tres" id="6_40p5p"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_w8011"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="8_1x4cv"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="8_1x4cv"]
 [ext_resource type="PackedScene" uid="uid://d0pdxcaldiea0" path="res://stages/extra/minecraft/obj/question_blocks/mc_coin_question_block.tscn" id="9_8c0mb"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="10_708ki"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="10_c7hdb"]

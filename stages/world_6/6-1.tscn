@@ -9,7 +9,7 @@
 [ext_resource type="Shader" uid="uid://b8mcr46fhc6u0" path="res://engine/shaders/XOR.gdshader" id="6_i22e2"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_pn8xa"]
 [ext_resource type="Texture2D" uid="uid://dklgp7bcqa05q" path="res://gfx/world6/1-1bg.png" id="10_0wc51"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_55n6n"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_55n6n"]
 [ext_resource type="Texture2D" uid="uid://do1eteauwn8hy" path="res://gfx/world6/1-1bg1.png" id="11_y8su8"]
 [ext_resource type="PackedScene" uid="uid://8riasidfvdr8" path="res://modules/beetroot-grab/grabable-spawner.tscn" id="12_gsm6u"]
 [ext_resource type="Shader" uid="uid://ctuxf4ltagyu5" path="res://engine/shaders/OR.gdshader" id="12_i0wf1"]

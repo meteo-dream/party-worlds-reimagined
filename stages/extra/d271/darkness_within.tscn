@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_6qpd8"]
 [ext_resource type="Texture2D" uid="uid://ucldpb8tou4p" path="res://stages/extra/d271/gfx/darkness_within_tileset.png" id="10_eijdt"]
 [ext_resource type="TileSet" uid="uid://c8vmqwxodub03" path="res://stages/extra/d271/prefabs/darkness_within.tres" id="10_kitch"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_oc1um"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_oc1um"]
 [ext_resource type="Texture2D" uid="uid://db78gg7oxquh2" path="res://stages/extra/d271/gfx/OutputImage.png" id="13_mah1h"]
 [ext_resource type="Script" uid="uid://bmpo2qyh1a5yk" path="res://stages/extra/d271/prefabs/gradient_glow.gd" id="15_u1hhb"]
 [ext_resource type="PackedScene" uid="uid://d0121yqkw7b6i" path="res://engine/objects/fluid/lava_area.tscn" id="16_qk6jp"]

@@ -37,7 +37,6 @@ const FINAL_BOSS_HUD = preload("res://objects/boss_touhou/boss_final/final_boss_
 @export var boss_music_phase_change_channel: int = 25
 @export var boss_music_phase_change_note: String = "C-05"
 @export var boss_music_excluded_positions: Array[int] = [0, 6, 8, 10, 11, 12, 14, 16, 18, 20, 32, 33, 34, 36]
-@export var boss_music_jump_to_position: Array[int] = [29, 0]
 @export_group("Battle Settings")
 @export var phase_change_in_music_list: Array[float]
 @export_group("Spellcard Background Settings", "settings_scbg_")
@@ -107,9 +106,6 @@ func _ready() -> void:
 			)
 		boss.request_slow_time.connect(_set_slow_time_scale)
 		boss.request_restore_time.connect(_restore_time_scale)
-		
-		if boss_music_jump_to_position.size() > 0:
-			phase_index = 18
 	# Side Boss
 	if is_instance_valid(side_boss):
 		side_boss.request_show_spellcard.connect(start_spell_card)
@@ -124,9 +120,6 @@ func _ready() -> void:
 			)
 		side_boss.request_slow_time.connect(_set_slow_time_scale)
 		side_boss.request_restore_time.connect(_restore_time_scale)
-		
-		if boss_music_jump_to_position.size() > 0:
-			side_boss.offset_phase_index = -12
 	# Music Sync
 	if is_instance_valid(music_sync_node):
 		music_sync_node.channel_to_check = boss_music_phase_change_channel
@@ -213,7 +206,6 @@ func start_boss_dialog() -> void:
 		trigger_dialogue = NEW_BALLOON.instantiate()
 		Scenes.current_scene.add_child(trigger_dialogue)
 	trigger_dialogue.start(chosen_dialogue_tree, "start", [self, FinalBossHandler.new()])
-	#start_boss_fight()
 
 func SPECIAL_move_boss_into_position() -> void:
 	if !is_instance_valid(boss): return
@@ -267,27 +259,8 @@ func boss_fight_music() -> void:
 			fade_ease = Tween.EaseType.EASE_OUT,
 			ignore_pause = false,
 		})
-		
-		# The following is a debug feature. Remove before the official release.
-		await get_tree().create_timer(0.1, false).timeout
-		if boss_music_jump_to_position.size() > 0:
-			var mod: AudioStreamMPT
-			if !Audio._music_channels.has(32): return
-			if (is_instance_valid(Audio._music_channels[32]) &&
-				Audio._music_channels[32].stream is AudioStreamMPT):
-				mod = Audio._music_channels[32].stream
-			if _null_check(mod): return
-			var playback: AudioStreamPlaybackMPT = Audio._music_channels[32].get_stream_playback()
-			if !is_instance_valid(playback): return
-			playback.seek(boss_music_jump_to_position[0], boss_music_jump_to_position[1])
-			# TODO: crutch for debugging, remove this when production rolls around
 	if music_overlay:
 		music_overlay.play(boss_music_overlay_index)
-
-func _null_check(mod) -> bool:
-	if !mod: return true
-	if !is_instance_valid(mod): return true
-	return false
 
 func boss_fight_logistics() -> void:
 	triggered = true
@@ -297,13 +270,6 @@ func boss_fight_logistics() -> void:
 		trigger_boss_HUD.spell_card_changed(0)
 		trigger_boss_HUD.appear_animation()
 	if boss: boss.activate()
-	if boss_music_jump_to_position.size() > 0:
-		if is_instance_valid(side_boss):
-			side_boss.activate()
-			side_boss.trigger = self
-			side_boss.offset_phase_index = 12
-			enable_secondary_boss = true
-			side_boss.current_spell_index = phase_index
 	trigger_boss_borders.process_mode = Node.PROCESS_MODE_ALWAYS
 
 func stop_music(fade: bool = true) -> void:
@@ -443,12 +409,10 @@ func _signal_force_boss_defeat() -> void:
 	side_boss._battle_victory_sequence()
 
 func hide_photo_counter() -> void:
-	trigger_boss_HUD.boss_photo_counter.disappear()
-	trigger_boss_HUD.boss_photo_label.disappear()
+	pass
 
 func show_photo_counter() -> void:
-	trigger_boss_HUD.boss_photo_counter.appear()
-	trigger_boss_HUD.boss_photo_label.appear()
+	pass
 
 func _fail_battle_auto() -> void:
 	if triggered:
@@ -457,4 +421,4 @@ func _fail_battle_auto() -> void:
 func _on_player_died() -> void:
 	_fail_battle_auto()
 	is_time_slow_active = false
-	#_reset_time_scale()
+	_reset_time_scale()

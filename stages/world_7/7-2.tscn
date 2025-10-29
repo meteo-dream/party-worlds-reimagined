@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_bpyns"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_4clcf"]
 [ext_resource type="TileSet" uid="uid://co61k86k5y2qh" path="res://gfx/world7/additives/7-1tileset.tres" id="8_22cs7"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="9_fytmh"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="9_fytmh"]
 [ext_resource type="FontFile" uid="uid://blaokmcj1basl" path="res://gfx/whoopass.regular.ttf" id="10_4ouh1"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="10_sgux4"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="12_kt3w1"]

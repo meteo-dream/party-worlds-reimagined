@@ -16,6 +16,7 @@ var current_section_id: int
 @onready var skip_label: Label = $SkipLabel
 @onready var end_label: Label = $EndLabel
 @onready var the_end_label: Label = $TheEnd
+var can_start_credits: bool = false
 var credits_started: bool = false
 var credits_finished: bool = false
 var curtain_tween: Tween
@@ -31,15 +32,16 @@ func _ready() -> void:
 	the_end_label.modulate.a = 0.0
 	curtain_layer.show()
 	_change_screen_modulate(Color.BLACK)
-	start_credits()
-
-func start_credits() -> void:
-	var tw5 = get_tree().create_tween()
-	tw5.tween_property(skip_label, "modulate:a", 1.0, 0.8)
-	
 	await _set_timer(0.5)
 	_change_screen_modulate(Color8(31, 31, 31), 0.7)
-	await _set_timer(2.5)
+	await _set_timer(1.0)
+	var tw5 = get_tree().create_tween()
+	tw5.tween_property(skip_label, "modulate:a", 1.0, 0.8)
+	can_start_credits = true
+
+func start_credits() -> void:
+	can_start_credits = false
+	
 	Audio.stop_all_musics()
 	_change_screen_modulate()
 	_play_sound_effect(SWITCH_SFX)
@@ -47,7 +49,7 @@ func start_credits() -> void:
 	
 	var tw = get_tree().create_tween()
 	tw.tween_property(skip_label, "modulate:a", 0.0, 0.8)
-	tw.tween_callback(func() -> void: skip_label.queue_free())
+	tw.tween_callback(func() -> void: if is_instance_valid(skip_label): skip_label.queue_free())
 	
 	await _set_timer(1.0)
 	_pull_up_curtains()
@@ -149,4 +151,6 @@ func _input(event: InputEvent) -> void:
 	if Data.technical_values.get("credits_cooldown", 0.0) > Time.get_ticks_msec():
 		return
 	if _are_actions_pressed(event, [&"ui_accept"]):
-		scene_exit()
+		if !credits_started and can_start_credits:
+			start_credits()
+		elif credits_started: scene_exit()

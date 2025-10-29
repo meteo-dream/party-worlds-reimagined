@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://20ivu6our5d8" path="res://gfx/world2/gray_pipe.png" id="8_ph283"]
 [ext_resource type="Texture2D" uid="uid://btpy56fmjaf6t" path="res://gfx/world1/Castle.png" id="9_y80db"]
 [ext_resource type="Texture2D" uid="uid://b1steq3elkspu" path="res://gfx/world1/platformtile.png" id="10_gcypw"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_m0c3w"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_m0c3w"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="11_p6mle"]
 [ext_resource type="Shader" uid="uid://qhmtggecruub" path="res://stages/world_2/shaders/2-3.gdshader" id="12_2b7ek"]
 [ext_resource type="Texture2D" uid="uid://dbi7l8qub0gfx" path="res://gfx/world2/BGCastle.png" id="12_qfbe0"]

@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://fqjbjukw84se" path="res://stages/world_6/Additives/6-3-f-s.tscn" id="8_hyga1"]
 [ext_resource type="Texture2D" uid="uid://cangjx7jtmi6i" path="res://gfx/world1/green_pipe.png" id="9_fvnnr"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="10_hoqjc"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_na7ck"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_na7ck"]
 [ext_resource type="PackedScene" uid="uid://2yepdgrhpmj3" path="res://engine/objects/bumping_blocks/brick/brick.tscn" id="11_ub1pf"]
 [ext_resource type="PackedScene" uid="uid://b6e661f0ry38p" path="res://engine/objects/bumping_blocks/brick/templates/Coin Brick.tscn" id="12_2mj2d"]
 [ext_resource type="Texture2D" uid="uid://cmtyajxg3ids1" path="res://gfx/world6/6-3b.png" id="13_3qlrc"]

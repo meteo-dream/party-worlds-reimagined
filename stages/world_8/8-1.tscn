@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dogfyexr1hdfx" path="res://stages/world_8/additives/beachsfx.wav" id="7_hscfc"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_mdkfj"]
 [ext_resource type="TileSet" uid="uid://d03yqfh0iegnm" path="res://stages/world_8/additives/8-1.tres" id="9_f0ims"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_c3og2"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_c3og2"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="12_un8ti"]
 [ext_resource type="Texture2D" uid="uid://dhv11anio3stx" path="res://gfx/world8/bgsunset.png" id="14_kowxc"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="15_atsf8"]

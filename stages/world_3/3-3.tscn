@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_8n56b"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="8_kicd5"]
 [ext_resource type="TileSet" uid="uid://dbfgv8ye2k5h6" path="res://stages/world_3/additives/night.tres" id="9_ty2yn"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_s37b8"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_s37b8"]
 [ext_resource type="Script" uid="uid://dymkqv71kvnfc" path="res://stages/world_3/additives/Stars-mover.gd" id="12_7k5pl"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="12_shqj5"]
 [ext_resource type="Texture2D" uid="uid://cjsixk4iq32bo" path="res://gfx/world3/gorka-night.png" id="13_hb8rf"]

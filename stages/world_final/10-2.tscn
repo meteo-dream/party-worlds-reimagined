@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bmn12rmr1b35d" path="res://gfx/worldfinal/10-2/10-2bg.png" id="8_ud7jm"]
 [ext_resource type="Material" uid="uid://cwwy5x5gqv5mx" path="res://engine/shaders/add_effect.tres" id="9_l3c1u"]
 [ext_resource type="PackedScene" uid="uid://cyh8itlx01dfq" path="res://FX/lava-particles/acid-particles.tscn" id="10_6dhdh"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_ruelt"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_ruelt"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="12_oc2bu"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="13_cpm1f"]
 [ext_resource type="TileSet" uid="uid://dupxibvyj167d" path="res://stages/world_final/Additives/w8_factory.tres" id="14_m25xo"]

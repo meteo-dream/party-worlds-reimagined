@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="6_ceiot"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="7_477ui"]
 [ext_resource type="TileSet" uid="uid://dgj1qjxyac2gc" path="res://stages/world_6/data/overworld.tres" id="8_cum2w"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_1dpxf"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_1dpxf"]
 [ext_resource type="Texture2D" uid="uid://un63p2fukoae" path="res://gfx/world6/1-2clods.png" id="12_hvwd7"]
 [ext_resource type="Texture2D" uid="uid://bb53r4mur46l2" path="res://gfx/world6/1-2bg.png" id="13_72j5r"]
 [ext_resource type="Texture2D" uid="uid://cl3kwalhe6cf3" path="res://gfx/world6/1-2water.png" id="14_4urgg"]

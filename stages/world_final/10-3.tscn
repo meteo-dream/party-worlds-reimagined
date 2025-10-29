@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="5_wqa8x"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="7_fser6"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_tiqof"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_php7t"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_php7t"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="11_qy81n"]
 [ext_resource type="TileSet" uid="uid://h3f7j20apwf0" path="res://stages/world_final/Additives/w8_desert.tres" id="13_odug7"]
 [ext_resource type="Texture2D" uid="uid://boehij35imfw" path="res://gfx/worldfinal/10-3bg.png" id="13_q4a4b"]

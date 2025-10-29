@@ -13,7 +13,7 @@
 [ext_resource type="TileSet" uid="uid://big4khcqfxxvi" path="res://stages/world_2/additives/2-1.tres" id="9_ghquw"]
 [ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="9_k70xw"]
 [ext_resource type="TileSet" uid="uid://djl4x7thc1p36" path="res://stages/world_4/Additives/goomba_statues.tres" id="9_oduhv"]
-[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="10_jpns6"]
+[ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_jpns6"]
 [ext_resource type="Texture2D" uid="uid://bohfl0xxqc3c0" path="res://gfx/world4/bg_windmil.png" id="10_ypqgk"]
 [ext_resource type="Texture2D" uid="uid://dkcjlk0huekdf" path="res://gfx/world4/fg_windmil.png" id="11_2rrxj"]
 [ext_resource type="PackedScene" uid="uid://ddwxc43m3q1c6" path="res://engine/objects/core/checkpoint/checkpoint.tscn" id="14_3b32s"]
