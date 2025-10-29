@@ -763,6 +763,45 @@ size_flags_horizontal = 10
 texture = SubResource("AtlasTexture_lobhh")
 stretch_mode = 2
 
+[node name="HBoxContainer13" type="HBoxContainer" parent="Gameplay"]
+layout_mode = 2
+script = ExtResource("3_pxu1a")
+tweak_name = "faster_end_timer"
+tweak_description = "accelerates the time-to-score calculation at the end of a level"
+selected_sound = ExtResource("3_ltw82")
+
+[node name="Label" type="Label" parent="Gameplay/HBoxContainer13"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_5xeuf")
+theme_override_font_sizes/font_size = 12
+text = "enable faster end-level timer"
+uppercase = true
+
+[node name="Toggle" type="TextureRect" parent="Gameplay/HBoxContainer13"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_nfdnl")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Gameplay/HBoxContainer13/Toggle"]
+modulate = Color(0, 0, 0, 0.462745)
+z_index = -1
+layout_mode = 2
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+size_flags_horizontal = 10
+texture = SubResource("AtlasTexture_lobhh")
+stretch_mode = 2
+
 [node name="Exit" type="HBoxContainer" parent="Gameplay"]
 layout_mode = 2
 size_flags_vertical = 10
