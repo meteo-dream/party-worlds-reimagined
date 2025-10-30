@@ -730,6 +730,7 @@ layer_1/tile_data = PackedInt32Array(20316159, 524288, 4, 22347788, 458752, 5, 2
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("14_bspt7")]
+display_text = "Hazel - Summer (barbeque at dafunk's beach house)"
 text = Array[String](["Hazel - Summer (barbeque at dafunk's beach house)"])
 
 [node name="HUD" parent="." instance=ExtResource("10_5ba4k")]

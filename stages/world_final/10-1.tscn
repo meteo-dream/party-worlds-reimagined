@@ -220,6 +220,7 @@ metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("10_ixihe")]
 layer = 6
+display_text = "GOUKISAN - BETRAYAL OF FEAR"
 text = Array[String](["GOUKISAN - BETRAYAL OF FEAR"])
 
 [node name="Objects" type="Node2D" parent="."]
@@ -350,8 +351,8 @@ frequency = -360.0
 [connection signal="scroll_stopped" from="Path2D/PathFollow2D" to="Objects/BorderBlocker10-1" method="_on_path_follow_2d_scroll_stopped"]
 [connection signal="speed_change" from="Path2D/PathFollow2D" to="Objects/JumpingCheepsGeneratorLeft" method="_on_path_follow_2d_speed_change"]
 [connection signal="collided_wall" from="NewTileMapLayer/Goomba" to="NewTileMapLayer/Goomba" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@69543" to="NewTileMapLayer/@CharacterBody2D@69543" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@36618" to="NewTileMapLayer/@CharacterBody2D@36618" method="turn_x"]
 [connection signal="collided_wall" from="NewTileMapLayer/KoopaRed" to="NewTileMapLayer/KoopaRed" method="turn_x"]
 [connection signal="collided_wall" from="NewTileMapLayer/SpinyRed" to="NewTileMapLayer/SpinyRed" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@69627" to="NewTileMapLayer/@CharacterBody2D@69627" method="turn_x"]
-[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@69698" to="NewTileMapLayer/@CharacterBody2D@69698" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@36702" to="NewTileMapLayer/@CharacterBody2D@36702" method="turn_x"]
+[connection signal="collided_wall" from="NewTileMapLayer/@CharacterBody2D@36773" to="NewTileMapLayer/@CharacterBody2D@36773" method="turn_x"]

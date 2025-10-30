@@ -519,6 +519,7 @@ metadata/_edit_lock_ = true
 [node name="HUD" parent="." instance=ExtResource("10_1dpxf")]
 
 [node name="MusicOverlay" parent="HUD" instance=ExtResource("24_ru4w2")]
+display_text = "jester - stardust memories"
 text = Array[String](["jester - stardust memories"])
 
 [node name="Label" parent="HUD" instance=ExtResource("25_gfqr4")]

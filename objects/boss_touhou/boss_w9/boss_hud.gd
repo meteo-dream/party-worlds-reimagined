@@ -5,8 +5,6 @@ const SPELL_CUTIN = preload("res://objects/boss_touhou/boss_w9/components/spell_
 
 @export var y_offset = 0
 @export var append_attack_count_to_name: bool = true
-@export var main_boss_name: String = "AYA SHAMEIMARU"
-@export var secret_boss_name: String = "HATATE HIMEKAIDOU"
 
 @onready var boss_name_label: Label = $BossName
 @onready var spellcard_count: TextureRect = $BossName/SpellCardCount
@@ -33,8 +31,9 @@ func _ready() -> void:
 
 func check_boss_name() -> void:
 	if CustomGlobals.check_for_hatate_boss():
-		boss_name = secret_boss_name
-	else: boss_name = main_boss_name
+		boss_name = tr("HATATE HIMEKAIDOU", "9-3 Secret Boss Name")
+	else: boss_name = tr("AYA SHAMEIMARU", "9-3 Boss Name")
+	if boss_name == null: return
 	boss_name_label.text = boss_name
 
 func appear_animation() -> void:

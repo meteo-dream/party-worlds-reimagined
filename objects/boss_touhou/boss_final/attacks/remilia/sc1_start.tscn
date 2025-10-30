@@ -6,7 +6,7 @@
 script = ExtResource("1_nblxg")
 is_new_spell_card = true
 is_spell_card = true
-spellcard_name = "Nether Sign \"Scarlet Netherworld\""
+spellcard_name_text = "Nether Sign \"Scarlet Netherworld\""
 
 [node name="RainTimer" type="Timer" parent="."]
 process_mode = 1

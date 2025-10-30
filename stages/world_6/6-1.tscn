@@ -485,6 +485,7 @@ tile_set = ExtResource("14_as8i7")
 [node name="HUD" parent="." instance=ExtResource("10_55n6n")]
 
 [node name="MusicOverlay" parent="HUD" instance=ExtResource("16_0qm2i")]
+display_text = "VINNYCEUS - MANUAL"
 text = Array[String](["VINNYCEUS - MANUAL"])
 
 [node name="Label" parent="HUD" instance=ExtResource("17_lw3gr")]

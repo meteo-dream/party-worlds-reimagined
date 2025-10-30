@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="5_qbodn"]
 [ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="7_cwt8f"]
 [ext_resource type="TileSet" uid="uid://co61k86k5y2qh" path="res://gfx/world7/additives/7-1tileset.tres" id="8_mh4er"]
-[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="10_gcyel"]
+[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="10_gcyel"]
 [ext_resource type="Texture2D" uid="uid://bf1ya20aq1row" path="res://gfx/world7/w7bg.png" id="11_cgab8"]
 [ext_resource type="Texture2D" uid="uid://bau5l64671pv4" path="res://gfx/world7/w7_bg33.png" id="12_kw63y"]
 [ext_resource type="PackedScene" uid="uid://byfm436d1p7j8" path="res://engine/objects/platform/platform_path_gray.tscn" id="12_te2ha"]
@@ -199,6 +199,7 @@ stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("29_bds5k")]
+display_text = "TJ TechnoiZ - Another World"
 text = Array[String](["TJ TechnoiZ - Another World"])
 
 [node name="Enemies" type="Node2D" parent="."]
@@ -288,9 +289,9 @@ metadata/_edit_lock_ = true
 position = Vector2(9232, 240)
 
 [node name="RotoRed" parent="Enemies/RotoCenter" instance=ExtResource("21_b3kqh")]
-position = Vector2(-65, 135)
+position = Vector2(24, 148)
 preview = true
-phase = 110.833
+phase = 75.833
 frequency = -300.0
 
 [node name="PiranhaGray4" parent="Enemies" instance=ExtResource("15_ad67c")]
@@ -389,3 +390,30 @@ position = Vector2(13152, 400)
 
 [node name="HammerBroJumpMarker" parent="." instance=ExtResource("16_ad67c")]
 position = Vector2(13040, 384)
+
+[connection signal="collided_wall" from="Ground/KoopaGreen" to="Ground/KoopaGreen" method="turn_x"]
+[connection signal="collided_wall" from="Ground/SpinyIron_EdgeTurn" to="Ground/SpinyIron_EdgeTurn" method="turn_x"]
+[connection signal="collided_wall" from="Ground/Goomba" to="Ground/Goomba" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@50932" to="Ground/@CharacterBody2D@50932" method="turn_x"]
+[connection signal="collided_wall" from="Ground/KoopaRed" to="Ground/KoopaRed" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@50961" to="Ground/@CharacterBody2D@50961" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@50962" to="Ground/@CharacterBody2D@50962" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@50966" to="Ground/@CharacterBody2D@50966" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@50967" to="Ground/@CharacterBody2D@50967" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@50968" to="Ground/@CharacterBody2D@50968" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51006" to="Ground/@CharacterBody2D@51006" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51007" to="Ground/@CharacterBody2D@51007" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51008" to="Ground/@CharacterBody2D@51008" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51009" to="Ground/@CharacterBody2D@51009" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51010" to="Ground/@CharacterBody2D@51010" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51011" to="Ground/@CharacterBody2D@51011" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51017" to="Ground/@CharacterBody2D@51017" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51018" to="Ground/@CharacterBody2D@51018" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51019" to="Ground/@CharacterBody2D@51019" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51026" to="Ground/@CharacterBody2D@51026" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51027" to="Ground/@CharacterBody2D@51027" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51028" to="Ground/@CharacterBody2D@51028" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51035" to="Ground/@CharacterBody2D@51035" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51048" to="Ground/@CharacterBody2D@51048" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51049" to="Ground/@CharacterBody2D@51049" method="turn_x"]
+[connection signal="collided_wall" from="Ground/@CharacterBody2D@51050" to="Ground/@CharacterBody2D@51050" method="turn_x"]

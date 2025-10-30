@@ -484,6 +484,7 @@ metadata/_edit_lock_ = true
 layer = 100
 
 [node name="MusicOverlay" parent="HUD" instance=ExtResource("11_77oud")]
+display_text = "Neil Brennan - Fist II (Johan Andersson cover)"
 text = Array[String](["Neil Brennan - Fist II (Johan Andersson cover)"])
 
 [node name="Label" parent="HUD" instance=ExtResource("18_gfhgt")]

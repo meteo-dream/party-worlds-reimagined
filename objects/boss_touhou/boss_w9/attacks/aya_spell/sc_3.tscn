@@ -5,7 +5,7 @@
 [node name="sc_3" type="Node"]
 script = ExtResource("1_kdna5")
 is_spell_card = true
-spellcard_name = "Snapshot \"Fast Shot\""
+spellcard_name_text = "Snapshot \"Fast Shot\""
 spellcard_time = 30.0
 spellcard_score_bonus = 10000
 

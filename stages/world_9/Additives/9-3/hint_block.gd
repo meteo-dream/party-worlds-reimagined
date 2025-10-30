@@ -1,5 +1,8 @@
 extends "res://engine/objects/bumping_blocks/message_block/message_block.gd"
 
+#@export var main_hint_list_text: Array[String]
+#@export var alternative_hint_list_text: Array[String]
+
 @export var main_hint_list: Array[String]
 @export var alternative_hint_list: Array[String]
 

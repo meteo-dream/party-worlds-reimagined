@@ -223,6 +223,7 @@ level = "uid://bny7rfh2vcik1"
 
 [node name="MusicOverlay" parent="." instance=ExtResource("18_3gcdc")]
 displaying_mode = 1
+display_text = "DRAX - REPEATING PATTERNS"
 text = Array[String](["DRAX - REPEATING PATTERNS"])
 
 [node name="Bosst" type="Sprite2D" parent="."]

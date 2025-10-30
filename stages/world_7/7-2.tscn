@@ -159,6 +159,7 @@ text = "SUNDAY
 MORNING"
 
 [node name="MusicOverlay" parent="." instance=ExtResource("12_kt3w1")]
+display_text = "TJ TechnoiZ - Sunday Morning"
 text = Array[String](["TJ TechnoiZ - Sunday Morning"])
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -659,11 +660,11 @@ id = 1
 [node name="FinishLine" parent="." instance=ExtResource("32_22cs7")]
 position = Vector2(15648, 416)
 
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54798" to="TileMapLayer/@CharacterBody2D@54798" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54823" to="TileMapLayer/@CharacterBody2D@54823" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54824" to="TileMapLayer/@CharacterBody2D@54824" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54886" to="TileMapLayer/@CharacterBody2D@54886" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54887" to="TileMapLayer/@CharacterBody2D@54887" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54915" to="TileMapLayer/@CharacterBody2D@54915" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54916" to="TileMapLayer/@CharacterBody2D@54916" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@54917" to="TileMapLayer/@CharacterBody2D@54917" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/KoopaRed" to="TileMapLayer/KoopaRed" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@51902" to="TileMapLayer/@CharacterBody2D@51902" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@51903" to="TileMapLayer/@CharacterBody2D@51903" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/Goomba" to="TileMapLayer/Goomba" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@51964" to="TileMapLayer/@CharacterBody2D@51964" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@51992" to="TileMapLayer/@CharacterBody2D@51992" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@51993" to="TileMapLayer/@CharacterBody2D@51993" method="turn_x"]
+[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@51994" to="TileMapLayer/@CharacterBody2D@51994" method="turn_x"]

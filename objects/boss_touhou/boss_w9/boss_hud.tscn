@@ -20,7 +20,7 @@ offset_bottom = 74.0
 pivot_offset = Vector2(0, 9)
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_4phmr")
-text = "AYA SHAMEIMARU"
+text = "PLACEHOLDER"
 
 [node name="SpellCardCount" type="TextureRect" parent="BossName"]
 layout_mode = 1

@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://co2aqkfsljcf1" path="res://engine/scenes/map/textures/x.png" id="17_u1l3n"]
 [ext_resource type="Script" uid="uid://bgm1hm3784ld7" path="res://engine/scenes/map/scripts/map_player_marker.gd" id="18_7pb56"]
 [ext_resource type="Texture2D" uid="uid://dn4s4dos2akcy" path="res://gfx/maps/w8-1.png" id="19_mnq5e"]
-[ext_resource type="PackedScene" path="res://stages/world_8/map8-2.tscn" id="20_ivdcw"]
+[ext_resource type="PackedScene" uid="uid://dc3sb64g14o8s" path="res://stages/world_8/map8-2.tscn" id="20_ivdcw"]
 [ext_resource type="Script" uid="uid://b8puhalomggbj" path="res://engine/scenes/map/scripts/map_swim_area.gd" id="21_ay5pj"]
 [ext_resource type="Texture2D" uid="uid://bhfeb11h4tkt5" path="res://gfx/maps/w8-3.png" id="22_jwbrf"]
 [ext_resource type="Shader" uid="uid://dlb60ticce5vh" path="res://FX/fg_fog/fg_fog.gdshader" id="23_s4bs2"]
@@ -114,6 +114,7 @@ script = ExtResource("13_5ukaj")
 
 [node name="MusicOverlay" parent="GUI" instance=ExtResource("14_qomgo")]
 displaying_mode = 1
+display_text = "tuna - midnight runaway"
 text = Array[String](["tuna - midnight runaway"])
 
 [node name="MarkerSpace" type="Node2D" parent="."]

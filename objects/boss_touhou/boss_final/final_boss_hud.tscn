@@ -6,15 +6,10 @@
 
 [node name="FinalBossHUD" instance=ExtResource("1_tll4x")]
 script = ExtResource("2_s1wyl")
-transition_boss_name = "PATCHOULI KNOWLEDGE"
-final_phase_name = "REMILIA & MARISA?"
 show_spell_count = false
-main_boss_name = "REMILIA SCARLET"
-secret_boss_name = "MARISA KIRISAME?"
 
 [node name="BossName" parent="." index="0"]
 offset_bottom = 72.0
-text = "REMILIA SCARLET"
 script = ExtResource("3_auwy2")
 
 [node name="Photos" parent="." index="4"]

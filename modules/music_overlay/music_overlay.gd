@@ -1,16 +1,15 @@
 @tool
 extends CanvasLayer
 
+var now_playing_text: String = tr('NOW PLAYING: \n%s')
+
 enum DisplayingMode {
 	ROLL_IN_OUT,
 	TYPER
 }
 
 @export var displaying_mode: DisplayingMode = DisplayingMode.ROLL_IN_OUT
-@export var text: Array[String] = ["MUSIC NAME"]:
-	set(value):
-		text = value
-		$MusicText.text = 'NOW PLAYING: \n%s' % text[id]
+@export var display_text: String
 
 var current_scene
 
@@ -35,8 +34,8 @@ func _ready() -> void:
 
 
 func play(index: int = 0) -> void:
-	id = index
-	text = text # Triggers setter
+	if is_instance_valid(music_text):
+		music_text.text = now_playing_text % display_text
 	while is_inside_tree() && !animation_player:
 		await get_tree().physics_frame
 	animation_player.play(

@@ -63,6 +63,7 @@ music = Array[Resource]([ExtResource("3_7g2o7")])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("4_o1gdg")]
 displaying_mode = 1
+display_text = "mr.gamer - mouseball"
 text = Array[String](["mr.gamer - mouseball"])
 
 [node name="Bg" type="Sprite2D" parent="."]

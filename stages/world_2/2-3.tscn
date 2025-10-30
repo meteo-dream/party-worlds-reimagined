@@ -531,6 +531,7 @@ script = ExtResource("6_dcgt3")
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("6_goysh")]
+display_text = "Baroque - facettes"
 text = Array[String](["Baroque - facettes"])
 
 [node name="CameraArea" parent="." instance=ExtResource("7_5567o")]

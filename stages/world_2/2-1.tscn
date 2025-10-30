@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bl1kvxnibhwrt" path="res://gfx/world2/bg2-1_1.png" id="23_mxc6p"]
 [ext_resource type="Texture2D" uid="uid://c4bhoogeyol60" path="res://gfx/world2/bg2-1_2.png" id="24_6hiuo"]
 [ext_resource type="PackedScene" uid="uid://ddwxc43m3q1c6" path="res://engine/objects/core/checkpoint/checkpoint.tscn" id="25_317hc"]
-[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="27_0ju03"]
+[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="27_0ju03"]
 [ext_resource type="PackedScene" uid="uid://btd4qa0fl8542" path="res://engine/objects/platform/platform_path_cloud.tscn" id="28_govkx"]
 [ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="29_pj6rx"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="30_qjmws"]
@@ -735,6 +735,7 @@ volume_db = Array[float]([-6.0])
 position = Vector2(112, 272)
 
 [node name="MusicOverlay" parent="." instance=ExtResource("5_oodo8")]
+display_text = "soft maniac - forgotten thrills"
 text = Array[String](["soft maniac - forgotten thrills"])
 
 [node name="PlayerCamera2D" type="Camera2D" parent="."]

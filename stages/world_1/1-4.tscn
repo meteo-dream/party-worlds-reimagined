@@ -540,6 +540,7 @@ layer = 2
 text = "The Calling"
 
 [node name="MusicOverlay" parent="." instance=ExtResource("9_0u1w0")]
+display_text = "Clawz - a call today (looper231 cover)"
 text = Array[String](["Clawz - a call today (looper231 cover)"])
 
 [node name="CamArea" parent="." instance=ExtResource("7_8hkis")]
@@ -1205,10 +1206,10 @@ position = Vector2(8880, 400)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter6" instance=ExtResource("35_nu1kw")]
-position = Vector2(46, -89)
+position = Vector2(-4, -100)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -65.0
+phase = -95.0
 frequency = -150.0
 
 [node name="RotoCenter5" parent="Enemies" instance=ExtResource("34_qx2lq")]
@@ -1216,23 +1217,23 @@ position = Vector2(7440, 272)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter5" instance=ExtResource("35_nu1kw")]
-position = Vector2(143, 30)
+position = Vector2(-15, -101)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(147.643, 147.643)
+amplitude = Vector2(100.502, 100.502)
 amplitude_changing_speed = 100.0
 amplitude_max = Vector2(150, 150)
-phase = 12.5
+phase = -97.5
 
 [node name="RotoCenter4" parent="Enemies" instance=ExtResource("34_qx2lq")]
 position = Vector2(2992, 368)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter4" instance=ExtResource("35_nu1kw")]
-position = Vector2(43, -25)
+position = Vector2(-47, 18)
 preview = true
 amplitude = Vector2(50, 50)
-phase = -28.6657
+phase = 161.334
 frequency = 110.0
 
 [node name="RotoCenter3" parent="Enemies" instance=ExtResource("34_qx2lq")]
@@ -1240,10 +1241,10 @@ position = Vector2(1776, 432)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter3" instance=ExtResource("35_nu1kw")]
-position = Vector2(144, -13)
+position = Vector2(128, -23)
 preview = true
 amplitude = Vector2(150, 45)
-phase = -17.54
+phase = -32.54
 frequency = -75.0
 
 [node name="RotoCenter2" parent="Enemies" instance=ExtResource("34_qx2lq")]
@@ -1251,13 +1252,13 @@ position = Vector2(1168, 304)
 preview = true
 
 [node name="RotoRed" parent="Enemies/RotoCenter2" instance=ExtResource("35_nu1kw")]
-position = Vector2(30, 11)
+position = Vector2(-20, -34)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(31.1091, 31.1091)
+amplitude = Vector2(38.1802, 38.1802)
 amplitude_changing_speed = 100.0
 amplitude_max = Vector2(70, 70)
-phase = 18.3334
+phase = -121.667
 frequency = -100.0
 
 [node name="PiranhaGreen" parent="Enemies" instance=ExtResource("36_ug88a")]

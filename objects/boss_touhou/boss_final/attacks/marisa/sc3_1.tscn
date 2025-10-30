@@ -11,7 +11,7 @@ next_attack_will_be_new = true
 end_spell_card_afterwards = true
 player_should_get_pity_afterwards = true
 is_spell_card = true
-spellcard_name = "Love Sign \"Master Spark\""
+spellcard_name_text = "Love Sign \"Master Spark\""
 
 [node name="BossRestTimer" type="Timer" parent="."]
 process_mode = 1

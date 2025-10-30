@@ -5,7 +5,7 @@
 [node name="sc_2" type="Node"]
 script = ExtResource("1_45qo5")
 is_spell_card = true
-spellcard_name = "Telescoping \"Candid Shot\""
+spellcard_name_text = "Telescoping \"Candid Shot\""
 spellcard_time = 31.0
 spellcard_score_bonus = 10000
 

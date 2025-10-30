@@ -1,0 +1,1770 @@
+# LANGUAGE translation for Mario Forever: Party Worlds Reimagined for the following files:
+# res://objects/boss_touhou/dialogue/vs_marisa.dialogue
+# res://objects/boss_touhou/dialogue/vs_reimu.dialogue
+# res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_1.tscn
+# res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_2.tscn
+# res://objects/boss_touhou/boss_w9/attacks/aya_spell/sc_3.tscn
+# res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_1_alt.tscn
+# res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_2_alt.tscn
+# res://objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_3_alt.tscn
+# res://objects/boss_touhou/boss_final/attacks/remilia/sc1_start.tscn
+# res://objects/boss_touhou/boss_final/attacks/remilia/sc3_start.tscn
+# res://objects/boss_touhou/boss_final/attacks/marisa/sc1_1.tscn
+# res://objects/boss_touhou/boss_final/attacks/marisa/sc3_1.tscn
+# res://objects/boss_touhou/boss_final/remilia/remilia_chara.tscn
+# res://objects/boss_touhou/boss_final/attacks/marisa/sc7_1.tscn
+# res://objects/boss_touhou/boss_final/attacks/marisa/scfinal_1.tscn
+# res://objects/boss_touhou/boss_w9/boss_hud.gd
+# res://objects/boss_touhou/boss_final/final_boss_hud.gd
+# res://objects/boss_touhou/boss_w9/boss_hud.tscn
+# res://objects/boss_touhou/boss_final/final_boss_hud.tscn
+# res://addons/localization/main_menu/tweaks.tscn
+# res://stages/main_menu/objects/tweaks_selections.tscn
+# res://engine/components/hud/hud.tscn
+# res://stages/world_1/1-1.tscn
+# res://stages/world_1/1-2.tscn
+# res://stages/world_1/1-3.tscn
+# res://stages/world_1/1-4.tscn
+# res://stages/world_2/2-1.tscn
+# res://stages/world_2/2-2.tscn
+# res://stages/world_2/2-3.tscn
+# res://stages/world_3/3-1.tscn
+# res://stages/world_3/3-2.tscn
+# res://stages/world_3/3-3.tscn
+# res://stages/world_3/3-4.tscn
+# res://stages/world_4/4-1.tscn
+# res://stages/world_4/4-2.tscn
+# res://stages/world_4/4-3.tscn
+# res://stages/world_4/4-4.tscn
+# res://stages/world_4/4-5.tscn
+# res://stages/world_5/levelpartyworld5.tscn
+# res://stages/world_6/6-1.tscn
+# res://stages/world_6/6-2.tscn
+# res://stages/world_6/6-3.tscn
+# res://stages/world_6/6-4.tscn
+# res://stages/world_6/6-5.tscn
+# res://stages/world_7/7-1.tscn
+# res://stages/world_7/7-2.tscn
+# res://stages/world_7/7-3.tscn
+# res://stages/world_8/8-1.tscn
+# res://stages/world_8/8-2.tscn
+# res://stages/world_8/8-3.tscn
+# res://stages/world_9/9-1.tscn
+# res://stages/world_9/9-2.tscn
+# res://stages/world_9/9-3.tscn
+# res://stages/world_9/after_9-3_cutscene.tscn
+# res://stages/world_final/10-1.tscn
+# res://stages/world_final/10-2.tscn
+# res://stages/world_final/10-3.tscn
+# res://stages/world_final/10-4.tscn
+# res://stages/world_final/10-4_boss.tscn
+# res://stages/main/save_game_room_pw.tscn
+# res://stages/main/credits/credits_pw.tscn
+# res://stages/main/credits/credits_pw_end.tscn
+# res://stages/main/credits/sections/section_0.tscn
+# res://stages/main/credits/sections/section_dev1.tscn
+# res://stages/main/credits/sections/section_dev1p2.tscn
+# res://stages/main/credits/sections/section_dev2.tscn
+# res://stages/main/credits/sections/section_dev2p2.tscn
+# res://stages/main/credits/sections/section_engine.tscn
+# res://stages/main/credits/sections/section_finalboss.tscn
+# res://stages/main/credits/sections/section_graphics1.tscn
+# res://stages/main/credits/sections/section_graphics2.tscn
+# res://stages/main/credits/sections/section_graphics3.tscn
+# res://stages/main/credits/sections/section_graphics4.tscn
+# res://stages/main/credits/sections/section_lead.tscn
+# res://stages/main/credits/sections/section_leveldesign.tscn
+# res://stages/main/credits/sections/section_mapdesign.tscn
+# res://stages/main/credits/sections/section_music.tscn
+# res://stages/main/credits/sections/section_skintails.tscn
+# res://stages/main/credits/sections/section_skintouhou.tscn
+# res://stages/main/credits/sections/section_sounds.tscn
+# res://stages/main/credits/sections/section_specialthanks.tscn
+# res://stages/main/credits/sections/section_touhou.tscn
+# res://modules/music_overlay/music_overlay.gd
+# res://engine/scenes/save_game_room/scripts/reset.tscn
+# res://stages/world_4/Additives/vstroeni.gd
+# res://stages/world_final/Additives/ljd_arrow_sign.tscn
+# res://stages/world_final/Additives/8-2/factory_big_sign.tscn
+# res://stages/main/saved_level_label_pw.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mario Forever: Party Worlds Reimagined\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#. TRANSLATORS: Character name
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgctxt "dialogue"
+msgid "Marisa"
+msgstr ""
+
+#. TRANSLATORS: Character name
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgctxt "dialogue"
+msgid "[right]???"
+msgstr ""
+
+#. TRANSLATORS: Character name
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgctxt "dialogue"
+msgid "[right]Remilia"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid ""
+"She's definitely here.\n"
+"This weird air is giving me the chills."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Why do the strong ones always hide?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[do! SPECIAL_move_boss_into_position()][right]A skilled hawk doesn't hide its tail.[wait=\"allow_continue_dialog\"]"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "...you don't seem to have a brain."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Humans are the only ones who need simple chemical thought centers such as brains."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "You're one of those, right?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Can't stand sunlight or smelly vegetables,[wait=0.5] or that one silver thing."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "You know, the masters of the night with tons of weaknesses for some reason..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Yes, I'm a sickly girl."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Interesting. So you really drink it? You know, that."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Of course. But I'm a light eater and always leave some on the plate."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "How many people's blood have you sucked up to now?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Can you remember how many slices of bread you have eaten until now?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Thirteen. I prefer Japanese food."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]So, what are you here for?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]I'm already quite full, but..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Oh yeah, I'm hungry."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]...Eating may be good."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Ah, so that's what you meant..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Just now, that sounded like the name of a plant: \"mint.\""
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Humans are fun."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Or maybe you're not a human?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "I'm a fun human."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]Heehee, because the moon is so red?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "[right]It looks like it's going to be a hot night."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_marisa.dialogue
+msgid "Looks like it's gonna be a cold night."
+msgstr ""
+
+#. TRANSLATORS: Character name
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgctxt "dialogue"
+msgid "Reimu"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Isn't it about time you showed yourself?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "\"Mistress?\""
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[do! SPECIAL_move_boss_into_position()][right]I knew it. Humans are useless.[wait=\"allow_continue_dialog\"]"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "So that maid was a human."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]You're a murderer, you know."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "One person doesn't make me a mass murderer, so it's fine."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]Well?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Oh right, you're being a huge nuisance."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid ""
+"[right]How quick you are to accuse.[wait=0.5]\n"
+"And I don't even know why."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Whatever, could you just leave?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]This is my castle, is it not?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]You are the one who will leave."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "I want you to leave this world."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]So that's how it's going to be."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]I am already full, but..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Didn't you hire that maid to protect you?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "I can take a sheltered young lady like you down in one blow!"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]Sakuya is an excellent cleaner."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]Not a single head is on the floor, thanks to her."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Are you strong?"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid ""
+"[right]Who knows.[wait=0.5]\n"
+"I don't get to go outside often."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]Since I'm weak to sunlight."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "...So you are strong, then."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]As the Moon is so scarlet, I shall thus kill you for good."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Although the Moon is so scarlet..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "[right]Looks like it's going to be a fun night."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/vs_reimu.dialogue
+msgid "Looks like it's going to be a long night."
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/attacks/aya_spell/sc_1.tscn
+msgid "Reporting \"Aya Shameimaru's Coercive Reporting\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/attacks/aya_spell/sc_2.tscn
+msgid "Telescoping \"Candid Shot\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/attacks/aya_spell/sc_3.tscn
+msgid "Snapshot \"Fast Shot\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_1_alt.tscn
+msgid "Reporting \"Hatate Himekaidou's Reporting Training\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_2_alt.tscn
+msgid "Continuous Shooting \"Rapid Shot\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/attacks/hatate_spell/sc_3_alt.tscn
+msgid "Far-sightedness \"Tengu Psychography\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/attacks/remilia/sc1_start.tscn
+msgid "Nether Sign \"Scarlet Netherworld\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/attacks/remilia/sc3_start.tscn
+msgid "Divine Art \"Vampire Illusion\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/attacks/marisa/sc1_1.tscn
+msgid "Light Sign \"Earthlight Ray\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/attacks/marisa/sc3_1.tscn
+msgid "Love Sign \"Master Spark\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/remilia/remilia_chara.tscn
+msgid "Scarlet Light Blast \"Shoot the Blood Moon\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/attacks/marisa/sc7_1.tscn
+msgid "Comet \"Blazing Star\""
+msgstr ""
+
+#: objects/boss_touhou/boss_final/attacks/marisa/scfinal_1.tscn
+msgid "Red Magicannon \"Final Spark\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.gd
+msgctxt "9-3 Secret Boss Name"
+msgid "HATATE HIMEKAIDOU"
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.gd
+msgctxt "9-3 Boss Name"
+msgid "AYA SHAMEIMARU"
+msgstr ""
+
+#: objects/boss_touhou/boss_final/final_boss_hud.gd
+msgctxt "Final Boss 1 Name"
+msgid "REMILIA SCARLET"
+msgstr ""
+
+#: objects/boss_touhou/boss_final/final_boss_hud.gd
+msgctxt "Final Boss 2 Name"
+msgid "MARISA KIRISAME?"
+msgstr ""
+
+#: objects/boss_touhou/boss_final/final_boss_hud.gd
+msgctxt "Final Boss Transition Boss Name"
+msgid "PATCHOULI KNOWLEDGE"
+msgstr ""
+
+#: objects/boss_touhou/boss_final/final_boss_hud.gd
+msgctxt "Final Boss Combined Name"
+msgid "REMILIA & MARISA?"
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.tscn
+msgid "PLACEHOLDER"
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.tscn
+msgid "Default Sign \"Default Name\""
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.tscn
+msgid "%.2fs"
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.tscn
+msgid "Get Power-up Bonus!!"
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.tscn
+msgid "PHOTOS"
+msgstr ""
+
+#: objects/boss_touhou/boss_w9/boss_hud.tscn
+msgid "%s/%s"
+msgstr ""
+
+#: addons/localization/main_menu/tweaks.tscn
+msgid ""
+"if you have\n"
+"any ideas\n"
+"on how to\n"
+"expand\n"
+"this list,\n"
+"feel free to\n"
+"contact us on\n"
+"our discord\n"
+"server!"
+msgstr ""
+
+#: addons/localization/main_menu/tweaks.tscn
+msgid ""
+"please press\n"
+"%s\n"
+"for a tweak\n"
+"description!"
+msgstr ""
+
+#: addons/localization/main_menu/tweaks.tscn
+msgid "MESSAGE BOX"
+msgstr ""
+
+#: addons/localization/main_menu/tweaks.tscn
+msgid "PRESS %s"
+msgstr ""
+
+#: addons/localization/main_menu/tweaks.tscn
+msgid "PRESS SPACE KEY"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "gameplay"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "press enter"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "aesthetic"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "miscellaneous"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "general"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "character"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "mario"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "<--"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "-->"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"set a modern skin for mario or luigi, or make your own character! you can also download custom skins of other players or share yours in our discord server! a guide on how to make your own skins is located there too.\n"
+"\n"
+"this list is expanded automatically if skins are detected in a skins folder, and applied on exit from this menu."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "skin set"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "you will be able to select and interact with menu controls such as this one using your mouse cursor."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "mouse input in menus"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "save and go back"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "each time you complete a level, a one-time save is made with your entire progress, including your power state, lives, and the level you were on. You can access it at any time."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"save suspended game on exit\n"
+"(aka progress continue)"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"mimics the behavior from the original, where the player receives a push forwards each time bowser is stomped, and cannot bounce as high.\n"
+"\n"
+"disabling this tweak makes stomping on bowser identical to other enemies."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"less bouncy bowser stomping \n"
+"(as in the original)"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "disabling this tweak removes all checkpoints, making the game more challenging."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enable checkpoints"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"stomping combos were not a thing in the original mario forever. the stomping combo goes like this:\n"
+"\n"
+"100 > 200 > 400 > 500 > 800 > 1000 > 2000 > 4000 > 5000 > 8000 > 1up > back to 100."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enable stomping combos"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"allows the player to jump while crouching in super or better forms.\n"
+"\n"
+"if jumped while crouching, you wouldn't be able to accelerate more than the walking speed limit, but you will keep previous speed. in this state, there is no passive deceleration when no buttons are pressed.\n"
+"\n"
+"if disabled, bricks above your head will break automatically while crouching. if enabled, you will have to jump to break bricks or activate bonus blocks."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enable crouch jumping"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"while disabled, springboards require the user to press the jump button up to 1/10 of a second in advance before touching the springboard to bounce higher.\n"
+"\n"
+"enabling this tweak makes the player always jump at the maximum height as long as you hold the jump button, making springboards a little easier to control."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "easier springboards (no timing required)"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "accelerates the time-to-score calculation at the end of a level."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enable faster end-level timer"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "go back"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"replace circle transitions with fades\n"
+"(from 5.0+)"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "smoothes out camera movement between certain areas, such as save game room."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "smooth camera transitions between areas"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "adds a blur transition each time the player warps into a new area. disable this to make the new area load immediately."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "blur transitions between pipe warp areas"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "each time the player receives a damage or dies, the world around them halts for a second, giving more time for the user to react."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "pause on player suit change"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"enables the skidding animation and particles, similar to something you would see in other mario games.\n"
+"\n"
+"note: this does not affect gameplay in any way!"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enable player skidding effects"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "sets a custom mouse cursor image."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "custom mouse cursor"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"copies the behavior over from the original game, where save pipes ignore the level you were on.\n"
+"\n"
+"notice: enabling this tweak will not reset your save pipe until you enter it."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "save pipe: always first level of the world"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enables a quick shortcut to save game room using f3 key."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "f3 keybind to save game room"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "enables a quick shortcut to main menu using f4 key."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "f4 keybind to main menu"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"if disabled, touching a power-up in save room item shop will immediately buy an item.\n"
+"\n"
+"if enabled, it also requires the player to press the moving up key in order to buy an item."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "require pressing up in item shop"
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid ""
+"if disabled, deleting saves in the save game room takes 3 seconds (or 2.5s in 1.2x game speed).\n"
+"\n"
+"if enabled, the time is reduced to 0.6 seconds (0.5s in 1.2x game speed)."
+msgstr ""
+
+#: stages/main_menu/objects/tweaks_selections.tscn
+msgid "faster save deletion"
+msgstr ""
+
+#: engine/components/hud/hud.tscn
+msgid "MARIO ~ %s"
+msgstr ""
+
+#: engine/components/hud/hud.tscn
+#: stages/world_6/6-3.tscn
+msgid "%s"
+msgstr ""
+
+#: engine/components/hud/hud.tscn
+msgid "TIME"
+msgstr ""
+
+#: engine/components/hud/hud.tscn
+msgid "GAME  OVER"
+msgstr ""
+
+#: stages/world_1/1-1.tscn
+msgid "Estrayk - I Don't Mind"
+msgstr ""
+
+#: stages/world_1/1-1.tscn
+msgid "I don't mind"
+msgstr ""
+
+#: stages/world_1/1-2.tscn
+msgid "Estrayk - I don't mind part 2"
+msgstr ""
+
+#: stages/world_1/1-2.tscn
+msgid "Do you mind?"
+msgstr ""
+
+#: stages/world_1/1-3.tscn
+msgid "Paso - Pleasure to paso?"
+msgstr ""
+
+#: stages/world_1/1-3.tscn
+msgid "Our pleasure"
+msgstr ""
+
+#: stages/world_1/1-4.tscn
+msgid "The Calling"
+msgstr ""
+
+#: stages/world_1/1-4.tscn
+msgid "Clawz - a call today (looper231 cover)"
+msgstr ""
+
+#: stages/world_2/2-1.tscn
+msgid "soft maniac - forgotten thrills"
+msgstr ""
+
+#: stages/world_2/2-1.tscn
+msgid ""
+"Forgotten\n"
+"rains\n"
+msgstr ""
+
+#: stages/world_2/2-2.tscn
+msgid "re:flex - radiovibe (party cut)"
+msgstr ""
+
+#: stages/world_2/2-2.tscn
+msgid "I forgot where am I going..."
+msgstr ""
+
+#: stages/world_2/2-3.tscn
+msgid "Baroque - facettes"
+msgstr ""
+
+#: stages/world_2/2-3.tscn
+msgid "where are you?"
+msgstr ""
+
+#: stages/world_3/3-1.tscn
+msgid "emax - oberheim power"
+msgstr ""
+
+#: stages/world_3/3-1.tscn
+msgid "Sunset Power"
+msgstr ""
+
+#: stages/world_3/3-2.tscn
+msgid "malmen - the self portrait"
+msgstr ""
+
+#: stages/world_3/3-2.tscn
+msgid "Sentiment"
+msgstr ""
+
+#: stages/world_3/3-3.tscn
+msgid "Elwood - inferiority complex"
+msgstr ""
+
+#: stages/world_3/3-3.tscn
+msgid "Night Complex"
+msgstr ""
+
+#: stages/world_3/3-4.tscn
+msgid "Rams - A track that fits on a floppy"
+msgstr ""
+
+#: stages/world_3/3-4.tscn
+msgid "%s vs kevin"
+msgstr ""
+
+#: stages/world_3/3-4.tscn
+msgid ""
+"Prepare to\n"
+"meet your\n"
+"clone!"
+msgstr ""
+
+#: stages/world_4/4-1.tscn
+msgid "Hazel - Summer (barbeque at dafunk's beach house)"
+msgstr ""
+
+#: stages/world_4/4-1.tscn
+msgid ""
+"ascension\n"
+"trip"
+msgstr ""
+
+#: stages/world_4/4-2.tscn
+msgid "Steve foster - Monty's high score 2024"
+msgstr ""
+
+#: stages/world_4/4-2.tscn
+msgid ""
+"gaining\n"
+"altitude"
+msgstr ""
+
+#: stages/world_4/4-3.tscn
+msgid "darkman007 - sad song"
+msgstr ""
+
+#: stages/world_4/4-3.tscn
+msgid "mellow forest"
+msgstr ""
+
+#: stages/world_4/4-3.tscn
+msgid "WARNING"
+msgstr ""
+
+#: stages/world_4/4-3.tscn
+msgid ""
+"chaotic rotodiscs\n"
+"ahead"
+msgstr ""
+
+#: stages/world_4/4-3.tscn
+msgid "wall ahead"
+msgstr ""
+
+#: stages/world_4/4-4.tscn
+msgid "Omniswamp"
+msgstr ""
+
+#: stages/world_4/4-4.tscn
+msgid "Emortal - Omnispace"
+msgstr ""
+
+#: stages/world_4/4-4.tscn
+msgid "have cheeseburger\n"
+msgstr ""
+
+#: stages/world_4/4-5.tscn
+msgid "fuzion mixer - tribal instinct (nordlicht edit)"
+msgstr ""
+
+#: stages/world_4/4-5.tscn
+msgid "Raver instinct"
+msgstr ""
+
+#: stages/world_4/4-5.tscn
+msgid "welcome to mexico"
+msgstr ""
+
+#: stages/world_5/levelpartyworld5.tscn
+msgid "SPIRIT - XMASMIX"
+msgstr ""
+
+#: stages/world_5/levelpartyworld5.tscn
+msgid "Xmas mix"
+msgstr ""
+
+#: stages/world_6/6-1.tscn
+msgid "VINNYCEUS - MANUAL"
+msgstr ""
+
+#: stages/world_6/6-1.tscn
+msgid "Forest Stroll"
+msgstr ""
+
+#: stages/world_6/6-1.tscn
+msgid ""
+"Grab me!\n"
+"(Press %s)"
+msgstr ""
+
+#: stages/world_6/6-2.tscn
+msgid "jester - stardust memories"
+msgstr ""
+
+#: stages/world_6/6-2.tscn
+msgid ""
+"Enigmatic\n"
+"Sands"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "tangerine - synthetic jumbo"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "Futurism"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"welcome to\n"
+"\"neo-koopa\"!"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"Follow\n"
+"the prophets"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "infinite possibilities await you"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "Barracks"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"Warning!\n"
+"Dangerous height!"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"We hope you enjoyed\n"
+"your stay!"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"All hail\n"
+"Greensweet"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"you're leaving\n"
+"\"Neo-koopa\""
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"Collect the\n"
+"blue coins!"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid ""
+"Bring me\n"
+"5 blue coins"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "City Entrance"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "Patrol District"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "Construction Site - Upper Level"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "Pit of death"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "City Exit"
+msgstr ""
+
+#: stages/world_6/6-3.tscn
+msgid "Construction Site - Bottom Level"
+msgstr ""
+
+#: stages/world_6/6-4.tscn
+msgid "DJ AIL - The night"
+msgstr ""
+
+#: stages/world_6/6-4.tscn
+msgid "Evening Stroller"
+msgstr ""
+
+#: stages/world_6/6-4.tscn
+msgid ""
+"yaku-yaku\n"
+":3 <3"
+msgstr ""
+
+#: stages/world_6/6-5.tscn
+msgid "drakonpod - phantom"
+msgstr ""
+
+#: stages/world_6/6-5.tscn
+msgid ""
+"erupting\n"
+"frustrator"
+msgstr ""
+
+#: stages/world_6/6-5.tscn
+msgid ""
+"also watch out\n"
+"for stoneballs"
+msgstr ""
+
+#: stages/world_6/6-5.tscn
+msgid ""
+"This platform\n"
+"can tilt"
+msgstr ""
+
+#: stages/world_6/6-5.tscn
+msgid "hello to das"
+msgstr ""
+
+#: stages/world_7/7-1.tscn
+msgid ""
+"ANOTHER\n"
+"WORLD"
+msgstr ""
+
+#: stages/world_7/7-1.tscn
+msgid "TJ TechnoiZ - Another World"
+msgstr ""
+
+#: stages/world_7/7-2.tscn
+msgid ""
+"SUNDAY\n"
+"MORNING"
+msgstr ""
+
+#: stages/world_7/7-2.tscn
+msgid "TJ TechnoiZ - Sunday Morning"
+msgstr ""
+
+#: stages/world_7/7-3.tscn
+msgid ""
+"CURSE OF\n"
+"DIVINE LOVE"
+msgstr ""
+
+#: stages/world_7/7-3.tscn
+msgid "TJ TechnoiZ - Divine (Curse of Love)"
+msgstr ""
+
+#: stages/world_7/7-3.tscn
+msgid ""
+"YOUR ONLY\n"
+"POWERUPS"
+msgstr ""
+
+#: stages/world_7/7-3.tscn
+msgid ""
+"USE THEM\n"
+"WISELY..."
+msgstr ""
+
+#: stages/world_7/7-3.tscn
+msgid ""
+"BE AWARE OF YOUR\n"
+"SURROUNDINGS"
+msgstr ""
+
+#: stages/world_8/8-1.tscn
+msgid "Beach's sympathy"
+msgstr ""
+
+#: stages/world_8/8-1.tscn
+msgid "Jacobthecat - care & sympathii"
+msgstr ""
+
+#: stages/world_8/8-1.tscn
+msgid ""
+"Jumping\n"
+"Cheeps!"
+msgstr ""
+
+#: stages/world_8/8-1.tscn
+msgid ""
+"Cannot swim\n"
+"here!"
+msgstr ""
+
+#: stages/world_8/8-2.tscn
+msgid "viraxor - isabella"
+msgstr ""
+
+#: stages/world_8/8-2.tscn
+msgid "Stroll out\n"
+msgstr ""
+
+#: stages/world_8/8-3.tscn
+msgid "Neil Brennan - Fist II (Johan Andersson cover)"
+msgstr ""
+
+#: stages/world_8/8-3.tscn
+msgid "Temple raider"
+msgstr ""
+
+#: stages/world_9/9-1.tscn
+msgid "Banana (Christof Mühlan) - Echoing (Looper231 Cover)"
+msgstr ""
+
+#: stages/world_9/9-1.tscn
+msgid ""
+"SUBTERRANEAN\n"
+"CRAWL"
+msgstr ""
+
+#: stages/world_9/9-2.tscn
+msgid ""
+"autumnal\n"
+"waterfall"
+msgstr ""
+
+#: stages/world_9/9-2.tscn
+msgid "ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"
+msgstr ""
+
+#: stages/world_9/9-3.tscn
+msgid ""
+"DOUBLE\n"
+"SPOILER"
+msgstr ""
+
+#: stages/world_9/9-3.tscn
+msgid "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"
+msgstr ""
+
+#: stages/world_9/after_9-3_cutscene.tscn
+msgid "Press the %s to skip."
+msgstr ""
+
+#: stages/world_final/10-1.tscn
+msgid ""
+"\"VuLKAN\"\n"
+"8KM. ->"
+msgstr ""
+
+#: stages/world_final/10-1.tscn
+msgid "APPROACH"
+msgstr ""
+
+#: stages/world_final/10-1.tscn
+msgid "GOUKISAN - BETRAYAL OF FEAR"
+msgstr ""
+
+#: stages/world_final/10-2.tscn
+msgid ""
+"DEATH\n"
+"FACTORY"
+msgstr ""
+
+#: stages/world_final/10-2.tscn
+msgid "ET16 - Death Factory"
+msgstr ""
+
+#: stages/world_final/10-2.tscn
+msgid ""
+"LOOKING FOR EMPLOYEES!\n"
+"\n"
+"IF YOU THINK YOU'RE\n"
+"WORTHY ENOUGH TO HELP\n"
+"US IMPROVE THE WORLD,\n"
+"CONTACT US!"
+msgstr ""
+
+#: stages/world_final/10-3.tscn
+msgid "Laxity - A Question of Luck"
+msgstr ""
+
+#: stages/world_final/10-3.tscn
+msgid ""
+"LUCKY\n"
+"QUESTION"
+msgstr ""
+
+#: stages/world_final/10-4.tscn
+msgid "surreal - transversal"
+msgstr ""
+
+#: stages/world_final/10-4.tscn
+msgid "The office"
+msgstr ""
+
+#: stages/world_final/10-4_boss.tscn
+msgid "THE OFFICE"
+msgstr ""
+
+#: stages/world_final/10-4_boss.tscn
+msgid ""
+"YOU\n"
+"WIN"
+msgstr ""
+
+#: stages/world_final/10-4_boss.tscn
+msgid "Cynmusic - The softcore song"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid ""
+"WORLD\n"
+"%s"
+msgstr ""
+
+#: stages/main/saved_level_label_pw.gd
+msgctxt "Save Pipe when yes save"
+msgid ""
+"WORLD\n"
+"%s"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid "RESET POWERUP"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid ""
+"YOU CAN EXCHANGE SOME LIVES FOR ONE OF THESE ITEMS!!!\n"
+"BUT BE CAREFUL, SOMETIMES LIVES ARE MORE IMPORTANT THAN THIS STUFF."
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid "COSTS 1 LIFE"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid "COSTS 2 LIVES"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid "SELECT SAVE"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid ""
+"mario forever\n"
+"party worlds"
+msgstr ""
+
+#: stages/main/save_game_room_pw.tscn
+msgid ""
+"POST-GAME\n"
+"CREDITS"
+msgstr ""
+
+#: stages/main/credits/credits_pw.tscn
+msgid ""
+"[center]\n"
+"\n"
+"\n"
+"Created by:\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"--credits--\n"
+"Project lead: LooPer231\n"
+"level design: looper231, [color=95FBFF]yaolinggui[/color]\n"
+"map design: [color=gray]serafim[/color]gws, [color=95FBFF]yaolinggui[/color], nerton17, bullex\n"
+"boss coding, several cutscenes and credits: [color=95FBFF]yaolinggui[/color]\n"
+"\n"
+"--graphics credits--\n"
+"sonikku\n"
+"askywalker\n"
+"yingchin soul\n"
+"supersledgebro\n"
+"walmaker2022\n"
+"gamma v\n"
+"sednaiur\n"
+"crafink\n"
+"shikaternia\n"
+"evan.f\n"
+"hellfire\n"
+"electro_kun\n"
+"supermany\n"
+"[color=gray]serafim[/color]gws\n"
+"random.nick\n"
+"pixelator\n"
+"eevee\n"
+"[color=light_green]smuglutena[/color]\n"
+"nitrox\n"
+"Nicelife\n"
+"\n"
+"various touhou graphics: \n"
+"team shanghai alice - zun \n"
+"\n"
+"various mario graphics: \n"
+"nintendo \n"
+"\n"
+"--Audio credits--\n"
+"\n"
+"Music Sources:\n"
+"remix.kwed.org\n"
+"modarchive.org\n"
+"SMWCentral.net\n"
+"demoscene\n"
+"newgrounds\n"
+"nintendo\n"
+"team shanghai alice\n"
+"\n"
+"Sound effect sources:\n"
+"The Sounds Resource\n"
+"Nintendo\n"
+"Team Shanghai Alice\n"
+"public domain\n"
+"Trick nostalgie\n"
+"\n"
+"\n"
+"--Engine credits--\n"
+"\n"
+"Powered by Thunder engine\n"
+"developed by:\n"
+"reflexguru\n"
+"jue13\n"
+"yukana\n"
+"\n"
+"\n"
+"--Skin credits--\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Marisa kirisame\n"
+"original by: hartflip0218\n"
+"voice: koumajou densetsu II & touhou canonball\n"
+"custom bgm: hooded edge\n"
+"Skin by: yaolinggui\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Reimu hakurei\n"
+"original by: hartflip0218\n"
+"voice: koumajou densetsu II & touhou canonball\n"
+"custom bgm: hooded edge\n"
+"Skin by: yaolinggui\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Miles \"tails\" prower\n"
+"original by: hartflip0218\n"
+"voice: Sonic heroes & sonic generations (jp)\n"
+"custom Sfx & bgm: Sonic 1, cd & 3\n"
+"Skin by: yaolinggui\n"
+"\n"
+"Credits music:\n"
+"k, jose - a light waltz\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"This is merely basic credits.\n"
+"For more details on characters who appear in the game,\n"
+"developer commentary, and special thanks,\n"
+"please beat the game and explore the save game room!"
+msgstr ""
+
+#: stages/main/credits/credits_pw_end.tscn
+msgid "Press the %s to begin/skip"
+msgstr ""
+
+#: stages/main/credits/credits_pw_end.tscn
+msgid ""
+"Thank you for playing!\n"
+"\n"
+"Press the %s to continue..."
+msgstr ""
+
+#: stages/main/credits/credits_pw_end.tscn
+msgid "the end"
+msgstr ""
+
+#: stages/main/credits/sections/section_0.tscn
+msgid "Credits music: k, jose - a light waltz"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev1.tscn
+msgid ""
+"\"This project started on March 30, 2024. It took me more than a year to finish this (with the help of my pal, Yaolinggui later on). I redid most of the levels from scratch to balance out the difficulty the best I could. It was way too late for me to realize, that the original Party Worlds were much harder than I had expected.\n"
+"\n"
+"So, I hope you enjoyed this completely new touch on my world series! Once again, the worlds try to follow their own structure, not related to any \"standard\" ways. And there is a bit of lore now, but it was thought of way later on :P\""
+msgstr ""
+
+#: stages/main/credits/sections/section_dev1.tscn
+#: stages/main/credits/sections/section_dev1p2.tscn
+#: stages/main/credits/sections/section_dev2.tscn
+#: stages/main/credits/sections/section_dev2p2.tscn
+msgid "Developer Commentary"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev1.tscn
+msgid "LooPer231 (1/2)"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev1p2.tscn
+msgid "\"This project wouldn't have been finished without Yaolinggui. He's carried it at the most important time ever, so big thanks to him, seriously. This project took more than a year to finish and thus might be the first and last MF project I release this year. I'm not done however, so expect more from Meteo Dream very soon!\""
+msgstr ""
+
+#: stages/main/credits/sections/section_dev1p2.tscn
+msgid "LooPer231 (2/2)"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev2.tscn
+msgid "[color=95FBFF]yaolinggui[/color] (1/2)"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev2.tscn
+msgid ""
+"\"I honestly had not expected to do this much for Party Worlds. At the outset, I figured LooPeR only asked me to make a few levels to just push things along a little. But then I asked for what more I could do in the meantime, and then I asked more, and so on. It didn't take long before I took charge of designing a whole world and the final boss.\n"
+"\n"
+"This is the second project I've been working on since my return from a hiatus as well. The first one being a port of one of my older projects to get me up to speed with Godot. By all accounts, I was not that well-equipped to handle something as large as Party Worlds.\""
+msgstr ""
+
+#: stages/main/credits/sections/section_dev2.tscn
+#: stages/main/credits/sections/section_dev2p2.tscn
+msgid "Art by QDylm"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev2p2.tscn
+msgid "[color=95FBFF]yaolinggui[/color] (2/2)"
+msgstr ""
+
+#: stages/main/credits/sections/section_dev2p2.tscn
+msgid ""
+"\"Still saw the project through to the end anyways :P I can at least say that this has given me invaluable experience on how to work with Godot and Thunder Engine from now on. It's bound to be much, much easier for me to start my own projects after this.\n"
+"\n"
+"I would like to thank LooPeR immensely, not only for being there always, but also being a decisive pillar of support. Were it not for him and his year-long project, I likely would have stopped at the port of my old, dusty project. Now? There will be more to expect from me in the (near) future.\""
+msgstr ""
+
+#: stages/main/credits/sections/section_engine.tscn
+msgid ""
+"powered by [color=gold]thunder engine[/color]\n"
+"\n"
+"\n"
+"\n"
+"engine developers:\n"
+"\n"
+"reflex[color=FFC2C2]guru[/color]\n"
+"[color=BEFFCB]jue13[/color]\n"
+"[color=FFFBBE]yukana[/color]"
+msgstr ""
+
+#: stages/main/credits/sections/section_finalboss.tscn
+msgid ""
+"9-3 & final boss coding,\n"
+"several cutscenes and credits:\n"
+"\n"
+"[color=95FBFF]yaolinggui[/color]"
+msgstr ""
+
+#: stages/main/credits/sections/section_finalboss.tscn
+msgid "1-4: the calling"
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics1.tscn
+msgid ""
+"GRAPHICS:\n"
+"\n"
+"sonikku\n"
+"askywalker\n"
+"yingchin soul\n"
+"supersledgebro\n"
+"walmaker2022\n"
+"gamma v\n"
+"sednaiur"
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics1.tscn
+msgid "7-2: sunday morning"
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics2.tscn
+msgid ""
+"GRAPHICS:\n"
+"\n"
+"crafink\n"
+"shikaternia\n"
+"evan.f\n"
+"hellfire\n"
+"electro_kun\n"
+"supermany\n"
+"[color=gray]serafim[/color]gws"
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics2.tscn
+msgid "6-3: futurism"
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics3.tscn
+msgid ""
+"[center]GRAPHICS:[fill]\n"
+" random.nick\t\t pixelator \n"
+" eevee\t\t\t\t  [color=light_green]smuglutena[/color] \n"
+" nitrox\tNicelife "
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics3.tscn
+msgid "WORLD 5: XMAS MIX"
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics4.tscn
+msgid ""
+"various touhou graphics: \n"
+"team shanghai alice - zun \n"
+"\n"
+"various mario graphics: \n"
+"nintendo "
+msgstr ""
+
+#: stages/main/credits/sections/section_graphics4.tscn
+msgid "9-2: autumnal waterfall"
+msgstr ""
+
+#: stages/main/credits/sections/section_lead.tscn
+msgid ""
+"Created by:\n"
+"\n"
+"\n"
+"project lead:\n"
+"     looper231"
+msgstr ""
+
+#: stages/main/credits/sections/section_leveldesign.tscn
+msgid ""
+"Level design:[fill]\n"
+" looper231 [color=95FBFF]yaolinggui[/color] "
+msgstr ""
+
+#: stages/main/credits/sections/section_leveldesign.tscn
+msgid "10 -3: lucky question"
+msgstr ""
+
+#: stages/main/credits/sections/section_mapdesign.tscn
+msgid ""
+"map design:\n"
+"[fill]\n"
+" [color=gray]serafim[/color]gws \t\t\t[color=95FBFF]yaolinggui[/color] \n"
+" nerton17\tbullex "
+msgstr ""
+
+#: stages/main/credits/sections/section_music.tscn
+msgid ""
+"MUSIC SOURCES:\n"
+"[left]\n"
+" remix.kwed.org\n"
+" modarchive.org\n"
+" SMWCentral.net\n"
+" demoscene\n"
+" newgrounds\n"
+" nintendo\n"
+" team shanghai alice"
+msgstr ""
+
+#: stages/main/credits/sections/section_music.tscn
+msgid "8-2: stroll out"
+msgstr ""
+
+#: stages/main/credits/sections/section_skintails.tscn
+msgid ""
+"Miles \"tails\" prower\n"
+"\n"
+"character: sega\n"
+"original sprites: hartflip0218\n"
+"voice: Sonic heroes & sonic generations (jp)\n"
+"custom sfx & bgm: Sonic 1, cd & 3\n"
+"\n"
+"Skin by: [color=95FBFF]yaolinggui[/color]"
+msgstr ""
+
+#: stages/main/credits/sections/section_skintouhou.tscn
+msgid ""
+"marisa kirisame & reimu hakurei\n"
+"\n"
+"characters: team shanghai alice - zun\n"
+"original sprites: hartflip0218\n"
+"voice: koumajou densetsu II\n"
+"& touhou canonball\n"
+"custom bgm: hooded edge\n"
+"\n"
+"Skin by: [color=95FBFF]yaolinggui[/color]"
+msgstr ""
+
+#: stages/main/credits/sections/section_sounds.tscn
+msgid ""
+"SOUND SOURCES:\n"
+"The Sounds Resource, Nintendo\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Team Shanghai Alice, public domain\n"
+"Trick nostalgie"
+msgstr ""
+
+#: stages/main/credits/sections/section_sounds.tscn
+msgid "4-2: gaining altitude"
+msgstr ""
+
+#: stages/main/credits/sections/section_specialthanks.tscn
+msgid ""
+"Dasasdhba\n"
+"Chaos Kirby/yjs\n"
+"David YST\n"
+"GreenSweet\n"
+"Newlife2017\n"
+"Yakumo Ton\n"
+"TheEnigmaScribe\n"
+"Herolich1"
+msgstr ""
+
+#: stages/main/credits/sections/section_specialthanks.tscn
+msgid ""
+"MFBoy\n"
+"Soundwave961\n"
+"OmerAras777\n"
+"Master 47\n"
+"Miyameon\n"
+"Nerton17\n"
+"Lokins2005\n"
+"ntmymike"
+msgstr ""
+
+#: stages/main/credits/sections/section_specialthanks.tscn
+msgid "Special Thanks To..."
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Featured Touhou Characters"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Patchouli Knowledge"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid ""
+"Graphics: team shanghai alice - zun\n"
+"Portraits: dairi"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Ordinary Magician - SPRITES: Iruka Unabara "
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Modern-Day Thoughtography Reporter "
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Maid of the Scarlet Devil Mansion "
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid " Magician of Knowledge and Shade"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid " Traditional Reporter of Fantasy"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid " The Eternally Young Scarlet Moon"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Remilia Scarlet"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Aya Shameimaru"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Hatate Himekaidou"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Marisa Kirisame"
+msgstr ""
+
+#: stages/main/credits/sections/section_touhou.tscn
+msgid "Sakuya Izayoi"
+msgstr ""
+
+#: modules/music_overlay/music_overlay.gd
+msgid ""
+"NOW PLAYING: \n"
+"%s"
+msgstr ""
+
+#: engine/scenes/save_game_room/scripts/reset.tscn
+msgid "TO DELETE A SAVE, PRESS AND HOLD DEL BUTTON FOR 3 SEC."
+msgstr ""
+
+#: stages/world_4/Additives/vstroeni.gd
+msgid "very tasty!!! wow!!!!!"
+msgstr ""
+
+#: stages/world_final/Additives/ljd_arrow_sign.tscn
+msgid ""
+"L.J.D\n"
+"OFFICE"
+msgstr ""
+
+#: stages/world_final/Additives/8-2/factory_big_sign.tscn
+msgid ""
+"TOXIN RESEARCH LAB\n"
+"\"VULKAN\"\n"
+"MAIN STAFF:\n"
+"LOOPER231 - CEO\n"
+"SERAFIMGWS - PR MANAGER\n"
+"USERED - LAB MANAGER"
+msgstr ""
+
+#: stages/main/saved_level_label_pw.gd
+msgctxt "Save Pipe when no save"
+msgid "empty..."
+msgstr ""

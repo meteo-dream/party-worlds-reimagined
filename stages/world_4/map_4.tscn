@@ -66,6 +66,7 @@ volume_db = Array[float]([0.0])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("4_penb0")]
 displaying_mode = 1
+display_text = "JLZ - trackertrance'24"
 text = Array[String](["JLZ - trackertrance'24"])
 
 [node name="Bg" type="Sprite2D" parent="."]

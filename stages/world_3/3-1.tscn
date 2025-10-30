@@ -1333,6 +1333,7 @@ position = Vector2(6272, 288)
 position = Vector2(13056, 416)
 
 [node name="MusicOverlay" parent="." instance=ExtResource("15_jadlv")]
+display_text = "emax - oberheim power"
 text = Array[String](["emax - oberheim power"])
 
 [node name="HUD" parent="." instance=ExtResource("10_e7m4s")]
@@ -2038,16 +2039,16 @@ position = Vector2(8592, 240)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("30_mlkrl")]
-position = Vector2(30, -49)
+position = Vector2(120, 30)
 preview = true
 amplitude = Vector2(150, 50)
-phase = -77.4999
+phase = 37.5001
 
 [node name="RotoRed2" parent="Rotos/RotoCenter" instance=ExtResource("30_mlkrl")]
-position = Vector2(-30, 49)
+position = Vector2(-120, -30)
 preview = true
 amplitude = Vector2(150, 50)
-phase = 102.5
+phase = -142.5
 
 [node name="Platform" type="Node2D" parent="."]
 

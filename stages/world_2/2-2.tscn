@@ -428,6 +428,7 @@ script = ExtResource("7_rttw4")
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("9_662vq")]
+display_text = "re:flex - radiovibe (party cut)"
 text = Array[String](["re:flex - radiovibe (party cut)"])
 
 [node name="HUD" parent="." instance=ExtResource("10_rr82p")]

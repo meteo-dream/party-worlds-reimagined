@@ -11,7 +11,7 @@
 [ext_resource type="TileSet" uid="uid://dbfgv8ye2k5h6" path="res://stages/world_3/additives/night.tres" id="9_ty2yn"]
 [ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="10_s37b8"]
 [ext_resource type="Script" uid="uid://dymkqv71kvnfc" path="res://stages/world_3/additives/Stars-mover.gd" id="12_7k5pl"]
-[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="12_shqj5"]
+[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="12_shqj5"]
 [ext_resource type="Texture2D" uid="uid://cjsixk4iq32bo" path="res://gfx/world3/gorka-night.png" id="13_hb8rf"]
 [ext_resource type="Texture2D" uid="uid://bjcwn05ct63wm" path="res://gfx/world3/gwizdki_niebo_efekt.png" id="14_3em1c"]
 [ext_resource type="Script" uid="uid://qucvue762ra1" path="res://stages/world_3/additives/star-offset.gd" id="15_tuwu2"]
@@ -112,6 +112,7 @@ layer_1/tile_data = PackedInt32Array(786464, 5, 65536, 786452, 4, 0, 720896, 4, 
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("8_kicd5")]
+display_text = "Elwood - inferiority complex"
 text = Array[String](["Elwood - inferiority complex"])
 
 [node name="HUD" parent="." instance=ExtResource("10_s37b8")]
@@ -295,3 +296,24 @@ position = Vector2(9248, 352)
 
 [node name="Checkpoint" parent="." instance=ExtResource("22_rp1am")]
 position = Vector2(4912, 320)
+
+[connection signal="collided_wall" from="TileMap/KoopaRed" to="TileMap/KoopaRed" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/Goomba" to="TileMap/Goomba" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68873" to="TileMap/@CharacterBody2D@68873" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68891" to="TileMap/@CharacterBody2D@68891" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/KoopaGreen" to="TileMap/KoopaGreen" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68943" to="TileMap/@CharacterBody2D@68943" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68944" to="TileMap/@CharacterBody2D@68944" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/SpinyRed" to="TileMap/SpinyRed" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68947" to="TileMap/@CharacterBody2D@68947" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68948" to="TileMap/@CharacterBody2D@68948" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68949" to="TileMap/@CharacterBody2D@68949" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68950" to="TileMap/@CharacterBody2D@68950" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68951" to="TileMap/@CharacterBody2D@68951" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68952" to="TileMap/@CharacterBody2D@68952" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68956" to="TileMap/@CharacterBody2D@68956" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68957" to="TileMap/@CharacterBody2D@68957" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68958" to="TileMap/@CharacterBody2D@68958" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68959" to="TileMap/@CharacterBody2D@68959" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68960" to="TileMap/@CharacterBody2D@68960" method="turn_x"]
+[connection signal="collided_wall" from="TileMap/@CharacterBody2D@68961" to="TileMap/@CharacterBody2D@68961" method="turn_x"]

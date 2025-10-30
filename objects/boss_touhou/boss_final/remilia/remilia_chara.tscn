@@ -210,7 +210,7 @@ player_should_get_pity_afterwards = true
 droplet_interval = 0.3
 droplet_speed = 268.0
 next_attack_will_be_new = true
-spellcard_name = "Scarlet Light Blast \"Shoot the Blood Moon\""
+spellcard_name_text = "Scarlet Light Blast \"Shoot the Blood Moon\""
 
 [node name="Sc5_End" parent="." instance=ExtResource("23_a6fck")]
 clear_screen_on_activate = true
@@ -224,7 +224,7 @@ is_new_spell_card = false
 next_attack_will_be_new = true
 end_spell_card_afterwards = true
 player_should_get_pity_afterwards = true
-spellcard_name = "Scarlet Light \"Shoot the Blood Moon\""
+spellcard_name_text = "Scarlet Light Blast \"Shoot the Blood Moon\""
 
 [node name="Sc6_Start" parent="." instance=ExtResource("26_bfm0r")]
 sc6_force_no_bounce = true

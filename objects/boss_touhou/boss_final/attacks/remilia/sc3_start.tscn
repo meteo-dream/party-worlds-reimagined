@@ -6,7 +6,7 @@
 script = ExtResource("1_xep3n")
 is_new_spell_card = true
 is_spell_card = true
-spellcard_name = "Divine Art \"Vampire Illusion\""
+spellcard_name_text = "Divine Art \"Vampire Illusion\""
 
 [node name="RemiInterval" type="Timer" parent="."]
 process_mode = 1

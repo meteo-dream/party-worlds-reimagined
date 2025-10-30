@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5s3uwx77gvab"]
 
 [ext_resource type="Script" uid="uid://d6jwq4pkic4c" path="res://modules/music_overlay/music_overlay.gd" id="1_b0r1a"]
-[ext_resource type="FontFile" uid="uid://tni6p4cik6y3" path="res://modules/music_overlay/fonts/fagrak.otf" id="2_us3jf"]
+[ext_resource type="FontFile" uid="uid://b44eed6in007m" path="res://addons/localization/special_fonts/fagrak_Telexified.otf" id="2_pye7w"]
 
 [sub_resource type="Animation" id="Animation_du1wx"]
 length = 0.001
@@ -129,14 +129,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.439216, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("2_us3jf")
+theme_override_fonts/font = ExtResource("2_pye7w")
 theme_override_font_sizes/font_size = 18
 text = "NOW PLAYING: 
-MUSIC NAME"
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_0spoy")
+&"": SubResource("AnimationLibrary_0spoy")
 }

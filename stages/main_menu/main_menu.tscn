@@ -1,20 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://dsu3sit1o8qsd"]
+[gd_scene load_steps=14 format=3 uid="uid://bebiiu5n11uji"]
 
-[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="1_t2ybe"]
-[ext_resource type="AudioStream" uid="uid://dmt74ar3lvy85" path="res://stages/main_menu/trancynew112.mp3" id="2_gl00q"]
-[ext_resource type="Texture2D" uid="uid://usm6n80msr7n" path="res://engine/scenes/map/textures/bg.png" id="3_b1pty"]
-[ext_resource type="Script" uid="uid://cl31gyhukew6s" path="res://engine/components/ui/generic/menu_selector.gd" id="4_frmaf"]
-[ext_resource type="Texture2D" uid="uid://q07o7lx60bis" path="res://gfx/MENU.png" id="4_qh37o"]
-[ext_resource type="Texture2D" uid="uid://c8wevmet4yyyk" path="res://stages/main_menu/textures/menu_items_bg.png" id="5_0ni4x"]
-[ext_resource type="SpriteFrames" uid="uid://br3qktscdu8fx" path="res://engine/objects/players/prefabs/animations/mario/selector.tres" id="5_x08ib"]
-[ext_resource type="PackedScene" uid="uid://bj1k76pyo26l" path="res://stages/main_menu/objects/main_menu_controls.tscn" id="6_6iew1"]
-[ext_resource type="Script" uid="uid://b1fji5ve3eoe0" path="res://engine/components/ui/generic/selector_player_animation.gd" id="6_521mh"]
-[ext_resource type="PackedScene" uid="uid://1jfyfq3ty6g1" path="res://engine/scenes/main_menu/settings.tscn" id="7_r3wt2"]
-[ext_resource type="PackedScene" uid="uid://cpme7ixwwuc2p" path="res://engine/scenes/main_menu/controls.tscn" id="8_iq8be"]
-[ext_resource type="PackedScene" uid="uid://c2mch7wqmlcgp" path="res://stages/main_menu/objects/tweaks.tscn" id="12_4lap8"]
+[ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="1_kdmpq"]
+[ext_resource type="AudioStream" uid="uid://dmt74ar3lvy85" path="res://stages/main_menu/trancynew112.mp3" id="2_fwcgp"]
+[ext_resource type="Texture2D" uid="uid://usm6n80msr7n" path="res://engine/scenes/map/textures/bg.png" id="3_217f2"]
+[ext_resource type="Texture2D" uid="uid://q07o7lx60bis" path="res://gfx/MENU.png" id="4_lw64t"]
+[ext_resource type="Texture2D" uid="uid://c8wevmet4yyyk" path="res://stages/main_menu/textures/menu_items_bg.png" id="5_cagd1"]
+[ext_resource type="PackedScene" uid="uid://bj1k76pyo26l" path="res://stages/main_menu/objects/main_menu_controls.tscn" id="6_odmmc"]
+[ext_resource type="Script" uid="uid://cl31gyhukew6s" path="res://engine/components/ui/generic/menu_selector.gd" id="7_88yms"]
+[ext_resource type="SpriteFrames" uid="uid://br3qktscdu8fx" path="res://engine/objects/players/prefabs/animations/mario/selector.tres" id="8_lntvb"]
+[ext_resource type="Script" uid="uid://b1fji5ve3eoe0" path="res://engine/components/ui/generic/selector_player_animation.gd" id="9_y8qq8"]
+[ext_resource type="PackedScene" uid="uid://1jfyfq3ty6g1" path="res://engine/scenes/main_menu/settings.tscn" id="10_xm7bt"]
+[ext_resource type="PackedScene" uid="uid://cpme7ixwwuc2p" path="res://engine/scenes/main_menu/controls.tscn" id="11_so7fl"]
+[ext_resource type="PackedScene" uid="uid://b5lghwf3e5bpg" path="res://addons/localization/main_menu/tweaks.tscn" id="12_kdmpq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v54by"]
-atlas = ExtResource("3_b1pty")
+atlas = ExtResource("3_217f2")
 region = Rect2(0, 0, 1920, 480)
 
 [node name="MainMenuExample" type="Control"]
@@ -40,8 +40,8 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="MusicLoader" parent="Menu" instance=ExtResource("1_t2ybe")]
-music = Array[Resource]([ExtResource("2_gl00q")])
+[node name="MusicLoader" parent="Menu" instance=ExtResource("1_kdmpq")]
+music = Array[Resource]([ExtResource("2_fwcgp")])
 channel_id = 0
 
 [node name="Sprite2D" type="TextureRect" parent="Menu"]
@@ -60,7 +60,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_qh37o")
+texture = ExtResource("4_lw64t")
 stretch_mode = 3
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Menu"]
@@ -77,13 +77,13 @@ offset_right = 272.0
 offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("5_0ni4x")
+texture = ExtResource("5_cagd1")
 patch_margin_left = 33
 patch_margin_top = 33
 patch_margin_right = 33
 patch_margin_bottom = 33
 
-[node name="MainMenuControls" parent="Menu" instance=ExtResource("6_6iew1")]
+[node name="MainMenuControls" parent="Menu" instance=ExtResource("6_odmmc")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -102,22 +102,22 @@ control_forward = &"ui_right"
 control_backward = &"ui_left"
 
 [node name="Selector" type="Node2D" parent="Menu"]
-script = ExtResource("4_frmaf")
+script = ExtResource("7_88yms")
 smooth_speed = 0.4
 position_padding = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Menu/Selector"]
-sprite_frames = ExtResource("5_x08ib")
-script = ExtResource("6_521mh")
+sprite_frames = ExtResource("8_lntvb")
+script = ExtResource("9_y8qq8")
 
-[node name="Settings" parent="." instance=ExtResource("7_r3wt2")]
+[node name="Settings" parent="." instance=ExtResource("10_xm7bt")]
 layout_mode = 1
 main_menu_controls = "Menu/MainMenuControls"
 
-[node name="Controls" parent="." instance=ExtResource("8_iq8be")]
+[node name="Controls" parent="." instance=ExtResource("11_so7fl")]
 layout_mode = 1
 
-[node name="Tweaks" parent="." instance=ExtResource("12_4lap8")]
+[node name="Tweaks" parent="." instance=ExtResource("12_kdmpq")]
 layout_mode = 1
 offset_left = -640.0
 offset_top = 480.0

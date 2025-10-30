@@ -2419,6 +2419,7 @@ tile_set = SubResource("TileSet_2ny1u")
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("24_ru4w2")]
+display_text = "tangerine - synthetic jumbo"
 text = Array[String](["tangerine - synthetic jumbo"])
 
 [node name="HUD" parent="." instance=ExtResource("10_1dpxf")]
@@ -2995,48 +2996,48 @@ amplitude = Vector2(0, 150)
 position = Vector2(5776, 208)
 
 [node name="RotoRed" parent="Enemies/RotoCenter6" instance=ExtResource("61_8ionl")]
-position = Vector2(-69, 11)
+position = Vector2(68, 16)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 170.0
+phase = 12.5
 frequency = -50.0
 
 [node name="RotoCenter5" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(2800, -208)
 
 [node name="RotoRed" parent="Enemies/RotoCenter5" instance=ExtResource("61_8ionl")]
-position = Vector2(-38, 92)
+position = Vector2(0, -100)
 preview = true
 amplitude = Vector2(100, 100)
-phase = 113.334
+phase = -89.166
 
 [node name="RotoCenter4" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(3824, 144)
 
 [node name="RotoRed" parent="Enemies/RotoCenter4" instance=ExtResource("61_8ionl")]
-position = Vector2(66, -70)
+position = Vector2(-33, 67)
 preview = true
 amplitude = Vector2(110, 50)
-phase = -32.4983
+phase = 125.002
 track_rot = -30.0
 
 [node name="RotoCenter2" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(4432, 368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter2" instance=ExtResource("61_8ionl")]
-position = Vector2(-136, 21)
+position = Vector2(101, -37)
 preview = true
 amplitude = Vector2(150, 50)
-phase = 155.834
+phase = -46.666
 
 [node name="RotoCenter3" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(4464, 368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter3" instance=ExtResource("61_8ionl")]
-position = Vector2(136, -21)
+position = Vector2(-101, 37)
 preview = true
 amplitude = Vector2(150, 50)
-phase = -24.1663
+phase = 133.334
 
 [node name="HammerBro" parent="Enemies" instance=ExtResource("62_x3sr5")]
 position = Vector2(11712, -96)
@@ -3379,15 +3380,14 @@ region_rect = Rect2(288, 492, 20, 20)
 [node name="AreaEntrance" parent="." instance=ExtResource("69_gb4kk")]
 offset_top = -480.0
 offset_right = 1600.0
-name_of_area = "City Entrance"
+name_of_area_text = "City Entrance"
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance2" parent="." instance=ExtResource("69_gb4kk")]
 offset_left = 1600.0
 offset_top = -480.0
 offset_right = 4352.0
-name_of_area = "Patrol District
-"
+name_of_area_text = "Patrol District"
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance3" parent="." instance=ExtResource("69_gb4kk")]
@@ -3395,27 +3395,27 @@ offset_left = 4352.0
 offset_top = -896.0
 offset_right = 6592.0
 offset_bottom = 0.0
-name_of_area = "Construction Site - Upper Level"
+name_of_area_text = "Construction Site - Upper Level"
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance5" parent="." instance=ExtResource("69_gb4kk")]
 offset_left = 6592.0
 offset_top = -480.0
 offset_right = 8352.0
-name_of_area = "Pit of death"
+name_of_area_text = "Pit of death"
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance6" parent="." instance=ExtResource("69_gb4kk")]
 offset_left = 8352.0
 offset_top = -480.0
 offset_right = 11104.0
-name_of_area = "City Exit"
+name_of_area_text = "City Exit"
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance4" parent="." instance=ExtResource("69_gb4kk")]
 offset_left = 4352.0
 offset_right = 6688.0
-name_of_area = "Construction Site - Bottom Level"
+name_of_area_text = "Construction Site - Bottom Level"
 metadata/_edit_lock_ = true
 
 [editable path="FG Fog"]

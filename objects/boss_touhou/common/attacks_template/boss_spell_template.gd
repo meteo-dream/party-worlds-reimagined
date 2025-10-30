@@ -13,9 +13,10 @@ const DEFAULT_NEUTRAL_SOUND = preload("res://engine/objects/players/prefabs/soun
 
 @export_category("Spell Card Attack Settings")
 @export var is_spell_card: bool = false # Nonspell (F) or spell (T)?
-@export var spellcard_name: String = ""
+@export var spellcard_name_text: String = ""
 @export var spellcard_time: float = 20.0
 @export var spellcard_score_bonus: int = 8000
+var spellcard_name: String
 var boss: Node2D
 var begin_attack: bool = false
 var FORCE_END_SPELLCARD: bool = false
@@ -32,6 +33,10 @@ enum Wander_Type {
 }
 
 @onready var player = Thunder._current_player
+
+func _ready() -> void:
+	spellcard_name = spellcard_name_text
+	pass
 
 func _accept_attack(node) -> void:
 	boss = node

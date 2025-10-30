@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cpguud6vt8l4" path="res://addons/localization/hud.tscn" id="11_c3og2"]
 [ext_resource type="PackedScene" uid="uid://c5s3uwx77gvab" path="res://modules/music_overlay/music_overlay.tscn" id="12_un8ti"]
 [ext_resource type="Texture2D" uid="uid://dhv11anio3stx" path="res://gfx/world8/bgsunset.png" id="14_kowxc"]
-[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://modules/level_label.tscn" id="15_atsf8"]
+[ext_resource type="PackedScene" uid="uid://dtabu5xxrq1yl" path="res://stages/level_label.tscn" id="15_atsf8"]
 [ext_resource type="Texture2D" uid="uid://bjwghfjgeial5" path="res://gfx/world8/bg_palms.png" id="15_un8ti"]
 [ext_resource type="Texture2D" uid="uid://bhvl2t5kjitfh" path="res://gfx/world8/bgsun.png" id="16_un8ti"]
 [ext_resource type="Texture2D" uid="uid://bdufkp8oi1kgf" path="res://gfx/world8/palm.png" id="18_atsf8"]
@@ -175,6 +175,7 @@ metadata/_edit_lock_ = true
 text = "Beach's sympathy"
 
 [node name="MusicOverlay" parent="." instance=ExtResource("12_un8ti")]
+display_text = "Jacobthecat - care & sympathii"
 text = Array[String](["Jacobthecat - care & sympathii"])
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -576,64 +577,64 @@ position = Vector2(11760, 304)
 preview = true
 
 [node name="RotoRed" parent="Objects/RotoCenter3" instance=ExtResource("33_rqdnw")]
-position = Vector2(47, 37)
+position = Vector2(-21, -56)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 39.167
+phase = -109.166
 
 [node name="RotoRed2" parent="Objects/RotoCenter3" instance=ExtResource("33_rqdnw")]
-position = Vector2(17, 57)
+position = Vector2(16, -58)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 74.167
+phase = -74.1663
 
 [node name="RotoRed3" parent="Objects/RotoCenter3" instance=ExtResource("33_rqdnw")]
-position = Vector2(-19, 57)
+position = Vector2(46, -39)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 109.167
+phase = -39.1663
 
 [node name="RotoRed4" parent="Objects/RotoCenter3" instance=ExtResource("33_rqdnw")]
-position = Vector2(-48, 36)
+position = Vector2(60, -5)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 144.168
+phase = -4.16533
 
 [node name="RotoRed5" parent="Objects/RotoCenter3" instance=ExtResource("33_rqdnw")]
-position = Vector2(-60, 2)
+position = Vector2(52, 30)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 179.168
+phase = 30.8347
 
 [node name="RotoCenter4" parent="Objects" instance=ExtResource("32_4qy0r")]
 position = Vector2(12784, 432)
 preview = true
 
 [node name="RotoRed5" parent="Objects/RotoCenter4" instance=ExtResource("33_rqdnw")]
-position = Vector2(-60, 2)
+position = Vector2(52, 30)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 179.168
+phase = 30.8347
 
 [node name="RotoCenter5" parent="Objects" instance=ExtResource("32_4qy0r")]
 position = Vector2(12528, 400)
 preview = true
 
 [node name="RotoRed5" parent="Objects/RotoCenter5" instance=ExtResource("33_rqdnw")]
-position = Vector2(30, -52)
+position = Vector2(2, 60)
 preview = true
 amplitude = Vector2(60, 60)
-phase = -61.167
+phase = 87.1663
 frequency = -50.0
 
 [node name="RotoCenter6" parent="Objects" instance=ExtResource("32_4qy0r")]
 position = Vector2(13008, 400)
 
 [node name="RotoRed5" parent="Objects/RotoCenter6" instance=ExtResource("33_rqdnw")]
-position = Vector2(38, 46)
+position = Vector2(-57, -19)
 preview = true
 amplitude = Vector2(60, 60)
-phase = 49.2703
+phase = -162.396
 frequency = -50.0
 
 [node name="Palms" type="Node2D" parent="."]
@@ -852,28 +853,28 @@ position = Vector2(9536, 160)
 [connection signal="music_started" from="MusicLoader" to="Sfx" method="_on_music_loader_music_started"]
 [connection signal="collided_wall" from="Front/JumpingGoomba" to="Front/JumpingGoomba" method="turn_x"]
 [connection signal="collided_wall" from="Front/GoombaInBricks" to="Front/GoombaInBricks" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31629" to="Front/@CharacterBody2D@31629" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31638" to="Front/@CharacterBody2D@31638" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31645" to="Front/@CharacterBody2D@31645" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31646" to="Front/@CharacterBody2D@31646" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31666" to="Front/@CharacterBody2D@31666" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31667" to="Front/@CharacterBody2D@31667" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31673" to="Front/@CharacterBody2D@31673" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49203" to="Front/@CharacterBody2D@49203" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49212" to="Front/@CharacterBody2D@49212" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49219" to="Front/@CharacterBody2D@49219" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49220" to="Front/@CharacterBody2D@49220" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49240" to="Front/@CharacterBody2D@49240" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49241" to="Front/@CharacterBody2D@49241" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49247" to="Front/@CharacterBody2D@49247" method="turn_x"]
 [connection signal="collided_wall" from="Front/KoopaGreen" to="Front/KoopaGreen" method="turn_x"]
 [connection signal="collided_wall" from="Front/KoopaRed" to="Front/KoopaRed" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31674" to="Front/@CharacterBody2D@31674" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31675" to="Front/@CharacterBody2D@31675" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31676" to="Front/@CharacterBody2D@31676" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31677" to="Front/@CharacterBody2D@31677" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31684" to="Front/@CharacterBody2D@31684" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31685" to="Front/@CharacterBody2D@31685" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31691" to="Front/@CharacterBody2D@31691" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31707" to="Front/@CharacterBody2D@31707" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31708" to="Front/@CharacterBody2D@31708" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31722" to="Front/@CharacterBody2D@31722" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31723" to="Front/@CharacterBody2D@31723" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31730" to="Front/@CharacterBody2D@31730" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31731" to="Front/@CharacterBody2D@31731" method="turn_x"]
-[connection signal="collided_wall" from="Front/@CharacterBody2D@31732" to="Front/@CharacterBody2D@31732" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49248" to="Front/@CharacterBody2D@49248" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49249" to="Front/@CharacterBody2D@49249" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49250" to="Front/@CharacterBody2D@49250" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49251" to="Front/@CharacterBody2D@49251" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49258" to="Front/@CharacterBody2D@49258" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49259" to="Front/@CharacterBody2D@49259" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49265" to="Front/@CharacterBody2D@49265" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49281" to="Front/@CharacterBody2D@49281" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49282" to="Front/@CharacterBody2D@49282" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49296" to="Front/@CharacterBody2D@49296" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49297" to="Front/@CharacterBody2D@49297" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49304" to="Front/@CharacterBody2D@49304" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49305" to="Front/@CharacterBody2D@49305" method="turn_x"]
+[connection signal="collided_wall" from="Front/@CharacterBody2D@49306" to="Front/@CharacterBody2D@49306" method="turn_x"]
 
 [editable path="Objects/Water11"]

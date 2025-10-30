@@ -149,6 +149,7 @@ volume_db = Array[float]([12.0])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("4_joxts")]
 displaying_mode = 1
+display_text = "darth nefelim - world map tune"
 text = Array[String](["darth nefelim - world map tune"])
 
 [node name="Bg" type="Sprite2D" parent="."]

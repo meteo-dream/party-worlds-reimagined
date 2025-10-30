@@ -6,7 +6,7 @@
 script = ExtResource("1_hfmwp")
 is_new_spell_card = true
 is_spell_card = true
-spellcard_name = "Light Sign \"Earthlight Ray\""
+spellcard_name_text = "Light Sign \"Earthlight Ray\""
 
 [node name="BossInterval" type="Timer" parent="."]
 process_mode = 1

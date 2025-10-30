@@ -135,6 +135,7 @@ tile_map_data = PackedByteArray("AAAFAAwABQAAAAAAAQAuAAwABQAAAAAAAQBlAAwABQAAAAA
 tile_set = ExtResource("9_54r3y")
 
 [node name="MusicOverlay" parent="." instance=ExtResource("8_jgb8x")]
+display_text = "Rams - A track that fits on a floppy"
 text = Array[String](["Rams - A track that fits on a floppy"])
 
 [node name="HUD" parent="." instance=ExtResource("10_21bg8")]
@@ -358,16 +359,16 @@ position = Vector2(10560, 416)
 
 [connection signal="collided_wall" from="Main/Goomba" to="Main/Goomba" method="turn_x"]
 [connection signal="collided_wall" from="Main/KoopaGreen" to="Main/KoopaGreen" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159380" to="Main/@CharacterBody2D@159380" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159381" to="Main/@CharacterBody2D@159381" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69259" to="Main/@CharacterBody2D@69259" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69260" to="Main/@CharacterBody2D@69260" method="turn_x"]
 [connection signal="collided_wall" from="Main/SpinyRed" to="Main/SpinyRed" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159382" to="Main/@CharacterBody2D@159382" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159383" to="Main/@CharacterBody2D@159383" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159384" to="Main/@CharacterBody2D@159384" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69261" to="Main/@CharacterBody2D@69261" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69262" to="Main/@CharacterBody2D@69262" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69263" to="Main/@CharacterBody2D@69263" method="turn_x"]
 [connection signal="collided_wall" from="Main/KoopaRed" to="Main/KoopaRed" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159419" to="Main/@CharacterBody2D@159419" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159420" to="Main/@CharacterBody2D@159420" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159421" to="Main/@CharacterBody2D@159421" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159422" to="Main/@CharacterBody2D@159422" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159423" to="Main/@CharacterBody2D@159423" method="turn_x"]
-[connection signal="collided_wall" from="Main/@CharacterBody2D@159424" to="Main/@CharacterBody2D@159424" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69298" to="Main/@CharacterBody2D@69298" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69299" to="Main/@CharacterBody2D@69299" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69300" to="Main/@CharacterBody2D@69300" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69301" to="Main/@CharacterBody2D@69301" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69302" to="Main/@CharacterBody2D@69302" method="turn_x"]
+[connection signal="collided_wall" from="Main/@CharacterBody2D@69303" to="Main/@CharacterBody2D@69303" method="turn_x"]

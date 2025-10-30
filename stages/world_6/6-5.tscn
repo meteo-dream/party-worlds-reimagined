@@ -545,6 +545,7 @@ offset_bottom = 480.0
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("8_xld6h")]
+display_text = "drakonpod - phantom"
 text = Array[String](["drakonpod - phantom"])
 
 [node name="FG Fog" parent="." instance=ExtResource("9_2usti")]
@@ -755,10 +756,10 @@ position = Vector2(3968, 32)
 position = Vector2(11152, 368)
 
 [node name="RotoRed" parent="Objects/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(116, -110)
+position = Vector2(156, -37)
 preview = true
 amplitude = Vector2(160, 160)
-phase = -40.333
+phase = -10.333
 frequency = 180.0
 
 [node name="Bonuses" type="Node2D" parent="."]
@@ -797,16 +798,16 @@ preview = true
 visible = false
 
 [node name="RotoRed" parent="Paths/Path2D/PlatformPath/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(76, -98)
+position = Vector2(99, 20)
 preview = true
 amplitude = Vector2(100, 150)
-phase = -39.9987
+phase = 8.33463
 
 [node name="RotoRed2" parent="Paths/Path2D/PlatformPath/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(-76, 98)
+position = Vector2(-99, -20)
 preview = true
 amplitude = Vector2(100, 150)
-phase = 140.0
+phase = -171.667
 
 [node name="PlatformPath2" parent="Paths/Path2D" instance=ExtResource("41_gt5ih")]
 position = Vector2(5023.98, 126.511)
@@ -822,17 +823,17 @@ preview = true
 visible = false
 
 [node name="RotoRed" parent="Paths/Path2D/PlatformPath2/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(76, 98)
+position = Vector2(99, -20)
 preview = true
 amplitude = Vector2(100, 150)
-phase = 40.0
+phase = -8.33333
 frequency = -50.0
 
 [node name="RotoRed2" parent="Paths/Path2D/PlatformPath2/RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(-76, -98)
+position = Vector2(-99, 20)
 preview = true
 amplitude = Vector2(100, 150)
-phase = -140.0
+phase = 171.667
 frequency = -50.0
 
 [node name="Path2D2" type="Path2D" parent="Paths"]
@@ -910,14 +911,14 @@ position = Vector2(8016, 432)
 preview = true
 
 [node name="RotoRed" parent="RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(150, 9)
+position = Vector2(93, 118)
 preview = true
-phase = 4.1673
+phase = 52.5006
 
 [node name="RotoRed2" parent="RotoCenter" instance=ExtResource("46_5nixr")]
-position = Vector2(-150, -9)
+position = Vector2(-93, -118)
 preview = true
-phase = -175.833
+phase = -127.5
 
 [node name="Lava Particles" parent="." instance=ExtResource("52_0c5fi")]
 

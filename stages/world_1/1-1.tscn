@@ -655,6 +655,7 @@ music = Array[Resource]([ExtResource("3_1deg1")])
 volume_db = Array[float]([-6.0])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("4_bp4mf")]
+display_text = "Estrayk - I Don't Mind"
 text = Array[String](["Estrayk - I Don't Mind"])
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

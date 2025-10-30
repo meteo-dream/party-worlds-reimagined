@@ -182,6 +182,9 @@ theme_override_fonts/font = ExtResource("2_hi1xf")
 [node name="Toggle" parent="Gameplay/HBoxContainer6" index="1"]
 texture = SubResource("AtlasTexture_y1l52")
 
+[node name="Label" parent="Gameplay/HBoxContainer13" index="0"]
+theme_override_fonts/font = ExtResource("2_hi1xf")
+
 [node name="Toggle" parent="Gameplay/HBoxContainer13" index="1"]
 texture = SubResource("AtlasTexture_c5crk")
 

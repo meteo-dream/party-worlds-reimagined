@@ -1,6 +1,6 @@
 extends Control
 
-@export_multiline var name_of_area: String
+@export_multiline var name_of_area_text: String
 
 var player_in: Player
 var tween: Tween
@@ -9,7 +9,7 @@ var tween: Tween
 
 
 func _ready() -> void:
-	area_name.text = name_of_area.to_upper()
+	area_name.text = name_of_area_text.to_upper()
 
 
 func _physics_process(delta: float) -> void:

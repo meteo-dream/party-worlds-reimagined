@@ -16,7 +16,6 @@ theme_override_fonts/font = ExtResource("2_m5eb3")
 theme_override_font_sizes/font_size = 38
 
 [node name="GameOver" parent="Control" index="5"]
-visible = true
 offset_left = -320.0
 offset_top = -19.0
 offset_right = 320.0

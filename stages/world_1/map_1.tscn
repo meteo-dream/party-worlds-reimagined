@@ -212,6 +212,7 @@ music = Array[Resource]([ExtResource("3_x17bs")])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("4_k368v")]
 displaying_mode = 1
+display_text = "Clawz - cheeba cheeba"
 text = Array[String](["Clawz - cheeba cheeba"])
 
 [node name="Bg" type="Sprite2D" parent="."]

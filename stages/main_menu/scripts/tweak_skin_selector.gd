@@ -1,6 +1,6 @@
 extends MenuSelection
 
-@export_multiline var tweak_description: String
+@export_multiline var tweak_description_text: String
 
 var toggle_sound = preload("res://engine/scenes/main_menu/sounds/change.wav")
 var skin_list: Array = [""]
@@ -17,7 +17,7 @@ func _ready():
 func _handle_focused(focus) -> void:
 	super(focus)
 	if !focus: return
-	if tweak_description:
+	if tweak_description_text:
 		$"../..".emit_signal(&"_tweak_desc", get_parent())
 
 
@@ -54,8 +54,8 @@ func _physics_process(delta: float) -> void:
 		SettingsManager.settings.skin = skin_list[skin_sel_index]
 		_toggled_option(old_value, SettingsManager.settings.skin)
 	elif Input.is_action_just_pressed(&"ui_select"):
-		if tweak_description:
-			$"../..".emit_signal(&"_show_desc", tweak_description, $Label.text)
+		if tweak_description_text:
+			$"../..".emit_signal(&"_show_desc", tweak_description_text, $Label.text)
 
 
 func _toggled_option(old_val, new_val) -> void:

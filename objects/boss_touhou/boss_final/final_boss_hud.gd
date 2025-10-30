@@ -8,11 +8,10 @@ class_name FinalBossHUD
 const SPELL_CUTIN_FINAL = preload("res://objects/boss_touhou/boss_final/spell_cutin_final.tscn")
 
 @export_category("Final Boss Settings")
-@export var transition_boss_name = "PATCHOULI KNOWLEDGE"
-@export var final_phase_name = "REMILIA & MARISA?"
 @export var show_spell_count: bool = false
 var force_end_disappear: bool = false
 var current_boss_phase: int = 0
+var final_boss_name_main: String = tr("REMILIA SCARLET", "Final Boss 1 Name")
 
 func _ready() -> void:
 	if !show_spell_count: spellcard_count.hide()
@@ -26,7 +25,7 @@ func update_time_counter(timer: float = 0.0) -> void:
 	spellcard_timecounter._check_timer()
 
 func check_boss_name() -> void:
-	boss_name_label.text = main_boss_name
+	boss_name_label.text = final_boss_name_main
 
 func change_boss_name(phase: int = 0) -> void:
 	boss_name_label.disappear()
@@ -34,14 +33,14 @@ func change_boss_name(phase: int = 0) -> void:
 	var new_boss_name: String
 	match phase:
 		0:
-			new_boss_name = main_boss_name
+			new_boss_name = final_boss_name_main
 			current_boss_phase = 0
 		1:
-			new_boss_name = secret_boss_name
+			new_boss_name = tr("MARISA KIRISAME?", "Final Boss 2 Name")
 			current_boss_phase = 1
-		2: new_boss_name = transition_boss_name
+		2: new_boss_name = tr("PATCHOULI KNOWLEDGE", "Final Boss Transition Boss Name")
 		3:
-			new_boss_name = final_phase_name
+			new_boss_name = tr("REMILIA & MARISA?", "Final Boss Combined Name")
 			current_boss_phase = 2
 		_: pass
 	boss_name_label.text = new_boss_name

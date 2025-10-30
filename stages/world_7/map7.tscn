@@ -104,6 +104,7 @@ script = ExtResource("13_4a18e")
 
 [node name="MusicOverlay" parent="GUI" instance=ExtResource("14_mhm18")]
 displaying_mode = 1
+display_text = "TJ TechnoiZ - Sunlight"
 text = Array[String](["TJ TechnoiZ - Sunlight"])
 
 [node name="MarkerSpace" type="Node2D" parent="."]

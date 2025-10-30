@@ -241,7 +241,7 @@ laser_life_time = 0.6
 laser_disappear_time = 0.15
 next_attack_will_be_new = true
 is_spell_card = false
-spellcard_name = ""
+spellcard_name_text = ""
 
 [node name="Sc5_End" parent="." instance=ExtResource("31_7wfnr")]
 spawner_count = 11
@@ -259,7 +259,7 @@ next_attack_will_be_new = true
 end_spell_card_afterwards = true
 player_should_get_pity_afterwards = true
 is_spell_card = false
-spellcard_name = ""
+spellcard_name_text = ""
 
 [node name="Sc6_Start" parent="." instance=ExtResource("36_u6x5i")]
 

@@ -5,5 +5,5 @@ extends Node2D
 func _on_area_2d_player_enter():
 	Audio.play_sound(sound, self)
 	Thunder.add_lives(1)
-	label_mister_earl.text = String('very tasty!!! wow!!!!!')
+	label_mister_earl.text = String(tr('very tasty!!! wow!!!!!'))
 	queue_free()

@@ -128,6 +128,7 @@ volume_db = Array[float]([0.0])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("4_lvya4")]
 displaying_mode = 1
+display_text = "estrayk - magical"
 text = Array[String](["estrayk - magical"])
 
 [node name="Bg" type="Sprite2D" parent="."]

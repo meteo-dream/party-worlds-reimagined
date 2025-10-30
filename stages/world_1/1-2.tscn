@@ -389,6 +389,7 @@ limit_bottom = 480
 script = ExtResource("6_rqumc")
 
 [node name="MusicOverlay" parent="." instance=ExtResource("6_bnfwy")]
+display_text = "Estrayk - I don't mind part 2"
 text = Array[String](["Estrayk - I don't mind part 2"])
 
 [node name="FG Fog" parent="." instance=ExtResource("5_veoai")]

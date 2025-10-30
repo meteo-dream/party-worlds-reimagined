@@ -18,9 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://8a7nemgi0b6q" path="res://engine/objects/powerups/beetroot/beetroot.tscn" id="16_73851"]
 [ext_resource type="PackedScene" uid="uid://o3k018cbex8g" path="res://engine/objects/powerups/green_lui/green_lui.tscn" id="17_elo2e"]
 [ext_resource type="PackedScene" uid="uid://b2d7bys2llvfr" path="res://engine/objects/bumping_blocks/reset_power_block/reset_power_block.tscn" id="18_eof12"]
+[ext_resource type="Script" uid="uid://dmkhlo5w8a544" path="res://stages/main/saved_level_label_pw.gd" id="18_ouyii"]
 [ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="21_f1o1t"]
 [ext_resource type="Texture2D" uid="uid://dh5ox7gb4u8fq" path="res://gfx/world3/3-1cloud.png" id="23_8x5mf"]
-[ext_resource type="Script" uid="uid://blthfq00iwm17" path="res://engine/scenes/save_game_room/scripts/saved_level_label.gd" id="23_j0sbb"]
 [ext_resource type="Texture2D" uid="uid://y4ikbppnbo64" path="res://gfx/world3/bg3-1.png" id="25_mwdyk"]
 [ext_resource type="PackedScene" uid="uid://dh4kf1w7jyseo" path="res://engine/objects/warps/pipe_in.tscn" id="28_cenxx"]
 [ext_resource type="AudioStream" uid="uid://b1bxtmesp2bfq" path="res://engine/objects/players/prefabs/sounds/powerup.wav" id="28_cvwyd"]
@@ -268,7 +268,7 @@ text = "WORLD
 %s"
 horizontal_alignment = 1
 uppercase = true
-script = ExtResource("23_j0sbb")
+script = ExtResource("18_ouyii")
 
 [node name="PipeSave2" parent="." instance=ExtResource("13_d852e")]
 position = Vector2(416, 304)
@@ -296,7 +296,7 @@ text = "WORLD
 %s"
 horizontal_alignment = 1
 uppercase = true
-script = ExtResource("23_j0sbb")
+script = ExtResource("18_ouyii")
 
 [node name="PipeSave3" parent="." instance=ExtResource("13_d852e")]
 position = Vector2(544, 304)
@@ -324,7 +324,7 @@ text = "WORLD
 %s"
 horizontal_alignment = 1
 uppercase = true
-script = ExtResource("23_j0sbb")
+script = ExtResource("18_ouyii")
 
 [node name="Objects" type="Node2D" parent="."]
 

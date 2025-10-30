@@ -149,6 +149,7 @@ region_filter_clip_enabled = true
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("5_0sssp")]
+display_text = "wotw - intro number 102"
 text = Array[String](["wotw - intro number 102"])
 
 [node name="GUI" type="CanvasLayer" parent="."]

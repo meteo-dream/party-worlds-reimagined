@@ -230,7 +230,7 @@ metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("18_d0yfd")]
 script = ExtResource("15_0k80g")
-text = Array[String](["N/A", "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"])
+display_text = "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"
 
 [node name="TBD_Backdrops" type="Node2D" parent="."]
 script = ExtResource("11_dps7q")

@@ -242,6 +242,7 @@ script = ExtResource("7_xrowv")
 
 [node name="MusicOverlay" parent="." instance=ExtResource("8_1dont")]
 displaying_mode = 1
+display_text = "Estrayk - Classic"
 text = Array[String](["Estrayk - Classic"])
 
 [node name="GUI" type="CanvasLayer" parent="."]

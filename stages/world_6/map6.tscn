@@ -103,6 +103,7 @@ volume_db = Array[float]([-4.0])
 
 [node name="MusicOverlay" parent="." instance=ExtResource("14_jh1ss")]
 displaying_mode = 1
+display_text = "air - acoustica power bundle 40kg"
 text = Array[String](["air - acoustica power bundle 40kg"])
 
 [node name="Bg" type="Sprite2D" parent="."]
@@ -132,7 +133,7 @@ region_filter_clip_enabled = true
 metadata/_edit_lock_ = true
 
 [node name="Pw61" type="Sprite2D" parent="."]
-position = Vector2(416, 240)
+position = Vector2(416, 243)
 texture = ExtResource("6_yn6tq")
 metadata/_edit_group_ = true
 

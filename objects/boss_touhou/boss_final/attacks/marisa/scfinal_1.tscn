@@ -7,7 +7,7 @@ script = ExtResource("1_il4n3")
 is_new_spell_card = true
 next_attack_will_be_new = true
 is_spell_card = true
-spellcard_name = "Red Magicannon \"Final Spark\""
+spellcard_name_text = "Red Magicannon \"Final Spark\""
 
 [node name="BossRestTimer" type="Timer" parent="."]
 process_mode = 1

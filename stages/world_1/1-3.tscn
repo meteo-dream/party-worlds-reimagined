@@ -350,6 +350,7 @@ layer_1/tile_data = PackedInt32Array(851981, 65538, 65537, 851980, 2, 65537, 720
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("7_8c1f8")]
+display_text = "Paso - Pleasure to paso?"
 text = Array[String](["Paso - Pleasure to paso?"])
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="."]
@@ -794,9 +795,9 @@ position = Vector2(8624, -624)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("27_htiwr")]
-position = Vector2(-145, -39)
+position = Vector2(-53, -140)
 preview = true
-phase = -165.833
+phase = -111.666
 frequency = -50.0
 
 [node name="RotoCenter3" parent="Rotos" instance=ExtResource("26_bicrd")]
@@ -804,19 +805,19 @@ position = Vector2(4624, -496)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter3" instance=ExtResource("27_htiwr")]
-position = Vector2(24, 148)
+position = Vector2(134, 67)
 preview = true
-phase = 81.6667
+phase = 27.5
 
 [node name="RotoCenter4" parent="Rotos" instance=ExtResource("26_bicrd")]
 position = Vector2(6864, -528)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter4" instance=ExtResource("27_htiwr")]
-position = Vector2(-50, -2)
+position = Vector2(-30, 96)
 preview = true
 amplitude = Vector2(50, 120)
-phase = -178.332
+phase = 127.501
 metadata/_edit_lock_ = true
 
 [node name="RotoCenter2" parent="Rotos" instance=ExtResource("26_bicrd")]
@@ -824,10 +825,10 @@ position = Vector2(1808, 624)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter2" instance=ExtResource("27_htiwr")]
-position = Vector2(65, -29)
+position = Vector2(15, 78)
 preview = true
 amplitude = Vector2(70, 80)
-phase = -20.0
+phase = 78.75
 frequency = 75.0
 metadata/_edit_lock_ = true
 

@@ -763,6 +763,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("23_dnxfj")]
+display_text = "DJ AIL - The night"
 text = Array[String](["DJ AIL - The night"])
 
 [node name="HUD" parent="." instance=ExtResource("10_na7ck")]
@@ -952,5 +953,22 @@ position = Vector2(1368, 48)
 
 [node name="Thwomp5" parent="." instance=ExtResource("41_hwt8b")]
 position = Vector2(3312, 48)
+
+[connection signal="collided_wall" from="T-Main/KoopaGreen" to="T-Main/KoopaGreen" method="turn_x"]
+[connection signal="collided_wall" from="T-Main/SpinyRed" to="T-Main/SpinyRed" method="turn_x"]
+[connection signal="collided_wall" from="T-Main/@CharacterBody2D@58465" to="T-Main/@CharacterBody2D@58465" method="turn_x"]
+[connection signal="collided_wall" from="T-Main/@CharacterBody2D@58466" to="T-Main/@CharacterBody2D@58466" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/KoopaRed" to="T-Other/KoopaRed" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58467" to="T-Other/@CharacterBody2D@58467" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/Goomba" to="T-Other/Goomba" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58475" to="T-Other/@CharacterBody2D@58475" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/KoopaGreen" to="T-Other/KoopaGreen" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/SpinyRed" to="T-Other/SpinyRed" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58484" to="T-Other/@CharacterBody2D@58484" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58537" to="T-Other/@CharacterBody2D@58537" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58538" to="T-Other/@CharacterBody2D@58538" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58539" to="T-Other/@CharacterBody2D@58539" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58540" to="T-Other/@CharacterBody2D@58540" method="turn_x"]
+[connection signal="collided_wall" from="T-Other/@CharacterBody2D@58541" to="T-Other/@CharacterBody2D@58541" method="turn_x"]
 
 [editable path="FG Fog"]

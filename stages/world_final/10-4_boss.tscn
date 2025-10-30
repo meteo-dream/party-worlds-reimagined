@@ -285,12 +285,12 @@ boss = NodePath("../BossRemilia")
 side_boss = NodePath("../KevinMarisa")
 trigger_boss_HUD = NodePath("../FinalBossHUD2")
 boss_music_song = ExtResource("20_6nvcv")
-boss_music_jump_to_position = Array[int]([])
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("17_1m34i")]
 script = ExtResource("18_bjqp8")
-text = Array[String](["", "Cynmusic - The softcore song"])
+display_text = "Cynmusic - The softcore song"
+text = Array[String](["Cynmusic - The softcore song"])
 
 [node name="BossRemilia" parent="." node_paths=PackedStringArray("phases") instance=ExtResource("21_65f8u")]
 position = Vector2(2120, -184)
