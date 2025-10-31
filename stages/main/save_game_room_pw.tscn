@@ -392,9 +392,9 @@ phase = 180.0
 frequency = 2.0
 
 [node name="Label" type="Label" parent="Node2D2"]
-offset_left = 802.0
+offset_left = 784.0
 offset_top = 160.0
-offset_right = 1245.0
+offset_right = 1264.0
 offset_bottom = 189.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
 theme_override_constants/outline_size = 8
@@ -403,6 +403,7 @@ theme_override_font_sizes/font_size = 21
 text = "YOU CAN EXCHANGE SOME LIVES FOR ONE OF THESE ITEMS!!!
 BUT BE CAREFUL, SOMETIMES LIVES ARE MORE IMPORTANT THAN THIS STUFF."
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="."]
 offset_left = 752.0
