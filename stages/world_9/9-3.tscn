@@ -419,8 +419,6 @@ metadata/_edit_lock_ = true
 [node name="MessageBlock" parent="TBD_Backdrops" instance=ExtResource("22_yx5jh")]
 position = Vector2(816, 272)
 script = ExtResource("20_ycnoe")
-main_hint_list = Array[String](["Aya will follow you around. Make her fly far!", "Her camera can reach quite far! Pit her into a corner and run like hell!", "Right when Aya flies at you, run and jump as far as you can!", "Aya will dash from edge to edge. Try not to jump!"])
-alternative_hint_list = Array[String](["Slow and steady wins the race.", "Try to keep yourself under Hatate as much as you can.", "Jump far away when she takes photos!", "Misdirect the homing shots that come from her photographing."])
 message = "Say \"NO\" to unsolicited photography!"
 
 [node name="Sign" type="Sprite2D" parent="TBD_Backdrops"]

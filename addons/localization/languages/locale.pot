@@ -94,6 +94,7 @@
 # res://stages/world_5/Additives/level_label.gd
 # res://objects/sign_help_key_formatter.gd
 # res://stages/main_menu/scripts/label_space_key.gd
+# res://stages/world_9/Additives/9-3/hint_block.gd
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -1820,4 +1821,44 @@ msgstr ""
 #: stages/main_menu/scripts/label_space_key.gd
 msgctxt "e.g. Space key, etc."
 msgid "%s key"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 1 Hint 1"
+msgid "Aya will follow you around. Make her fly far!"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 1 Hint 2"
+msgid "Her camera can reach quite far! Pit her into a corner and run like hell!"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 1 Hint 3"
+msgid "Right when she dashes at you, run and jump as far as you can!"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 1 Hint 4"
+msgid "Aya will dash from edge to edge. Try not to jump!"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 2 Hint 1"
+msgid "Slow and steady wins the race."
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 2 Hint 2"
+msgid "Try to keep yourself under her as much as you can."
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 2 Hint 3"
+msgid "Jump far away when she takes photos!"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/hint_block.gd
+msgctxt "9-3 Boss 2 Hint 4"
+msgid "Misdirect the homing shots that come from her photographing."
 msgstr ""
