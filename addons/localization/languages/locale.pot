@@ -87,6 +87,13 @@
 # res://stages/world_final/Additives/ljd_arrow_sign.tscn
 # res://stages/world_final/Additives/8-2/factory_big_sign.tscn
 # res://stages/main/saved_level_label_pw.gd
+# res://objects/area_titles/area_title.tscn
+# res://stages/world_9/Additives/9-3/music_overlay.gd
+# res://stages/world_9/Additives/9-2/scripts/music_overlay.gd
+# res://objects/boss_touhou/dialogue/balloon.tscn
+# res://stages/world_5/Additives/level_label.gd
+# res://objects/sign_help_key_formatter.gd
+# res://stages/main_menu/scripts/label_space_key.gd
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -1156,21 +1163,14 @@ msgid ""
 "waterfall"
 msgstr ""
 
-#: stages/world_9/9-2.tscn
-msgid "ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"
-msgstr ""
-
 #: stages/world_9/9-3.tscn
 msgid ""
 "DOUBLE\n"
 "SPOILER"
 msgstr ""
 
-#: stages/world_9/9-3.tscn
-msgid "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"
-msgstr ""
-
 #: stages/world_9/after_9-3_cutscene.tscn
+#: objects/boss_touhou/dialogue/balloon.tscn
 msgid "Press the %s to skip."
 msgstr ""
 
@@ -1223,9 +1223,6 @@ msgid "surreal - transversal"
 msgstr ""
 
 #: stages/world_final/10-4.tscn
-msgid "The office"
-msgstr ""
-
 #: stages/world_final/10-4_boss.tscn
 msgid "THE OFFICE"
 msgstr ""
@@ -1473,7 +1470,8 @@ msgstr ""
 msgid ""
 "\"Still saw the project through to the end anyways :P I can at least say that this has given me invaluable experience on how to work with Godot and Thunder Engine from now on. It's bound to be much, much easier for me to start my own projects after this.\n"
 "\n"
-"I would like to thank LooPeR immensely, not only for being there always, but also being a decisive pillar of support. Were it not for him and his year-long project, I likely would have stopped at the port of my old, dusty project. Now? There will be more to expect from me in the (near) future.\""
+"I would like to thank LooPeR immensely, not only for being there always, but also being a decisive pillar of support. Were it not for him and his year-long project, I likely would have stopped at the port of my old, dusty project. Now? There will be more to expect from me in the (near) future.\"\n"
+"\n"
 msgstr ""
 
 #: stages/main/credits/sections/section_engine.tscn
@@ -1494,7 +1492,8 @@ msgid ""
 "9-3 & final boss coding,\n"
 "several cutscenes and credits:\n"
 "\n"
-"[color=95FBFF]yaolinggui[/color]"
+"[color=95FBFF]yaolinggui[/color]\n"
+"\n"
 msgstr ""
 
 #: stages/main/credits/sections/section_finalboss.tscn
@@ -1745,7 +1744,7 @@ msgid "TO DELETE A SAVE, PRESS AND HOLD DEL BUTTON FOR 3 SEC."
 msgstr ""
 
 #: stages/world_4/Additives/vstroeni.gd
-msgid "very tasty!!! wow!!!!!"
+msgid "very tasty!!! wow!!!!!\n"
 msgstr ""
 
 #: stages/world_final/Additives/ljd_arrow_sign.tscn
@@ -1767,4 +1766,58 @@ msgstr ""
 #: stages/main/saved_level_label_pw.gd
 msgctxt "Save Pipe when no save"
 msgid "empty..."
+msgstr ""
+
+#: objects/area_titles/area_title.tscn
+msgid "AREA NAME"
+msgstr ""
+
+#: stages/world_9/Additives/9-3/music_overlay.gd
+msgid "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"
+msgstr ""
+
+#: stages/world_9/Additives/9-2/scripts/music_overlay.gd
+msgid "ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid "Character"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid ""
+"Dialogue...\n"
+"Dialogue..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid "Response example"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid ""
+"\t\t\t\t\t\t\t[color=FF6699]The Eternally Young Scarlet Moon[/color]\n"
+"\t\t\t\t\t\t\tRemilia Scarlet"
+msgstr ""
+
+#: stages/world_5/Additives/level_label.gd
+msgid ""
+"xmas mix \n"
+"part 2"
+msgstr ""
+
+#: stages/world_5/Additives/level_label.gd
+msgid ""
+"xmas mix \n"
+"part 3"
+msgstr ""
+
+#: objects/sign_help_key_formatter.gd
+msgctxt "e.g. Space button, etc."
+msgid "%s button"
+msgstr ""
+
+#: stages/main_menu/scripts/label_space_key.gd
+msgctxt "e.g. Space key, etc."
+msgid "%s key"
 msgstr ""

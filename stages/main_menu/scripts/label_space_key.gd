@@ -5,6 +5,7 @@ extends Label
 var _tw: Tween
 var _min_a: float = 0
 @onready var _template = text
+var key_string: String = tr('%s key', "e.g. Space key, etc.")
 
 func _ready() -> void:
 	modulate.a = 0
@@ -25,7 +26,7 @@ func update_text() -> void:
 	var _event: String = "buttons on keyboard"
 	for i in _events:
 		if i is InputEventKey:
-			_event = i.as_text().get_slice(' (', 0) + ' key'
+			_event = key_string % i.as_text().get_slice(' (', 0)
 			break
 	
-	text = _template % _event
+	text = tr(_template) % _event

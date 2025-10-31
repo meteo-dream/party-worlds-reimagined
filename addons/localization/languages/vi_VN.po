@@ -183,13 +183,13 @@ msgstr "[right]Đương nhiên rồi. Nhưng không nhiều và ta toàn bỏ d�
 
 #: objects/boss_touhou/dialogue/vs_marisa.dialogue
 msgid "How many people's blood have you sucked up to now?"
-msgstr "Cô đã uống nhiêu máu nguời rồi vậy?"
+msgstr "Cô đã uống nhiêu máu người rồi vậy?"
 
 #: objects/boss_touhou/dialogue/vs_marisa.dialogue
 msgid ""
 "[right]Can you remember how many slices of bread you have eaten until now?"
 msgstr ""
-"[right]Vậy nguơi có bao giờ đếm xem mình đã ăn đuợc bao nhiêu bánh mì không?"
+"[right]Vậy người có bao giờ đếm xem mình đã ăn được bao nhiêu bánh mì không?"
 
 #: objects/boss_touhou/dialogue/vs_marisa.dialogue
 msgid "Thirteen. I prefer Japanese food."
@@ -569,7 +569,7 @@ msgstr ""
 
 #: stages/main_menu/objects/tweaks_selections.tscn
 msgid "skin set"
-msgstr "bộ skin"
+msgstr "chọn bộ skin"
 
 #: stages/main_menu/objects/tweaks_selections.tscn
 msgid ""
@@ -1018,7 +1018,7 @@ msgstr ""
 msgid "Omniswamp"
 msgstr ""
 "Đầm lầy\n"
-"đa năng"
+"toàn năng"
 
 #: stages/world_4/4-4.tscn
 msgid "Emortal - Omnispace"
@@ -1316,7 +1316,9 @@ msgstr ""
 
 #: stages/world_8/8-2.tscn
 msgid "Stroll out\n"
-msgstr "Dạo đêm\n"
+msgstr ""
+"Đi dạo\n"
+"\n"
 
 #: stages/world_8/8-3.tscn
 msgid "Neil Brennan - Fist II (Johan Andersson cover)"
@@ -1346,23 +1348,16 @@ msgstr ""
 "thác nước\n"
 "mùa thu"
 
-#: stages/world_9/9-2.tscn
-msgid "ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"
-msgstr "ZUN - Thác nước của mùa thu ~ Con thác mùa thu (WAKANA REMIX KIỂU SMW)"
-
 #: stages/world_9/9-3.tscn
 msgid ""
 "DOUBLE\n"
 "SPOILER"
 msgstr ""
-"NHÀ BÁO\n"
-"ĐỐI ĐẦU"
-
-#: stages/world_9/9-3.tscn
-msgid "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"
-msgstr "ZUN - Núi Yêu Quái ~ Ngọn núi thần bí (LINDH0LM REMIX KIỂU SM64)"
+"TIN VỊT\n"
+"NHÂN  ĐÔI"
 
 #: stages/world_9/after_9-3_cutscene.tscn
+#: objects/boss_touhou/dialogue/balloon.tscn
 msgid "Press the %s to skip."
 msgstr "Ấn %s để bỏ qua."
 
@@ -1424,11 +1419,7 @@ msgstr ""
 msgid "surreal - transversal"
 msgstr ""
 
-#: stages/world_final/10-4.tscn
-msgid "The office"
-msgstr "Văn phòng"
-
-#: stages/world_final/10-4_boss.tscn
+#: stages/world_final/10-4.tscn stages/world_final/10-4_boss.tscn
 msgid "THE OFFICE"
 msgstr "VĂN PHÒNG"
 
@@ -1437,8 +1428,8 @@ msgid ""
 "YOU\n"
 "WIN"
 msgstr ""
-"CHIẾN\n"
-"THẮNG"
+"THẮNG\n"
+"CUỘC"
 
 #: stages/world_final/10-4_boss.tscn
 msgid "Cynmusic - The softcore song"
@@ -1470,7 +1461,7 @@ msgid ""
 "YOU CAN EXCHANGE SOME LIVES FOR ONE OF THESE ITEMS!!!\n"
 "BUT BE CAREFUL, SOMETIMES LIVES ARE MORE IMPORTANT THAN THIS STUFF."
 msgstr ""
-"BẠN CÓ THỂ TRAO ĐỔI MẠNG ĐỂ MUA MỘT MÓN VẬT PHẨM!!!\n"
+"Ở ĐÂY CÓ ĐỔI MẠNG MUA MỘT TRONG SỐ VẬT PHẨM DƯỚI ĐÂY!!!\n"
 "NHỚ ĐỂ Ý RẰNG CÓ LÚC MẠNG QUÝ HƠN VẬT PHẨM."
 
 #: stages/main/save_game_room_pw.tscn
@@ -1620,7 +1611,7 @@ msgstr ""
 
 #: stages/main/credits/credits_pw_end.tscn
 msgid "Press the %s to begin/skip"
-msgstr ""
+msgstr "Ấn %s để bắt đầu/bỏ qua"
 
 #: stages/main/credits/credits_pw_end.tscn
 msgid ""
@@ -1628,14 +1619,17 @@ msgid ""
 "\n"
 "Press the %s to continue..."
 msgstr ""
+"Cảm ơn bạn đã chơi!\n"
+"\n"
+"Ấn %s để tiếp tục..."
 
 #: stages/main/credits/credits_pw_end.tscn
 msgid "the end"
-msgstr ""
+msgstr "hết"
 
 #: stages/main/credits/sections/section_0.tscn
 msgid "Credits music: k, jose - a light waltz"
-msgstr ""
+msgstr "Nhạc phần ghi danh: k, jose - a light waltz"
 
 #: stages/main/credits/sections/section_dev1.tscn
 msgid ""
@@ -1650,13 +1644,23 @@ msgid ""
 "\"standard\" ways. And there is a bit of lore now, but it was thought of way "
 "later on :P\""
 msgstr ""
+"\"Tôi bắt tay vào sản xuất từ ngày 30 tháng 3 năm 2024. Tầm hơn một năm sau "
+"tôi mới xong việc (với sự trợ giúp từ thằng bạn Yaolinggui về sau). Tôi cố "
+"gắng hết sức có thể thiết kế lại từ đầu hầu hết mọi màn để cân bằng độ khó. "
+"Lúc đấy đã quá muộn để tôi nhận ra rằng Party Worlds bản gốc khó hơn tôi đã "
+"dự kiến.\n"
+"\n"
+"Bởi thế, tôi mong các bạn đã tận hưởng tái bản hoàn toàn mới này! Như bản "
+"gốc, mọi thế giới trong đây đi theo hướng thiết kế riêng, không theo tiêu "
+"chuẩn \"truyền thống\" nào cả. Giờ cũng có thêm cả tí cốt truyện nốt, nhưng "
+"cái này về sau mới thêm vào cơ :P\""
 
 #: stages/main/credits/sections/section_dev1.tscn
 #: stages/main/credits/sections/section_dev1p2.tscn
 #: stages/main/credits/sections/section_dev2.tscn
 #: stages/main/credits/sections/section_dev2p2.tscn
 msgid "Developer Commentary"
-msgstr ""
+msgstr "Bình luận từ nhà sản xuất"
 
 #: stages/main/credits/sections/section_dev1.tscn
 msgid "LooPer231 (1/2)"
@@ -1670,6 +1674,12 @@ msgid ""
 "MF project I release this year. I'm not done however, so expect more from "
 "Meteo Dream very soon!\""
 msgstr ""
+"\"Không có Yaolinggui tham gia giúp thì dự án này đã không thành. Ổng cân "
+"được giúp tôi tại thời phút quyết định, thế nên là tôi rất muốn cảm ơn ổng. "
+"Thật đấy. Dự án này mất hơn một năm mới xong. Có khả năng là đây sẽ là dự án "
+"Mario Forever đầu tiên và duy nhất tôi ra mắt năm nay. Nói thế thôi nhưng mà "
+"tôi vẫn chưa xong đâu, nên là các bạn có thể đón chờ thêm từ Meteo Dream rất "
+"sớm thôi!\""
 
 #: stages/main/credits/sections/section_dev1p2.tscn
 msgid "LooPer231 (2/2)"
@@ -1692,11 +1702,21 @@ msgid ""
 "get me up to speed with Godot. By all accounts, I was not that well-equipped "
 "to handle something as large as Party Worlds.\""
 msgstr ""
+"\"Để mà nói thật thì ban đầu tôi không dự kiến là cống hiến ngần này thời "
+"gian làm Party Worlds. Ban đầu tôi tưởng ông LooPeR chỉ nhờ làm lặt nhặt vài "
+"cái màn để đẩy tiến độ thôi. Thế mà tôi lại đi đòi thêm việc mà làm, rồi "
+"thành ra là tôi đảm nhiệm thiết kế hẳn một thế giới và cân cả boss cuối "
+"luôn.\n"
+"\n"
+"Kể từ lúc tôi mới quay về làm mấy trò Mario Forever thì đây là dự án thứ hai "
+"của tôi. Cái đầu tiên là tôi chuyển hóa một cái dự án cũ sang Godot để bắt "
+"kịp cách dùng thôi. Thật tình mà nói thì lúc đấy Party Worlds vẫn còn quá đồ "
+"sộ đối với tôi.\""
 
 #: stages/main/credits/sections/section_dev2.tscn
 #: stages/main/credits/sections/section_dev2p2.tscn
 msgid "Art by QDylm"
-msgstr ""
+msgstr "Đồ họa: QDylm"
 
 #: stages/main/credits/sections/section_dev2p2.tscn
 msgid "[color=95FBFF]yaolinggui[/color] (2/2)"
@@ -1712,8 +1732,19 @@ msgid ""
 "I would like to thank LooPeR immensely, not only for being there always, but "
 "also being a decisive pillar of support. Were it not for him and his year-"
 "long project, I likely would have stopped at the port of my old, dusty "
-"project. Now? There will be more to expect from me in the (near) future.\""
+"project. Now? There will be more to expect from me in the (near) future.\"\n"
+"\n"
 msgstr ""
+"\"Dù gì thì vẫn hoàn thành nhiệm vụ thôi :P Ít ra lo vụ này thì tôi được cái "
+"kinh nghiệm quý báu phát triển game dùng Godot và Thunder Engine. Sau này "
+"còn làm gì nữa thì đảm bảo dễ hơn nhiều.\n"
+"\n"
+"Tôi muốn chân thành cảm ơn ổng LooPeR, không chỉ luôn luôn có mặt để hỗ trợ "
+"tôi về mặt tinh thần mà còn làm trụ cột cốt lõi ủng hộ tôi. Không có ổng và "
+"cái dự án lâu năm của ổng thì tôi làm xong một dự án kia chắc đã bỏ rồi. "
+"Nhưng mà bây giờ á? Trong tương lai (gần) chắc tôi ra mắt vài ba cái dự án "
+"nữa.\"\n"
+"\n"
 
 #: stages/main/credits/sections/section_engine.tscn
 msgid ""
@@ -1727,18 +1758,32 @@ msgid ""
 "[color=BEFFCB]jue13[/color]\n"
 "[color=FFFBBE]yukana[/color]"
 msgstr ""
+"phát triển bằng [color=gold]thunder engine[/color]\n"
+"\n"
+"\n"
+"\n"
+"Nhà phát triển:\n"
+"\n"
+"reflex[color=FFC2C2]guru[/color]\n"
+"[color=BEFFCB]jue13[/color]\n"
+"[color=FFFBBE]yukana[/color]"
 
 #: stages/main/credits/sections/section_finalboss.tscn
 msgid ""
 "9-3 & final boss coding,\n"
 "several cutscenes and credits:\n"
 "\n"
-"[color=95FBFF]yaolinggui[/color]"
+"[color=95FBFF]yaolinggui[/color]\n"
+"\n"
 msgstr ""
+"9-3 & lập trình boss cuối,\n"
+"vài cảnh cutscene\n"
+"và mục ghi danh:\n"
+"[color=95FBFF]yaolinggui[/color]\n"
 
 #: stages/main/credits/sections/section_finalboss.tscn
 msgid "1-4: the calling"
-msgstr ""
+msgstr "1-4: TIẾNG GỌI"
 
 #: stages/main/credits/sections/section_graphics1.tscn
 msgid ""
@@ -1752,10 +1797,19 @@ msgid ""
 "gamma v\n"
 "sednaiur"
 msgstr ""
+"ĐỒ HỌA:\n"
+"\n"
+"sonikku\n"
+"askywalker\n"
+"yingchin soul\n"
+"supersledgebro\n"
+"walmaker2022\n"
+"gamma v\n"
+"sednaiur"
 
 #: stages/main/credits/sections/section_graphics1.tscn
 msgid "7-2: sunday morning"
-msgstr ""
+msgstr "7-2: SÁNG CHỦ NHẬT"
 
 #: stages/main/credits/sections/section_graphics2.tscn
 msgid ""
@@ -1769,10 +1823,19 @@ msgid ""
 "supermany\n"
 "[color=gray]serafim[/color]gws"
 msgstr ""
+"ĐỒ HỌA:\n"
+"\n"
+"crafink\n"
+"shikaternia\n"
+"evan.f\n"
+"hellfire\n"
+"electro_kun\n"
+"supermany\n"
+"[color=gray]serafim[/color]gws"
 
 #: stages/main/credits/sections/section_graphics2.tscn
 msgid "6-3: futurism"
-msgstr ""
+msgstr "6-3: CHỦ NGHĨA VỊ LAI"
 
 #: stages/main/credits/sections/section_graphics3.tscn
 msgid ""
@@ -1781,10 +1844,14 @@ msgid ""
 " eevee\t\t\t\t  [color=light_green]smuglutena[/color] \n"
 " nitrox\tNicelife "
 msgstr ""
+"[center]ĐỒ HỌA:[fill]\n"
+" random.nick\t\t pixelator \n"
+" eevee\t\t\t\t  [color=light_green]smuglutena[/color] \n"
+" nitrox\tNicelife "
 
 #: stages/main/credits/sections/section_graphics3.tscn
 msgid "WORLD 5: XMAS MIX"
-msgstr ""
+msgstr "THẾ GIỚI THỨ 5: TUYỂN TẬP GIÁNG SINH"
 
 #: stages/main/credits/sections/section_graphics4.tscn
 msgid ""
@@ -1794,10 +1861,15 @@ msgid ""
 "various mario graphics: \n"
 "nintendo "
 msgstr ""
+"vô số đồ họa touhou: \n"
+"team shanghai alice - zun \n"
+"\n"
+"vô số đồ họa mario: \n"
+"nintendo "
 
 #: stages/main/credits/sections/section_graphics4.tscn
 msgid "9-2: autumnal waterfall"
-msgstr ""
+msgstr "9-2: THÁC NƯỚC MÙA THU"
 
 #: stages/main/credits/sections/section_lead.tscn
 msgid ""
@@ -1807,16 +1879,23 @@ msgid ""
 "project lead:\n"
 "     looper231"
 msgstr ""
+"Tạo bởi:\n"
+"\n"
+"\n"
+"Trưởng dự án:\n"
+"     looper231"
 
 #: stages/main/credits/sections/section_leveldesign.tscn
 msgid ""
 "Level design:[fill]\n"
 " looper231 [color=95FBFF]yaolinggui[/color] "
 msgstr ""
+"Thiết kế màn:[fill]\n"
+" looper231 [color=95FBFF]yaolinggui[/color] "
 
 #: stages/main/credits/sections/section_leveldesign.tscn
 msgid "10 -3: lucky question"
-msgstr ""
+msgstr "10 -3: CÂU HỎI MAY MẮN"
 
 #: stages/main/credits/sections/section_mapdesign.tscn
 msgid ""
@@ -1825,6 +1904,10 @@ msgid ""
 " [color=gray]serafim[/color]gws \t\t\t[color=95FBFF]yaolinggui[/color] \n"
 " nerton17\tbullex "
 msgstr ""
+"thiết kế bản đồ:\n"
+"[fill]\n"
+" [color=gray]serafim[/color]gws \t\t\t[color=95FBFF]yaolinggui[/color] \n"
+" nerton17\tbullex "
 
 #: stages/main/credits/sections/section_music.tscn
 msgid ""
@@ -1838,10 +1921,19 @@ msgid ""
 " nintendo\n"
 " team shanghai alice"
 msgstr ""
+"NGUỒN NHẠC NỀN:\n"
+"[left]\n"
+" remix.kwed.org\n"
+" modarchive.org\n"
+" SMWCentral.net\n"
+" demoscene\n"
+" newgrounds\n"
+" nintendo\n"
+" team shanghai alice"
 
 #: stages/main/credits/sections/section_music.tscn
 msgid "8-2: stroll out"
-msgstr ""
+msgstr "8-2: ĐI DẠO"
 
 #: stages/main/credits/sections/section_skintails.tscn
 msgid ""
@@ -1859,7 +1951,7 @@ msgstr ""
 "nhân vật: sega\n"
 "đồ họa gốc: hartflip0218\n"
 "giọng: Sonic heroes & sonic generations (jp)\n"
-"nhạc và hiệu ứng âm thanh tự chế: Sonic 1, cd & 3\n"
+"nhạc & hiệu ứng âm thanh: Sonic 1, cd & 3\n"
 "\n"
 "Skin by: [color=95FBFF]yaolinggui[/color]"
 
@@ -1965,7 +2057,7 @@ msgstr "Pháp sư tầm thường - ĐỒ HỌA: Unabara Iruka "
 
 #: stages/main/credits/sections/section_touhou.tscn
 msgid "Modern-Day Thoughtography Reporter "
-msgstr ""
+msgstr "Phóng viên chụp ảnh tâm linh thời hiện đại "
 
 #: stages/main/credits/sections/section_touhou.tscn
 msgid "Maid of the Scarlet Devil Mansion "
@@ -2016,8 +2108,8 @@ msgid "TO DELETE A SAVE, PRESS AND HOLD DEL BUTTON FOR 3 SEC."
 msgstr "ĐỂ XÓA DỮ LIỆU ĐÃ LƯU, ẤN VÀ GIỮ PHÍM DEL TẦM 3 GIÂY."
 
 #: stages/world_4/Additives/vstroeni.gd
-msgid "very tasty!!! wow!!!!!"
-msgstr "ngon quá đã!!! wow!!!!!"
+msgid "very tasty!!! wow!!!!!\n"
+msgstr "ngon quá đã!!! wow!!!!!\n"
 
 #: stages/world_final/Additives/ljd_arrow_sign.tscn
 msgid ""
@@ -2047,3 +2139,69 @@ msgstr ""
 msgctxt "Save Pipe when no save"
 msgid "empty..."
 msgstr "không có..."
+
+#: objects/area_titles/area_title.tscn
+msgid "AREA NAME"
+msgstr "TÊN KHU VỰC"
+
+#: stages/world_9/Additives/9-3/music_overlay.gd
+msgid "ZUN - YOUKAI MOUNTAIN ~ MYSTERIOUS MOUNTAIN (LINDH0LM SM64 COVER)"
+msgstr "ZUN - Núi Yêu Quái ~ Ngọn núi thần bí (LINDH0LM REMIX KIỂU SM64)"
+
+#: stages/world_9/Additives/9-2/scripts/music_overlay.gd
+msgid "ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"
+msgstr "ZUN - Thác nước của mùa thu ~ Con thác mùa thu (WAKANA REMIX KIỂU SMW)"
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+#, fuzzy
+#| msgid "character"
+msgid "Character"
+msgstr "chọn nhân vật"
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid ""
+"Dialogue...\n"
+"Dialogue..."
+msgstr ""
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid "Response example"
+msgstr ""
+
+#: objects/boss_touhou/dialogue/balloon.tscn
+msgid ""
+"\t\t\t\t\t\t\t[color=FF6699]The Eternally Young Scarlet Moon[/color]\n"
+"\t\t\t\t\t\t\tRemilia Scarlet"
+msgstr ""
+"\t\t\t\t\t\t\t[color=FF6699] Mặt trăng trẻ tuổi vĩnh hằng màu đỏ[/color]\n"
+"\t\t\t\t\t\t\tRemilia Scarlet"
+
+#: stages/world_5/Additives/level_label.gd
+msgid ""
+"xmas mix \n"
+"part 2"
+msgstr "tuyển tập giáng sinh II"
+
+#: stages/world_5/Additives/level_label.gd
+msgid ""
+"xmas mix \n"
+"part 3"
+msgstr "tuyển tập giáng sinh III"
+
+#: objects/sign_help_key_formatter.gd
+msgctxt "e.g. Space button, etc."
+msgid "%s button"
+msgstr "phím %s"
+
+#: stages/main_menu/scripts/label_space_key.gd
+msgctxt "e.g. Space key, etc."
+msgid "%s key"
+msgstr "phím %s"
+
+#, fuzzy
+#~| msgid "Featured Touhou Characters"
+#~ msgid "Insert Control Character"
+#~ msgstr "Nhân vật Touhou xuất hiện"
+
+#~ msgid "The office"
+#~ msgstr "Văn phòng"

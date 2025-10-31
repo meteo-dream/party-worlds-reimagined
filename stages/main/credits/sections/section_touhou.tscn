@@ -53,6 +53,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarisaSprites" type="Label" parent="." index="3"]
+z_index = 1
 offset_left = 3.0
 offset_top = 174.0
 offset_right = 483.0

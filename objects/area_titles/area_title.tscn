@@ -9,18 +9,22 @@ anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 480.0
 script = ExtResource("1_ryqik")
+name_of_area_text = "AREA NAME"
 
 [node name="HUD" type="CanvasLayer" parent="."]
 layer = 2
 
 [node name="AreaName" type="Label" parent="HUD"]
-anchors_preset = 5
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
 anchor_left = 0.5
+anchor_top = -0.033
 anchor_right = 0.5
+anchor_bottom = -0.033
 offset_left = -197.0
-offset_top = 18.0
+offset_top = 33.84
 offset_right = 198.0
-offset_bottom = 56.0
+offset_bottom = 71.84
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_yvbvp")

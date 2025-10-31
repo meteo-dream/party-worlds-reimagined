@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://w0xp68p3kqoa"]
+[gd_scene load_steps=78 format=4 uid="uid://w0xp68p3kqoa"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_c6rxe"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_88tke"]
@@ -36,8 +36,9 @@
 [ext_resource type="PackedScene" uid="uid://dh4kf1w7jyseo" path="res://engine/objects/warps/pipe_in.tscn" id="35_idgo7"]
 [ext_resource type="PackedScene" uid="uid://u383towqhd0i" path="res://engine/objects/warps/pipe_out.tscn" id="36_orena"]
 [ext_resource type="Texture2D" uid="uid://dcva06o6wpt3w" path="res://engine/objects/signs/sign3.png" id="37_bqtrn"]
+[ext_resource type="FontVariation" uid="uid://u83p423iwekg" path="res://addons/localization/special_fonts/misterearlbt_variation.tres" id="38_6c0gp"]
+[ext_resource type="Script" uid="uid://dm12fb7tofg2p" path="res://objects/sign_help_key_formatter.gd" id="38_7tcb6"]
 [ext_resource type="PackedScene" uid="uid://bj3fvmd6bah6d" path="res://engine/fonts/templates/mister_earl_font.tscn" id="38_b3d3i"]
-[ext_resource type="Script" uid="uid://8xp2fxtplbpj" path="res://modules/sign_help_key_formatter_only_button.gd" id="39_glo8g"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="40_r8vb8"]
 [ext_resource type="PackedScene" uid="uid://ddwxc43m3q1c6" path="res://engine/objects/core/checkpoint/checkpoint.tscn" id="41_jkqoj"]
 
@@ -486,7 +487,6 @@ tile_set = ExtResource("14_as8i7")
 
 [node name="MusicOverlay" parent="HUD" instance=ExtResource("16_0qm2i")]
 display_text = "VINNYCEUS - MANUAL"
-text = Array[String](["VINNYCEUS - MANUAL"])
 
 [node name="Label" parent="HUD" instance=ExtResource("17_lw3gr")]
 text = "Forest Stroll"
@@ -1310,9 +1310,10 @@ offset_left = -48.0
 offset_top = -45.0
 offset_right = 50.0
 offset_bottom = -29.0
+theme_override_fonts/font = ExtResource("38_6c0gp")
 text = "Grab me!
 (Press %s)"
-script = ExtResource("39_glo8g")
+script = ExtResource("38_7tcb6")
 action = "m_attack"
 
 [node name="FinishLine" parent="." instance=ExtResource("40_r8vb8")]

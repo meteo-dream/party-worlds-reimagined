@@ -34,7 +34,7 @@ func _ready() -> void:
 	_change_screen_modulate(Color.BLACK)
 	await _set_timer(0.5)
 	_change_screen_modulate(Color8(31, 31, 31), 0.7)
-	await _set_timer(1.0)
+	await _set_timer(1.5)
 	var tw5 = get_tree().create_tween()
 	tw5.tween_property(skip_label, "modulate:a", 1.0, 0.8)
 	can_start_credits = true

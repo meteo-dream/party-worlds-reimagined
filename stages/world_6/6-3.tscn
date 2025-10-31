@@ -2420,7 +2420,6 @@ metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("24_ru4w2")]
 display_text = "tangerine - synthetic jumbo"
-text = Array[String](["tangerine - synthetic jumbo"])
 
 [node name="HUD" parent="." instance=ExtResource("10_1dpxf")]
 
@@ -2996,48 +2995,48 @@ amplitude = Vector2(0, 150)
 position = Vector2(5776, 208)
 
 [node name="RotoRed" parent="Enemies/RotoCenter6" instance=ExtResource("61_8ionl")]
-position = Vector2(68, 16)
+position = Vector2(69, -10)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 12.5
+phase = -9.16667
 frequency = -50.0
 
 [node name="RotoCenter5" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(2800, -208)
 
 [node name="RotoRed" parent="Enemies/RotoCenter5" instance=ExtResource("61_8ionl")]
-position = Vector2(0, -100)
+position = Vector2(37, -93)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -89.166
+phase = -67.4993
 
 [node name="RotoCenter4" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(3824, 144)
 
 [node name="RotoRed" parent="Enemies/RotoCenter4" instance=ExtResource("61_8ionl")]
-position = Vector2(-33, 67)
+position = Vector2(-65, 70)
 preview = true
 amplitude = Vector2(110, 50)
-phase = 125.002
+phase = 146.669
 track_rot = -30.0
 
 [node name="RotoCenter2" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(4432, 368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter2" instance=ExtResource("61_8ionl")]
-position = Vector2(101, -37)
+position = Vector2(135, -22)
 preview = true
 amplitude = Vector2(150, 50)
-phase = -46.666
+phase = -24.9993
 
 [node name="RotoCenter3" parent="Enemies" instance=ExtResource("60_lsndb")]
 position = Vector2(4464, 368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter3" instance=ExtResource("61_8ionl")]
-position = Vector2(-101, 37)
+position = Vector2(-135, 22)
 preview = true
 amplitude = Vector2(150, 50)
-phase = 133.334
+phase = 155.001
 
 [node name="HammerBro" parent="Enemies" instance=ExtResource("62_x3sr5")]
 position = Vector2(11712, -96)
@@ -3388,6 +3387,7 @@ offset_left = 1600.0
 offset_top = -480.0
 offset_right = 4352.0
 name_of_area_text = "Patrol District"
+text_type = 1
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance3" parent="." instance=ExtResource("69_gb4kk")]
@@ -3396,6 +3396,7 @@ offset_top = -896.0
 offset_right = 6592.0
 offset_bottom = 0.0
 name_of_area_text = "Construction Site - Upper Level"
+text_type = 2
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance5" parent="." instance=ExtResource("69_gb4kk")]
@@ -3403,6 +3404,7 @@ offset_left = 6592.0
 offset_top = -480.0
 offset_right = 8352.0
 name_of_area_text = "Pit of death"
+text_type = 4
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance6" parent="." instance=ExtResource("69_gb4kk")]
@@ -3410,12 +3412,14 @@ offset_left = 8352.0
 offset_top = -480.0
 offset_right = 11104.0
 name_of_area_text = "City Exit"
+text_type = 5
 metadata/_edit_lock_ = true
 
 [node name="AreaEntrance4" parent="." instance=ExtResource("69_gb4kk")]
 offset_left = 4352.0
 offset_right = 6688.0
 name_of_area_text = "Construction Site - Bottom Level"
+text_type = 3
 metadata/_edit_lock_ = true
 
 [editable path="FG Fog"]

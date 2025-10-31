@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://p4jrhkp0ff31"]
+[gd_scene load_steps=70 format=4 uid="uid://p4jrhkp0ff31"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_tg1ag"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_peuqm"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://hkhy751lpyx5" path="res://engine/objects/fluid/water_area.tscn" id="12_tg1ag"]
 [ext_resource type="PackedScene" uid="uid://da16joa30w76a" path="res://engine/objects/enemies/piranha_plants/piranha_green.tscn" id="13_4j0t4"]
 [ext_resource type="PackedScene" uid="uid://oja3uy1y4hpl" path="res://engine/objects/enemies/piranha_plants/piranha_pink.tscn" id="14_1sud6"]
+[ext_resource type="Script" uid="uid://cvfsc4xn3fxus" path="res://stages/world_9/Additives/9-2/scripts/music_overlay.gd" id="14_7ytkn"]
 [ext_resource type="PackedScene" uid="uid://ddldd020oordq" path="res://engine/objects/platform/platform_path_small.tscn" id="14_tis51"]
 [ext_resource type="PackedScene" uid="uid://dgcgfl28trox0" path="res://engine/objects/springboard/springboard.tscn" id="15_0314l"]
 [ext_resource type="PackedScene" uid="uid://b1ccfvy323ic6" path="res://stages/world_9/Additives/9-2/enemies/flying/koopa_paratroopa_yellow.tscn" id="18_d4x18"]
@@ -761,8 +762,7 @@ texture = SubResource("GradientTexture2D_0314l")
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("10_cdhn6")]
-display_text = "ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"
-text = Array[String](["ZUN - FALL OF FALL ~ AUTUMNAL WATERFALL (WAKANA SMW-STYLE COVER)"])
+script = ExtResource("14_7ytkn")
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -787,10 +787,10 @@ troopa = ExtResource("18_d4x18")
 position = Vector2(80, 12368)
 
 [node name="RotoRed" parent="Enemies/RotoCenter" instance=ExtResource("25_dx357")]
-position = Vector2(0, 26)
+position = Vector2(0, -147)
 preview = true
 amplitude = Vector2(0, 200)
-phase = 174.167
+phase = -130.833
 frequency = 100.0
 
 [node name="KoopaParatroopaRed4" parent="Enemies" instance=ExtResource("24_d4x18")]
@@ -1597,52 +1597,3 @@ position = Vector2(416, 15568)
 trigger_immediately = true
 
 [connection signal="level_completed" from="." to="DataSaver" method="_on__level_completed"]
-[connection signal="collided_ceiling" from="TileMapLayer/CheepBlue" to="TileMapLayer/CheepBlue" method="turn_y"]
-[connection signal="collided_floor" from="TileMapLayer/CheepBlue" to="TileMapLayer/CheepBlue" method="turn_y"]
-[connection signal="collided_wall" from="TileMapLayer/CheepBlue" to="TileMapLayer/CheepBlue" method="turn_x"]
-[connection signal="collided_ceiling" from="TileMapLayer/@CharacterBody2D@38253" to="TileMapLayer/@CharacterBody2D@38253" method="turn_y"]
-[connection signal="collided_floor" from="TileMapLayer/@CharacterBody2D@38253" to="TileMapLayer/@CharacterBody2D@38253" method="turn_y"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38253" to="TileMapLayer/@CharacterBody2D@38253" method="turn_x"]
-[connection signal="collided_ceiling" from="TileMapLayer/@CharacterBody2D@38254" to="TileMapLayer/@CharacterBody2D@38254" method="turn_y"]
-[connection signal="collided_floor" from="TileMapLayer/@CharacterBody2D@38254" to="TileMapLayer/@CharacterBody2D@38254" method="turn_y"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38254" to="TileMapLayer/@CharacterBody2D@38254" method="turn_x"]
-[connection signal="collided_ceiling" from="TileMapLayer/@CharacterBody2D@38255" to="TileMapLayer/@CharacterBody2D@38255" method="turn_y"]
-[connection signal="collided_floor" from="TileMapLayer/@CharacterBody2D@38255" to="TileMapLayer/@CharacterBody2D@38255" method="turn_y"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38255" to="TileMapLayer/@CharacterBody2D@38255" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/BuzzleBettle" to="TileMapLayer/BuzzleBettle" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38260" to="TileMapLayer/@CharacterBody2D@38260" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/SpinyIron" to="TileMapLayer/SpinyIron" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/Goomba" to="TileMapLayer/Goomba" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/KoopaRed" to="TileMapLayer/KoopaRed" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/KoopaGreen" to="TileMapLayer/KoopaGreen" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38318" to="TileMapLayer/@CharacterBody2D@38318" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38366" to="TileMapLayer/@CharacterBody2D@38366" method="turn_x"]
-[connection signal="collided_ceiling" from="TileMapLayer/@CharacterBody2D@38383" to="TileMapLayer/@CharacterBody2D@38383" method="turn_y"]
-[connection signal="collided_floor" from="TileMapLayer/@CharacterBody2D@38383" to="TileMapLayer/@CharacterBody2D@38383" method="turn_y"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38383" to="TileMapLayer/@CharacterBody2D@38383" method="turn_x"]
-[connection signal="collided_ceiling" from="TileMapLayer/@CharacterBody2D@38384" to="TileMapLayer/@CharacterBody2D@38384" method="turn_y"]
-[connection signal="collided_floor" from="TileMapLayer/@CharacterBody2D@38384" to="TileMapLayer/@CharacterBody2D@38384" method="turn_y"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38384" to="TileMapLayer/@CharacterBody2D@38384" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38388" to="TileMapLayer/@CharacterBody2D@38388" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38389" to="TileMapLayer/@CharacterBody2D@38389" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/SpinyIron_EdgeTurn" to="TileMapLayer/SpinyIron_EdgeTurn" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38395" to="TileMapLayer/@CharacterBody2D@38395" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38407" to="TileMapLayer/@CharacterBody2D@38407" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/SpinyRed" to="TileMapLayer/SpinyRed" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38409" to="TileMapLayer/@CharacterBody2D@38409" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38499" to="TileMapLayer/@CharacterBody2D@38499" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38504" to="TileMapLayer/@CharacterBody2D@38504" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38505" to="TileMapLayer/@CharacterBody2D@38505" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38506" to="TileMapLayer/@CharacterBody2D@38506" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38511" to="TileMapLayer/@CharacterBody2D@38511" method="turn_x"]
-[connection signal="collided_floor" from="TileMapLayer/KoopaParatroopaBlue" to="TileMapLayer/KoopaParatroopaBlue" method="jump" binds= [0.0]]
-[connection signal="collided_wall" from="TileMapLayer/KoopaParatroopaBlue" to="TileMapLayer/KoopaParatroopaBlue" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38515" to="TileMapLayer/@CharacterBody2D@38515" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38516" to="TileMapLayer/@CharacterBody2D@38516" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38550" to="TileMapLayer/@CharacterBody2D@38550" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38554" to="TileMapLayer/@CharacterBody2D@38554" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38555" to="TileMapLayer/@CharacterBody2D@38555" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38556" to="TileMapLayer/@CharacterBody2D@38556" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38573" to="TileMapLayer/@CharacterBody2D@38573" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38574" to="TileMapLayer/@CharacterBody2D@38574" method="turn_x"]
-[connection signal="collided_wall" from="TileMapLayer/@CharacterBody2D@38575" to="TileMapLayer/@CharacterBody2D@38575" method="turn_x"]

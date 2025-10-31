@@ -8,9 +8,9 @@
 life_time_sec = 5.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
-offset_top = 56.0
+offset_top = 32.0
 offset_right = 640.0
-offset_bottom = 384.0
+offset_bottom = 408.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/normal_font = ExtResource("4_y17lv")
@@ -25,7 +25,10 @@ engine developers:
 reflex[color=FFC2C2]guru[/color]
 [color=BEFFCB]jue13[/color]
 [color=FFFBBE]yukana[/color]"
+fit_content = true
+scroll_active = false
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]
 position = Vector2(320, 144)

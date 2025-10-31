@@ -1142,7 +1142,6 @@ volume_db = Array[float]([-6.0, -6.0, -6.0])
 [node name="MusicOverlay" parent="." instance=ExtResource("6_qluov")]
 layer = 3
 display_text = "SPIRIT - XMASMIX"
-text = Array[String](["SPIRIT - XMASMIX"])
 
 [node name="Mario" parent="." instance=ExtResource("7_apxye")]
 position = Vector2(144, 400)
@@ -2817,10 +2816,10 @@ position = Vector2(1168, 336)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter" instance=ExtResource("30_ej2eg")]
-position = Vector2(19, -46)
+position = Vector2(-5, 50)
 preview = true
 amplitude = Vector2(50, 50)
-phase = -70.3327
+phase = 93.334
 frequency = -170.0
 
 [node name="RotoCenter2" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2828,10 +2827,10 @@ position = Vector2(1680, 336)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter2" instance=ExtResource("30_ej2eg")]
-position = Vector2(19, 46)
+position = Vector2(-5, -50)
 preview = true
 amplitude = Vector2(50, 50)
-phase = 70.3337
+phase = -93.333
 frequency = 170.0
 
 [node name="RotoCenter3" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2839,10 +2838,10 @@ position = Vector2(4048, 368)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter3" instance=ExtResource("30_ej2eg")]
-position = Vector2(34, 37)
+position = Vector2(-22, -45)
 preview = true
 amplitude = Vector2(50, 50)
-phase = 50.0005
+phase = -113.666
 frequency = 170.0
 
 [node name="RotoCenter4" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2850,10 +2849,10 @@ position = Vector2(4144, 368)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter4" instance=ExtResource("30_ej2eg")]
-position = Vector2(-34, 37)
+position = Vector2(22, -45)
 preview = true
 amplitude = Vector2(50, 50)
-phase = 130.002
+phase = -66.3313
 frequency = -170.0
 
 [node name="RotoCenter5" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2861,20 +2860,20 @@ position = Vector2(5296, 208)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter5" instance=ExtResource("30_ej2eg")]
-position = Vector2(-93, -36)
+position = Vector2(1, 100)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -158.332
+phase = 90.0013
 
 [node name="RotoCenter6" parent="Rotos" instance=ExtResource("29_gfsuv")]
 position = Vector2(5392, 208)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter6" instance=ExtResource("30_ej2eg")]
-position = Vector2(93, -36)
+position = Vector2(-1, 100)
 preview = true
 amplitude = Vector2(100, 100)
-phase = -21.6667
+phase = 90.0
 frequency = -50.0
 
 [node name="RotoCenter7" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2882,10 +2881,10 @@ position = Vector2(3504, -2000)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter7" instance=ExtResource("30_ej2eg")]
-position = Vector2(6, 70)
+position = Vector2(35, 61)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 82.5
+phase = 57.5
 frequency = -150.0
 
 [node name="RotoCenter8" parent="Rotos" instance=ExtResource("29_gfsuv")]
@@ -2893,10 +2892,10 @@ position = Vector2(4208, -2000)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter8" instance=ExtResource("30_ej2eg")]
-position = Vector2(-18, 68)
+position = Vector2(-45, 54)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 107.5
+phase = 132.5
 frequency = 150.0
 metadata/_edit_lock_ = true
 
@@ -2905,10 +2904,10 @@ position = Vector2(2320, -2032)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter10" instance=ExtResource("30_ej2eg")]
-position = Vector2(-18, 68)
+position = Vector2(-45, 54)
 preview = true
 amplitude = Vector2(70, 70)
-phase = 107.5
+phase = 132.5
 frequency = 150.0
 metadata/_edit_lock_ = true
 
@@ -2917,13 +2916,13 @@ position = Vector2(5008, -1936)
 preview = true
 
 [node name="RotoRed" parent="Rotos/RotoCenter9" instance=ExtResource("30_ej2eg")]
-position = Vector2(-125, 72)
+position = Vector2(-104, 33)
 preview = true
 amplitude_enable = true
-amplitude = Vector2(147.314, 147.314)
+amplitude = Vector2(105.806, 105.806)
 amplitude_changing_speed = 250.0
 amplitude_max = Vector2(150, 150)
-phase = 151.25
+phase = 163.75
 frequency = 75.0
 metadata/_edit_lock_ = true
 

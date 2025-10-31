@@ -28,9 +28,9 @@ texture = ExtResource("3_u0dtt")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." index="2"]
 z_index = 2
-offset_left = 16.0
+offset_left = 8.0
 offset_top = 88.0
-offset_right = 496.0
+offset_right = 504.0
 offset_bottom = 416.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
 theme_override_constants/outline_size = 15
@@ -39,8 +39,13 @@ theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
 text = "\"Still saw the project through to the end anyways :P I can at least say that this has given me invaluable experience on how to work with Godot and Thunder Engine from now on. It's bound to be much, much easier for me to start my own projects after this.
 
-I would like to thank LooPeR immensely, not only for being there always, but also being a decisive pillar of support. Were it not for him and his year-long project, I likely would have stopped at the port of my old, dusty project. Now? There will be more to expect from me in the (near) future.\""
+I would like to thank LooPeR immensely, not only for being there always, but also being a decisive pillar of support. Were it not for him and his year-long project, I likely would have stopped at the port of my old, dusty project. Now? There will be more to expect from me in the (near) future.\"
+
+"
+fit_content = true
+scroll_active = false
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DevCom2" type="Label" parent="." index="3"]
 offset_top = 8.0
@@ -50,7 +55,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("2_k2avc")
-theme_override_font_sizes/font_size = 43
+theme_override_font_sizes/font_size = 40
 text = "Developer Commentary"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -379,6 +379,7 @@ func _victory_sequence() -> void:
 	if is_instance_valid(trigger_boss_HUD):
 		trigger_boss_HUD.disappear()
 	stop_music(false)
+	Thunder._current_player.completed = true
 	await get_tree().create_timer(2.0, false, false).timeout
 	_restore_time_scale()
 	var wait_time: float = 2.8

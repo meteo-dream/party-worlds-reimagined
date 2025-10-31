@@ -309,7 +309,6 @@ func _battle_victory_sequence() -> void:
 	await get_tree().create_timer(0.7, false).timeout
 	Audio.play_sound(boss_defeat, self)
 	leaf_gather_effect(0.8, 400.0, 200, 0.6, 1, 1, true, false)
-	player.completed = true
 	await get_tree().create_timer(0.8, false).timeout
 	if Thunder._current_camera.has_method(&"shock"):
 		Thunder._current_camera.shock(0.5, Vector2.ONE * 40)

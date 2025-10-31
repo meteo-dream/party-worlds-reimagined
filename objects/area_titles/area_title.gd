@@ -1,6 +1,8 @@
 extends Control
 
 @export_multiline var name_of_area_text: String
+@export_enum("Entrance: 0", "Patrol: 1", "Upper Site: 2", "Bottom Site: 3", "Death Pit: 4", "Exit: 5") var text_type: int = 0
+var predefined_text_array: Array[String] = [tr("City Entrance"), tr("Patrol District"), tr("Construction Site - Upper Level"), tr("Construction Site - Bottom Level"), tr("Pit of death"), tr("City Exit")]
 
 var player_in: Player
 var tween: Tween
@@ -9,7 +11,8 @@ var tween: Tween
 
 
 func _ready() -> void:
-	area_name.text = name_of_area_text.to_upper()
+	#area_name.text = name_of_area_text.to_upper()
+	area_name.text = predefined_text_array[text_type].to_upper()
 
 
 func _physics_process(delta: float) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://dmv1cfedqdjph"]
+[gd_scene load_steps=44 format=4 uid="uid://dmv1cfedqdjph"]
 
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_tuyco"]
 [ext_resource type="AudioStream" uid="uid://c3fuj530bqcdh" path="res://stages/world_final/music/you_win.ogg" id="2_jhiy2"]
@@ -22,7 +22,6 @@
 [ext_resource type="AudioStream" uid="uid://bal7ynj7nwcpk" path="res://stages/world_final/music/softcore.xm" id="20_6nvcv"]
 [ext_resource type="PackedScene" uid="uid://5oalgh6nfmj6" path="res://objects/boss_touhou/boss_final/remilia/remilia_chara.tscn" id="21_65f8u"]
 [ext_resource type="PackedScene" uid="uid://b1as42ceyjt3e" path="res://objects/boss_touhou/boss_final/kevin_marisa/kevin_marisa.tscn" id="22_jv3qh"]
-[ext_resource type="PackedScene" uid="uid://bfjmx5hk7bmic" path="res://objects/boss_touhou/boss_final/final_boss_hud.tscn" id="23_k6vjy"]
 [ext_resource type="PackedScene" uid="uid://qv1pk2ssy43f" path="res://addons/localization/final_boss_hud.tscn" id="24_6nvcv"]
 
 [sub_resource type="Gradient" id="Gradient_cmi6i"]
@@ -283,14 +282,13 @@ white_background = NodePath("../HUD/White")
 you_win_text = NodePath("../HUD/YouWinText")
 boss = NodePath("../BossRemilia")
 side_boss = NodePath("../KevinMarisa")
-trigger_boss_HUD = NodePath("../FinalBossHUD2")
+trigger_boss_HUD = NodePath("../FinalBossHUD")
 boss_music_song = ExtResource("20_6nvcv")
 metadata/_edit_lock_ = true
 
 [node name="MusicOverlay" parent="." instance=ExtResource("17_1m34i")]
 script = ExtResource("18_bjqp8")
 display_text = "Cynmusic - The softcore song"
-text = Array[String](["Cynmusic - The softcore song"])
 
 [node name="BossRemilia" parent="." node_paths=PackedStringArray("phases") instance=ExtResource("21_65f8u")]
 position = Vector2(2120, -184)
@@ -300,10 +298,7 @@ phases = [NodePath("EnterBattle"), NodePath("Sc0_Start"), NodePath("Sc0_Blue"), 
 position = Vector2(2544, -80)
 phases = [NodePath("ActivateBoss"), NodePath("Sc0_Start"), NodePath("Sc0_Middle"), NodePath("Sc0_End"), NodePath("Sc1_Start"), NodePath("Sc2_Start"), NodePath("Sc3_Start"), NodePath("TransitionToDual"), NodePath("Sc4_Start"), NodePath("Sc5_Start"), NodePath("Sc5_End"), NodePath("Sc6_Start"), NodePath("Sc7_Start"), NodePath("TransitionToDual"), NodePath("Sc8_Start"), NodePath("ScFinal_Start"), null, null, null, null, null, null, null, null, null, null, null, null]
 
-[node name="FinalBossHUD" parent="." instance=ExtResource("23_k6vjy")]
-visible = false
-
-[node name="FinalBossHUD2" parent="." instance=ExtResource("24_6nvcv")]
+[node name="FinalBossHUD" parent="." instance=ExtResource("24_6nvcv")]
 
 [connection signal="died" from="Player" to="FinalBossHandler" method="_on_player_died"]
 [connection signal="final_boss_triggered" from="FinalBossHandler" to="TileMapLayer" method="_on_final_boss_handler_final_boss_triggered"]

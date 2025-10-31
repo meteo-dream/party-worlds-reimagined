@@ -15,9 +15,9 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_2nvhn")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
-offset_top = 8.0
+offset_top = -16.0
 offset_right = 640.0
-offset_bottom = 408.0
+offset_bottom = 432.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/normal_font = ExtResource("3_8nqfc")
@@ -34,9 +34,10 @@ The Sounds Resource, Nintendo
 
 Team Shanghai Alice, public domain
 Trick nostalgie"
+fit_content = true
+scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="." index="2"]
 offset_top = 224.0
