@@ -1,0 +1,26 @@
+[gd_resource type="FontVariation" load_steps=7 format=3 uid="uid://cebucf6nt6ldr"]
+
+[ext_resource type="FontFile" uid="uid://bw34t3c4dejdu" path="res://addons/localization/special_fonts/JuneBugTelex.otf" id="1_npo1w"]
+[ext_resource type="FontFile" uid="uid://v8skinfwtr8w" path="res://addons/localization/special_fonts/fallback/18vag_junebug.ttf" id="2_pb1ab"]
+[ext_resource type="FontFile" uid="uid://bm7587gaiefq0" path="res://addons/localization/special_fonts/fallback/higashi_ome.ttf" id="3_npo1w"]
+[ext_resource type="FontFile" uid="uid://bm0op5774ay2y" path="res://addons/localization/special_fonts/fallback/simsun.ttc" id="4_pb1ab"]
+
+[sub_resource type="FontVariation" id="FontVariation_pb1ab"]
+fallbacks = Array[Font]([ExtResource("4_pb1ab")])
+base_font = ExtResource("3_npo1w")
+variation_embolden = 0.5
+variation_transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
+spacing_glyph = 5
+baseline_offset = 0.25
+
+[sub_resource type="FontVariation" id="FontVariation_npo1w"]
+fallbacks = Array[Font]([SubResource("FontVariation_pb1ab")])
+base_font = ExtResource("2_pb1ab")
+variation_embolden = 1.0
+variation_transform = Transform2D(1.2, 0, 0, 1.2, 0, 0)
+spacing_glyph = 1
+baseline_offset = 0.22
+
+[resource]
+fallbacks = Array[Font]([SubResource("FontVariation_npo1w")])
+base_font = ExtResource("1_npo1w")

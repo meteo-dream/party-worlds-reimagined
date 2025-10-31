@@ -1,8 +1,24 @@
-[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://u83p423iwekg"]
+[gd_resource type="FontVariation" load_steps=6 format=3 uid="uid://u83p423iwekg"]
 
 [ext_resource type="FontFile" uid="uid://b2bmyy3777jaj" path="res://addons/localization/special_fonts/MisterEarlBT_Telexified.otf" id="1_wy07a"]
+[ext_resource type="FontFile" uid="uid://mlhdttnb4d5q" path="res://addons/localization/special_fonts/fallback/msgothic.ttc" id="2_cwxs4"]
+[ext_resource type="FontFile" uid="uid://bm0op5774ay2y" path="res://addons/localization/special_fonts/fallback/simsun.ttc" id="3_7pe60"]
+
+[sub_resource type="FontVariation" id="FontVariation_7pe60"]
+base_font = ExtResource("3_7pe60")
+variation_embolden = 0.7
+variation_transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
+spacing_glyph = -15
+
+[sub_resource type="FontVariation" id="FontVariation_cwxs4"]
+fallbacks = Array[Font]([SubResource("FontVariation_7pe60")])
+base_font = ExtResource("2_cwxs4")
+variation_embolden = 0.5
+variation_transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
+spacing_glyph = -16
 
 [resource]
+fallbacks = Array[Font]([SubResource("FontVariation_cwxs4")])
 base_font = ExtResource("1_wy07a")
 variation_transform = Transform2D(1, 0, 0, 0.6, 0, 0)
 spacing_top = -8

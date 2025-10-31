@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://bjybbmmlgbp0w"]
+[gd_scene load_steps=24 format=3 uid="uid://bjybbmmlgbp0w"]
 
 [ext_resource type="PackedScene" uid="uid://kiw6yxeov3fj" path="res://stages/main_menu/objects/tweaks_selections.tscn" id="1_jrlth"]
 [ext_resource type="Texture2D" uid="uid://byetryv2ltxkl" path="res://stages/main_menu/textures/check-mark-check.png" id="2_c5crk"]
 [ext_resource type="FontFile" uid="uid://bw34t3c4dejdu" path="res://addons/localization/special_fonts/JuneBugTelex.otf" id="2_hi1xf"]
+[ext_resource type="FontVariation" uid="uid://cebucf6nt6ldr" path="res://addons/localization/special_fonts/junebug_variation.tres" id="3_hi1xf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi1xf"]
 resource_local_to_scene = true
@@ -102,169 +103,169 @@ region = Rect2(0, 0, 16, 16)
 [node name="Control" instance=ExtResource("1_jrlth")]
 
 [node name="Label" parent="Tweaks/GameplayButton" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Value" parent="Tweaks/GameplayButton" index="1"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Tweaks/AestheticsButton" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Value" parent="Tweaks/AestheticsButton" index="1"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Tweaks/MiscaleneousButton" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Value" parent="Tweaks/MiscaleneousButton" index="1"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Tweaks/HSeparator5" index="0"]
 theme_override_fonts/font = ExtResource("2_hi1xf")
 
 [node name="Label" parent="Tweaks/HBoxContainer" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Value" parent="Tweaks/HBoxContainer/HBoxContainer" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Tweaks/HBoxContainer2" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Value" parent="Tweaks/HBoxContainer2/HBoxContainer" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Tweaks/HBoxContainer25" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Tweaks/HBoxContainer25" index="1"]
 texture = SubResource("AtlasTexture_hi1xf")
 
 [node name="Label" parent="Tweaks/Exit2" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Gameplay/HSeparator" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Gameplay/HBoxContainer24" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer24" index="1"]
 texture = SubResource("AtlasTexture_rslvp")
 
 [node name="Label" parent="Gameplay/HBoxContainer4" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer4" index="1"]
 texture = SubResource("AtlasTexture_e5wfi")
 
 [node name="Label" parent="Gameplay/HBoxContainer10" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer10" index="1"]
 texture = SubResource("AtlasTexture_cc8mf")
 
 [node name="Label" parent="Gameplay/HBoxContainer12" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer12" index="1"]
 texture = SubResource("AtlasTexture_jymbt")
 
 [node name="Label" parent="Gameplay/HBoxContainer14" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer14" index="1"]
 texture = SubResource("AtlasTexture_4pc8i")
 
 [node name="Label" parent="Gameplay/HBoxContainer6" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer6" index="1"]
 texture = SubResource("AtlasTexture_y1l52")
 
 [node name="Label" parent="Gameplay/HBoxContainer13" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Gameplay/HBoxContainer13" index="1"]
 texture = SubResource("AtlasTexture_c5crk")
 
 [node name="Label" parent="Gameplay/Exit" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Aesthetic/HSeparator2" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Aesthetic/HBoxContainer27" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Aesthetic/HBoxContainer27" index="1"]
 texture = SubResource("AtlasTexture_jjygh")
 
 [node name="Label" parent="Aesthetic/HBoxContainer22" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Aesthetic/HBoxContainer22" index="1"]
 texture = SubResource("AtlasTexture_mxw13")
 
 [node name="Label" parent="Aesthetic/HBoxContainer23" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Aesthetic/HBoxContainer23" index="1"]
 texture = SubResource("AtlasTexture_f13ck")
 
 [node name="Label" parent="Aesthetic/HBoxContainer16" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Aesthetic/HBoxContainer16" index="1"]
 texture = SubResource("AtlasTexture_7vbuf")
 
 [node name="Label" parent="Aesthetic/HBoxContainer17" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Aesthetic/HBoxContainer17" index="1"]
 texture = SubResource("AtlasTexture_chnap")
 
 [node name="Label" parent="Aesthetic/HBoxContainer26" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Aesthetic/HBoxContainer26" index="1"]
 texture = SubResource("AtlasTexture_6l3y7")
 
 [node name="Label" parent="Aesthetic/Exit" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Presets/HSeparator2" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Label" parent="Presets/HBoxContainer20" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Presets/HBoxContainer20" index="1"]
 texture = SubResource("AtlasTexture_eynf6")
 
 [node name="Label" parent="Presets/HBoxContainer16" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Presets/HBoxContainer16" index="1"]
 texture = SubResource("AtlasTexture_chd47")
 
 [node name="Label" parent="Presets/HBoxContainer17" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Presets/HBoxContainer17" index="1"]
 texture = SubResource("AtlasTexture_5lvgl")
 
 [node name="Label" parent="Presets/HBoxContainer21" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Presets/HBoxContainer21" index="1"]
 texture = SubResource("AtlasTexture_yohcs")
 
 [node name="Label" parent="Presets/HBoxContainer22" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")
 
 [node name="Toggle" parent="Presets/HBoxContainer22" index="1"]
 texture = SubResource("AtlasTexture_rk7l7")
 
 [node name="Label" parent="Presets/Exit" index="0"]
-theme_override_fonts/font = ExtResource("2_hi1xf")
+theme_override_fonts/font = ExtResource("3_hi1xf")

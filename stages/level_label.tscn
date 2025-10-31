@@ -1,8 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtabu5xxrq1yl"]
+[gd_scene load_steps=6 format=3 uid="uid://dtabu5xxrq1yl"]
 
 [ext_resource type="FontFile" uid="uid://cl6pg5xvm17g4" path="res://addons/localization/special_fonts/WhoopAssTelex.otf" id="1_q3ikk"]
+[ext_resource type="FontFile" uid="uid://bbwfml7rapru6" path="res://addons/localization/special_fonts/fallback/molot_whoopass.otf" id="2_52t26"]
+[ext_resource type="FontFile" uid="uid://bm7587gaiefq0" path="res://addons/localization/special_fonts/fallback/higashi_ome.ttf" id="3_3g75h"]
+
+[sub_resource type="FontVariation" id="FontVariation_52t26"]
+base_font = ExtResource("2_52t26")
+spacing_bottom = -10
 
 [sub_resource type="FontVariation" id="FontVariation_mux5g"]
+fallbacks = Array[Font]([SubResource("FontVariation_52t26"), ExtResource("3_3g75h")])
 base_font = ExtResource("1_q3ikk")
 spacing_bottom = -10
 
@@ -18,3 +25,4 @@ theme_override_font_sizes/font_size = 24
 text = "Level Name"
 horizontal_alignment = 1
 autowrap_mode = 2
+uppercase = true

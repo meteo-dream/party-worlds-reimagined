@@ -21,6 +21,7 @@ pivot_offset = Vector2(0, 9)
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_4phmr")
 text = "PLACEHOLDER"
+uppercase = true
 
 [node name="SpellCardCount" type="TextureRect" parent="BossName"]
 layout_mode = 1
@@ -113,6 +114,7 @@ size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_4phmr")
 text = "PHOTOS"
 horizontal_alignment = 2
+uppercase = true
 script = ExtResource("6_cyjyk")
 
 [node name="PhotoCounter" type="Label" parent="."]

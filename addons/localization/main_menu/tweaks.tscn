@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://clm1anrf3fw3j" path="res://engine/scripts/nodes/general_movement/circle_movement.gd" id="3_oud60"]
 [ext_resource type="Texture2D" uid="uid://dqmtyhn8gs07t" path="res://stages/main_menu/textures/tweaks.png" id="4_fayen"]
 [ext_resource type="PackedScene" uid="uid://bjybbmmlgbp0w" path="res://addons/localization/main_menu/tweaks_selections_tl.tscn" id="6_cr2xd"]
+[ext_resource type="FontVariation" uid="uid://cebucf6nt6ldr" path="res://addons/localization/special_fonts/junebug_variation.tres" id="6_hbsc8"]
 [ext_resource type="Script" uid="uid://4njnxglrb7mw" path="res://stages/main_menu/scripts/label_space_key.gd" id="7_nvi0n"]
 [ext_resource type="Script" uid="uid://btpomigrb53gl" path="res://stages/main_menu/scripts/tweak_description.gd" id="8_w3j61"]
-[ext_resource type="FontFile" uid="uid://bw34t3c4dejdu" path="res://addons/localization/special_fonts/JuneBugTelex.otf" id="9_cr2xd"]
 [ext_resource type="FontFile" uid="uid://dam7p4rtnpfd7" path="res://addons/localization/special_fonts/ComixHeavy_Telexified+Cyr.otf" id="9_hbsc8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_smql5"]
@@ -87,7 +87,7 @@ theme_override_constants/line_spacing = 1
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("9_cr2xd")
+theme_override_fonts/font = ExtResource("6_hbsc8")
 theme_override_font_sizes/font_size = 11
 text = "if you have
 any ideas
@@ -114,7 +114,7 @@ theme_override_constants/line_spacing = 1
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("9_cr2xd")
+theme_override_fonts/font = ExtResource("6_hbsc8")
 theme_override_font_sizes/font_size = 11
 text = "please press
 %s
@@ -165,7 +165,7 @@ pivot_offset = Vector2(0, 27)
 size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0.341176, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("9_cr2xd")
+theme_override_fonts/font = ExtResource("6_hbsc8")
 theme_override_font_sizes/font_size = 12
 text = "MESSAGE BOX"
 horizontal_alignment = 1
@@ -215,7 +215,7 @@ theme_override_constants/line_spacing = 1
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("9_cr2xd")
+theme_override_fonts/font = ExtResource("6_hbsc8")
 theme_override_font_sizes/font_size = 12
 text = "PRESS SPACE KEY"
 horizontal_alignment = 1
